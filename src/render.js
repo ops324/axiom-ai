@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { renderIndex } from '../templates/index.js';
 import { renderArticle } from '../templates/article.js';
 import { renderArchive } from '../templates/archive.js';
+import { renderSection } from '../templates/section.js';
 import { config } from './config.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -48,6 +49,13 @@ export async function renderSite(rawArticles) {
   // archive.html（超過分があるときのみ・全記事を時系列で一覧）
   if (archived.length) {
     await writeFile(path.join(ROOT, 'archive.html'), renderArchive(byRecency, label), 'utf8');
+  }
+
+  // sections/<slug>.html（ナビ各タブのリンク先・重要度→新着順）
+  await mkdir(path.join(ROOT, 'sections'), { recursive: true });
+  for (const { name, slug } of config.navSections) {
+    const items = [...decorated].filter((a) => a.section === name).sort(importanceThenRecency);
+    await writeFile(path.join(ROOT, 'sections', `${slug}.html`), renderSection(name, slug, items, label), 'utf8');
   }
 
   // 各記事ページ（全件）。関連は重要度上位から自分以外を3件。

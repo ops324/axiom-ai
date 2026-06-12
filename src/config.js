@@ -37,4 +37,16 @@ export const config = {
 
   // CSS抽象サムネのフォールバック候補（styles.css のクラス）
   thumbVariants: ['thumb--blue', 'thumb--amber', 'thumb--violet', 'thumb--teal', 'thumb--rose', 'thumb--lime'],
+
+  // ナビのセクション（表示順）。slug はセクションページのファイル名 sections/<slug>.html。
+  navSections: [
+    { name: '基盤モデル', slug: 'foundation' },
+    { name: '研究', slug: 'research' },
+    { name: '産業応用', slug: 'industry' },
+    { name: '規制・倫理', slug: 'regulation' },
+    { name: 'スタートアップ', slug: 'startups' },
+    { name: 'ハードウェア', slug: 'hardware' },
+    { name: 'オピニオン', slug: 'opinion' },
+    { name: 'データ', slug: 'data' },
+  ],
 };

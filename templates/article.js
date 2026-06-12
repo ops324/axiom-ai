@@ -3,24 +3,9 @@
 import { ticker, header, footer, page } from './layout.js';
 import { mdToHtml, esc } from '../src/markdown.js';
 import { config } from '../src/config.js';
+import { thumb, credit } from './cardbits.js';
 
 const BASE = '../';
-
-// 実写真があれば背景画像サムネ、無ければ CSS 抽象サムネ
-function thumb(a, variant) {
-  const img = a.image || {};
-  if (img.imageUrl) {
-    return `<figure class="thumb" style="background-image: url('${esc(img.imageUrl)}'); background-size: cover; background-position: center;" aria-hidden="true"></figure>`;
-  }
-  return `<figure class="thumb ${variant}" aria-hidden="true"></figure>`;
-}
-
-// Unsplash 規約準拠の帰属（実写真のときのみ）
-function credit(a) {
-  const img = a.image || {};
-  if (!img.imageUrl) return '';
-  return `<span style="color: var(--color-ink-3); font-size: var(--text-xs);">Photo: <a href="${esc(img.profileUrl)}" target="_blank" rel="noopener">${esc(img.photographer)}</a> / ${esc(img.provider)}</span>`;
-}
 
 function heroFigure(a, index = 0) {
   const img = a.image || {};

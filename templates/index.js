@@ -3,25 +3,10 @@
 import { ticker, header, footer, page } from './layout.js';
 import { esc } from '../src/markdown.js';
 import { config } from '../src/config.js';
+import { thumb, credit } from './cardbits.js';
 
 const THUMBS = config.thumbVariants;
 const href = (a) => `articles/${a.slug}.html`;
-
-// 実写真があれば背景画像のサムネ、無ければ CSS 抽象サムネ
-function thumb(a, variant) {
-  const img = a.image || {};
-  if (img.imageUrl) {
-    return `<figure class="thumb" style="background-image: url('${esc(img.imageUrl)}'); background-size: cover; background-position: center;" aria-hidden="true"></figure>`;
-  }
-  return `<figure class="thumb ${variant}" aria-hidden="true"></figure>`;
-}
-
-// Unsplash 規約準拠の帰属（実写真のときのみ）
-function credit(a) {
-  const img = a.image || {};
-  if (!img.imageUrl) return '';
-  return `<span style="color: var(--color-ink-3); font-size: var(--text-xs);">Photo: <a href="${esc(img.profileUrl)}" target="_blank" rel="noopener">${esc(img.photographer)}</a> / ${esc(img.provider)}</span>`;
-}
 
 function relTime(a) {
   return esc(a.displayTime || a.section || '');
@@ -183,6 +168,20 @@ ${ranked(featured.slice(0, 5))}
         </div>
       </aside>
     </div>
+
+    <!-- ============== NEWSLETTER（準備中）============== -->
+    <section class="section">
+      <div class="newsletter" style="text-align: center; max-width: 720px; margin: 0 auto;">
+        <span class="newsletter__eyebrow">Morning Brief</span>
+        <h3>朝、5分で世界の AI を掴む。</h3>
+        <p>AXIOM AI 編集部が毎朝、その日のニュースを要約してお届けします。無料・いつでも解除可能。</p>
+        <form class="newsletter__form" onsubmit="event.preventDefault(); alert('メルマガ登録は準備中です');" style="max-width: 480px; margin: 0 auto;">
+          <input type="email" placeholder="you@example.com" aria-label="メールアドレス">
+          <button class="btn btn--primary" type="submit">登録</button>
+        </form>
+        <p style="font-size: var(--text-xs); color: var(--color-ink-2);">※ メルマガ配信は準備中です</p>
+      </div>
+    </section>
 
   </main>
 
