@@ -1,5 +1,57 @@
 [
   {
+    "slug": "20260613-11",
+    "headline": "OpenAI、中国関連の影響工作がAI議論を標的にしていると報告",
+    "lead": "OpenAIが中国関連の2つの秘密キャンペーンを摘発し、米国内のAIインフラ議論を操作しようとしていた実態を公表した。",
+    "body_markdown": "OpenAIは2026年6月の脅威レポートで、中国（PRC）に関連する2つの影響工作クラスターを発見・遮断したと発表した。\n\n1つ目の「Data Center Bandwagon」は、AIデータセンターの拡大が一般家庭の電気料金を押し上げているという主張を英語のコメントや風刺画として生成し、Xの偽アカウントを通じて拡散していた。OpenAIの調査により、この工作は中国の省レベルの当局と連携する民間テック企業に遡ることが判明した。同じアカウント群は活動家への攻撃や在米中国系移民の偽装にも使われていた。\n\n2つ目の「Tech and Tariffs」は、トランプ大統領の関税政策や米国の技術覇権戦略を攻撃する風刺画を制作していた。プロンプトには「中国や習近平主席を描かないように」と明示的に指示されており、ある利用者は自身のアカウント群を組織的な世論操作を指す「水軍」と自称していた。\n\nさらにこれらのクラスターは、ChatGPTのユーザーデータが漏洩したという虚偽の主張を拡散しようとしていたほか、AI監視システムの構築手法についても問い合わせていた。\n\nOpenAIの「ブレイクアウトスケール」ではいずれもカテゴリー1（自身のアカウント以外への実質的な拡散なし）と評価され、大きな影響には至らなかった。しかし、AIインフラに対する既存の市民の懸念に便乗しようとする手法は、今後のAI政策議論における情報操作リスクを示している。",
+    "tags": [
+      "AI安全保障",
+      "影響工作",
+      "OpenAI",
+      "中国",
+      "データセンター"
+    ],
+    "section": "基盤モデル",
+    "source": "OpenAI",
+    "link": "https://openai.com/index/prc-linked-influence-operations-ai-debates",
+    "importance": 4,
+    "image_query": "cybersecurity network defense",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxjeWJlcnNlY3VyaXR5JTIwbmV0d29yayUyMGRlZmVuc2V8ZW58MXwwfHx8MTc4MTI5ODI0M3ww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "FlyD",
+      "profileUrl": "https://unsplash.com/@flyd2069?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-12T21:04:03.369Z"
+  },
+  {
+    "slug": "20260613-12",
+    "headline": "Hugging Faceら、エージェントRL向け共通環境規格「OpenEnv」を発表",
+    "lead": "MetaやNvidiaなど9組織がガバナンスに参加し、エージェント強化学習の環境標準化を目指すオープンソースプロジェクトが始動した。",
+    "body_markdown": "Hugging Faceは、エージェント強化学習（Agentic RL）のための実行環境を標準化するオープンソースプロジェクト「OpenEnv」を発表した。Meta（PyTorch Foundation）、Nvidia、Unsloth、Modal、Prime Intellectなど9組織がガバナンス委員会に参加し、vLLM、Scale AI、UC BerkeleyのSkyRLなど15以上の組織が支援・採用を表明している。\n\nOpenEnvはGymnasium形式のAPI（`reset()`、`step()`、`state()`）を提供し、ターミナルやブラウザなどエージェントが操作するあらゆる環境を共通インターフェースで扱えるようにする。HTTP、WebSocket、Dockerといった標準プロトコルで環境を配信し、Anthropicが提唱するMCP（Model Context Protocol）もファーストクラスでサポートする。\n\n重要なのは、OpenEnvは報酬の定義やスコアリング基準を規定せず、あくまで「相互運用性レイヤー」として機能する点だ。報酬設計やトレーナー固有のロジックは既存の専門ライブラリに委ねる設計となっている。\n\n現在、フロンティアラボはモデルと実行環境を一体的に最適化できる優位性を持つが、オープンソースコミュニティは環境・モデル・推論エンジンが分断されている。OpenEnvはこの相互運用性の課題を解消し、ローカルモデルの特定タスクへの特化訓練を効率化する狙いがある。今後数カ月でタスクセット統合、外部報酬定義、TRLやUnslothでのエンドツーエンド訓練チュートリアルなどが予定されている。",
+    "tags": [
+      "強化学習",
+      "オープンソース",
+      "Hugging Face",
+      "エージェントAI",
+      "OpenEnv"
+    ],
+    "section": "研究",
+    "source": "Hugging Face",
+    "link": "https://huggingface.co/blog/openenv-agentic-rl",
+    "importance": 3,
+    "image_query": "robot arm training simulation",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1637002722490-5f8ceed9774c?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxyb2JvdCUyMGFybSUyMHRyYWluaW5nJTIwc2ltdWxhdGlvbnxlbnwxfDB8fHwxNzgxMjk4MjQzfDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Sufyan",
+      "profileUrl": "https://unsplash.com/@blenderdesigner?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-12T21:04:04.025Z"
+  },
+  {
     "slug": "20260613-09",
     "headline": "OpenAIがクラウド基盤企業Onaを買収、Codexの長時間エージェント実行を強化",
     "lead": "OpenAIは独クラウドスタートアップOna（旧Gitpod）の買収を発表し、Codexにセキュアな常時稼働クラウド環境を統合する。",
