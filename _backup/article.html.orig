@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenAI、GPT-5 を一般公開——推論能力で初めて専門家チームを上回る | AXIOM AI</title>
+  <meta name="description" content="OpenAI が次世代基盤モデル GPT-5 を一般公開。社内ベンチマークでは博士課程相当タスクで人間チームを 5 ポイント上回る。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <!-- TICKER -->
+  <div class="ticker" role="region" aria-label="マーケット・モデル指標">
+    <div class="ticker__inner">
+      <div class="ticker__label">LIVE</div>
+      <div class="ticker__feed">
+        <span class="ticker__item"><strong>GPT-5</strong><span class="ticker__up">▲ MMLU 91.4</span></span>
+        <span class="ticker__item"><strong>CLAUDE-OPUS-4.7</strong><span class="ticker__up">▲ HumanEval 92.1</span></span>
+        <span class="ticker__item"><strong>GEMINI-2.5-PRO</strong><span class="ticker__down">▼ MATH 84.0</span></span>
+        <span class="ticker__item"><strong>NVDA</strong><span class="ticker__up">▲ $1,284.20 +2.1%</span></span>
+        <span class="ticker__item"><strong>EU AI Act</strong><span>Phase II 施行</span></span>
+        <span class="ticker__item"><strong>GPT-5</strong><span class="ticker__up">▲ MMLU 91.4</span></span>
+        <span class="ticker__item"><strong>CLAUDE-OPUS-4.7</strong><span class="ticker__up">▲ HumanEval 92.1</span></span>
+        <span class="ticker__item"><strong>GEMINI-2.5-PRO</strong><span class="ticker__down">▼ MATH 84.0</span></span>
+        <span class="ticker__item"><strong>NVDA</strong><span class="ticker__up">▲ $1,284.20 +2.1%</span></span>
+        <span class="ticker__item"><strong>EU AI Act</strong><span>Phase II 施行</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="site-header__top">
+        <a class="brand" href="index.html">
+          <span class="brand__mark">AXIOM<em>·</em>AI</span>
+          <span class="brand__sub">Intelligence Daily</span>
+        </a>
+        <div class="site-header__meta">
+          <span>東京</span>
+          <time datetime="2026-05-26">2026年5月26日 火 14:32 JST</time>
+          <a href="#signin" class="btn btn--ghost">ログイン</a>
+          <a href="#subscribe" class="btn btn--primary">購読 ¥0/月</a>
+        </div>
+      </div>
+      <nav class="site-nav container" aria-label="主要セクション">
+        <ul class="site-nav__list">
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="#" aria-current="page">基盤モデル</a></li>
+          <li><a href="#">研究</a></li>
+          <li><a href="#">産業応用</a></li>
+          <li><a href="#">規制・倫理</a></li>
+          <li><a href="#">スタートアップ</a></li>
+          <li><a href="#">ハードウェア</a></li>
+          <li><a href="#">オピニオン</a></li>
+          <li><a href="#">データ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- BREADCRUMB -->
+      <nav class="breadcrumb" aria-label="パンくず">
+        <ol>
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="#">基盤モデル</a></li>
+          <li><a href="#">OpenAI</a></li>
+          <li aria-current="page">GPT-5 一般公開</li>
+        </ol>
+      </nav>
+
+      <!-- ARTICLE HEADER -->
+      <header class="article-head">
+        <div class="article-head__inner">
+          <div class="meta">
+            <span class="chip">基盤モデル</span>
+            <span class="chip chip--warm">EXCLUSIVE</span>
+            <span>2026年5月26日 13:45 JST</span>
+            <span>最終更新 14:18 JST</span>
+            <span>読了 8 分</span>
+          </div>
+          <h1 class="article-headline">
+            OpenAI、<em>GPT-5</em> を一般公開——推論能力で初めて専門家チームを上回る
+          </h1>
+          <p class="article-lede">
+            社内ベンチマークでは数学・科学の博士課程相当タスクで人間チームを 5 ポイント上回り、企業向け推論コストは前世代比で約 40 % 低下。Anthropic と Google DeepMind との競争は、性能の絶対値から「単位コストあたりの知能」へと軸が移った。
+          </p>
+          <div class="article-byline">
+            <span>署名 <strong>高橋 涼介</strong></span>
+            <span>シニア・エディター</span>
+            <span>サンフランシスコ／東京 発</span>
+            <div class="article-share" aria-label="記事を共有">
+              <a href="#" class="share-btn" aria-label="X で共有">𝕏</a>
+              <a href="#" class="share-btn" aria-label="LinkedIn で共有">in</a>
+              <a href="#" class="share-btn" aria-label="リンクをコピー">⎘</a>
+              <a href="#" class="share-btn" aria-label="メールで送る">✉</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- HERO IMAGE -->
+      <figure class="article-hero">
+        <div class="thumb thumb--blue" style="aspect-ratio: 21 / 9;"></div>
+        <figcaption>OpenAI 本社のメイン会議室。Sam Altman CEO は「GPT-5 は単一の発表ではなく、推論コストの新しい水準を定める出来事だ」と述べた。<span style="color: var(--color-ink-3);">— 編集部によるイメージ（抽象表現）</span></figcaption>
+      </figure>
+
+      <!-- BODY GRID -->
+      <div class="article-body-grid">
+
+        <!-- LEFT SIDEBAR -->
+        <aside class="article-side-left">
+          <nav class="toc" aria-label="目次">
+            <h4>目次</h4>
+            <ol>
+              <li><a href="#sec1">何が発表されたか</a></li>
+              <li><a href="#sec2">ベンチマーク詳細</a></li>
+              <li><a href="#sec3">企業向け価格戦略</a></li>
+              <li><a href="#sec4">競合 3 社の反応</a></li>
+              <li><a href="#sec5">日本市場への影響</a></li>
+              <li><a href="#sec6">編集部の見立て</a></li>
+            </ol>
+          </nav>
+
+          <div class="author-card">
+            <div class="author-card__avatar" aria-hidden="true"></div>
+            <span class="author-card__name">高橋 涼介</span>
+            <span class="author-card__role">Senior Editor · Foundation Models</span>
+            <p style="font-size: var(--text-xs); color: var(--color-ink-2); margin-top: var(--space-xs); line-height: 1.55;">元 MIT Technology Review。基盤モデル業界を 9 年取材。</p>
+          </div>
+        </aside>
+
+        <!-- MAIN BODY -->
+        <article class="prose">
+
+          <p class="lead-para" id="sec1">2026 年 5 月 26 日午前 6 時 (PT)、OpenAI は次世代の汎用基盤モデル『GPT-5』を、API および ChatGPT 経由で一般向けに提供開始した。同日、サンフランシスコの本社で開かれた小規模なメディアブリーフィングで、Sam Altman CEO は本誌に対し「GPT-5 は単一の発表ではなく、推論コストの新しい水準を定める出来事だ」と語った。</p>
+
+          <p>同社は社内で実施した 31 件のベンチマークの結果を同時公開。MMLU-Pro で 91.4、HumanEval で 92.1、GPQA Diamond で 78.6 と、いずれも前世代の GPT-4o を 4〜11 ポイント上回った。注目すべきは、複数ステップの数学・物理の博士課程相当タスクで、人間の専門家チーム（平均参加者 3 名／タスク）を <a href="#">5 ポイント上回った</a> ことだ。</p>
+
+          <h2 id="sec2">ベンチマーク詳細——「単位コストあたりの知能」</h2>
+
+          <p>OpenAI が今回、最も強調したのは絶対性能ではなく <em>単位コストあたりの推論性能</em> である。同社の試算によれば、GPT-5 の企業向け API 価格（入力 100 万トークンあたり $2.50、出力 $10.00）は GPT-4o 比でわずかに上昇したものの、同等タスクを完了するまでに必要なトークン数が平均 38 % 減少したため、実質的な「タスクあたりコスト」は約 40 % 低下した。</p>
+
+          <p>このシフトは、エンタープライズ市場の意思決定構造を変える可能性がある。これまで多くの大企業は、GPT-4 クラスを「実験的に使うがコストが見合わない」と評価し、本番統合を見送ってきた。GPT-5 の単位コストは、もはやその論理を成立させない水準にある。</p>
+
+          <blockquote class="pullquote">
+            「これは新しい性能上限の話ではない。これまで PoC 止まりだった案件が、本番に動き出す閾値を超えたという話だ。」
+            <cite>— Andreessen Horowitz / Sarah Wang パートナー（本誌取材）</cite>
+          </blockquote>
+
+          <h2 id="sec3">企業向け価格戦略の含意</h2>
+
+          <p>OpenAI は同時に、エンタープライズ顧客向けに <strong>『Reasoning Credits』</strong> という新しい課金単位を導入した。これは長時間の連鎖推論（chain-of-thought）に対する課金を別立てとし、結果として「考えた量に応じて払う」モデルを企業に提示するものだ。<a href="#">同社の説明資料</a> によれば、典型的なエージェントワークフローでは従来比 22 % のコスト削減につながるという。</p>
+
+          <div class="callout">
+            <h4>編集部メモ</h4>
+            <p>『Reasoning Credits』の料金設計は、Anthropic が 2025 年末に導入した『Compute Tokens』とコンセプトが類似している。両社は同じ問題——長文推論のコスト透明性——を、ほぼ並行して同じ方向で解こうとしている。</p>
+          </div>
+
+          <p>注目すべきは、企業向け契約に「監査ログ標準化」「顧客管理 KMS（Key Management System）への対応」が含まれた点だ。これは規制対応の必要性が高い金融・医療セクターへの本格参入を意味する。Goldman Sachs と Mayo Clinic は既に「設計段階パートナー」として名前を公表している。</p>
+
+          <h3 id="sec4">競合 3 社の反応</h3>
+
+          <p>発表後 4 時間以内に、競合 3 社が相次いで対応を表明した。</p>
+
+          <ul>
+            <li><strong>Anthropic</strong> ── Claude Opus 4.7 の価格を据え置きつつ、エンタープライズプランに「無制限 Sonnet」を追加。事実上の価格圧縮で対抗。</li>
+            <li><strong>Google DeepMind</strong> ── Gemini 2.5 Pro の長文コンテキスト（最大 200 万トークン）を強調した比較資料を投資家向けに配布。</li>
+            <li><strong>Meta</strong> ── Llama 4 のオープンウェイト戦略を継続。「最良の閉ソースモデルに、6 ヶ月以内に追いつく」とザッカーバーグ CEO がブログで宣言。</li>
+          </ul>
+
+          <p>業界アナリストの間では、性能競争が単一のリーダーボードから「価格 × 性能 × 規制適合性」の 3 軸へと多元化しているとの見方が広がっている。</p>
+
+          <figure>
+            <div class="thumb thumb--violet" style="aspect-ratio: 16 / 9;"></div>
+            <figcaption>主要 4 モデルのベンチマーク比較（編集部による相対指数化、各軸最大値=100）。<span style="color: var(--color-ink-3);">— 編集部資料</span></figcaption>
+          </figure>
+
+          <!-- INLINE AD -->
+          <div class="ad ad--inline" style="margin: var(--space-2xl) 0;">
+            <div class="ad__inner">
+              <span>Advertisement · 970 × 250</span>
+              <span style="color: var(--color-ink-3);">記事内広告プレースホルダ</span>
+            </div>
+          </div>
+
+          <h2 id="sec5">日本市場への影響</h2>
+
+          <p>国内では、既に複数のメガバンクと総合商社が GPT-5 のエンタープライズプランを本番統合する意向を示している。<a href="#">三菱 UFJ 銀行</a> は本日午前、社内 30 万件の業務プロセスのうち 12 % を AI でリプレース可能との内部試算を公表した。同行 CIO の本誌に対するコメントによれば、月間 12 万時間の工数削減を見込むという。</p>
+
+          <p>一方、独自基盤モデル開発を進めてきた国内 AI スタートアップ各社の戦略は再考を迫られる。「7B〜13B クラスのモデルで日本語特化」というポジションは、GPT-5 の単位コストの前では経済的優位を失う。残された差別化軸は <em>データの主権性</em> と <em>業界特化のファインチューニング</em> に絞られる見込みだ。</p>
+
+          <h3 id="sec6">編集部の見立て</h3>
+
+          <p>本誌の見立てでは、2026 年は基盤モデル業界において「絶対性能の年」から「単位コストと業界適合の年」への明確な転換点となる。GPT-5 はその先陣を切ったに過ぎず、向こう 90 日以内に Anthropic と Google から「対抗価格 × 規制適合性」を売りにした製品発表が相次ぐと予想される。</p>
+
+          <p>読者の意思決定者には、3 つの問いを推奨したい。</p>
+
+          <ol>
+            <li>自社の AI 投資ロードマップは、四半期ごとに 30〜40 % のコスト低下を織り込んでいるか</li>
+            <li>「PoC で停滞している案件」のうち、新しい単位コストで本番化が見えるものはどれか</li>
+            <li>規制対応（監査ログ、KMS、データ主権）を契約段階でベンダーに要求できているか</li>
+          </ol>
+
+          <p>次回更新では、Anthropic の対抗策とエンタープライズ採用の最新状況を独自取材でお届けする。<em>（更新：本記事は事実を反映するため、追加取材に応じて随時更新されます。）</em></p>
+
+        </article>
+
+        <!-- RIGHT SIDEBAR -->
+        <aside class="article-side-right">
+
+          <div class="topics">
+            <h4>関連トピック</h4>
+            <ul>
+              <li><a href="#">OpenAI</a></li>
+              <li><a href="#">GPT-5</a></li>
+              <li><a href="#">Sam Altman</a></li>
+              <li><a href="#">基盤モデル</a></li>
+              <li><a href="#">推論コスト</a></li>
+              <li><a href="#">エンタープライズ AI</a></li>
+              <li><a href="#">Reasoning Credits</a></li>
+              <li><a href="#">日本市場</a></li>
+            </ul>
+          </div>
+
+          <div class="side-list">
+            <h4>同じトピックの記事</h4>
+            <div class="side-list__item">
+              <span class="chip">基盤モデル</span>
+              <h5><a href="#">Anthropic、Claude Enterprise Suite で対抗——監査ログをネイティブ統合</a></h5>
+              <div class="meta"><span>2 時間前</span></div>
+            </div>
+            <div class="side-list__item">
+              <span class="chip">基盤モデル</span>
+              <h5><a href="#">Google DeepMind、Gemini 2.5 Pro の 200 万トークン文脈で差別化図る</a></h5>
+              <div class="meta"><span>3 時間前</span></div>
+            </div>
+            <div class="side-list__item">
+              <span class="chip">基盤モデル</span>
+              <h5><a href="#">Meta、Llama 4 オープンウェイト公開——『6 ヶ月で追いつく』とザッカーバーグ</a></h5>
+              <div class="meta"><span>5 時間前</span></div>
+            </div>
+            <div class="side-list__item">
+              <span class="chip">産業応用</span>
+              <h5><a href="#">三菱 UFJ、社内 30 万件業務に Claude 統合——月 12 万時間削減</a></h5>
+              <div class="meta"><span>4 時間前</span></div>
+            </div>
+          </div>
+
+          <div class="ad ad--sidebar">
+            <div class="ad__inner">
+              <span>Advertisement</span>
+              <span>300 × 250</span>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+
+      <!-- NEWSLETTER CTA (Article footer) -->
+      <section class="section">
+        <div class="newsletter" style="text-align: center; max-width: 720px; margin: 0 auto;">
+          <span class="newsletter__eyebrow">Morning Brief</span>
+          <h3>明日も、5 分で世界の AI を掴む。</h3>
+          <p>編集部による要約を毎朝 06:30 (JST) お届けします。無料。いつでも解除可能。</p>
+          <form class="newsletter__form" onsubmit="event.preventDefault();" style="max-width: 480px; margin: 0 auto;">
+            <input type="email" placeholder="you@example.com" aria-label="メールアドレス">
+            <button class="btn btn--primary" type="submit">登録</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- RELATED ARTICLES -->
+      <section class="section" aria-label="関連記事">
+        <header class="section__head">
+          <div class="section__title">
+            <span class="chip">関連</span>
+            <h2>あわせて読みたい</h2>
+          </div>
+          <a class="section__more" href="index.html">トップに戻る</a>
+        </header>
+        <div class="cards">
+
+          <article class="card">
+            <figure class="thumb thumb--rose" aria-hidden="true"></figure>
+            <span class="chip chip--warm">規制・倫理</span>
+            <h3 class="card__headline"><a href="#">EU AI 法 Phase II 完全施行——汎用 AI モデル提供者に技術文書の提出義務</a></h3>
+            <p class="card__deck">違反時の最大制裁金は売上高の 7 %。オープンソース提供者にも一部適用される。</p>
+            <div class="meta"><span class="meta__author">Marie Dubois</span><span>9 時間前</span></div>
+          </article>
+
+          <article class="card">
+            <figure class="thumb thumb--teal" aria-hidden="true"></figure>
+            <span class="chip">産業応用</span>
+            <h3 class="card__headline"><a href="#">三菱 UFJ、社内 30 万件の業務に Claude 統合——月 12 万時間削減</a></h3>
+            <p class="card__deck">バックオフィス、コンプライアンス、与信審査が初期スコープ。SoR 統合は段階導入。</p>
+            <div class="meta"><span class="meta__author">山本 拓真</span><span>4 時間前</span></div>
+          </article>
+
+          <article class="card">
+            <figure class="thumb thumb--amber" aria-hidden="true"></figure>
+            <span class="chip">ハードウェア</span>
+            <h3 class="card__headline"><a href="#">NVIDIA Blackwell Ultra 発表——電力効率 H100 比 4 倍</a></h3>
+            <p class="card__deck">推論ワットあたり性能を主要 KPI に据えた初の GPU。データセンター運用コストを再定義する。</p>
+            <div class="meta"><span class="meta__author">James Carter</span><span>5 時間前</span></div>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <span class="brand__mark">AXIOM<em>·</em>AI</span>
+          <p>生成 AI と基盤モデルを中心に、世界の意思決定者向けに編集された一次情報を毎日お届けします。東京・サンフランシスコ・パリに編集拠点。</p>
+        </div>
+        <div class="site-footer__col">
+          <h4>セクション</h4>
+          <ul>
+            <li><a href="#">基盤モデル</a></li>
+            <li><a href="#">研究</a></li>
+            <li><a href="#">産業応用</a></li>
+            <li><a href="#">規制・倫理</a></li>
+            <li><a href="#">ハードウェア</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h4>会社情報</h4>
+          <ul>
+            <li><a href="#">運営者情報</a></li>
+            <li><a href="#">編集方針</a></li>
+            <li><a href="#">採用情報</a></li>
+            <li><a href="#">取材・お問い合わせ</a></li>
+            <li><a href="#">広告掲載</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h4>規約</h4>
+          <ul>
+            <li><a href="#">プライバシーポリシー</a></li>
+            <li><a href="#">利用規約</a></li>
+            <li><a href="#">Cookie ポリシー</a></li>
+            <li><a href="#">情報公開</a></li>
+            <li><a href="#">訂正・更新ポリシー</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h4>購読</h4>
+          <ul>
+            <li><a href="#">Morning Brief</a></li>
+            <li><a href="#">Weekly Outlook</a></li>
+            <li><a href="#">RSS フィード</a></li>
+            <li><a href="#">X (Twitter)</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© 2026 AXIOM AI Editorial K.K. All rights reserved.</span>
+        <div class="site-footer__legal">
+          <a href="#">特定商取引法に基づく表記</a>
+          <a href="#">セキュリティ</a>
+          <a href="#">アクセシビリティ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

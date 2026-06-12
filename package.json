@@ -1,0 +1,18 @@
+{
+  "name": "axiom-ai-pipeline",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AXIOM AI — ヘッドレス Claude がニュースを取材・執筆し、画像付与・静的サイト生成まで自動化するパイプライン",
+  "scripts": {
+    "candidates": "node src/fetchCandidates.js",
+    "ingest": "node src/ingestDrafts.js",
+    "render": "node src/renderOnly.js",
+    "serve": "node --version >/dev/null && python3 -m http.server 8000"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "marked": "^15.0.6",
+    "rss-parser": "^3.13.0"
+  }
+}

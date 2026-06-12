@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AXIOM AI — 信頼できるAIインテリジェンス・デイリー</title>
+  <meta name="description" content="生成AI・基盤モデル・規制・産業応用に関する一次情報を、編集者の目で毎日お届けします。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <!-- ============== TICKER ============== -->
+  <div class="ticker" role="region" aria-label="マーケット・モデル指標">
+    <div class="ticker__inner">
+      <div class="ticker__label">LIVE</div>
+      <div class="ticker__feed">
+        <span class="ticker__item"><strong>GPT-5</strong><span class="ticker__up">▲ MMLU 91.4</span></span>
+        <span class="ticker__item"><strong>CLAUDE-OPUS-4.7</strong><span class="ticker__up">▲ HumanEval 92.1</span></span>
+        <span class="ticker__item"><strong>GEMINI-2.5-PRO</strong><span class="ticker__down">▼ MATH 84.0</span></span>
+        <span class="ticker__item"><strong>NVDA</strong><span class="ticker__up">▲ $1,284.20 +2.1%</span></span>
+        <span class="ticker__item"><strong>EU AI Act</strong><span>Phase II 施行</span></span>
+        <span class="ticker__item"><strong>METASTAKE</strong><span class="ticker__up">▲ Llama 4 公開</span></span>
+        <span class="ticker__item"><strong>GPT-5</strong><span class="ticker__up">▲ MMLU 91.4</span></span>
+        <span class="ticker__item"><strong>CLAUDE-OPUS-4.7</strong><span class="ticker__up">▲ HumanEval 92.1</span></span>
+        <span class="ticker__item"><strong>GEMINI-2.5-PRO</strong><span class="ticker__down">▼ MATH 84.0</span></span>
+        <span class="ticker__item"><strong>NVDA</strong><span class="ticker__up">▲ $1,284.20 +2.1%</span></span>
+        <span class="ticker__item"><strong>EU AI Act</strong><span>Phase II 施行</span></span>
+        <span class="ticker__item"><strong>METASTAKE</strong><span class="ticker__up">▲ Llama 4 公開</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="site-header__top">
+        <a class="brand" href="/">
+          <span class="brand__mark">AXIOM<em>·</em>AI</span>
+          <span class="brand__sub">Intelligence Daily</span>
+        </a>
+        <div class="site-header__meta">
+          <span>東京</span>
+          <time datetime="2026-05-26">2026年5月26日 火 14:32 JST</time>
+          <a href="#signin" class="btn btn--ghost">ログイン</a>
+          <a href="#subscribe" class="btn btn--primary">購読 ¥0/月</a>
+        </div>
+      </div>
+      <nav class="site-nav container" aria-label="主要セクション">
+        <ul class="site-nav__list">
+          <li><a href="#" aria-current="page">トップ</a></li>
+          <li><a href="#">基盤モデル</a></li>
+          <li><a href="#">研究</a></li>
+          <li><a href="#">産業応用</a></li>
+          <li><a href="#">規制・倫理</a></li>
+          <li><a href="#">スタートアップ</a></li>
+          <li><a href="#">ハードウェア</a></li>
+          <li><a href="#">オピニオン</a></li>
+          <li><a href="#">データ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============== BREAKING ============== -->
+  <div class="breaking">
+    <div class="container breaking__inner">
+      <span class="breaking__tag">速報</span>
+      <span class="breaking__text">OpenAI、GPT-5 を一般公開。推論性能が前世代比 3.2 倍に向上、企業向け価格は据え置き。</span>
+      <span class="breaking__time">07 分前</span>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <!-- ============== HERO (Marquee Hero) ============== -->
+    <section class="hero">
+      <div class="hero__grid">
+
+        <article class="hero__lead">
+          <figure class="thumb thumb--blue" aria-hidden="true"></figure>
+          <div>
+            <div class="meta" style="margin-bottom: var(--space-md);">
+              <span class="chip">基盤モデル</span>
+              <span>2026年5月26日 13:45 JST</span>
+              <span>読了 8 分</span>
+            </div>
+            <h1 class="hero__headline">
+              OpenAI、<em>GPT-5</em> を一般公開——推論能力で初めて専門家チームを上回る
+            </h1>
+            <p class="hero__deck">
+              26 日朝、OpenAI は次世代基盤モデル GPT-5 を一般公開した。社内ベンチマークでは数学・科学の博士課程相当タスクで人間チームを 5 ポイント上回り、企業向け推論コストは前世代比で約 40 % 低下したという。Anthropic, Google DeepMind との競争は次のフェーズに入る。
+            </p>
+            <div class="meta" style="margin-top: var(--space-md);">
+              <span class="meta__author">高橋 涼介</span>
+              <span>シニア・エディター</span>
+            </div>
+          </div>
+        </article>
+
+        <aside class="hero__side">
+
+          <div class="hero__side-item">
+            <span class="chip chip--warm">規制・倫理</span>
+            <h3><a href="article.html">EU AI 法 Phase II が完全施行——汎用 AI モデル提供者に技術文書の提出義務</a></h3>
+            <div class="meta">
+              <span>2 時間前</span>
+              <span>読了 6 分</span>
+            </div>
+          </div>
+
+          <div class="hero__side-item">
+            <span class="chip">産業応用</span>
+            <h3><a href="article.html">三菱 UFJ、社内 30 万件の業務に Claude を統合。バックオフィス工数を月間 12 万時間削減</a></h3>
+            <div class="meta">
+              <span>4 時間前</span>
+              <span>読了 5 分</span>
+            </div>
+          </div>
+
+          <div class="hero__side-item">
+            <span class="chip chip--warm">ハードウェア</span>
+            <h3><a href="article.html">NVIDIA、データセンター向け新 GPU『Blackwell Ultra』を発表——電力効率は H100 比 4 倍</a></h3>
+            <div class="meta">
+              <span>5 時間前</span>
+              <span>読了 7 分</span>
+            </div>
+          </div>
+
+          <div class="hero__side-item">
+            <span class="chip">研究</span>
+            <h3><a href="article.html">DeepMind、医療診断 AI が臨床試験フェーズ 3 へ。胸部 X 線で放射線専門医と同等以上の感度</a></h3>
+            <div class="meta">
+              <span>7 時間前</span>
+              <span>読了 4 分</span>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============== SECONDARY 3 CARDS ============== -->
+    <section class="cards" aria-label="注目ストーリー">
+      <article class="card">
+        <figure class="thumb thumb--amber" aria-hidden="true"></figure>
+        <span class="chip">スタートアップ</span>
+        <h3 class="card__headline"><a href="article.html">Mistral AI、シリーズ D で 18 億ユーロ調達——欧州初のオープンソース基盤モデル提供者として独立路線を堅持</a></h3>
+        <p class="card__deck">主導は General Catalyst。仏政府系ファンドも参加し、評価額は 60 億ドル超。Mistral は今後 18 ヶ月で 280 名を新規採用予定。</p>
+        <div class="meta">
+          <span class="meta__author">Marie Dubois</span>
+          <span>欧州編集部</span>
+          <span>3 時間前</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <figure class="thumb thumb--violet" aria-hidden="true"></figure>
+        <span class="chip chip--warm">オピニオン</span>
+        <h3 class="card__headline"><a href="article.html">なぜ日本のエンタープライズは AI 導入で『中国型』に向かうのか</a></h3>
+        <p class="card__deck">米国型の SaaS 統合でも、欧州型の規制重視でもない。日本企業 14 社の CIO へのインタビューから浮かび上がった独自のパターン。</p>
+        <div class="meta">
+          <span class="meta__author">伊藤 美咲</span>
+          <span>論説委員</span>
+          <span>6 時間前</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <figure class="thumb thumb--teal" aria-hidden="true"></figure>
+        <span class="chip">産業応用</span>
+        <h3 class="card__headline"><a href="article.html">Salesforce、Agentforce 3.0 を発表——マルチエージェント協調で営業サイクルが平均 33 % 短縮</a></h3>
+        <p class="card__deck">同社 Dreamforce 基調講演より。フォーチュン 500 のうち 412 社が既にプロトタイプを構築中と Benioff CEO。</p>
+        <div class="meta">
+          <span class="meta__author">James Carter</span>
+          <span>SF 支局</span>
+          <span>8 時間前</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============== AD: LEADERBOARD ============== -->
+    <div class="ad ad--leaderboard" role="complementary" aria-label="広告枠">
+      <div class="ad__inner">
+        <span>Advertisement · 970 × 90</span>
+        <span style="color: var(--color-ink-3);">Google AdSense / 直接広告プレースホルダ</span>
+      </div>
+    </div>
+
+    <!-- ============== SECTION: 基盤モデル ============== -->
+    <section class="section" aria-label="基盤モデル">
+      <header class="section__head">
+        <div class="section__title">
+          <span class="chip">セクション</span>
+          <h2>基盤モデル</h2>
+        </div>
+        <a class="section__more" href="#">すべて見る</a>
+      </header>
+      <div class="section__list">
+
+        <article class="list-card">
+          <span class="meta">2026.05.26 · 11:20</span>
+          <h3 class="list-card__headline"><a href="article.html">Anthropic、企業向け『Claude Enterprise Suite』を発表——監査ログと顧客管理 KMS をネイティブ統合</a></h3>
+          <p class="card__deck" style="color: var(--color-ink-2);">月額 60 ドル/席〜。年内に主要 SI ベンダー 14 社と OEM 提携。</p>
+        </article>
+
+        <article class="list-card">
+          <span class="meta">2026.05.26 · 09:55</span>
+          <h3 class="list-card__headline"><a href="article.html">Meta、Llama 4 をオープンウェイトで公開——マルチモーダル対応、400B パラメータ MoE 構成</a></h3>
+          <p class="card__deck" style="color: var(--color-ink-2);">Apache 2.0 系の独自ライセンス。MAU 7 億超のサービスのみ商用利用に追加同意が必要。</p>
+        </article>
+
+        <article class="list-card">
+          <span class="meta">2026.05.26 · 08:12</span>
+          <h3 class="list-card__headline"><a href="article.html">Cohere、エンタープライズ特化の Command-R+ v3 を提供開始——RAG 精度で GPT-5 と統計的に同等</a></h3>
+          <p class="card__deck" style="color: var(--color-ink-2);">プライベートクラウド配備に対応。金融機関 7 行が PoC を開始。</p>
+        </article>
+
+        <article class="list-card">
+          <span class="meta">2026.05.25 · 22:40</span>
+          <h3 class="list-card__headline"><a href="article.html">Mistral、Mixtral-Next を発表——マルチモーダル MoE、推論コストは Llama 4 比 60 %</a></h3>
+          <p class="card__deck" style="color: var(--color-ink-2);">仏国内データセンターで学習されたモデル。EU の主権 AI 議論を後押し。</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============== AD + 規制 セクション ============== -->
+    <div class="section" style="display: grid; grid-template-columns: 8fr 4fr; gap: var(--space-2xl); align-items: start;">
+
+      <section aria-label="規制・倫理">
+        <header class="section__head">
+          <div class="section__title">
+            <span class="chip chip--warm">セクション</span>
+            <h2>規制・倫理</h2>
+          </div>
+          <a class="section__more" href="#">すべて見る</a>
+        </header>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl);">
+
+          <article class="card">
+            <figure class="thumb thumb--rose" aria-hidden="true"></figure>
+            <span class="chip chip--warm">EU</span>
+            <h3 class="card__headline"><a href="article.html">欧州委員会、汎用 AI ガイドライン最終版を公表——透明性義務はオープンソースにも一部適用</a></h3>
+            <p class="card__deck">業界団体 ALLAI は『過剰規制ではない』との声明。違反時の最大制裁金は売上高の 7 %。</p>
+            <div class="meta"><span class="meta__author">Marie Dubois</span><span>9 時間前</span></div>
+          </article>
+
+          <article class="card">
+            <figure class="thumb thumb--lime" aria-hidden="true"></figure>
+            <span class="chip chip--warm">日本</span>
+            <h3 class="card__headline"><a href="article.html">経産省、『AI 事業者ガイドライン 2.0』案を公表——リスクベース・アプローチを本格採用</a></h3>
+            <p class="card__deck">EU AI 法との相互運用性を強く意識した構成。パブリックコメントは 6 月 30 日まで。</p>
+            <div class="meta"><span class="meta__author">山本 拓真</span><span>12 時間前</span></div>
+          </article>
+
+        </div>
+      </section>
+
+      <aside style="display: grid; gap: var(--space-xl);">
+
+        <div>
+          <header style="margin-bottom: var(--space-md);">
+            <span class="chip">人気記事 24h</span>
+          </header>
+          <ol class="ranked">
+            <li class="ranked__item">
+              <div>
+                <h4><a href="article.html">OpenAI、GPT-5 を一般公開——推論性能が前世代比 3.2 倍に</a></h4>
+                <div class="meta"><span>基盤モデル</span><span>14:32</span></div>
+              </div>
+            </li>
+            <li class="ranked__item">
+              <div>
+                <h4><a href="article.html">三菱 UFJ、社内 30 万件の業務に Claude 統合——月 12 万時間削減</a></h4>
+                <div class="meta"><span>産業応用</span><span>10:14</span></div>
+              </div>
+            </li>
+            <li class="ranked__item">
+              <div>
+                <h4><a href="article.html">EU AI 法 Phase II 完全施行——汎用 AI モデル提供者に文書義務</a></h4>
+                <div class="meta"><span>規制・倫理</span><span>09:00</span></div>
+              </div>
+            </li>
+            <li class="ranked__item">
+              <div>
+                <h4><a href="article.html">DeepMind 医療診断 AI、臨床試験フェーズ 3 へ</a></h4>
+                <div class="meta"><span>研究</span><span>07:42</span></div>
+              </div>
+            </li>
+            <li class="ranked__item">
+              <div>
+                <h4><a href="article.html">NVIDIA Blackwell Ultra 発表——電力効率 H100 比 4 倍</a></h4>
+                <div class="meta"><span>ハードウェア</span><span>05:18</span></div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="ad ad--rectangle">
+          <div class="ad__inner">
+            <span>Advertisement · 300 × 250</span>
+            <span style="color: var(--color-ink-3);">サイドバー広告</span>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+
+    <!-- ============== NEWSLETTER + 産業応用 ============== -->
+    <div class="section" style="display: grid; grid-template-columns: 4fr 8fr; gap: var(--space-2xl); align-items: start;">
+
+      <div class="newsletter">
+        <span class="newsletter__eyebrow">Morning Brief</span>
+        <h3>朝、5分で<br>世界の AI を掴む。</h3>
+        <p>AXIOM AI の編集部が毎朝 06:30 (JST)、その日のニュースを 5 ストーリーに要約してお送りします。購読料は無料、いつでも解除可能です。</p>
+        <form class="newsletter__form" onsubmit="event.preventDefault();">
+          <input type="email" placeholder="you@example.com" aria-label="メールアドレス">
+          <button class="btn btn--primary" type="submit">登録</button>
+        </form>
+        <p style="font-size: var(--text-xs); color: var(--color-ink-2);">既に 42,180 名が購読中</p>
+      </div>
+
+      <section aria-label="産業応用">
+        <header class="section__head">
+          <div class="section__title">
+            <span class="chip">セクション</span>
+            <h2>産業応用</h2>
+          </div>
+          <a class="section__more" href="#">すべて見る</a>
+        </header>
+
+        <div class="section__list" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
+
+          <article class="list-card">
+            <span class="meta">金融</span>
+            <h3 class="list-card__headline"><a href="article.html">JP モルガン、AI トレーディング基盤『LOXM-3』を全 12 拠点で本番稼働</a></h3>
+          </article>
+
+          <article class="list-card">
+            <span class="meta">医療</span>
+            <h3 class="list-card__headline"><a href="article.html">国立がん研究センター、病理画像 AI で見落とし率を 22 % 改善</a></h3>
+          </article>
+
+          <article class="list-card">
+            <span class="meta">小売</span>
+            <h3 class="list-card__headline"><a href="article.html">ユニクロ、生成 AI 試着で EC 返品率を 18 % 低減——本社グローバル展開へ</a></h3>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <span class="brand__mark">AXIOM<em>·</em>AI</span>
+          <p>生成 AI と基盤モデルを中心に、世界の意思決定者向けに編集された一次情報を毎日お届けします。東京・サンフランシスコ・パリに編集拠点。</p>
+        </div>
+        <div class="site-footer__col">
+          <h4>セクション</h4>
+          <ul>
+            <li><a href="#">基盤モデル</a></li>
+            <li><a href="#">研究</a></li>
+            <li><a href="#">産業応用</a></li>
+            <li><a href="#">規制・倫理</a></li>
+            <li><a href="#">ハードウェア</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h4>会社情報</h4>
+          <ul>
+            <li><a href="#">運営者情報</a></li>
+            <li><a href="#">編集方針</a></li>
+            <li><a href="#">採用情報</a></li>
+            <li><a href="#">取材・お問い合わせ</a></li>
+            <li><a href="#">広告掲載</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h4>規約</h4>
+          <ul>
+            <li><a href="#">プライバシーポリシー</a></li>
+            <li><a href="#">利用規約</a></li>
+            <li><a href="#">Cookie ポリシー</a></li>
+            <li><a href="#">情報公開</a></li>
+            <li><a href="#">訂正・更新ポリシー</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h4>購読</h4>
+          <ul>
+            <li><a href="#">Morning Brief</a></li>
+            <li><a href="#">Weekly Outlook</a></li>
+            <li><a href="#">RSS フィード</a></li>
+            <li><a href="#">X (Twitter)</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© 2026 AXIOM AI Editorial K.K. All rights reserved.</span>
+        <div class="site-footer__legal">
+          <a href="#">特定商取引法に基づく表記</a>
+          <a href="#">セキュリティ</a>
+          <a href="#">アクセシビリティ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

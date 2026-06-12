@@ -1,0 +1,12 @@
+node_modules/
+.env
+*.log
+.DS_Store
+
+# 実行時の一時ファイル（articles.json は正本なのでコミットする）
+data/_candidates.json
+data/_drafts.json
+data/scheduler.log
+
+# Claude Code ローカル状態
+.claude/scheduled_tasks.lock

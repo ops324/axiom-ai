@@ -1,0 +1,115 @@
+// RSS（主力・キー不要）+ NewsAPI/GNews（任意）から記事候補を集め、
+// 既処理 link を除外して上位 maxArticles 件を返す。
+import Parser from 'rss-parser';
+import { config } from './config.js';
+
+const parser = new Parser({ timeout: 15000 });
+
+function clean(s = '') {
+  return s.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+async function fromRss() {
+  const results = [];
+  await Promise.all(
+    config.rssFeeds.map(async (feed) => {
+      try {
+        const parsed = await parser.parseURL(feed.url);
+        for (const item of (parsed.items || []).slice(0, 8)) {
+          if (!item.link || !item.title) continue;
+          results.push({
+            title: clean(item.title),
+            link: item.link.split('?')[0],
+            summary: clean(item.contentSnippet || item.content || item.summary || ''),
+            source: feed.source,
+            section: feed.section,
+            tier: feed.tier || 'media',
+            publishedAt: item.isoDate || item.pubDate || null,
+          });
+        }
+      } catch (err) {
+        console.warn(`  [rss] 取得失敗: ${feed.source} (${err.message})`);
+      }
+    })
+  );
+  return results;
+}
+
+async function fromNewsApi() {
+  if (!config.newsapiKey) return [];
+  try {
+    const url = `https://newsapi.org/v2/everything?q=AI%20OR%20%22artificial%20intelligence%22&language=en&sortBy=publishedAt&pageSize=10&apiKey=${config.newsapiKey}`;
+    const res = await fetch(url);
+    if (!res.ok) return [];
+    const data = await res.json();
+    return (data.articles || []).map((a) => ({
+      title: clean(a.title || ''),
+      link: (a.url || '').split('?')[0],
+      summary: clean(a.description || a.content || ''),
+      source: a.source?.name || 'NewsAPI',
+      section: '産業応用',
+      tier: 'media',
+      publishedAt: a.publishedAt || null,
+    })).filter((a) => a.link && a.title);
+  } catch (err) {
+    console.warn(`  [newsapi] 失敗: ${err.message}`);
+    return [];
+  }
+}
+
+async function fromGNews() {
+  if (!config.gnewsKey) return [];
+  try {
+    const url = `https://gnews.io/api/v4/search?q=AI&lang=en&max=10&apikey=${config.gnewsKey}`;
+    const res = await fetch(url);
+    if (!res.ok) return [];
+    const data = await res.json();
+    return (data.articles || []).map((a) => ({
+      title: clean(a.title || ''),
+      link: (a.url || '').split('?')[0],
+      summary: clean(a.description || ''),
+      source: a.source?.name || 'GNews',
+      section: '産業応用',
+      tier: 'media',
+      publishedAt: a.publishedAt || null,
+    })).filter((a) => a.link && a.title);
+  } catch (err) {
+    console.warn(`  [gnews] 失敗: ${err.message}`);
+    return [];
+  }
+}
+
+// 動画/ポッドキャスト等の弱いソースか判定（抽出本文が乏しく捏造の温床になる）
+function isWeakSource(link) {
+  const url = (link || '').toLowerCase();
+  return config.skipUrlPatterns.some((p) => url.includes(p));
+}
+
+// 既処理リンク集合を渡すと、未処理の新着のみを上位 limit 件返す
+export async function fetchNews(existing, limit = config.maxArticles) {
+  const all = (await Promise.all([fromRss(), fromNewsApi(), fromGNews()])).flat();
+
+  // link で重複排除（取得元内・横断）＋弱いソース除外
+  const seen = new Set();
+  const unique = [];
+  let skippedWeak = 0;
+  for (const a of all) {
+    if (seen.has(a.link) || existing.has(a.link)) continue;
+    if (isWeakSource(a.link)) { skippedWeak++; continue; }
+    seen.add(a.link);
+    unique.push(a);
+  }
+  if (skippedWeak) console.log(`  弱いソース(動画/音声等)を ${skippedWeak} 件除外`);
+
+  // 一次情報(primary)を優先し、その中で新しい順。media は後ろ。
+  const tierRank = (t) => (t === 'primary' ? 0 : 1);
+  unique.sort((a, b) => {
+    const tr = tierRank(a.tier) - tierRank(b.tier);
+    if (tr !== 0) return tr;
+    const ta = a.publishedAt ? Date.parse(a.publishedAt) : 0;
+    const tb = b.publishedAt ? Date.parse(b.publishedAt) : 0;
+    return tb - ta;
+  });
+
+  return unique.slice(0, limit);
+}
