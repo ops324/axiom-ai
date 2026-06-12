@@ -1,29 +1,38 @@
-// 既存記事のうち、まだ実写真が無い（CSS抽象サムネの）ものに、
-// フリー素材API（Unsplash/Pexels）の写真を一括で付与してサイトを再生成する。
-// 前提: .env に UNSPLASH_KEY か PEXELS_KEY を設定済みであること。
+// 既存記事の画像を整える: ①実写真が無い記事に付与、②他記事と画像が重複している記事を
+// ユニークな写真に差し替える。前提: .env に UNSPLASH_KEY か PEXELS_KEY を設定済み。
 // 使い方: npm run backfill-images
 import { loadArticles, saveArticles } from './store.js';
-import { fetchImage } from './fetchImage.js';
+import { fetchImage, imageKey } from './fetchImage.js';
 import { renderSite } from './render.js';
 
 const arts = await loadArticles();
 let updated = 0;
+const usedImages = new Set();
 
 for (let i = 0; i < arts.length; i++) {
   const a = arts[i];
-  if (a.image?.imageUrl) continue; // 既に実写真あり
-  const img = await fetchImage(a, i);
+  const k = imageKey(a.image);
+
+  // 既にユニークな実写真がある → そのまま使用済み登録
+  if (a.image?.imageUrl && k && !usedImages.has(k)) {
+    usedImages.add(k);
+    continue;
+  }
+
+  // 画像が無い、または他記事と重複 → ユニークな写真を取得
+  const reason = a.image?.imageUrl ? '重複差し替え' : '新規付与';
+  const img = await fetchImage(a, i, usedImages);
   if (img?.imageUrl) {
     a.image = img;
     updated++;
-    console.log(`  + ${a.headline} → ${img.provider} / ${img.photographer}`);
+    console.log(`  + [${reason}] ${a.headline} → ${img.provider} / ${img.photographer}`);
   }
 }
 
 if (updated > 0) {
   await saveArticles(arts);
   const stats = await renderSite(arts);
-  console.log(`\n✓ ${updated} 件に実写真を付与し、計 ${stats.articles} 記事を再生成しました。`);
+  console.log(`\n✓ ${updated} 件の画像を更新し、計 ${stats.articles} 記事を再生成しました。`);
 } else {
-  console.log('付与できた画像はありませんでした（UNSPLASH_KEY/PEXELS_KEY 未設定か、検索ヒット0）。');
+  console.log('更新する画像はありませんでした（全記事ユニーク、またはキー未設定/ヒット0）。');
 }

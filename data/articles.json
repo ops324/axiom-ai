@@ -88,9 +88,9 @@
     "source": "The Verge",
     "link": "https://www.theverge.com/ai-artificial-intelligence/949005/jeff-bezos-prometheus-artificial-general-engineer",
     "image": {
-      "imageUrl": "https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxzdGFydHVwJTIwb2ZmaWNlfGVufDF8MHx8fDE3ODEyOTI1NzV8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
-      "photographer": "Redd Francisco",
-      "profileUrl": "https://unsplash.com/@reddfrancisco?utm_source=axiom_ai&utm_medium=referral",
+      "imageUrl": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxzdG9jayUyMG1hcmtldCUyMGZpbmFuY2V8ZW58MXwwfHx8MTc4MTI5MzkyNHww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Nick Chong",
+      "profileUrl": "https://unsplash.com/@nick604?utm_source=axiom_ai&utm_medium=referral",
       "provider": "Unsplash"
     },
     "mode": "full",
@@ -112,9 +112,9 @@
     "source": "TechCrunch",
     "link": "https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/",
     "image": {
-      "imageUrl": "https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxzdGFydHVwJTIwb2ZmaWNlfGVufDF8MHx8fDE3ODEyOTI1NzV8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
-      "photographer": "Redd Francisco",
-      "profileUrl": "https://unsplash.com/@reddfrancisco?utm_source=axiom_ai&utm_medium=referral",
+      "imageUrl": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwyfHxzdG9jayUyMG1hcmtldCUyMGZpbmFuY2V8ZW58MXwwfHx8MTc4MTI5MzkyNHww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Maxim Hopman",
+      "profileUrl": "https://unsplash.com/@nampoh?utm_source=axiom_ai&utm_medium=referral",
       "provider": "Unsplash"
     },
     "mode": "full",
@@ -136,9 +136,9 @@
     "source": "The Verge",
     "link": "https://www.theverge.com/ai-artificial-intelligence/948409/elon-musk-trillionaire-spacex-ipo",
     "image": {
-      "imageUrl": "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfDB8fHwxNzgxMjkyNTczfDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
-      "photographer": "Igor Omilaev",
-      "profileUrl": "https://unsplash.com/@omilaev?utm_source=axiom_ai&utm_medium=referral",
+      "imageUrl": "https://images.unsplash.com/photo-1645226880663-81561dcab0ae?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwzfHxzdG9jayUyMG1hcmtldCUyMGZpbmFuY2V8ZW58MXwwfHx8MTc4MTI5MzkyNHww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Adam Śmigielski",
+      "profileUrl": "https://unsplash.com/@smigielski?utm_source=axiom_ai&utm_medium=referral",
       "provider": "Unsplash"
     },
     "mode": "full",
@@ -158,9 +158,9 @@
     "source": "TechCrunch",
     "link": "https://techcrunch.com/2026/06/12/spacex-ipo-everything-you-need-to-know/",
     "image": {
-      "imageUrl": "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfDB8fHwxNzgxMjkyNTczfDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
-      "photographer": "Igor Omilaev",
-      "profileUrl": "https://unsplash.com/@omilaev?utm_source=axiom_ai&utm_medium=referral",
+      "imageUrl": "https://images.unsplash.com/photo-1651341050677-24dba59ce0fd?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHw0fHxzdG9jayUyMG1hcmtldCUyMGZpbmFuY2V8ZW58MXwwfHx8MTc4MTI5MzkyNHww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Anne Nygård",
+      "profileUrl": "https://unsplash.com/@polarmermaid?utm_source=axiom_ai&utm_medium=referral",
       "provider": "Unsplash"
     },
     "mode": "full",
@@ -180,9 +180,9 @@
     "source": "Hugging Face",
     "link": "https://huggingface.co/blog/allenai/olmo-eval",
     "image": {
-      "imageUrl": "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfDB8fHwxNzgxMjkyNTczfDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
-      "photographer": "Igor Omilaev",
-      "profileUrl": "https://unsplash.com/@omilaev?utm_source=axiom_ai&utm_medium=referral",
+      "imageUrl": "https://images.unsplash.com/photo-1614935151651-0bea6508db6b?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxyZXNlYXJjaCUyMGxhYm9yYXRvcnl8ZW58MXwwfHx8MTc4MTI5MzkyNHww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Julia Koblitz",
+      "profileUrl": "https://unsplash.com/@jkoblitz?utm_source=axiom_ai&utm_medium=referral",
       "provider": "Unsplash"
     },
     "mode": "full",
@@ -202,9 +202,9 @@
     "source": "TechCrunch",
     "link": "https://techcrunch.com/2026/06/11/spacex-officially-prices-shares-at-135-in-the-largest-ipo-ever/",
     "image": {
-      "imageUrl": "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwxfDB8fHwxNzgxMjkyNTczfDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
-      "photographer": "Igor Omilaev",
-      "profileUrl": "https://unsplash.com/@omilaev?utm_source=axiom_ai&utm_medium=referral",
+      "imageUrl": "https://images.unsplash.com/photo-1560221328-12fe60f83ab8?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHw1fHxzdG9jayUyMG1hcmtldCUyMGZpbmFuY2V8ZW58MXwwfHx8MTc4MTI5MzkyNHww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Nicholas Cappello",
+      "profileUrl": "https://unsplash.com/@bash__profile?utm_source=axiom_ai&utm_medium=referral",
       "provider": "Unsplash"
     },
     "mode": "full",
@@ -225,9 +225,9 @@
     "source": "Google AI",
     "link": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/virginia-community-investments/",
     "image": {
-      "imageUrl": "https://images.unsplash.com/photo-1645226880663-81561dcab0ae?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxmaW5hbmNlJTIwdGVjaG5vbG9neXxlbnwxfDB8fHwxNzgxMjkyNTc2fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
-      "photographer": "Adam Śmigielski",
-      "profileUrl": "https://unsplash.com/@smigielski?utm_source=axiom_ai&utm_medium=referral",
+      "imageUrl": "https://images.unsplash.com/photo-1651340981821-b519ad14da7c?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHw2fHxzdG9jayUyMG1hcmtldCUyMGZpbmFuY2V8ZW58MXwwfHx8MTc4MTI5MzkyNHww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Anne Nygård",
+      "profileUrl": "https://unsplash.com/@polarmermaid?utm_source=axiom_ai&utm_medium=referral",
       "provider": "Unsplash"
     },
     "mode": "full",
@@ -247,9 +247,9 @@
     "source": "TechCrunch",
     "link": "https://techcrunch.com/2026/06/11/spacex-spv-investors-wont-know-their-true-holdings-until-post-ipo-lock-ups-lift/",
     "image": {
-      "imageUrl": "https://images.unsplash.com/photo-1645226880663-81561dcab0ae?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxmaW5hbmNlJTIwdGVjaG5vbG9neXxlbnwxfDB8fHwxNzgxMjkyNTc2fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
-      "photographer": "Adam Śmigielski",
-      "profileUrl": "https://unsplash.com/@smigielski?utm_source=axiom_ai&utm_medium=referral",
+      "imageUrl": "https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHw3fHxzdG9jayUyMG1hcmtldCUyMGZpbmFuY2V8ZW58MXwwfHx8MTc4MTI5MzkyNHww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Marga Santoso",
+      "profileUrl": "https://unsplash.com/@margabagus?utm_source=axiom_ai&utm_medium=referral",
       "provider": "Unsplash"
     },
     "mode": "full",

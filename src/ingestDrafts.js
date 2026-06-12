@@ -5,7 +5,7 @@ import { readFile, unlink } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadArticles, saveArticles, makeSlug, yyyymmdd, existingLinks } from './store.js';
-import { fetchImage } from './fetchImage.js';
+import { fetchImage, imageKey } from './fetchImage.js';
 import { renderSite } from './render.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -25,11 +25,15 @@ const seen = existingLinks(store);
 const dateStr = yyyymmdd();
 const created = [];
 
+// 既存記事で使用済みの画像キーを集めておく（重複回避）
+const usedImages = new Set();
+for (const a of store) { const k = imageKey(a.image); if (k) usedImages.add(k); }
+
 for (const d of drafts) {
   if (!d?.headline || !d?.body_markdown || !d?.link) { console.error('  スキップ（必須欠落）'); continue; }
   if (seen.has(d.link)) { console.error(`  スキップ（重複）: ${d.link}`); continue; }
   seen.add(d.link);
-  const image = await fetchImage(d, created.length);
+  const image = await fetchImage(d, created.length, usedImages);
   created.push({
     slug: makeSlug(store, dateStr, created.length),
     headline: String(d.headline).trim(),
