@@ -1,5 +1,5 @@
 // トップページ。articles（新しい順）から既存デザインのヒーロー/カード/リストを再現。
-// 一覧のサムネは著作権配慮で CSS抽象サムネを使用（実写真は記事詳細で帰属付き表示）。
+// ヒーロー/カードは実写真（Unsplash・帰属付き）があれば表示、無ければ CSS抽象サムネにフォールバック。
 import { ticker, header, footer, page } from './layout.js';
 import { esc } from '../src/markdown.js';
 import { config } from '../src/config.js';
