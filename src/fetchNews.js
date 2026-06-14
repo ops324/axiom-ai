@@ -85,21 +85,38 @@ function isWeakSource(link) {
   return config.skipUrlPatterns.some((p) => url.includes(p));
 }
 
+// AI関連度スコア: title+summary に含まれる aiKeywords の種類数を数える
+function aiRelevance(a) {
+  const hay = `${a.title || ''} ${a.summary || ''}`.toLowerCase();
+  let hits = 0;
+  for (const kw of config.aiKeywords) {
+    if (hay.includes(kw.toLowerCase())) hits++;
+  }
+  return hits;
+}
+
 // 既処理リンク集合を渡すと、未処理の新着のみを上位 limit 件返す
 export async function fetchNews(existing, limit = config.maxArticles) {
   const all = (await Promise.all([fromRss(), fromNewsApi(), fromGNews()])).flat();
 
-  // link で重複排除（取得元内・横断）＋弱いソース除外
+  // link で重複排除（取得元内・横断）＋弱いソース除外＋AI関連度フィルタ
   const seen = new Set();
   const unique = [];
   let skippedWeak = 0;
+  let skippedIrrelevant = 0;
   for (const a of all) {
     if (seen.has(a.link) || existing.has(a.link)) continue;
     if (isWeakSource(a.link)) { skippedWeak++; continue; }
+    // primary(公式)は常に通す。media はAI関連度が閾値未満なら除外。
+    if (a.tier !== 'primary' && aiRelevance(a) < config.relevanceFloorMedia) {
+      skippedIrrelevant++;
+      continue;
+    }
     seen.add(a.link);
     unique.push(a);
   }
   if (skippedWeak) console.log(`  弱いソース(動画/音声等)を ${skippedWeak} 件除外`);
+  if (skippedIrrelevant) console.log(`  AI関連度が低い media を ${skippedIrrelevant} 件除外`);
 
   // 一次情報(primary)を優先し、その中で新しい順。media は後ろ。
   const tierRank = (t) => (t === 'primary' ? 0 : 1);

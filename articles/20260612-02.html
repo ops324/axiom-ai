@@ -3,12 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <title>Google、バージニア州への新投資で地元雇用とエネルギー安を支援 | AXIOM AI</title>
   <meta name="description" content="Googleは、バージニア州での新たなコミュニティ投資を通じて、地元の雇用創出とエネルギー費用の軽減に取り組む。">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="../assets/styles.css">
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "325ab8c5bd8546bda7ab30baf1e01c9b"}'></script>
 </head>
 <body>
 
@@ -41,11 +44,20 @@
           <span class="brand__mark">AXIOM<em>·</em>AI</span>
           <span class="brand__sub">Intelligence Daily</span>
         </a>
+        <div class="site-header__right">
         <div class="site-header__meta">
           <span>東京</span>
-          <time>2026年6月14日 日</time>
+          <time>2026年6月15日 月</time>
           <a href="#" class="btn btn--ghost" title="準備中" onclick="event.preventDefault(); alert('ログイン機能は準備中です');">ログイン</a>
           <a href="#" class="btn btn--primary" title="準備中" onclick="event.preventDefault(); alert('購読機能は準備中です');">購読 ¥0/月</a>
+        </div>
+        <div class="site-header__tools">
+          <div class="hsearch">
+            <input type="search" id="site-search" class="hsearch__input" placeholder="記事を検索…" aria-label="サイト内検索" autocomplete="off" data-base="../">
+            <div id="site-search-results" class="hsearch__results" role="listbox" hidden></div>
+          </div>
+          <button type="button" id="theme-toggle" class="theme-toggle" aria-label="配色テーマを切り替え" title="配色テーマを切り替え" onclick="(function(d){var n=d.getAttribute('data-theme')==='light'?'dark':'light';d.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}var b=document.getElementById('theme-toggle');if(b)b.textContent=n==='light'?'☀':'☾';})(document.documentElement)">☾</button>
+        </div>
         </div>
       </div>
       <nav class="site-nav container" aria-label="主要セクション">
@@ -70,7 +82,7 @@
       <nav class="breadcrumb" aria-label="パンくず">
         <ol>
           <li><a href="../index.html">トップ</a></li>
-          <li><a href="#">研究</a></li>
+          <li><a href="../sections/research.html">研究</a></li>
           <li aria-current="page">Google、バージニア州への新投資で地元雇用とエネルギー安を支援</li>
         </ol>
       </nav>
@@ -79,7 +91,8 @@
         <div class="article-head__inner">
           <div class="meta">
             <span class="chip">研究</span>
-            <span>2026.06.12</span>
+            <span>2026.06.12 06:28</span>
+            <span>約1分で読めます</span>
             <span>出典: Google AI</span>
           </div>
           <h1 class="article-headline">Google、バージニア州への新投資で地元雇用とエネルギー安を支援</h1>
@@ -88,16 +101,16 @@
             <span>署名 <strong>AXIOM AI 編集部</strong></span>
             <span>AI 自動要約 + 編集</span>
             <div class="article-share" aria-label="記事を共有">
-              <a href="#" class="share-btn" aria-label="X で共有">𝕏</a>
-              <a href="#" class="share-btn" aria-label="LinkedIn で共有">in</a>
-              <a href="#" class="share-btn" aria-label="リンクをコピー">⎘</a>
+              <a href="https://twitter.com/intent/tweet?text=Google%E3%80%81%E3%83%90%E3%83%BC%E3%82%B8%E3%83%8B%E3%82%A2%E5%B7%9E%E3%81%B8%E3%81%AE%E6%96%B0%E6%8A%95%E8%B3%87%E3%81%A7%E5%9C%B0%E5%85%83%E9%9B%87%E7%94%A8%E3%81%A8%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E5%AE%89%E3%82%92%E6%94%AF%E6%8F%B4&amp;url=https%3A%2F%2Faxiom-ai-xi.vercel.app%2Farticles%2F20260612-02.html" class="share-btn" target="_blank" rel="noopener" aria-label="X で共有">𝕏</a>
+              <a href="https://b.hatena.ne.jp/entry/https%3A%2F%2Faxiom-ai-xi.vercel.app%2Farticles%2F20260612-02.html" class="share-btn" target="_blank" rel="noopener" aria-label="はてなブックマークに追加">B!</a>
+              <button type="button" class="share-btn" aria-label="リンクをコピー" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://axiom-ai-xi.vercel.app/articles/20260612-02.html').then(()=>{this.textContent='✓';setTimeout(()=>{this.textContent='⎘'},1200)})">⎘</button>
             </div>
           </div>
         </div>
       </header>
 
       <figure class="article-hero">
-        <div class="thumb" style="aspect-ratio: 21 / 9; background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxwb3dlciUyMGVuZXJneSUyMGdyaWR8ZW58MXwwfHx8MTc4MTI5NDM0MHww&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg'); background-size: cover; background-position: center;"></div>
+        <div class="thumb" style="aspect-ratio: 21 / 9; background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxwb3dlciUyMGVuZXJneSUyMGdyaWR8ZW58MXwwfHx8MTc4MTI5NDM0MHww&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg&amp;w=1600&amp;q=70&amp;auto=format&amp;fit=crop'); background-size: cover; background-position: center;"></div>
         <figcaption>Google、バージニア州への新投資で地元雇用とエネルギー安を支援<span style="color: var(--color-ink-3);"> — Photo: <a href="https://unsplash.com/@matthewhenry?utm_source=axiom_ai&amp;utm_medium=referral" target="_blank" rel="noopener">Matthew Henry</a> / Unsplash（本文と直接の関係はないイメージ画像）</span></figcaption>
       </figure>
 
@@ -130,10 +143,10 @@
           <div class="topics">
             <h4>関連トピック</h4>
             <ul>
-              <li><a href="#">Google</a></li>
-              <li><a href="#">バージニア州</a></li>
-              <li><a href="#">雇用創出</a></li>
-              <li><a href="#">エネルギー費用</a></li>
+              <li><a href="../tags/Google.html">Google</a></li>
+              <li><a href="../tags/%E3%83%90%E3%83%BC%E3%82%B8%E3%83%8B%E3%82%A2%E5%B7%9E.html">バージニア州</a></li>
+              <li><a href="../tags/%E9%9B%87%E7%94%A8%E5%89%B5%E5%87%BA.html">雇用創出</a></li>
+              <li><a href="../tags/%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E8%B2%BB%E7%94%A8.html">エネルギー費用</a></li>
             </ul>
           </div>
         </aside>
@@ -149,7 +162,7 @@
         </header>
         <div class="cards">
           <article class="card">
-            <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1592758080692-b6a5dbe9c725?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwY29uZmVyZW5jZSUyMHN0YWdlJTIwcHJlc2VudGF0aW9ufGVufDF8MHx8fDE3ODE0Mjc4MDh8MA&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
+            <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1592758080692-b6a5dbe9c725?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwY29uZmVyZW5jZSUyMHN0YWdlJTIwcHJlc2VudGF0aW9ufGVufDF8MHx8fDE3ODE0Mjc4MDh8MA&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg&amp;w=800&amp;q=70&amp;auto=format&amp;fit=crop'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
             <span class="chip">研究</span>
             <h3 class="card__headline"><a href="20260614-05.html">Google I/O 2026、動画生成「Gemini Omni」など発表</a></h3>
             <p class="card__deck">Googleが開発者会議I/O 2026で動画生成モデルGemini Omniと高速モデルGemini 3.5 Flashを公開した。</p>
@@ -157,7 +170,7 @@
           </article>
 
           <article class="card">
-            <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMGVkaXRpbmclMjBzY3JlZW58ZW58MXwwfHx8MTc4MTQwNjIzNHww&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
+            <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMGVkaXRpbmclMjBzY3JlZW58ZW58MXwwfHx8MTc4MTQwNjIzNHww&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg&amp;w=800&amp;q=70&amp;auto=format&amp;fit=crop'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
             <span class="chip">研究</span>
             <h3 class="card__headline"><a href="20260614-03.html">Google、新モデルGemini 3.5とOmniを公開</a></h3>
             <p class="card__deck">Google I/O 2026でエージェント特化の3.5 Flashと動画生成Omniを発表した。</p>
@@ -165,11 +178,11 @@
           </article>
 
           <article class="card">
-            <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1608817576203-3c27ed168bd2?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxldXJvcGVhbiUyMHVuaW9uJTIwZmxhZ3N8ZW58MXwwfHx8MTc4MTM4NDYyM3ww&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
-            <span class="chip">基盤モデル</span>
-            <h3 class="card__headline"><a href="20260614-01.html">OpenAI、EUのAI生成物の透明性規範を支持</a></h3>
-            <p class="card__deck">OpenAIがEUの「AI生成コンテンツの透明性に関する行動規範」への支持を表明した。</p>
-            <div class="meta"><span class="meta__author">AXIOM AI 編集部</span><span>出典: OpenAI</span><span style="color: var(--color-ink-3); font-size: var(--text-xs);">Photo: <a href="https://unsplash.com/@christianlue?utm_source=axiom_ai&amp;utm_medium=referral" target="_blank" rel="noopener">Christian Lue</a> / Unsplash</span></div>
+            <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwyfHxwcm9ncmFtbWluZyUyMGNvZGUlMjB0ZXJtaW5hbCUyMHNjcmVlbnxlbnwxfDB8fHwxNzgxNDI3ODA5fDA&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg&amp;w=800&amp;q=70&amp;auto=format&amp;fit=crop'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
+            <span class="chip">研究</span>
+            <h3 class="card__headline"><a href="20260614-06.html">Hugging Face、AIエージェント最適化のhf CLIを刷新</a></h3>
+            <p class="card__deck">Hugging Faceが、人間とAIエージェントの両方に対応する新しいコマンドラインツールhfを公開した。</p>
+            <div class="meta"><span class="meta__author">AXIOM AI 編集部</span><span>出典: Hugging Face</span><span style="color: var(--color-ink-3); font-size: var(--text-xs);">Photo: <a href="https://unsplash.com/@florianolv?utm_source=axiom_ai&amp;utm_medium=referral" target="_blank" rel="noopener">Florian Olivo</a> / Unsplash</span></div>
           </article>
         </div>
       </section>
@@ -237,5 +250,6 @@
     </div>
   </footer>
 
+  <script defer src="../assets/search.js"></script>
 </body>
 </html>

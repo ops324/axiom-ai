@@ -8,6 +8,7 @@ import { renderIndex } from '../templates/index.js';
 import { renderArticle } from '../templates/article.js';
 import { renderArchive } from '../templates/archive.js';
 import { renderSection } from '../templates/section.js';
+import { renderTag, renderTagsIndex } from '../templates/tag.js';
 import { config } from './config.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -28,6 +29,30 @@ function decorate(a) {
 const recencyDesc = (x, y) => Date.parse(y.createdAt || 0) - Date.parse(x.createdAt || 0);
 const imp = (a) => Number(a.importance) || 3;
 const importanceThenRecency = (x, y) => (imp(y) - imp(x)) || recencyDesc(x, y);
+
+// 関連記事: タグ共有数×3 + 同セクション×2 でスコアし、同点は重要度→新着。
+// 関連度>0 を優先し、不足分は重要度上位で補完して count 件を返す。
+function relatedFor(target, pool, count = 3) {
+  const tags = new Set(target.tags || []);
+  const scored = pool
+    .filter((a) => a.slug !== target.slug)
+    .map((a) => {
+      const shared = (a.tags || []).filter((t) => tags.has(t)).length;
+      const score = shared * 3 + (a.section === target.section ? 2 : 0);
+      return { a, score };
+    });
+  const relevant = scored
+    .filter((s) => s.score > 0)
+    .sort((x, y) => (y.score - x.score) || importanceThenRecency(x.a, y.a))
+    .map((s) => s.a);
+  if (relevant.length >= count) return relevant.slice(0, count);
+  // 不足分を重要度上位（既選を除く）で補完
+  const chosen = new Set(relevant.map((a) => a.slug));
+  const fill = pool
+    .filter((a) => a.slug !== target.slug && !chosen.has(a.slug))
+    .sort(importanceThenRecency);
+  return [...relevant, ...fill].slice(0, count);
+}
 
 export async function renderSite(rawArticles) {
   const decorated = rawArticles.map(decorate);
@@ -58,12 +83,41 @@ export async function renderSite(rawArticles) {
     await writeFile(path.join(ROOT, 'sections', `${slug}.html`), renderSection(name, slug, items, label), 'utf8');
   }
 
+  // tags/<tag>.html + tags/index.html（タグ→記事の Map を構築）
+  await mkdir(path.join(ROOT, 'tags'), { recursive: true });
+  const tagMap = new Map(); // tag -> 記事[]
+  for (const a of decorated) {
+    for (const t of a.tags || []) {
+      if (!tagMap.has(t)) tagMap.set(t, []);
+      tagMap.get(t).push(a);
+    }
+  }
+  for (const [tag, items] of tagMap) {
+    items.sort(importanceThenRecency);
+    await writeFile(path.join(ROOT, 'tags', `${tag}.html`), renderTag(tag, items, label), 'utf8');
+  }
+  const tagEntries = [...tagMap.entries()]
+    .map(([tag, items]) => [tag, items.length])
+    .sort((x, y) => (y[1] - x[1]) || x[0].localeCompare(y[0], 'ja'));
+  await writeFile(path.join(ROOT, 'tags', 'index.html'), renderTagsIndex(tagEntries, label), 'utf8');
+
+  // search-index.json（クライアント検索用・全記事の軽量メタ）
+  const searchIndex = byRecency.map((a) => ({
+    slug: a.slug,
+    headline: a.headline,
+    lead: a.lead || '',
+    tags: a.tags || [],
+    section: a.section || '',
+    date: a.displayDate || '',
+  }));
+  await writeFile(path.join(ROOT, 'search-index.json'), JSON.stringify(searchIndex), 'utf8');
+
   // 各記事ページ（全件）。関連は重要度上位から自分以外を3件。
   await mkdir(path.join(ROOT, 'articles'), { recursive: true });
   let count = 0;
   for (let i = 0; i < byRecency.length; i++) {
     const a = byRecency[i];
-    const related = featured.filter((x) => x.slug !== a.slug).slice(0, 3);
+    const related = relatedFor(a, byRecency, 3);
     const html = renderArticle(a, related, label, i);
     await writeFile(path.join(ROOT, 'articles', `${a.slug}.html`), html, 'utf8');
     count++;

@@ -3,16 +3,45 @@
 import { ticker, header, footer, page } from './layout.js';
 import { mdToHtml, esc } from '../src/markdown.js';
 import { config } from '../src/config.js';
-import { thumb, credit } from './cardbits.js';
+import { thumb, credit, tagHref, optimizedUrl } from './cardbits.js';
 
 const BASE = '../';
+
+// セクション名 → sections/<slug>.html。未知セクションはトップへ。
+function sectionHref(name) {
+  const found = config.navSections.find((s) => s.name === name);
+  return found ? `${BASE}sections/${found.slug}.html` : `${BASE}index.html`;
+}
+
+// 読了時間（日本語 ≈ 400字/分）。最低1分。
+function readingMinutes(md = '') {
+  return Math.max(1, Math.round(md.length / 400));
+}
+
+// 記事の絶対URL（共有用）
+function articleUrl(a) {
+  return `${config.siteUrl}/articles/${a.slug}.html`;
+}
+
+// 機能する共有ボタン（X / はてブ / リンクコピー）
+function shareButtons(a) {
+  const url = articleUrl(a);
+  const text = a.headline || 'AXIOM AI';
+  const xHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+  const hatebuHref = `https://b.hatena.ne.jp/entry/${encodeURIComponent(url)}`;
+  return `            <div class="article-share" aria-label="記事を共有">
+              <a href="${esc(xHref)}" class="share-btn" target="_blank" rel="noopener" aria-label="X で共有">𝕏</a>
+              <a href="${esc(hatebuHref)}" class="share-btn" target="_blank" rel="noopener" aria-label="はてなブックマークに追加">B!</a>
+              <button type="button" class="share-btn" aria-label="リンクをコピー" onclick="navigator.clipboard&&navigator.clipboard.writeText('${esc(url)}').then(()=>{this.textContent='✓';setTimeout(()=>{this.textContent='⎘'},1200)})">⎘</button>
+            </div>`;
+}
 
 function heroFigure(a, index = 0) {
   const img = a.image || {};
   if (img.imageUrl) {
     const credit = `Photo: <a href="${esc(img.profileUrl)}" target="_blank" rel="noopener">${esc(img.photographer)}</a> / ${esc(img.provider)}`;
     return `      <figure class="article-hero">
-        <div class="thumb" style="aspect-ratio: 21 / 9; background-image: url('${esc(img.imageUrl)}'); background-size: cover; background-position: center;"></div>
+        <div class="thumb" style="aspect-ratio: 21 / 9; background-image: url('${esc(optimizedUrl(img.imageUrl, 1600))}'); background-size: cover; background-position: center;"></div>
         <figcaption>${esc(a.headline)}<span style="color: var(--color-ink-3);"> — ${credit}（本文と直接の関係はないイメージ画像）</span></figcaption>
       </figure>`;
   }
@@ -25,7 +54,7 @@ function heroFigure(a, index = 0) {
 
 function topics(tags = []) {
   if (!tags.length) return '';
-  const lis = tags.map((t) => `              <li><a href="#">${esc(t)}</a></li>`).join('\n');
+  const lis = tags.map((t) => `              <li><a href="${tagHref(t, BASE)}">${esc(t)}</a></li>`).join('\n');
   return `          <div class="topics">
             <h4>関連トピック</h4>
             <ul>
@@ -78,7 +107,7 @@ export function renderArticle(a, related, dateLabel, index = 0) {
       <nav class="breadcrumb" aria-label="パンくず">
         <ol>
           <li><a href="${BASE}index.html">トップ</a></li>
-          <li><a href="#">${esc(a.section || 'AI')}</a></li>
+          <li><a href="${sectionHref(a.section)}">${esc(a.section || 'AI')}</a></li>
           <li aria-current="page">${esc(a.headline)}</li>
         </ol>
       </nav>
@@ -87,7 +116,8 @@ export function renderArticle(a, related, dateLabel, index = 0) {
         <div class="article-head__inner">
           <div class="meta">
             <span class="chip">${esc(a.section || 'AI')}</span>
-            <span>${esc(a.displayDate || '')}</span>
+            <span>${esc(a.displayDate || '')}${a.displayTime ? ` ${esc(a.displayTime)}` : ''}</span>
+            <span>約${readingMinutes(a.body_markdown)}分で読めます</span>
             <span>出典: ${esc(a.source)}</span>
           </div>
           <h1 class="article-headline">${esc(a.headline)}</h1>
@@ -95,11 +125,7 @@ export function renderArticle(a, related, dateLabel, index = 0) {
           <div class="article-byline">
             <span>署名 <strong>AXIOM AI 編集部</strong></span>
             <span>AI 自動要約 + 編集</span>
-            <div class="article-share" aria-label="記事を共有">
-              <a href="#" class="share-btn" aria-label="X で共有">𝕏</a>
-              <a href="#" class="share-btn" aria-label="LinkedIn で共有">in</a>
-              <a href="#" class="share-btn" aria-label="リンクをコピー">⎘</a>
-            </div>
+${shareButtons(a)}
           </div>
         </div>
       </header>

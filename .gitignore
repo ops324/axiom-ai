@@ -7,6 +7,7 @@ node_modules/
 data/_candidates.json
 data/_drafts.json
 data/scheduler.log
+data/.health
 
 # Claude Code ローカル状態
 .claude/scheduled_tasks.lock

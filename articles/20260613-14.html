@@ -3,12 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <title>NVIDIA、多言語・マルチモーダル対応の安全性モデルNemotron 3.5を公開 | AXIOM AI</title>
   <meta name="description" content="NVIDIAがエンタープライズ向けコンテンツ安全性モデル「Nemotron 3.5 Content Safety」をオープンライセンスで公開した。">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="../assets/styles.css">
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "325ab8c5bd8546bda7ab30baf1e01c9b"}'></script>
 </head>
 <body>
 
@@ -41,11 +44,20 @@
           <span class="brand__mark">AXIOM<em>·</em>AI</span>
           <span class="brand__sub">Intelligence Daily</span>
         </a>
+        <div class="site-header__right">
         <div class="site-header__meta">
           <span>東京</span>
-          <time>2026年6月14日 日</time>
+          <time>2026年6月15日 月</time>
           <a href="#" class="btn btn--ghost" title="準備中" onclick="event.preventDefault(); alert('ログイン機能は準備中です');">ログイン</a>
           <a href="#" class="btn btn--primary" title="準備中" onclick="event.preventDefault(); alert('購読機能は準備中です');">購読 ¥0/月</a>
+        </div>
+        <div class="site-header__tools">
+          <div class="hsearch">
+            <input type="search" id="site-search" class="hsearch__input" placeholder="記事を検索…" aria-label="サイト内検索" autocomplete="off" data-base="../">
+            <div id="site-search-results" class="hsearch__results" role="listbox" hidden></div>
+          </div>
+          <button type="button" id="theme-toggle" class="theme-toggle" aria-label="配色テーマを切り替え" title="配色テーマを切り替え" onclick="(function(d){var n=d.getAttribute('data-theme')==='light'?'dark':'light';d.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}var b=document.getElementById('theme-toggle');if(b)b.textContent=n==='light'?'☀':'☾';})(document.documentElement)">☾</button>
+        </div>
         </div>
       </div>
       <nav class="site-nav container" aria-label="主要セクション">
@@ -70,7 +82,7 @@
       <nav class="breadcrumb" aria-label="パンくず">
         <ol>
           <li><a href="../index.html">トップ</a></li>
-          <li><a href="#">研究</a></li>
+          <li><a href="../sections/research.html">研究</a></li>
           <li aria-current="page">NVIDIA、多言語・マルチモーダル対応の安全性モデルNemotron 3.5を公開</li>
         </ol>
       </nav>
@@ -79,7 +91,8 @@
         <div class="article-head__inner">
           <div class="meta">
             <span class="chip">研究</span>
-            <span>2026.06.13</span>
+            <span>2026.06.13 12:11</span>
+            <span>約1分で読めます</span>
             <span>出典: Hugging Face</span>
           </div>
           <h1 class="article-headline">NVIDIA、多言語・マルチモーダル対応の安全性モデルNemotron 3.5を公開</h1>
@@ -88,9 +101,9 @@
             <span>署名 <strong>AXIOM AI 編集部</strong></span>
             <span>AI 自動要約 + 編集</span>
             <div class="article-share" aria-label="記事を共有">
-              <a href="#" class="share-btn" aria-label="X で共有">𝕏</a>
-              <a href="#" class="share-btn" aria-label="LinkedIn で共有">in</a>
-              <a href="#" class="share-btn" aria-label="リンクをコピー">⎘</a>
+              <a href="https://twitter.com/intent/tweet?text=NVIDIA%E3%80%81%E5%A4%9A%E8%A8%80%E8%AA%9E%E3%83%BB%E3%83%9E%E3%83%AB%E3%83%81%E3%83%A2%E3%83%BC%E3%83%80%E3%83%AB%E5%AF%BE%E5%BF%9C%E3%81%AE%E5%AE%89%E5%85%A8%E6%80%A7%E3%83%A2%E3%83%87%E3%83%ABNemotron%203.5%E3%82%92%E5%85%AC%E9%96%8B&amp;url=https%3A%2F%2Faxiom-ai-xi.vercel.app%2Farticles%2F20260613-14.html" class="share-btn" target="_blank" rel="noopener" aria-label="X で共有">𝕏</a>
+              <a href="https://b.hatena.ne.jp/entry/https%3A%2F%2Faxiom-ai-xi.vercel.app%2Farticles%2F20260613-14.html" class="share-btn" target="_blank" rel="noopener" aria-label="はてなブックマークに追加">B!</a>
+              <button type="button" class="share-btn" aria-label="リンクをコピー" onclick="navigator.clipboard&&navigator.clipboard.writeText('https://axiom-ai-xi.vercel.app/articles/20260613-14.html').then(()=>{this.textContent='✓';setTimeout(()=>{this.textContent='⎘'},1200)})">⎘</button>
             </div>
           </div>
         </div>
@@ -130,11 +143,11 @@
           <div class="topics">
             <h4>関連トピック</h4>
             <ul>
-              <li><a href="#">NVIDIA</a></li>
-              <li><a href="#">Nemotron</a></li>
-              <li><a href="#">AI安全性</a></li>
-              <li><a href="#">マルチモーダル</a></li>
-              <li><a href="#">オープンソース</a></li>
+              <li><a href="../tags/NVIDIA.html">NVIDIA</a></li>
+              <li><a href="../tags/Nemotron.html">Nemotron</a></li>
+              <li><a href="../tags/AI%E5%AE%89%E5%85%A8%E6%80%A7.html">AI安全性</a></li>
+              <li><a href="../tags/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%A2%E3%83%BC%E3%83%80%E3%83%AB.html">マルチモーダル</a></li>
+              <li><a href="../tags/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9.html">オープンソース</a></li>
             </ul>
           </div>
         </aside>
@@ -150,7 +163,7 @@
         </header>
         <div class="cards">
           <article class="card">
-            <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1592758080692-b6a5dbe9c725?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwY29uZmVyZW5jZSUyMHN0YWdlJTIwcHJlc2VudGF0aW9ufGVufDF8MHx8fDE3ODE0Mjc4MDh8MA&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
+            <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1592758080692-b6a5dbe9c725?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwY29uZmVyZW5jZSUyMHN0YWdlJTIwcHJlc2VudGF0aW9ufGVufDF8MHx8fDE3ODE0Mjc4MDh8MA&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg&amp;w=800&amp;q=70&amp;auto=format&amp;fit=crop'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
             <span class="chip">研究</span>
             <h3 class="card__headline"><a href="20260614-05.html">Google I/O 2026、動画生成「Gemini Omni」など発表</a></h3>
             <p class="card__deck">Googleが開発者会議I/O 2026で動画生成モデルGemini Omniと高速モデルGemini 3.5 Flashを公開した。</p>
@@ -158,19 +171,19 @@
           </article>
 
           <article class="card">
-            <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMGVkaXRpbmclMjBzY3JlZW58ZW58MXwwfHx8MTc4MTQwNjIzNHww&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
+            <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1637002722490-5f8ceed9774c?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxyb2JvdCUyMGFybSUyMHRyYWluaW5nJTIwc2ltdWxhdGlvbnxlbnwxfDB8fHwxNzgxMjk4MjQzfDA&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg&amp;w=800&amp;q=70&amp;auto=format&amp;fit=crop'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
             <span class="chip">研究</span>
-            <h3 class="card__headline"><a href="20260614-03.html">Google、新モデルGemini 3.5とOmniを公開</a></h3>
-            <p class="card__deck">Google I/O 2026でエージェント特化の3.5 Flashと動画生成Omniを発表した。</p>
-            <div class="meta"><span class="meta__author">AXIOM AI 編集部</span><span>出典: Google AI</span><span style="color: var(--color-ink-3); font-size: var(--text-xs);">Photo: <a href="https://unsplash.com/@peter_s?utm_source=axiom_ai&amp;utm_medium=referral" target="_blank" rel="noopener">Peter Stumpf</a> / Unsplash</span></div>
+            <h3 class="card__headline"><a href="20260613-12.html">Hugging Faceら、エージェントRL向け共通環境規格「OpenEnv」を発表</a></h3>
+            <p class="card__deck">MetaやNvidiaなど9組織がガバナンスに参加し、エージェント強化学習の環境標準化を目指すオープンソースプロジェクトが始動した。</p>
+            <div class="meta"><span class="meta__author">AXIOM AI 編集部</span><span>出典: Hugging Face</span><span style="color: var(--color-ink-3); font-size: var(--text-xs);">Photo: <a href="https://unsplash.com/@blenderdesigner?utm_source=axiom_ai&amp;utm_medium=referral" target="_blank" rel="noopener">Sufyan</a> / Unsplash</span></div>
           </article>
 
           <article class="card">
-            <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1608817576203-3c27ed168bd2?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxldXJvcGVhbiUyMHVuaW9uJTIwZmxhZ3N8ZW58MXwwfHx8MTc4MTM4NDYyM3ww&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
-            <span class="chip">基盤モデル</span>
-            <h3 class="card__headline"><a href="20260614-01.html">OpenAI、EUのAI生成物の透明性規範を支持</a></h3>
-            <p class="card__deck">OpenAIがEUの「AI生成コンテンツの透明性に関する行動規範」への支持を表明した。</p>
-            <div class="meta"><span class="meta__author">AXIOM AI 編集部</span><span>出典: OpenAI</span><span style="color: var(--color-ink-3); font-size: var(--text-xs);">Photo: <a href="https://unsplash.com/@christianlue?utm_source=axiom_ai&amp;utm_medium=referral" target="_blank" rel="noopener">Christian Lue</a> / Unsplash</span></div>
+            <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxwcm9ncmFtbWluZyUyMGNvZGUlMjBzY3JlZW58ZW58MXwwfHx8MTc4MTI5NDMzNnww&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg&amp;w=800&amp;q=70&amp;auto=format&amp;fit=crop'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
+            <span class="chip">研究</span>
+            <h3 class="card__headline"><a href="20260613-10.html">Cohere、開発者向けコード生成モデル「North Mini Code」をオープンソース公開</a></h3>
+            <p class="card__deck">Cohereが初の開発者向けモデルNorth Mini Codeを公開。30Bパラメータ（アクティブ3B）のMoEアーキテクチャで、同規模クラス最高水準のコード生成性能を達成した。</p>
+            <div class="meta"><span class="meta__author">AXIOM AI 編集部</span><span>出典: Hugging Face</span><span style="color: var(--color-ink-3); font-size: var(--text-xs);">Photo: <a href="https://unsplash.com/@cdr6934?utm_source=axiom_ai&amp;utm_medium=referral" target="_blank" rel="noopener">Chris Ried</a> / Unsplash</span></div>
           </article>
         </div>
       </section>
@@ -238,5 +251,6 @@
     </div>
   </footer>
 
+  <script defer src="../assets/search.js"></script>
 </body>
 </html>

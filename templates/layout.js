@@ -44,11 +44,20 @@ export function header(dateLabel, activeNav = 'トップ', base = '') {
           <span class="brand__mark">AXIOM<em>·</em>AI</span>
           <span class="brand__sub">Intelligence Daily</span>
         </a>
+        <div class="site-header__right">
         <div class="site-header__meta">
           <span>東京</span>
           <time>${dateLabel}</time>
           <a href="#" class="btn btn--ghost" title="準備中" onclick="event.preventDefault(); alert('ログイン機能は準備中です');">ログイン</a>
           <a href="#" class="btn btn--primary" title="準備中" onclick="event.preventDefault(); alert('購読機能は準備中です');">購読 ¥0/月</a>
+        </div>
+        <div class="site-header__tools">
+          <div class="hsearch">
+            <input type="search" id="site-search" class="hsearch__input" placeholder="記事を検索…" aria-label="サイト内検索" autocomplete="off" data-base="${base}">
+            <div id="site-search-results" class="hsearch__results" role="listbox" hidden></div>
+          </div>
+          <button type="button" id="theme-toggle" class="theme-toggle" aria-label="配色テーマを切り替え" title="配色テーマを切り替え" onclick="(function(d){var n=d.getAttribute('data-theme')==='light'?'dark':'light';d.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}var b=document.getElementById('theme-toggle');if(b)b.textContent=n==='light'?'☀':'☾';})(document.documentElement)">☾</button>
+        </div>
         </div>
       </div>
       <nav class="site-nav container" aria-label="主要セクション">
@@ -120,6 +129,13 @@ export const footer = `  <!-- ============== FOOTER ============== -->
     </div>
   </footer>`;
 
+// Cloudflare Web Analytics（Cookieless）。token が設定されているときのみ出力。
+function analyticsSnippet() {
+  const t = config.analytics?.token;
+  if (!t) return '';
+  return `  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "${t}"}'></script>\n`;
+}
+
 // ページ全体のHTMLを組み立てる（base: 記事サブディレクトリ用の相対プレフィックス）
 export function page({ title, description, body, base = '' }) {
   return `<!doctype html>
@@ -127,15 +143,18 @@ export function page({ title, description, body, base = '' }) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <title>${title}</title>
   <meta name="description" content="${description}">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 ${FONTS}
   <link rel="stylesheet" href="${base}assets/styles.css">
-</head>
+${analyticsSnippet()}</head>
 <body>
 
 ${body}
 
+  <script defer src="${base}assets/search.js"></script>
 </body>
 </html>
 `;

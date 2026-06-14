@@ -181,10 +181,22 @@ launchctl kickstart -k gui/$(id -u)/com.axiom.generate                          
 
 ---
 
+## 機能（コンテンツ・体験・運用）
+
+- **関連記事**: タグ／セクションの一致度でスコアリングして提示（`src/render.js` の `relatedFor`）。
+- **タグページ**: `tags/<タグ>.html` を自動生成、`tags/index.html` はタグクラウド。記事内タグから辿れる。
+- **AI 関連度フィルタ**: media 系 RSS の AI 無関係記事を `config.aiKeywords` で足切り（公式 primary は常に通す）。
+- **記事体験**: 読了時間の目安、公開時刻、機能する共有ボタン（X / はてブ / リンクコピー）。
+- **ライト／ダークテーマ**: ヘッダーのトグルで切替（OS 設定に追従、localStorage で保持）。
+- **サイト内検索**: 静的（追加依存ゼロ）。`search-index.json` をクライアントで部分一致検索。
+- **画像最適化**: Unsplash 画像に配信パラメータを付与＋ `images.unsplash.com` を preconnect（CWV 改善）。
+- **パイプライン監視**: `scripts/auto-generate.sh` が異常終了・push 失敗・新規ゼロ連続を検知して macOS 通知。
+- **アナリティクス（任意）**: `.env` に `CF_BEACON_TOKEN` を設定すると Cloudflare Web Analytics（Cookieless）を出力。未設定なら無効。
+
 ## 今後の発展（任意）
 
 1. **Astro + Cloudflare Pages** へ移植（無料枠で十分）
-2. **AI 関連度フィルタ**（RSS にテック全般の記事が混ざるため、キーワードで選別精度を上げる）
+2. **SEO 強化（P0）**: OGP / Twitter Card / JSON-LD（NewsArticle）/ sitemap.xml / robots.txt / RSS フィード。
 3. **AdSense 申請**（運営者情報・プライバシー・お問い合わせページを実装してから）
 
 ---

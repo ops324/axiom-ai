@@ -2,9 +2,10 @@
 
 AI ニュースの取得・執筆・画像付与・サイト生成を全自動化する、ヘッドレス Claude Code ベースのニュースパイプライン。
 
-- 最終更新: 2026-06-13
+- 最終更新: 2026-06-15
 - 対象リポジトリ: `AIニュースサイト/`
-- 配信形態: 静的サイト（HTML/CSS、依存ゼロで閲覧可能）
+- 本番URL: `https://axiom-ai-xi.vercel.app`（Vercel・git push で自動デプロイ）
+- 配信形態: 静的サイト（HTML/CSS、閲覧は依存ゼロ。検索のみ軽量 JS）
 
 ---
 
@@ -39,7 +40,10 @@ launchd（毎日 6:00 / 12:00 / 18:00）
                  → data/_drafts.json（下書き）
             ③ node src/ingestDrafts.js
                  slug採番 → 画像取得 → 重複排除 → data/articles.json 保存
-                 → render（index.html / archive.html / articles/*.html）
+                 → render（index.html / archive.html / articles/*.html
+                           / sections/*.html / tags/*.html / search-index.json）
+       └─ 健全性チェック（記事数増減・exit code）→ 異常なら macOS 通知
+       └─ 変更があれば git commit & push（Vercel 自動デプロイ）
        └─ 実行結果を data/scheduler.log に追記
 ```
 
@@ -54,11 +58,16 @@ AIニュースサイト/
 ├── article.html            # デザイン参照元（旧プロトタイプ）
 ├── articles/<slug>.html    # 生成: 各記事ページ
 ├── sections/<slug>.html    # 生成: ナビ各タブ（セクション別一覧。空でも生成）
-├── assets/styles.css       # デザイン（OKLCH トークン・全クラス）
+├── tags/<tag>.html         # 生成: タグ別一覧（UTF-8ファイル名）＋ index.html（タグクラウド）
+├── search-index.json       # 生成: サイト内検索のクライアント用インデックス
+├── assets/
+│   ├── styles.css          # デザイン（OKLCH トークン・全クラス・ライト/ダーク）
+│   └── search.js           # サイト内検索＋テーマトグル絵文字の初期化（依存ゼロ）
 ├── data/
 │   ├── articles.json       # コンテンツの永続ストア（=サイトの正本）
 │   ├── _candidates.json    # 一時: 候補プール（実行後に掃除）
 │   ├── _drafts.json        # 一時: Claude の下書き（実行後に掃除）
+│   ├── .health             # 一時: 新規ゼロの連続回数（監視用・git管理外）
 │   └── scheduler.log       # 定期実行ログ
 ├── prompts/
 │   └── generate-articles.md # Claude への執筆指示（編集方針を内包）
@@ -76,11 +85,12 @@ AIニュースサイト/
 │   ├── store.js            # articles.json 読み書き・slug採番
 │   └── markdown.js         # md→html / エスケープ
 ├── templates/
-│   ├── layout.js           # ticker/header(ナビ)/footer/page 骨格
-│   ├── cardbits.js         # 共有: 実写真サムネ thumb() / 帰属 credit()
+│   ├── layout.js           # ticker/header(ナビ・検索・テーマトグル)/footer/page 骨格・解析
+│   ├── cardbits.js         # 共有: サムネ thumb() / 帰属 credit() / tagHref() / optimizedUrl()
 │   ├── index.js            # トップ（＋メルマガ欄）
-│   ├── article.js          # 記事詳細
+│   ├── article.js          # 記事詳細（読了時間・共有ボタン・関連記事）
 │   ├── section.js          # セクション別一覧
+│   ├── tag.js              # タグ別一覧 renderTag() / タグクラウド renderTagsIndex()
 │   └── archive.js          # アーカイブ
 └── _backup/                # 退避（旧HTML・廃止した qwen フォールバック）
 ```
@@ -117,6 +127,8 @@ AIニュースサイト/
 | 一次情報優先 | フィードを `tier`（primary=企業公式 / media=報道）で区別。候補は primary を上位に。media の主張は Claude が WebSearch で裏取り。 | `config.rssFeeds[].tier` |
 | 重要度で選別 | Claude が候補を 1〜5 で採点し、閾値以上のみ・1回最大N本を掲載。類似トピックは1本に統合。 | `importanceFloor`=3, `maxArticles`=2 |
 | 重要度で序列 | ヒーロー大見出し／カード／人気記事を重要度順（同点は新しい順）に配置。「最新記事」のみ時系列。 | `render.js: importanceThenRecency` |
+| AI関連度フィルタ | media tier 候補は `aiKeywords` のヒット数が閾値未満なら除外（primary 公式は常に通す）。 | `aiKeywords`, `relevanceFloorMedia`=1 |
+| 関連記事 | 「あわせて読みたい」はタグ共有×3＋同セクション×2 でスコアし上位3件。不足は重要度で補完。 | `render.js: relatedFor` |
 | 保持とアーカイブ | トップは最新 N 本。超過分は `archive.html`（月別一覧）へ。記事HTMLは全保持。 | `retentionTop`=40 |
 | 掲載数 | 1回最大2本 × 1日3回 = 約6本/日。重要なものが無い回は載せない。 | `maxArticles`, スケジュール |
 
@@ -163,13 +175,31 @@ AIニュースサイト/
 
 | キー | 既定 | 説明 |
 |---|---|---|
+| `siteUrl` | 本番URL | 共有リンク・検索の絶対パス（`SITE_URL` で上書き可） |
 | `maxArticles` | 2 | 1回に掲載する本数（`MAX_ARTICLES` 環境変数で上書き可） |
 | `candidatePool` | 12 | Claude に提示する候補数 |
 | `importanceFloor` | 3 | これ未満の重要度は掲載しない |
 | `retentionTop` | 40 | トップ掲載の上限。超過分はアーカイブへ |
 | `skipUrlPatterns` | 動画/音声系 | 取材に向かない弱いソースを除外 |
+| `aiKeywords` | AI関連語44件 | media 候補のAI関連度判定に使うキーワード |
+| `relevanceFloorMedia` | 1 | media 候補のキーワードヒットがこれ未満なら除外 |
 | `rssFeeds` | AI系8フィード | `tier` 付き。一次情報3＋メディア5 |
 | `imageProvider` / `*Key` | unsplash | 画像API（未設定なら CSS サムネ） |
+| `analytics.token` | 空（`CF_BEACON_TOKEN`） | Cloudflare Web Analytics の beacon トークン。空なら出力しない |
+
+---
+
+## 7.5 フロント機能（コンテンツ・体験）
+
+| 機能 | 概要 | 実装 |
+|---|---|---|
+| タグページ | `tags/<タグ>.html`（UTF-8名）と `tags/index.html`（件数で大小をつけるタグクラウド）。記事内タグ・パンくずから辿れる。 | `templates/tag.js`, `render.js` |
+| 関連記事 | タグ／セクションの一致度で「あわせて読みたい」を選出。 | `render.js: relatedFor` |
+| 記事体験 | 読了時間（≈400字/分）、公開時刻、機能する共有ボタン（X / はてブ / リンクコピー）。共有URLは `siteUrl` 基準の絶対パス。 | `templates/article.js` |
+| ライト/ダーク | ヘッダーのトグルで切替。`<head>` のインラインJSが localStorage／OS設定から `data-theme` を paint 前に適用（フラッシュ防止）。 | `styles.css` の `[data-theme="light"]`, `layout.js` |
+| サイト内検索 | `search-index.json` をクライアントで部分一致検索（見出し/タグ/セクション/リード重み付け、キーボード操作対応）。追加依存なし。 | `assets/search.js`, `render.js` |
+| 画像最適化 | Unsplash 画像に配信パラメータ（`w/q/auto=format/fit=crop`）を付与＋`images.unsplash.com` を preconnect。CLS はサムネの `aspect-ratio` で抑制。 | `cardbits.js: optimizedUrl`, `layout.js` |
+| アナリティクス | `CF_BEACON_TOKEN` 設定時のみ Cloudflare Web Analytics（Cookieless・無料）の beacon を全ページに出力。未設定なら無出力。 | `config.analytics`, `layout.js` |
 
 ---
 
@@ -180,6 +210,8 @@ AIニュースサイト/
 - スケジュール: 毎日 **6:00 / 12:00 / 18:00**
 - 実行: `scripts/auto-generate.sh`（ollama 不要・claude CLI を使用）
 - ログ: `data/scheduler.log`
+- 健全性監視: 実行前後で `articles.json` の件数を比較。**異常終了・articles.json 破損・push 失敗・
+  新規ゼロが3回連続**のとき macOS 通知（`osascript`）を出す。連続回数は `data/.health` に記録。
 
 ```sh
 # 状態 / 停止 / 再開 / 即時実行
@@ -223,6 +255,10 @@ open index.html
 - `makeSlug` は「同日最大連番+1」方式（削除で欠番が出ても衝突しない）。
 - zsh の `$status` は読取専用のため、シェルスクリプトでは別名（`rc`）を使う。
 - **ナビ**: ヘッダー各タブは `config.navSections` から `sections/<slug>.html` を生成・リンク（`render.js`）。
-  記事0のセクションも空状態ページを生成する。フッターの会社情報/規約/購読リンクは未実装（`#`のまま）。
+  記事0のセクションも空状態ページを生成する。記事のパンくず／タグはセクション・タグページへリンク済み。
+  **フッターの会社情報/規約/購読リンクは未実装（`#`のまま）** — 運営者情報・プライバシー等の実ページ化は今後（P0）。
 - **準備中（バックエンド無しのため未実装）**: ログイン・購読・メルマガ登録は静的サイトの制約上、
   クリック/送信で「準備中」アラートを出すのみ（認証・メール配信は導入していない）。
+- **SEO（P0・未実装）**: OGP / Twitter Card / JSON-LD（NewsArticle）/ sitemap.xml / robots.txt / RSSフィードは未対応。
+- **アナリティクス**: Cloudflare Web Analytics を導入済み（`.env` の `CF_BEACON_TOKEN`）。トークンは公開前提の値で、
+  HTML（=デプロイ物）に埋め込まれる。`.env` 自体は git 管理外。

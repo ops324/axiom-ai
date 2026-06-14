@@ -25,6 +25,9 @@
   --color-rule: oklch(26% 0.012 250);      /* hairline borders */
   --color-rule-strong: oklch(34% 0.014 250);
 
+  /* 半透明ヘッダー背景（テーマで切替）*/
+  --color-header-bg: rgba(11, 14, 26, 0.92);
+
   /* Accents */
   --color-accent: oklch(78% 0.15 220);     /* 電子インク・ブルー */
   --color-accent-deep: oklch(58% 0.18 232);
@@ -81,6 +84,47 @@
   --site-gutter: 32px;
   --measure: 68ch;
 }
+
+/* ---- ライトテーマ（data-theme="light" のときトークンを上書き）----
+ * 既定はダーク。OS設定/手動トグルは <head> のインラインスクリプトが
+ * data-theme を設定する（フラッシュ防止）。OKLCH の hue は維持し lightness を反転。 */
+[data-theme="light"] {
+  --color-paper-0: oklch(99% 0.004 85);
+  --color-paper-1: oklch(97% 0.005 250);
+  --color-paper-2: oklch(94% 0.007 250);
+  --color-paper-3: oklch(91% 0.009 250);
+
+  --color-ink-0: oklch(24% 0.012 250);
+  --color-ink-1: oklch(40% 0.012 250);
+  --color-ink-2: oklch(52% 0.010 250);
+  --color-ink-3: oklch(66% 0.010 250);
+
+  --color-rule: oklch(89% 0.008 250);
+  --color-rule-strong: oklch(80% 0.010 250);
+  --color-header-bg: rgba(252, 252, 253, 0.9);
+
+  /* 明るい背景で十分なコントラストになるよう accent を深める（白文字のボタン対応）*/
+  --color-accent: oklch(52% 0.17 250);
+  --color-accent-deep: oklch(46% 0.18 250);
+  --color-accent-warm: oklch(58% 0.15 65);
+  --color-focus: oklch(50% 0.18 250);
+}
+
+/* テーマ切替トグルボタン */
+.theme-toggle {
+  width: 32px; height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-rule-strong);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-ink-1);
+  font-size: var(--text-md);
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.theme-toggle:hover { background: var(--color-paper-2); color: var(--color-ink-0); }
 
 /* ============================================================
  * 2. RESET + BASE
@@ -238,7 +282,7 @@ p { margin: 0; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(11, 14, 26, 0.92);
+  background: var(--color-header-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-rule);
@@ -294,6 +338,83 @@ p { margin: 0; }
 }
 
 .site-header__meta time { color: var(--color-ink-1); }
+
+/* ヘッダー右側のまとまり（メタ情報＋ツール） */
+.site-header__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+/* ヘッダーのツール（検索＋テーマトグル） */
+.site-header__tools {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.hsearch { position: relative; }
+.hsearch__input {
+  width: 200px;
+  max-width: 44vw;
+  padding: var(--space-2xs) var(--space-sm);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-ink-0);
+  background: var(--color-paper-3);
+  border: 1px solid var(--color-rule-strong);
+  border-radius: var(--radius-sm);
+}
+.hsearch__input::placeholder { color: var(--color-ink-2); }
+.hsearch__input:focus { outline: 2px solid var(--color-focus); outline-offset: 1px; }
+
+.hsearch__results {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  width: 360px;
+  max-width: 86vw;
+  max-height: 60vh;
+  overflow-y: auto;
+  background: var(--color-paper-1);
+  border: 1px solid var(--color-rule-strong);
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+  z-index: 80;
+}
+.hsearch__results a {
+  display: block;
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-rule);
+  color: var(--color-ink-0);
+}
+.hsearch__results a:last-child { border-bottom: 0; }
+.hsearch__results a:hover, .hsearch__results a.is-active { background: var(--color-paper-2); }
+.hsearch__results .hsearch__hl { display: block; font-size: var(--text-sm); font-weight: 600; line-height: 1.4; }
+.hsearch__results .hsearch__meta { display: block; font-size: var(--text-xs); color: var(--color-ink-2); margin-top: 2px; }
+.hsearch__empty { padding: var(--space-md); color: var(--color-ink-2); font-size: var(--text-sm); }
+
+/* タグクラウド（tags/index.html） */
+.tagcloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  list-style: none;
+  padding: 0;
+  margin: var(--space-xl) 0 var(--space-4xl);
+}
+.tagcloud__item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  padding: var(--space-2xs) var(--space-sm);
+  border: 1px solid var(--color-rule-strong);
+  border-radius: var(--radius-sm);
+  color: var(--color-ink-1);
+  line-height: 1.4;
+}
+.tagcloud__item:hover { background: var(--color-paper-2); color: var(--color-ink-0); border-color: var(--color-accent); }
+.tagcloud__count { font-family: var(--font-mono); font-size: var(--text-2xs); color: var(--color-ink-2); }
 
 .btn {
   display: inline-flex;
@@ -996,6 +1117,10 @@ p { margin: 0; }
   border: 1px solid var(--color-rule-strong);
   border-radius: var(--radius-sm);
   color: var(--color-ink-1);
+  background: transparent;
+  font-family: inherit;
+  font-size: var(--text-sm);
+  cursor: pointer;
   transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
 }
 .share-btn:hover { background: var(--color-paper-2); color: var(--color-ink-0); }
@@ -1290,6 +1415,8 @@ p { margin: 0; }
   :root { --site-gutter: 20px; }
   .site-header__top { padding: var(--space-md) 0; }
   .site-header__meta { display: none; }
+  .site-header__tools { margin-left: auto; }
+  .hsearch__input { width: 140px; }
   .cards { grid-template-columns: 1fr; }
   .section__list { grid-template-columns: 1fr; }
   .site-footer__top { grid-template-columns: 1fr; gap: var(--space-xl); }

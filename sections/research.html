@@ -3,12 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <title>研究 | AXIOM AI</title>
   <meta name="description" content="研究 に関する最新の AI ニュースを AXIOM AI 編集部の要約と論評でお届けします。">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="../assets/styles.css">
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "325ab8c5bd8546bda7ab30baf1e01c9b"}'></script>
 </head>
 <body>
 
@@ -41,11 +44,20 @@
           <span class="brand__mark">AXIOM<em>·</em>AI</span>
           <span class="brand__sub">Intelligence Daily</span>
         </a>
+        <div class="site-header__right">
         <div class="site-header__meta">
           <span>東京</span>
-          <time>2026年6月14日 日</time>
+          <time>2026年6月15日 月</time>
           <a href="#" class="btn btn--ghost" title="準備中" onclick="event.preventDefault(); alert('ログイン機能は準備中です');">ログイン</a>
           <a href="#" class="btn btn--primary" title="準備中" onclick="event.preventDefault(); alert('購読機能は準備中です');">購読 ¥0/月</a>
+        </div>
+        <div class="site-header__tools">
+          <div class="hsearch">
+            <input type="search" id="site-search" class="hsearch__input" placeholder="記事を検索…" aria-label="サイト内検索" autocomplete="off" data-base="../">
+            <div id="site-search-results" class="hsearch__results" role="listbox" hidden></div>
+          </div>
+          <button type="button" id="theme-toggle" class="theme-toggle" aria-label="配色テーマを切り替え" title="配色テーマを切り替え" onclick="(function(d){var n=d.getAttribute('data-theme')==='light'?'dark':'light';d.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}var b=document.getElementById('theme-toggle');if(b)b.textContent=n==='light'?'☀':'☾';})(document.documentElement)">☾</button>
+        </div>
         </div>
       </div>
       <nav class="site-nav container" aria-label="主要セクション">
@@ -76,7 +88,7 @@
 
     <section class="cards" aria-label="記事一覧">
       <article class="card">
-        <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1592758080692-b6a5dbe9c725?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwY29uZmVyZW5jZSUyMHN0YWdlJTIwcHJlc2VudGF0aW9ufGVufDF8MHx8fDE3ODE0Mjc4MDh8MA&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
+        <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1592758080692-b6a5dbe9c725?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwY29uZmVyZW5jZSUyMHN0YWdlJTIwcHJlc2VudGF0aW9ufGVufDF8MHx8fDE3ODE0Mjc4MDh8MA&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg&amp;w=800&amp;q=70&amp;auto=format&amp;fit=crop'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
         <span class="chip">研究</span>
         <h3 class="card__headline"><a href="../articles/20260614-05.html">Google I/O 2026、動画生成「Gemini Omni」など発表</a></h3>
         <p class="card__deck">Googleが開発者会議I/O 2026で動画生成モデルGemini Omniと高速モデルGemini 3.5 Flashを公開した。</p>
@@ -89,7 +101,7 @@
       </article>
 
       <article class="card">
-        <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMGVkaXRpbmclMjBzY3JlZW58ZW58MXwwfHx8MTc4MTQwNjIzNHww&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
+        <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMGVkaXRpbmclMjBzY3JlZW58ZW58MXwwfHx8MTc4MTQwNjIzNHww&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg&amp;w=800&amp;q=70&amp;auto=format&amp;fit=crop'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
         <span class="chip">研究</span>
         <h3 class="card__headline"><a href="../articles/20260614-03.html">Google、新モデルGemini 3.5とOmniを公開</a></h3>
         <p class="card__deck">Google I/O 2026でエージェント特化の3.5 Flashと動画生成Omniを発表した。</p>
@@ -102,7 +114,7 @@
       </article>
 
       <article class="card">
-        <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwyfHxwcm9ncmFtbWluZyUyMGNvZGUlMjB0ZXJtaW5hbCUyMHNjcmVlbnxlbnwxfDB8fHwxNzgxNDI3ODA5fDA&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
+        <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwyfHxwcm9ncmFtbWluZyUyMGNvZGUlMjB0ZXJtaW5hbCUyMHNjcmVlbnxlbnwxfDB8fHwxNzgxNDI3ODA5fDA&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg&amp;w=800&amp;q=70&amp;auto=format&amp;fit=crop'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
         <span class="chip">研究</span>
         <h3 class="card__headline"><a href="../articles/20260614-06.html">Hugging Face、AIエージェント最適化のhf CLIを刷新</a></h3>
         <p class="card__deck">Hugging Faceが、人間とAIエージェントの両方に対応する新しいコマンドラインツールhfを公開した。</p>
@@ -128,7 +140,7 @@
       </article>
 
       <article class="card">
-        <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1637002722490-5f8ceed9774c?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxyb2JvdCUyMGFybSUyMHRyYWluaW5nJTIwc2ltdWxhdGlvbnxlbnwxfDB8fHwxNzgxMjk4MjQzfDA&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
+        <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1637002722490-5f8ceed9774c?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxyb2JvdCUyMGFybSUyMHRyYWluaW5nJTIwc2ltdWxhdGlvbnxlbnwxfDB8fHwxNzgxMjk4MjQzfDA&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg&amp;w=800&amp;q=70&amp;auto=format&amp;fit=crop'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
         <span class="chip">研究</span>
         <h3 class="card__headline"><a href="../articles/20260613-12.html">Hugging Faceら、エージェントRL向け共通環境規格「OpenEnv」を発表</a></h3>
         <p class="card__deck">MetaやNvidiaなど9組織がガバナンスに参加し、エージェント強化学習の環境標準化を目指すオープンソースプロジェクトが始動した。</p>
@@ -141,7 +153,7 @@
       </article>
 
       <article class="card">
-        <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxwcm9ncmFtbWluZyUyMGNvZGUlMjBzY3JlZW58ZW58MXwwfHx8MTc4MTI5NDMzNnww&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
+        <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxwcm9ncmFtbWluZyUyMGNvZGUlMjBzY3JlZW58ZW58MXwwfHx8MTc4MTI5NDMzNnww&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg&amp;w=800&amp;q=70&amp;auto=format&amp;fit=crop'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
         <span class="chip">研究</span>
         <h3 class="card__headline"><a href="../articles/20260613-10.html">Cohere、開発者向けコード生成モデル「North Mini Code」をオープンソース公開</a></h3>
         <p class="card__deck">Cohereが初の開発者向けモデルNorth Mini Codeを公開。30Bパラメータ（アクティブ3B）のMoEアーキテクチャで、同規模クラス最高水準のコード生成性能を達成した。</p>
@@ -154,7 +166,7 @@
       </article>
 
       <article class="card">
-        <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkfGVufDF8MHx8fDE3ODEyOTQzNDB8MA&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
+        <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkfGVufDF8MHx8fDE3ODEyOTQzNDB8MA&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg&amp;w=800&amp;q=70&amp;auto=format&amp;fit=crop'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
         <span class="chip">研究</span>
         <h3 class="card__headline"><a href="../articles/20260613-06.html">AIモデル開発の評価ツール「olmo-eval」がリリース</a></h3>
         <p class="card__deck">Allen AI研究所は、大規模言語モデル(LLM)の開発プロセスを効率化するための新しい評価ワークベンチ「olmo-eval」を公開した。</p>
@@ -167,7 +179,7 @@
       </article>
 
       <article class="card">
-        <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxwb3dlciUyMGVuZXJneSUyMGdyaWR8ZW58MXwwfHx8MTc4MTI5NDM0MHww&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
+        <figure class="thumb" style="background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxwb3dlciUyMGVuZXJneSUyMGdyaWR8ZW58MXwwfHx8MTc4MTI5NDM0MHww&amp;ixlib=rb-4.1.0&amp;w=1280&amp;q=80&amp;fm=jpg&amp;w=800&amp;q=70&amp;auto=format&amp;fit=crop'); background-size: cover; background-position: center;" aria-hidden="true"></figure>
         <span class="chip">研究</span>
         <h3 class="card__headline"><a href="../articles/20260612-02.html">Google、バージニア州への新投資で地元雇用とエネルギー安を支援</a></h3>
         <p class="card__deck">Googleは、バージニア州での新たなコミュニティ投資を通じて、地元の雇用創出とエネルギー費用の軽減に取り組む。</p>
@@ -242,5 +254,6 @@
     </div>
   </footer>
 
+  <script defer src="../assets/search.js"></script>
 </body>
 </html>

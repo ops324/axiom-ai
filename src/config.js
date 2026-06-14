@@ -2,14 +2,37 @@
 import 'dotenv/config';
 
 export const config = {
+  // 本番URL（共有リンク・検索・解析・将来のSEOで使用。末尾スラッシュなし）
+  siteUrl: process.env.SITE_URL || 'https://axiom-ai-xi.vercel.app',
+
   // --- 生成設定（執筆はヘッドレス Claude が担当。ollama は廃止）---
   maxArticles: Number(process.env.MAX_ARTICLES || 2), // 1回で「掲載する」本数（×3回/日 = 6本/日）
   candidatePool: 12,    // Claude に提示する候補プール数（この中から重要度で maxArticles 本を選別）
   importanceFloor: 3,   // 重要度(1-5)がこれ未満の候補は掲載しない（些末ネタの除外）
   retentionTop: 40,     // トップページに載せる最新記事の上限。超過分はアーカイブへ
 
+  // --- AI関連度フィルタ（media tier の無関係なテック記事を足切り）---
+  // title+summary にこれらのいずれかが含まれる数を数える。primary は常に通す。
+  aiKeywords: [
+    'AI', 'A.I.', '人工知能', 'LLM', '大規模言語', '生成', 'ジェネレーティブ', 'generative',
+    'モデル', 'model', 'エージェント', 'agent', 'GPT', 'Gemini', 'Claude', 'Llama', 'Grok',
+    '機械学習', 'machine learning', 'ディープラーニング', 'deep learning', 'ニューラル', 'neural',
+    'OpenAI', 'Anthropic', 'DeepMind', 'Hugging Face', 'チャットボット', 'chatbot',
+    'マルチモーダル', 'multimodal', '推論', 'inference', '学習', 'training', 'GPU', 'NVIDIA',
+    'トランスフォーマー', 'transformer', 'プロンプト', 'prompt', 'RAG', '基盤モデル', 'foundation model',
+  ],
+  relevanceFloorMedia: 1, // media tier はキーワードヒットがこの数未満なら除外
+
   // 弱いソース除外: 動画/ポッドキャスト等は本文が乏しく取材に向かないためスキップ
   skipUrlPatterns: ['/video/', '/videos/', '/podcast/', '/podcasts/', '/live/', 'youtube.com', 'youtu.be'],
+
+  // --- アナリティクス（Cookieless・任意）---
+  // token を設定すると Cloudflare Web Analytics の beacon を全ページに出力する。
+  // 未設定なら何も出力しない（プライバシー配慮・無料）。
+  analytics: {
+    provider: 'cloudflare',
+    token: process.env.CF_BEACON_TOKEN || '',
+  },
 
   // --- 画像（フリー素材API・任意）---
   imageProvider: process.env.IMAGE_PROVIDER || 'unsplash', // 'unsplash' | 'pexels'

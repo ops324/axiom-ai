@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <title>タグ一覧 | AXIOM AI</title>
+  <meta name="description" content="AXIOM AI の記事トピック（タグ）一覧。テーマ別に AI ニュースを辿れます。">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "325ab8c5bd8546bda7ab30baf1e01c9b"}'></script>
+</head>
+<body>
+
+  <!-- ============== TICKER ============== -->
+  <div class="ticker" role="region" aria-label="マーケット・モデル指標">
+    <div class="ticker__inner">
+      <div class="ticker__label">LIVE</div>
+      <div class="ticker__feed">
+        <span class="ticker__item"><strong>GPT-5</strong><span class="ticker__up">▲ MMLU 91.4</span></span>
+        <span class="ticker__item"><strong>CLAUDE-OPUS-4.7</strong><span class="ticker__up">▲ HumanEval 92.1</span></span>
+        <span class="ticker__item"><strong>GEMINI-2.5-PRO</strong><span class="ticker__down">▼ MATH 84.0</span></span>
+        <span class="ticker__item"><strong>NVDA</strong><span class="ticker__up">▲ $1,284.20 +2.1%</span></span>
+        <span class="ticker__item"><strong>EU AI Act</strong><span>Phase II 施行</span></span>
+        <span class="ticker__item"><strong>METASTAKE</strong><span class="ticker__up">▲ Llama 4 公開</span></span>
+        <span class="ticker__item"><strong>GPT-5</strong><span class="ticker__up">▲ MMLU 91.4</span></span>
+        <span class="ticker__item"><strong>CLAUDE-OPUS-4.7</strong><span class="ticker__up">▲ HumanEval 92.1</span></span>
+        <span class="ticker__item"><strong>GEMINI-2.5-PRO</strong><span class="ticker__down">▼ MATH 84.0</span></span>
+        <span class="ticker__item"><strong>NVDA</strong><span class="ticker__up">▲ $1,284.20 +2.1%</span></span>
+        <span class="ticker__item"><strong>EU AI Act</strong><span>Phase II 施行</span></span>
+        <span class="ticker__item"><strong>METASTAKE</strong><span class="ticker__up">▲ Llama 4 公開</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="site-header__top">
+        <a class="brand" href="../index.html">
+          <span class="brand__mark">AXIOM<em>·</em>AI</span>
+          <span class="brand__sub">Intelligence Daily</span>
+        </a>
+        <div class="site-header__right">
+        <div class="site-header__meta">
+          <span>東京</span>
+          <time>2026年6月15日 月</time>
+          <a href="#" class="btn btn--ghost" title="準備中" onclick="event.preventDefault(); alert('ログイン機能は準備中です');">ログイン</a>
+          <a href="#" class="btn btn--primary" title="準備中" onclick="event.preventDefault(); alert('購読機能は準備中です');">購読 ¥0/月</a>
+        </div>
+        <div class="site-header__tools">
+          <div class="hsearch">
+            <input type="search" id="site-search" class="hsearch__input" placeholder="記事を検索…" aria-label="サイト内検索" autocomplete="off" data-base="../">
+            <div id="site-search-results" class="hsearch__results" role="listbox" hidden></div>
+          </div>
+          <button type="button" id="theme-toggle" class="theme-toggle" aria-label="配色テーマを切り替え" title="配色テーマを切り替え" onclick="(function(d){var n=d.getAttribute('data-theme')==='light'?'dark':'light';d.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}var b=document.getElementById('theme-toggle');if(b)b.textContent=n==='light'?'☀':'☾';})(document.documentElement)">☾</button>
+        </div>
+        </div>
+      </div>
+      <nav class="site-nav container" aria-label="主要セクション">
+        <ul class="site-nav__list">
+          <li><a href="../index.html">トップ</a></li>
+          <li><a href="../sections/foundation.html">基盤モデル</a></li>
+          <li><a href="../sections/research.html">研究</a></li>
+          <li><a href="../sections/industry.html">産業応用</a></li>
+          <li><a href="../sections/regulation.html">規制・倫理</a></li>
+          <li><a href="../sections/startups.html">スタートアップ</a></li>
+          <li><a href="../sections/hardware.html">ハードウェア</a></li>
+          <li><a href="../sections/opinion.html">オピニオン</a></li>
+          <li><a href="../sections/data.html">データ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <nav class="breadcrumb" aria-label="パンくず">
+      <ol>
+        <li><a href="../index.html">トップ</a></li>
+        <li aria-current="page">タグ</li>
+      </ol>
+    </nav>
+
+    <header class="article-head" style="border: 0;">
+      <div class="article-head__inner">
+        <div class="meta"><span class="chip">タグ</span><span>64 タグ</span></div>
+        <h1 class="article-headline">タグ一覧</h1>
+        <p class="article-lede">記事に付与されたトピックの一覧です。気になるテーマから記事を辿れます。</p>
+      </div>
+    </header>
+
+    <ul class="tagcloud">
+        <li><a class="tagcloud__item" href="../tags/OpenAI.html" style="font-size: 1.75rem;">#OpenAI <span class="tagcloud__count">6</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/AI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88.html" style="font-size: 1.60rem;">#AIエージェント <span class="tagcloud__count">5</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/IPO.html" style="font-size: 1.45rem;">#IPO <span class="tagcloud__count">4</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/SpaceX.html" style="font-size: 1.45rem;">#SpaceX <span class="tagcloud__count">4</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/Google.html" style="font-size: 1.30rem;">#Google <span class="tagcloud__count">3</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E3%82%A4%E3%83%BC%E3%83%AD%E3%83%B3%E3%83%BB%E3%83%9E%E3%82%B9%E3%82%AF.html" style="font-size: 1.30rem;">#イーロン・マスク <span class="tagcloud__count">3</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9.html" style="font-size: 1.30rem;">#オープンソース <span class="tagcloud__count">3</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/ChatGPT.html" style="font-size: 1.15rem;">#ChatGPT <span class="tagcloud__count">2</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/Codex.html" style="font-size: 1.15rem;">#Codex <span class="tagcloud__count">2</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/Gemini.html" style="font-size: 1.15rem;">#Gemini <span class="tagcloud__count">2</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/Hugging%20Face.html" style="font-size: 1.15rem;">#Hugging Face <span class="tagcloud__count">2</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89.html" style="font-size: 1.15rem;">#クラウド <span class="tagcloud__count">2</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%A2%E3%83%BC%E3%83%80%E3%83%AB.html" style="font-size: 1.15rem;">#マルチモーダル <span class="tagcloud__count">2</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E5%AE%87%E5%AE%99AI.html" style="font-size: 1.15rem;">#宇宙AI <span class="tagcloud__count">2</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E5%BC%B7%E5%8C%96%E5%AD%A6%E7%BF%92.html" style="font-size: 1.15rem;">#強化学習 <span class="tagcloud__count">2</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E8%B3%87%E9%87%91%E8%AA%BF%E9%81%94.html" style="font-size: 1.15rem;">#資金調達 <span class="tagcloud__count">2</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90.html" style="font-size: 1.15rem;">#動画生成 <span class="tagcloud__count">2</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/AI.html" style="font-size: 1.00rem;">#AI <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/AI%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0.html" style="font-size: 1.00rem;">#AIエンジニアリング <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/AI%E5%AE%89%E5%85%A8%E6%80%A7.html" style="font-size: 1.00rem;">#AI安全性 <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/AI%E5%AE%89%E5%85%A8%E4%BF%9D%E9%9A%9C.html" style="font-size: 1.00rem;">#AI安全保障 <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/AI%E8%A6%8F%E5%88%B6.html" style="font-size: 1.00rem;">#AI規制 <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/AI%E6%95%99%E8%82%B2.html" style="font-size: 1.00rem;">#AI教育 <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/BBVA.html" style="font-size: 1.00rem;">#BBVA <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/Claude%20Code.html" style="font-size: 1.00rem;">#Claude Code <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/CLI.html" style="font-size: 1.00rem;">#CLI <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/Cohere.html" style="font-size: 1.00rem;">#Cohere <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/EU.html" style="font-size: 1.00rem;">#EU <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/Jeff%20Bezos.html" style="font-size: 1.00rem;">#Jeff Bezos <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/Mistral%20AI.html" style="font-size: 1.00rem;">#Mistral AI <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/MoE.html" style="font-size: 1.00rem;">#MoE <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/Nemotron.html" style="font-size: 1.00rem;">#Nemotron <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/NVIDIA.html" style="font-size: 1.00rem;">#NVIDIA <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/OpenEnv.html" style="font-size: 1.00rem;">#OpenEnv <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/Oracle%20Cloud.html" style="font-size: 1.00rem;">#Oracle Cloud <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/Prometheus.html" style="font-size: 1.00rem;">#Prometheus <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/SPV.html" style="font-size: 1.00rem;">#SPV <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/xAI.html" style="font-size: 1.00rem;">#xAI <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88AI.html" style="font-size: 1.00rem;">#エージェントAI <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E8%B2%BB%E7%94%A8.html" style="font-size: 1.00rem;">#エネルギー費用 <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E3%82%A8%E3%83%AD%E3%83%B3%E3%83%BB%E3%83%9E%E3%82%B9%E3%82%AF.html" style="font-size: 1.00rem;">#エロン・マスク <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BAAI.html" style="font-size: 1.00rem;">#エンタープライズAI <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E3%82%B3%E3%83%BC%E3%83%89%E7%94%9F%E6%88%90.html" style="font-size: 1.00rem;">#コード生成 <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97.html" style="font-size: 1.00rem;">#スタートアップ <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9X.html" style="font-size: 1.00rem;">#スペースX <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E3%82%BD%E3%83%96%E3%83%AA%E3%83%B3AI.html" style="font-size: 1.00rem;">#ソブリンAI <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC.html" style="font-size: 1.00rem;">#データセンター <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E3%83%90%E3%83%BC%E3%82%B8%E3%83%8B%E3%82%A2%E5%B7%9E.html" style="font-size: 1.00rem;">#バージニア州 <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E3%83%95%E3%82%A3%E3%82%B8%E3%82%AB%E3%83%ABAI.html" style="font-size: 1.00rem;">#フィジカルAI <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E3%83%AA%E3%82%B9%E3%82%AD%E3%83%AA%E3%83%B3%E3%82%B0.html" style="font-size: 1.00rem;">#リスキリング <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E5%BD%B1%E9%9F%BF%E5%B7%A5%E4%BD%9C.html" style="font-size: 1.00rem;">#影響工作 <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E6%AC%A7%E5%B7%9EAI.html" style="font-size: 1.00rem;">#欧州AI <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E9%96%8B%E7%99%BA%E3%83%84%E3%83%BC%E3%83%AB.html" style="font-size: 1.00rem;">#開発ツール <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E4%BC%81%E6%A5%AD%E5%B0%8E%E5%85%A5.html" style="font-size: 1.00rem;">#企業導入 <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E9%87%91%E8%9E%8D.html" style="font-size: 1.00rem;">#金融 <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E9%9B%87%E7%94%A8%E5%89%B5%E5%87%BA.html" style="font-size: 1.00rem;">#雇用創出 <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E4%B8%8A%E5%A0%B4.html" style="font-size: 1.00rem;">#上場 <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E7%94%9F%E6%88%90AI.html" style="font-size: 1.00rem;">#生成AI <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E5%A4%A7%E8%A6%8F%E6%A8%A1%E8%A8%80%E8%AA%9E%E3%83%A2%E3%83%87%E3%83%AB.html" style="font-size: 1.00rem;">#大規模言語モデル <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E4%B8%AD%E5%9B%BD.html" style="font-size: 1.00rem;">#中国 <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E9%80%8F%E6%98%8E%E6%80%A7.html" style="font-size: 1.00rem;">#透明性 <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E8%B2%B7%E5%8F%8E.html" style="font-size: 1.00rem;">#買収 <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E8%A9%95%E4%BE%A1%E3%83%84%E3%83%BC%E3%83%AB.html" style="font-size: 1.00rem;">#評価ツール <span class="tagcloud__count">1</span></a></li>
+        <li><a class="tagcloud__item" href="../tags/%E6%9D%A5%E6%AD%B4%E6%A8%99%E6%BA%96.html" style="font-size: 1.00rem;">#来歴標準 <span class="tagcloud__count">1</span></a></li>
+    </ul>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <span class="brand__mark">AXIOM<em>·</em>AI</span>
+          <p>生成 AI と基盤モデルを中心に、世界の意思決定者向けに編集された一次情報を毎日お届けします。本サイトの記事は各一次情報源の要約・論評であり、詳細は必ず出典元をご確認ください。</p>
+        </div>
+        <div class="site-footer__col">
+          <h4>セクション</h4>
+          <ul>
+            <li><a href="#">基盤モデル</a></li>
+            <li><a href="#">研究</a></li>
+            <li><a href="#">産業応用</a></li>
+            <li><a href="#">規制・倫理</a></li>
+            <li><a href="#">ハードウェア</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h4>会社情報</h4>
+          <ul>
+            <li><a href="#">運営者情報</a></li>
+            <li><a href="#">編集方針</a></li>
+            <li><a href="#">採用情報</a></li>
+            <li><a href="#">取材・お問い合わせ</a></li>
+            <li><a href="#">広告掲載</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h4>規約</h4>
+          <ul>
+            <li><a href="#">プライバシーポリシー</a></li>
+            <li><a href="#">利用規約</a></li>
+            <li><a href="#">Cookie ポリシー</a></li>
+            <li><a href="#">情報公開</a></li>
+            <li><a href="#">訂正・更新ポリシー</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h4>購読</h4>
+          <ul>
+            <li><a href="#">Morning Brief</a></li>
+            <li><a href="#">Weekly Outlook</a></li>
+            <li><a href="#">RSS フィード</a></li>
+            <li><a href="#">X (Twitter)</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© 2026 AXIOM AI Editorial K.K. All rights reserved.</span>
+        <div class="site-footer__legal">
+          <a href="#">特定商取引法に基づく表記</a>
+          <a href="#">セキュリティ</a>
+          <a href="#">アクセシビリティ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="../assets/search.js"></script>
+</body>
+</html>
