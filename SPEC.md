@@ -40,8 +40,9 @@ launchd（毎日 6:00 / 12:00 / 18:00）
                  → data/_drafts.json（下書き）
             ③ node src/ingestDrafts.js
                  slug採番 → 画像取得 → 重複排除 → data/articles.json 保存
-                 → render（index.html / archive.html / articles/*.html
-                           / sections/*.html / tags/*.html / search-index.json）
+                 → render（index / archive / articles/* / sections/* / tags/*
+                           / 法的6ページ / search-index.json / sitemap.xml
+                           / robots.txt / feed.xml）
        └─ 健全性チェック（記事数増減・exit code）→ 異常なら macOS 通知
        └─ 変更があれば git commit & push（Vercel 自動デプロイ）
        └─ 実行結果を data/scheduler.log に追記
@@ -182,7 +183,10 @@ AIニュースサイト/
 
 | キー | 既定 | 説明 |
 |---|---|---|
-| `siteUrl` | 本番URL | 共有リンク・検索の絶対パス（`SITE_URL` で上書き可） |
+| `siteUrl` | 本番URL | 共有リンク・検索・canonical の絶対パス（`SITE_URL` で上書き可） |
+| `siteName` / `siteDescription` | AXIOM AI / 紹介文 | OGP・JSON-LD・RSS で使用 |
+| `ogImage` / `logo` | /assets/og-default.jpg / /assets/logo.png | 共通OG画像・publisher.logo の絶対パス基準 |
+| `operator` | FlowMate / 滝本哲也 / 所在地 / contact@flowmate.jp | 運営者ページ・JSON-LD publisher の情報 |
 | `maxArticles` | 2 | 1回に掲載する本数（`MAX_ARTICLES` 環境変数で上書き可） |
 | `candidatePool` | 12 | Claude に提示する候補数 |
 | `importanceFloor` | 3 | これ未満の重要度は掲載しない |
