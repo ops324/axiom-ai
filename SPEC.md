@@ -56,7 +56,6 @@ launchd（毎日 6:00 / 12:00 / 18:00）
 AIニュースサイト/
 ├── index.html              # 生成: トップページ
 ├── archive.html            # 生成: アーカイブ（記事が retentionTop を超えたら）
-├── article.html            # デザイン参照元（旧プロトタイプ）
 ├── articles/<slug>.html    # 生成: 各記事ページ
 ├── sections/<slug>.html    # 生成: ナビ各タブ（セクション別一覧。空でも生成）
 ├── tags/<tag>.html         # 生成: タグ別一覧（UTF-8ファイル名）＋ index.html（タグクラウド）
