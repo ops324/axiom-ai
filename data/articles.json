@@ -1,5 +1,57 @@
 [
   {
+    "slug": "20260615-01",
+    "headline": "中国流出懸念で米がAnthropic製AIを規制",
+    "lead": "米政府はAnthropicの最先端モデルMythosの利用を米国民に限定するよう指示し、同社は両モデルを市場から撤回した。",
+    "body_markdown": "米トランプ政権は6月13日、Anthropicに対し最先端AIモデル「Mythos」と消費者版「Fable 5」の利用を米国民に限定するよう指示した。Semaforの報道によれば、背景には中国に関連するグループが同モデルにアクセスした疑いがあり、当局はモデルが蒸留（distillation）によって複製されたり、コードの脆弱性を見つける能力が悪用されたりする国家安全保障上のリスクを懸念したとされる。\n\nAnthropicは外国籍の従業員も利用できなくなることから、両モデルを市場から完全に撤回した。同社は「中国からの製品アクセスを禁止している」と説明し、協議で中国の問題が挙がったことは否定している。一方、大統領顧問のデビッド・サックス氏は、Fable 5のジェイルブレイク（安全機構の回避）を巡り、CEOのダリオ・アモデイ氏が深刻なリスクではないとして修正を拒んだと主張した。\n\n報道の多くは関係者の証言に基づき、ホワイトハウスは内容を公式には認めていない。それでも、商用AIが安全保障と通商政策の対象として正面から扱われた意味は大きい。モデルを公開できるか否かが一国の政府判断に左右されうる現実は、AI開発企業と各国の関係に新たな緊張をもたらしている。",
+    "tags": [
+      "Anthropic",
+      "輸出規制",
+      "国家安全保障",
+      "中国",
+      "AI規制"
+    ],
+    "section": "産業応用",
+    "source": "The Verge",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/949644/china-white-house-anthropic-mythos",
+    "importance": 4,
+    "image_query": "computer security padlock",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1614064548237-096f735f344f?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwyfHxjb21wdXRlciUyMHNlY3VyaXR5JTIwcGFkbG9ja3xlbnwxfDB8fHwxNzgxNDcxMDYzfDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "FlyD",
+      "profileUrl": "https://unsplash.com/@flyd2069?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-14T21:04:23.718Z"
+  },
+  {
+    "slug": "20260615-02",
+    "headline": "SpaceX上場が最大規模、AI企業のIPO競争過熱",
+    "lead": "SpaceXが史上最大のIPOを達成し、OpenAIやAnthropicも追随観測。AI関連企業への資金集中が鮮明になっている。",
+    "body_markdown": "6月12日、SpaceXがナスダックに上場した。1株135ドルで約750億ドルを調達し、評価額は1.75兆ドルに達して株式市場史上最大のIPOとなった。初日に株価は急騰し、CEOのイーロン・マスク氏の資産を大きく押し上げた。TechCrunchによれば、この成功を受けてAI業界全体で上場の機運が一段と高まっている。\n\nOpenAIとAnthropicはいずれも非公開でIPOを申請済みとされ、両社の上場時期を巡る競争も指摘される。市場では従来の「FAANG」に代わり、Meta・Anthropic・NVIDIA・Google・OpenAI・SpaceXを指す「MANGOS」という呼称も登場した。さらに新興のQuantum SpaceがSPACで追随を狙うなど、周辺企業にも動きが広がっている。\n\nAIとディープテックへの資金集中は鮮明だが、調達できる資本には限りがあり、評価額の調整局面を警戒する声もある。大型上場が相次げば資金や人材の偏在が進む可能性もあり、過熱が続くかどうかは今後の決算と市況が試すことになる。",
+    "tags": [
+      "IPO",
+      "SpaceX",
+      "OpenAI",
+      "資金調達",
+      "AI株"
+    ],
+    "section": "スタートアップ",
+    "source": "TechCrunch",
+    "link": "https://techcrunch.com/2026/06/14/as-ai-companies-race-to-go-public-who-else-is-along-for-the-ride/",
+    "importance": 4,
+    "image_query": "stock exchange trading floor",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1761233138997-44d9b002a08f?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxzdG9jayUyMGV4Y2hhbmdlJTIwdHJhZGluZyUyMGZsb29yfGVufDF8MHx8fDE3ODE0NzEwNjR8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Maxim Klimashin",
+      "profileUrl": "https://unsplash.com/@maxim_klimashin?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-14T21:04:24.345Z"
+  },
+  {
     "slug": "20260614-05",
     "headline": "Google I/O 2026、動画生成「Gemini Omni」など発表",
     "lead": "Googleが開発者会議I/O 2026で動画生成モデルGemini Omniと高速モデルGemini 3.5 Flashを公開した。",

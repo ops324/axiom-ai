@@ -7,7 +7,23 @@
     <atom:link href="https://axiom-ai-xi.vercel.app/feed.xml" rel="self" type="application/rss+xml" />
     <description>生成AI・基盤モデル・規制・産業応用の最新ニュースを、編集部の要約と論評でお届けする日本語AI専門メディア。</description>
     <language>ja</language>
-    <lastBuildDate>Sun, 14 Jun 2026 20:38:57 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2026 21:04:24 GMT</lastBuildDate>
+    <item>
+      <title>SpaceX上場が最大規模、AI企業のIPO競争過熱</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260615-02.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260615-02.html</guid>
+      <pubDate>Sun, 14 Jun 2026 21:04:24 GMT</pubDate>
+      <description>SpaceXが史上最大のIPOを達成し、OpenAIやAnthropicも追随観測。AI関連企業への資金集中が鮮明になっている。</description>
+      <category>スタートアップ</category>
+    </item>
+    <item>
+      <title>中国流出懸念で米がAnthropic製AIを規制</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260615-01.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260615-01.html</guid>
+      <pubDate>Sun, 14 Jun 2026 21:04:23 GMT</pubDate>
+      <description>米政府はAnthropicの最先端モデルMythosの利用を米国民に限定するよう指示し、同社は両モデルを市場から撤回した。</description>
+      <category>産業応用</category>
+    </item>
     <item>
       <title>Hugging Face、AIエージェント最適化のhf CLIを刷新</title>
       <link>https://axiom-ai-xi.vercel.app/articles/20260614-06.html</link>
@@ -150,22 +166,6 @@
       <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260613-06.html</guid>
       <pubDate>Fri, 12 Jun 2026 16:38:16 GMT</pubDate>
       <description>Allen AI研究所は、大規模言語モデル(LLM)の開発プロセスを効率化するための新しい評価ワークベンチ「olmo-eval」を公開した。</description>
-      <category>研究</category>
-    </item>
-    <item>
-      <title>SpaceX上場後、SPV投資家は所有株式不明確に</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260612-03.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260612-03.html</guid>
-      <pubDate>Thu, 11 Jun 2026 21:29:49 GMT</pubDate>
-      <description>SpaceXが上場したものの、特殊目的 vehicle (SPV) を通じて投資を行った一部の投資家は、自身の保有株数を正確には知ることができない状況にある。</description>
-      <category>スタートアップ</category>
-    </item>
-    <item>
-      <title>Google、バージニア州への新投資で地元雇用とエネルギー安を支援</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260612-02.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260612-02.html</guid>
-      <pubDate>Thu, 11 Jun 2026 21:28:51 GMT</pubDate>
-      <description>Googleは、バージニア州での新たなコミュニティ投資を通じて、地元の雇用創出とエネルギー費用の軽減に取り組む。</description>
       <category>研究</category>
     </item>
   </channel>
