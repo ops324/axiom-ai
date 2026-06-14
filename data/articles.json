@@ -1,5 +1,57 @@
 [
   {
+    "slug": "20260614-03",
+    "headline": "Google、新モデルGemini 3.5とOmniを公開",
+    "lead": "Google I/O 2026でエージェント特化の3.5 Flashと動画生成Omniを発表した。",
+    "body_markdown": "Googleは5月19日に開いたGoogle I/O 2026で、新しいAIモデル群「Gemini 3.5」と「Gemini Omni」を発表し、9本のデモ動画でその機能を公開した。\n\nGemini 3.5の先行版「3.5 Flash」は、複数ステップにわたる推論やコーディング、自律的に動くエージェント用途に重点を置く。Googleはコーディング・エージェント・マルチモーダルの各ベンチマークで上位の3.1 Proを上回るとし、出力速度は他の最先端モデルの約4倍をうたう。提供はGeminiアプリ、検索、開発ツールAntigravity 2.0、Gemini APIで順次始まり、上位版の3.5 Proは翌月に公開予定とされる。\n\n一方のGemini Omniは、推論と創作を組み合わせたモデル群。先行版のOmni Flashは画像・音声・動画・テキストを入力として受け取り、現実世界の知識に基づいた編集可能な動画を生成する。GoogleのAIプラン各種やGoogle Flowで提供され、YouTubeクリエイターには無償で開放される。\n\n速度とコストを抑えてエージェント用途を狙う3.5 Flashと、動画生成に振り切ったOmniは、Googleが推論と創作の両面でモデルの位置づけを再編しようとしている動きを示している。",
+    "tags": [
+      "Gemini",
+      "Google",
+      "生成AI",
+      "動画生成",
+      "AIエージェント"
+    ],
+    "section": "研究",
+    "source": "Google AI",
+    "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/",
+    "importance": 4,
+    "image_query": "video editing screen",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHx2aWRlbyUyMGVkaXRpbmclMjBzY3JlZW58ZW58MXwwfHx8MTc4MTQwNjIzNHww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Peter Stumpf",
+      "profileUrl": "https://unsplash.com/@peter_s?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-14T03:03:54.328Z"
+  },
+  {
+    "slug": "20260614-04",
+    "headline": "OpenAI、職場向け無料AI講座を3つ追加",
+    "lead": "ChatGPTアカウントがあれば誰でも受けられる実務向けの自習講座を公開した。",
+    "body_markdown": "OpenAIは、仕事で使える実践的なAIスキルを学ぶための新しい「OpenAI Academy」講座を3つ公開した。基礎から応用まで段階的に学べる構成で、いずれも無料・自習形式となっている。\n\n追加されたのは「AI Foundations」「Applied AI Foundations」「Agents and Workflows」の3講座。最初のAI Foundationsでは、効果的なプロンプトの書き方、文脈の与え方、出力の確認方法、責任あるAIの使い方といった基本を扱う。続く講座では日常業務へのAIの応用、さらにAIエージェントを使った複雑なワークフローの構築へと進む。\n\nこれらの講座はChatGPTアカウントを持つ人なら世界中の誰でも受講でき、技術的な知識や有料プラン・職場アカウントは不要だとしている。\n\n反復可能な業務手順やエージェント活用に焦点を当てた今回の講座は、AIを試す段階から実務へ組み込む段階へと利用者を後押しするもので、ツールの普及に伴う使いこなしの底上げを狙った取り組みといえる。",
+    "tags": [
+      "OpenAI",
+      "ChatGPT",
+      "AI教育",
+      "リスキリング",
+      "AIエージェント"
+    ],
+    "section": "基盤モデル",
+    "source": "OpenAI",
+    "link": "https://openai.com/index/academy-courses-applying-ai-at-work",
+    "importance": 3,
+    "image_query": "online learning laptop",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxvbmxpbmUlMjBsZWFybmluZyUyMGxhcHRvcHxlbnwxfDB8fHwxNzgxNDA2MjM0fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Christin Hume",
+      "profileUrl": "https://unsplash.com/@christinhumephoto?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-14T03:03:54.932Z"
+  },
+  {
     "slug": "20260614-01",
     "headline": "OpenAI、EUのAI生成物の透明性規範を支持",
     "lead": "OpenAIがEUの「AI生成コンテンツの透明性に関する行動規範」への支持を表明した。",
