@@ -42,7 +42,7 @@ launchd（毎日 6:00 / 12:00 / 18:00）
                  slug採番 → 画像取得 → 重複排除 → data/articles.json 保存
                  → render（index / archive / articles/* / sections/* / tags/*
                            / 法的6ページ / search-index.json / sitemap.xml
-                           / robots.txt / feed.xml）
+                           / robots.txt / feed.xml / feed.xsl）
        └─ 健全性チェック（記事数増減・exit code）→ 異常なら macOS 通知
        └─ 変更があれば git commit & push（Vercel 自動デプロイ）
        └─ 実行結果を data/scheduler.log に追記
@@ -62,7 +62,8 @@ AIニュースサイト/
 ├── about/contact/privacy/terms/editorial/disclaimer.html # 生成: 法的・運営ページ
 ├── sitemap.xml             # 生成: サイトマップ
 ├── robots.txt              # 生成: クローラ指示（Sitemap 参照）
-├── feed.xml                # 生成: RSS 2.0 フィード
+├── feed.xml                # 生成: RSS 2.0 フィード（XSL 参照付き）
+├── feed.xsl                # 生成: feed.xml をブラウザで読み物表示する XSLT
 ├── search-index.json       # 生成: サイト内検索のクライアント用インデックス
 ├── assets/
 │   ├── styles.css          # デザイン（OKLCH トークン・全クラス・ライト/ダーク）
@@ -267,9 +268,10 @@ open index.html
 - **ナビ**: ヘッダー各タブは `config.navSections` から `sections/<slug>.html` を生成・リンク（`render.js`）。
   記事0のセクションも空状態ページを生成する。記事のパンくず／タグはセクション・タグページへリンク済み。
   **フッターは実ページ（運営者情報/編集方針/お問い合わせ/プライバシー/利用規約/免責/RSS）へ接続済み**。
-- **準備中（バックエンド無しのため未実装）**: ログイン・購読・メルマガ登録は静的サイトの制約上、
-  クリック/送信で「準備中」アラートを出すのみ（認証・メール配信は導入していない）。
+- **未実装機能の扱い**: バックエンドが無いため、ログイン・メール購読・メルマガUIは**設置しない**（「準備中」アラートも撤去済み）。
+  記事の購読は **RSS（`feed.xml`）** で提供。`feed.xml` は XSL（`feed.xsl`）でブラウザ表示時は読み物化、リーダーには通常のRSSとして機能。
+- **広告**: 空の広告プレースホルダは撤去済み。AdSense 等を導入する際に枠を追加する（プライバシーポリシーは Cookie 利用に言及済み）。
 - **SEO（P0・実装済み）**: OGP / Twitter Card / canonical / JSON-LD（NewsArticle・WebSite・Organization）/
-  sitemap.xml / robots.txt / RSSフィード（feed.xml）を出力。共通OG画像 `assets/og-default.jpg`。
+  sitemap.xml / robots.txt / RSSフィード（feed.xml＋feed.xsl）を出力。共通OG画像 `assets/og-default.jpg`。
 - **アナリティクス**: Cloudflare Web Analytics を導入済み（`.env` の `CF_BEACON_TOKEN`）。トークンは公開前提の値で、
   HTML（=デプロイ物）に埋め込まれる。`.env` 自体は git 管理外。
