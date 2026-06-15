@@ -1,5 +1,55 @@
 [
   {
+    "slug": "20260615-05",
+    "headline": "AIを理由にした人員削減、米で過去最多に",
+    "lead": "AIを挙げた解雇が月間の理由で初めて首位に。富の偏在への警鐘も。",
+    "body_markdown": "米調査会社チャレンジャー・グレイ・アンド・クリスマスの最新集計で、2026年5月に米企業が発表した人員削減のうちAI（人工知能）を理由に挙げたものが約3万8,000人分に達し、月間の削減理由として初めて首位になった。同社によると、2026年に入ってからAI関連として計上された削減は約8万7,000人分にのぼり、2025年通年の約5万5,000人分をすでに上回っている。テック大手による大規模なレイオフも続いている。\n\n一方でTechCrunchは、人員削減が広がるのと同じ時期に、一部のAI関連企業の関係者が株式公開などで巨額の富を得ている点を指摘する。著名投資家マーク・アンドリーセン氏は、AIは過剰雇用を整理するための「都合のよい口実」になっており、多くの大企業は人員を25〜75%抱えすぎていると述べたという。\n\n職を失う多数の労働者と、富を築く少数の内部関係者——この対比が社会的な反発を招きかねない、というのが同記事の見立てだ。AIが雇用に与える影響は、今後の政策論議でも大きな焦点になりそうだ。",
+    "tags": [
+      "AI雇用",
+      "レイオフ",
+      "労働市場",
+      "格差"
+    ],
+    "section": "スタートアップ",
+    "source": "TechCrunch",
+    "link": "https://techcrunch.com/2026/06/15/the-ai-layoff-wave-is-becoming-a-powder-keg/",
+    "importance": 4,
+    "image_query": "empty office desks workplace",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1549637642-90187f64f420?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxlbXB0eSUyMG9mZmljZSUyMGRlc2tzJTIwd29ya3BsYWNlfGVufDF8MHx8fDE3ODE1MTQyNDl8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "kate.sade",
+      "profileUrl": "https://unsplash.com/@kate_sade?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-15T09:04:09.476Z"
+  },
+  {
+    "slug": "20260615-06",
+    "headline": "天体物理学者がCodexでブラックホール再現",
+    "lead": "アリゾナ大の研究者がCodexで一般相対論検証のシミュレーションを加速。",
+    "body_markdown": "米OpenAIは、天体物理学者がコード生成AI「Codex」をブラックホール研究に活用している事例を公開した。アリゾナ大学スチュワード天文台の研究者チー・クワン・チャン氏は、2019年に世界初のブラックホール撮影に成功した国際協力プロジェクト「イベント・ホライズン・テレスコープ（EHT）」に参加している研究者だ。\n\nチャン氏はCodexを使い、ブラックホール周辺を回る電子やイオンの動きを再現するアルゴリズムの候補を導き出し、既知の解と照らし合わせて検証しているという。ブラックホール近傍はアインシュタインの一般相対性理論を検証する有力な舞台とされ、こうしたシミュレーションの精度向上が理論の裏付けにつながる。\n\nOpenAIによれば、この手法がうまくいけば、将来的にはブラックホール周囲の数兆個規模の粒子を扱うシミュレーションが可能になる可能性があるという。AIが研究者の試行錯誤を加速し、基礎科学の探究を後押しする一例といえる。",
+    "tags": [
+      "OpenAI",
+      "Codex",
+      "天体物理学",
+      "科学研究"
+    ],
+    "section": "基盤モデル",
+    "source": "OpenAI",
+    "link": "https://openai.com/index/using-codex-to-simulate-black-holes",
+    "importance": 3,
+    "image_query": "black hole space",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1732633553684-b18a43a48d3d?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxibGFjayUyMGhvbGUlMjBzcGFjZXxlbnwxfDB8fHwxNzgxNTE0MjQ5fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Bojun Liu",
+      "profileUrl": "https://unsplash.com/@slusho_o?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-15T09:04:10.012Z"
+  },
+  {
     "slug": "20260615-03",
     "headline": "OpenAI、1.5億ドルでパートナー網を始動",
     "lead": "OpenAIが1.5億ドルを投じ、企業のAI導入を支援する世界規模のパートナー制度を立ち上げた。",

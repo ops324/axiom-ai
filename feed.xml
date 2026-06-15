@@ -7,7 +7,23 @@
     <atom:link href="https://axiom-ai-xi.vercel.app/feed.xml" rel="self" type="application/rss+xml" />
     <description>生成AI・基盤モデル・規制・産業応用の最新ニュースを、編集部の要約と論評でお届けする日本語AI専門メディア。</description>
     <language>ja</language>
-    <lastBuildDate>Mon, 15 Jun 2026 03:03:39 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2026 09:04:10 GMT</lastBuildDate>
+    <item>
+      <title>天体物理学者がCodexでブラックホール再現</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260615-06.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260615-06.html</guid>
+      <pubDate>Mon, 15 Jun 2026 09:04:10 GMT</pubDate>
+      <description>アリゾナ大の研究者がCodexで一般相対論検証のシミュレーションを加速。</description>
+      <category>基盤モデル</category>
+    </item>
+    <item>
+      <title>AIを理由にした人員削減、米で過去最多に</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260615-05.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260615-05.html</guid>
+      <pubDate>Mon, 15 Jun 2026 09:04:09 GMT</pubDate>
+      <description>AIを挙げた解雇が月間の理由で初めて首位に。富の偏在への警鐘も。</description>
+      <category>スタートアップ</category>
+    </item>
     <item>
       <title>Sakana AI、初の商用サービス「Marlin」</title>
       <link>https://axiom-ai-xi.vercel.app/articles/20260615-04.html</link>
@@ -151,22 +167,6 @@
       <pubDate>Fri, 12 Jun 2026 17:59:08 GMT</pubDate>
       <description>Jeff Bezos氏が共同CEOを務めるPrometheusが120億ドルを調達し、評価額410億ドルで「汎用AIエンジニア」の開発を目指す。</description>
       <category>産業応用</category>
-    </item>
-    <item>
-      <title>SpaceX上場で史上最大IPO、マスク氏が初の「兆ドル長者」に</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260613-04.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260613-04.html</guid>
-      <pubDate>Fri, 12 Jun 2026 17:42:45 GMT</pubDate>
-      <description>SpaceXがNasdaqに上場し時価総額約1.77兆ドルを記録、イーロン・マスク氏の資産が1兆ドルを突破した。</description>
-      <category>産業応用</category>
-    </item>
-    <item>
-      <title>Mistral AI、評価額€200億で€30億の大型調達を交渉中</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260613-03.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260613-03.html</guid>
-      <pubDate>Fri, 12 Jun 2026 17:42:45 GMT</pubDate>
-      <description>フランスのAIスタートアップMistralが、前回ラウンドからほぼ倍増となる評価額で新たな資金調達を協議している。</description>
-      <category>スタートアップ</category>
     </item>
   </channel>
 </rss>
