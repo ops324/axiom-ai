@@ -1,5 +1,55 @@
 [
   {
+    "slug": "20260616-01",
+    "headline": "米政府、Anthropicの最新AIに外国人アクセス禁止令",
+    "lead": "米政府がFable 5とMythos 5への外国人アクセス停止を指示し、Anthropicは全顧客向けに両モデルを無効化した。",
+    "body_markdown": "米政府は2026年6月12日、国家安全保障を理由に、Anthropicへ「Fable 5とMythos 5への外国人によるアクセスをすべて停止する」よう求める輸出管理上の指示を出した。対象は自社従業員を含む外国籍者で、両モデルは公開からわずか数日後だった。Anthropicは指示に従い、コンプライアンス確保のため全顧客向けに両モデルを無効化したと説明している。政府は懸念の具体的根拠を明示していないが、Fable 5の安全機構を回避する「脱獄（ジェイルブレイク）」手法を把握したとされる。Anthropicによれば、これは特定のコードベースを読ませて脆弱性を修正させる限定的な手口だという。\n\n一企業の最新モデルが当局の指示で即時停止された事例であり、フロンティアモデルの提供と国家安全保障が正面から衝突したことを示す。Anthropicは「狭い潜在的脱獄を理由に、数億人に提供される商用モデルを回収すべきではない」「この基準ではすべての新規モデル提供が事実上停止しかねない」と反論しており、今後の規制のあり方を巡る議論を呼びそうだ。",
+    "tags": [
+      "Anthropic",
+      "AI規制",
+      "国家安全保障",
+      "輸出管理"
+    ],
+    "section": "産業応用",
+    "source": "The Verge",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/950026/anthropic-fable-mythos-ban-ai-shutdown",
+    "importance": 5,
+    "image_query": "circuit board security lock",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1654588836793-c6babf14d254?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxjaXJjdWl0JTIwYm9hcmQlMjBzZWN1cml0eSUyMGxvY2t8ZW58MXwwfHx8MTc4MTU1NzQ0Mnww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Sasun Bughdaryan",
+      "profileUrl": "https://unsplash.com/@sasun1990?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-15T21:04:03.227Z"
+  },
+  {
+    "slug": "20260616-02",
+    "headline": "Google、アラバマ州に15億ドルのデータセンター投資",
+    "lead": "Googleは2026〜2027年にアラバマ州ジャクソン郡のデータセンター拡張へ15億ドルを投じると発表した。",
+    "body_markdown": "Googleは2026年6月、アラバマ州ジャクソン郡のデータセンター拡張に、2026〜2027年で15億ドルを投じると発表した。同拠点は石炭火力発電所の跡地を再利用し、2019年から稼働している。拡張に伴う電力・インフラ費用は全額自社で負担するとしている。地域貢献としては、これまでに13万人を超えるアラバマ州民にデジタル技能研修を提供したほか、テネシー川流域開発公社などと連携した200万ドルのエネルギー基金や、STEM教育向けの55万ドルの寄付も明らかにした。\n\n生成AIの普及で計算需要が急増するなか、大手各社はデータセンター投資を加速させている。今回の投資は、AIインフラの拡張が電力の確保や地域経済と密接に結びついていることを改めて示すものだ。一方で、電力や水資源への負荷をどう抑えるかも引き続き問われることになる。",
+    "tags": [
+      "Google",
+      "データセンター",
+      "AIインフラ",
+      "設備投資"
+    ],
+    "section": "研究",
+    "source": "Google AI",
+    "link": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/",
+    "importance": 4,
+    "image_query": "data center servers",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1746893737268-81fe686e6a51?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwyfHxkYXRhJTIwY2VudGVyJTIwc2VydmVyc3xlbnwxfDB8fHwxNzgxNTU3NDQzfDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Avi Waxman",
+      "profileUrl": "https://unsplash.com/@aviosly?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-15T21:04:03.543Z"
+  },
+  {
     "slug": "20260615-05",
     "headline": "AIを理由にした人員削減、米で過去最多に",
     "lead": "AIを挙げた解雇が月間の理由で初めて首位に。富の偏在への警鐘も。",

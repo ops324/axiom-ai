@@ -7,7 +7,23 @@
     <atom:link href="https://axiom-ai-xi.vercel.app/feed.xml" rel="self" type="application/rss+xml" />
     <description>生成AI・基盤モデル・規制・産業応用の最新ニュースを、編集部の要約と論評でお届けする日本語AI専門メディア。</description>
     <language>ja</language>
-    <lastBuildDate>Mon, 15 Jun 2026 09:04:10 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2026 21:04:03 GMT</lastBuildDate>
+    <item>
+      <title>Google、アラバマ州に15億ドルのデータセンター投資</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260616-02.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260616-02.html</guid>
+      <pubDate>Mon, 15 Jun 2026 21:04:03 GMT</pubDate>
+      <description>Googleは2026〜2027年にアラバマ州ジャクソン郡のデータセンター拡張へ15億ドルを投じると発表した。</description>
+      <category>研究</category>
+    </item>
+    <item>
+      <title>米政府、Anthropicの最新AIに外国人アクセス禁止令</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260616-01.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260616-01.html</guid>
+      <pubDate>Mon, 15 Jun 2026 21:04:03 GMT</pubDate>
+      <description>米政府がFable 5とMythos 5への外国人アクセス停止を指示し、Anthropicは全顧客向けに両モデルを無効化した。</description>
+      <category>産業応用</category>
+    </item>
     <item>
       <title>天体物理学者がCodexでブラックホール再現</title>
       <link>https://axiom-ai-xi.vercel.app/articles/20260615-06.html</link>
@@ -151,22 +167,6 @@
       <pubDate>Fri, 12 Jun 2026 18:27:28 GMT</pubDate>
       <description>Cohereが初の開発者向けモデルNorth Mini Codeを公開。30Bパラメータ（アクティブ3B）のMoEアーキテクチャで、同規模クラス最高水準のコード生成性能を達成した。</description>
       <category>研究</category>
-    </item>
-    <item>
-      <title>SpaceX上場、史上最大のIPOで750億ドル調達</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260613-07.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260613-07.html</guid>
-      <pubDate>Fri, 12 Jun 2026 17:59:08 GMT</pubDate>
-      <description>SpaceXがNasdaqに上場し、IPO価格135ドルに対して初値150ドルを付け、時価総額は一時2兆ドルを超えた。</description>
-      <category>産業応用</category>
-    </item>
-    <item>
-      <title>ベゾス氏のAI企業Prometheus、120億ドルを調達</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260613-08.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260613-08.html</guid>
-      <pubDate>Fri, 12 Jun 2026 17:59:08 GMT</pubDate>
-      <description>Jeff Bezos氏が共同CEOを務めるPrometheusが120億ドルを調達し、評価額410億ドルで「汎用AIエンジニア」の開発を目指す。</description>
-      <category>産業応用</category>
     </item>
   </channel>
 </rss>
