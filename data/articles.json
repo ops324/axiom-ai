@@ -1,5 +1,31 @@
 [
   {
+    "slug": "20260617-01",
+    "headline": "自動運転の「フィジカルAI」、3社で分かれる設計思想",
+    "lead": "Tesla・Waymo・NVIDIAが目指す物理世界向けAIは、学習方式と安全検証の考え方で大きく異なる。",
+    "body_markdown": "物理世界で動作する「フィジカルAI」をめぐり、自動運転を主戦場とする主要3社のアプローチの違いが鮮明になっている。\n\nTeslaはカメラ映像から運転操作までを一つのニューラルネットで学習する**エンドツーエンド（E2E）型**を採り、従来のルールベース記述から大きく舵を切った。Waymoは認識・予測・計画などを分割した**モジュール型**を基盤に安全性の検証可能性を重視しつつ、Googleのマルチモーダルモデル「Gemini」を用いたE2E研究モデル「EMMA」も公表している。NVIDIAは自らロボタクシーを運行するのではなく、推論型の**Vision-Language-Action（VLA）モデル**群「Alpamayo」を提供する立場で、より大規模なAlpamayo 2 Superも投入し、自動車メーカー各社へ基盤を供給する。\n\n生成AIの進化は、想定外の場面で段階的に「推論」して判断する能力や、その判断根拠の説明性を高める方向に各社を動かしている。一方でE2E型は判断過程が見えにくく、安全規制への対応で課題が残るとされる。\n\n日本政府が戦略分野に掲げる物理AIの社会実装は自動運転が最前線の一つであり、E2Eに集約するか、モジュールと推論で安全性を担保するかという設計思想の違いは、今後の普及速度と規制対応を左右しそうだ。",
+    "tags": [
+      "自動運転",
+      "フィジカルAI",
+      "NVIDIA",
+      "Waymo",
+      "Tesla"
+    ],
+    "section": "産業応用",
+    "source": "ITmedia AI＋",
+    "link": "https://atmarkit.itmedia.co.jp/ait/articles/2606/17/news007.html",
+    "importance": 3,
+    "image_query": "self-driving car sensors road",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1521410843026-323be9ead002?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxzZWxmLWRyaXZpbmclMjBjYXIlMjBzZW5zb3JzJTIwcm9hZHxlbnwxfDB8fHwxNzgxNjQzODc0fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Samuele Errico Piccarini",
+      "profileUrl": "https://unsplash.com/@samuele_piccarini?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-16T21:04:34.565Z"
+  },
+  {
     "slug": "20260616-05",
     "headline": "ソフトバンク、OpenAI技術でAIセキュリティ診断",
     "lead": "OpenAIの「GPT-5.5 Cyber」を活用し、企業の脆弱性を発見・修復する「Patching as a Service」を発表した。",

@@ -7,7 +7,15 @@
     <atom:link href="https://axiom-ai-xi.vercel.app/feed.xml" rel="self" type="application/rss+xml" />
     <description>生成AI・基盤モデル・規制・産業応用の最新ニュースを、編集部の要約と論評でお届けする日本語AI専門メディア。</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 16 Jun 2026 09:04:01 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 21:04:34 GMT</lastBuildDate>
+    <item>
+      <title>自動運転の「フィジカルAI」、3社で分かれる設計思想</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260617-01.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260617-01.html</guid>
+      <pubDate>Tue, 16 Jun 2026 21:04:34 GMT</pubDate>
+      <description>Tesla・Waymo・NVIDIAが目指す物理世界向けAIは、学習方式と安全検証の考え方で大きく異なる。</description>
+      <category>産業応用</category>
+    </item>
     <item>
       <title>Preply、OpenAIで語学レッスンをAI要約</title>
       <link>https://axiom-ai-xi.vercel.app/articles/20260616-06.html</link>
@@ -159,14 +167,6 @@
       <pubDate>Sat, 13 Jun 2026 03:11:47 GMT</pubDate>
       <description>NVIDIAがエンタープライズ向けコンテンツ安全性モデル「Nemotron 3.5 Content Safety」をオープンライセンスで公開した。</description>
       <category>研究</category>
-    </item>
-    <item>
-      <title>OpenAIモデルとCodexがOracle Cloudから利用可能に</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260613-13.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260613-13.html</guid>
-      <pubDate>Sat, 13 Jun 2026 03:11:46 GMT</pubDate>
-      <description>OpenAIがOracle Cloud Infrastructure（OCI）との統合を発表し、既存のクラウド契約でAIモデルを利用できるようになる。</description>
-      <category>基盤モデル</category>
     </item>
   </channel>
 </rss>
