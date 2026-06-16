@@ -59,6 +59,8 @@ node src/fetchCandidates.js
   - 資金調達/上場/株 → `stock market finance`
   - 半導体/チップ → `circuit board chip`
   注意: 企業名・人名・ロゴ・画像内テキストは避ける（写真に写らない）。抽象的すぎる語も避け、具体的な被写体にする。
+  注意: `image_query` は**ストック写真（Unsplash）用**のキーワードのみ。公式プレス画像（報道対象の公式キービジュアル）は
+  権利確認が要るため自動取得せず、必要なら公開後に人手で `npm run set-press-image`（クレジット必須）で登録する。
 
 ### 4. 取り込んで反映
 次を実行する:

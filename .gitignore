@@ -11,3 +11,5 @@ data/.health
 
 # Claude Code ローカル状態
 .claude/scheduled_tasks.lock
+
+# 公式プレス画像のローカル複製（assets/press/）は配信物なので「コミットする」。無視しない。

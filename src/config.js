@@ -76,6 +76,9 @@ export const config = {
   // CSS抽象サムネのフォールバック候補（styles.css のクラス）
   thumbVariants: ['thumb--blue', 'thumb--amber', 'thumb--violet', 'thumb--teal', 'thumb--rose', 'thumb--lime'],
 
+  // 公式プレス画像（image.kind === 'press'）のクレジット接頭辞。表示は「<label>: <credit>」。
+  pressCreditLabel: '提供',
+
   // ナビのセクション（表示順）。slug はセクションページのファイル名 sections/<slug>.html。
   // hue: セクション別アクセント色相（OKLCH の H・0-360）。チップの色分けで回遊の道標にする。
   navSections: [

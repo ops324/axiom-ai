@@ -39,10 +39,15 @@ function shareButtons(a) {
 function heroFigure(a, index = 0) {
   const img = a.image || {};
   if (img.imageUrl) {
-    const credit = `Photo: <a href="${esc(img.profileUrl)}" target="_blank" rel="noopener">${esc(img.photographer)}</a> / ${esc(img.provider)}`;
+    const isPress = img.kind === 'press';
+    // 公式プレス画像は「— 提供: ◇◇」、ストック写真は従来の撮影者帰属＋「（イメージ写真）」。
+    const credit = isPress
+      ? `${esc(config.pressCreditLabel)}: ${img.creditUrl ? `<a href="${esc(img.creditUrl)}" target="_blank" rel="noopener">${esc(img.credit)}</a>` : esc(img.credit)}`
+      : `Photo: <a href="${esc(img.profileUrl)}" target="_blank" rel="noopener">${esc(img.photographer)}</a> / ${esc(img.provider)}（イメージ写真）`;
+    const aria = isPress ? `${esc(a.headline)} の関連画像` : `${esc(a.headline)} のイメージ写真`;
     return `      <figure class="article-hero">
-        <div class="thumb" role="img" aria-label="${esc(a.headline)} のイメージ写真" style="aspect-ratio: 21 / 9; background-image: url('${esc(optimizedUrl(img.imageUrl, 1600))}'); background-size: cover; background-position: center;"></div>
-        <figcaption>${esc(a.headline)}<span style="color: var(--color-ink-2);"> — ${credit}（イメージ写真）</span></figcaption>
+        <div class="thumb" role="img" aria-label="${aria}" style="aspect-ratio: 21 / 9; background-image: url('${esc(optimizedUrl(img.imageUrl, 1600))}'); background-size: cover; background-position: center;"></div>
+        <figcaption>${esc(a.headline)}<span style="color: var(--color-ink-2);"> — ${credit}</span></figcaption>
       </figure>`;
   }
   const variant = img.fallbackThumb || config.thumbVariants[index % config.thumbVariants.length];

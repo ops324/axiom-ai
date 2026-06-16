@@ -43,9 +43,15 @@ export function thumb(a, variant) {
   return `<figure class="thumb ${variant}" aria-hidden="true"></figure>`;
 }
 
-// Unsplash 規約準拠の帰属（実写真のときのみ）
+// 画像クレジット。公式プレス画像（kind==='press'）は「提供: ◇◇」、それ以外は Unsplash 規約準拠の帰属。
 export function credit(a) {
   const img = a.image || {};
   if (!img.imageUrl) return '';
+  if (img.kind === 'press') {
+    const name = img.creditUrl
+      ? `<a href="${esc(img.creditUrl)}" target="_blank" rel="noopener">${esc(img.credit)}</a>`
+      : esc(img.credit);
+    return `<span style="color: var(--color-ink-2); font-size: var(--text-xs);">${esc(config.pressCreditLabel)}: ${name}</span>`;
+  }
   return `<span style="color: var(--color-ink-2); font-size: var(--text-xs);">Photo: <a href="${esc(img.profileUrl)}" target="_blank" rel="noopener">${esc(img.photographer)}</a> / ${esc(img.provider)}</span>`;
 }

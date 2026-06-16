@@ -65,6 +65,7 @@ open index.html
 - ニュース画像の転載はしない（実写真は Unsplash の商用利用可・帰属付き素材のみ）。
 - AI 画像生成（DALL·E / Imagen 等の従量課金サービス）は使用しない。
 - 既存記事への一括付与は `npm run backfill-images`。
+- 例外として、報道対象“本人”の**公式プレス画像**は `npm run set-press-image`（クレジット必須・自動上書き保護）で**手動登録**できる。利用可否は各社の press 規約を確認。詳細は [SPEC.md §6.1](SPEC.md)。
 
 ---
 

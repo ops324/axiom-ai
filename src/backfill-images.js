@@ -13,6 +13,12 @@ for (let i = 0; i < arts.length; i++) {
   const a = arts[i];
   const k = imageKey(a.image);
 
+  // 公式プレス画像（手動登録）は自動上書きしない。使用済みキーには登録して他記事の重複を防ぐ。
+  if (a.image?.kind === 'press') {
+    if (k) usedImages.add(k);
+    continue;
+  }
+
   // 既にユニークな実写真がある → そのまま使用済み登録
   if (a.image?.imageUrl && k && !usedImages.has(k)) {
     usedImages.add(k);

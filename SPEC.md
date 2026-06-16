@@ -87,7 +87,8 @@ AIニュースサイト/
 │   ├── fetchNews.js        # RSS/補助API 取得・重複排除・一次情報優先
 │   ├── ingestDrafts.js     # 下書き取込（採番・画像・保存・再生成）
 │   ├── fetchImage.js       # Unsplash/Pexels 画像（無ければ CSS サムネ）
-│   ├── backfill-images.js  # 既存記事に実写真を一括付与
+│   ├── backfill-images.js  # 既存記事に実写真を一括付与（press画像は上書きしない）
+│   ├── set-press-image.js  # 公式プレス画像を特定記事へ手動登録（クレジット必須・上書き保護）
 │   ├── render.js           # 重要度序列・保持・アーカイブの描画統括（任意 outDir 対応）
 │   ├── renderOnly.js       # 再描画のみ
 │   ├── check.js            # 公開前チェック（render完走/スキーマ/鍵混入）
@@ -105,7 +106,7 @@ AIニュースサイト/
 ├── CLAUDE.md               # 開発ルール（毎回自動読込・コード品質/Git/検証）
 ├── README.md               # デザイン・概要
 ├── SPEC.md                 # 本書（技術仕様・運用）
-├── package.json            # スクリプト（candidates / render / check / backfill-images / serve）
+├── package.json            # スクリプト（candidates / render / check / backfill-images / set-press-image / serve）
 ├── .env.example            # 環境変数の雛形（すべて任意）
 └── _backup/                # 退避（旧HTML・廃止した qwen フォールバック）
 ```
@@ -130,6 +131,9 @@ AIニュースサイト/
   "image_query": "data center servers", // Claude が決めた画像検索ワード（内容準拠）
   "image": { "imageUrl": "…", "photographer": "…", "profileUrl": "…", "provider": "unsplash" },
                                     // 画像が無い場合は { "fallbackThumb": "thumb--blue" }
+                                    // 公式プレス画像（手動登録・自動上書き対象外）の場合:
+                                    // { "kind": "press", "imageUrl": "…", "credit": "Anthropic",
+                                    //   "creditUrl": "https://…（任意）", "source": "報道利用メモ（任意）" }
   "mode": "full",
   "createdAt": "2026-06-13T03:29:00.000Z"
 }
@@ -182,9 +186,27 @@ AIニュースサイト/
 
 **運用**
 - 有効化: `.env` に `UNSPLASH_KEY`（または `PEXELS_KEY`）。Unsplash 無料 Demo は 50 req/h で 1日6記事に十分。
-- 一括メンテ: `npm run backfill-images` — ①画像が無い記事に付与、②**他記事と重複している画像をユニークな写真へ差し替え**、の両方を行い再描画。
+- 一括メンテ: `npm run backfill-images` — ①画像が無い記事に付与、②**他記事と重複している画像をユニークな写真へ差し替え**、の両方を行い再描画。**`kind:'press'` の手動画像は上書きしない**。
 - 新規記事: 生成時に自動取得（`ingestDrafts.js` が使用済みキーを seed して `fetchImage` を呼ぶ → 既存記事と重複しない）。
 - `.env` は git 管理外（キーは公開されない）。
+
+### 6.1 公式プレス画像（手動・クレジット必須）
+
+報道対象“本人”の公式キービジュアル（例: Anthropic 公式の発表画像）を、特定記事に**人手で**登録する経路。生成・自動ジョブの既定挙動（stock/抽象サムネ）は変えず、判断を要する画像だけ“昇格”させる。
+
+- 登録: `npm run set-press-image -- <slug> <imageUrl> <credit> [creditUrl] [source]`
+  - `imageUrl` は**外部公式URL直リンク（既定推奨・複製を残さない）**または `/assets/press/<slug>.jpg`（ローカル複製・リンク切れに強いが“複製”の許諾確認がより重要）。
+  - 解除: `npm run set-press-image -- <slug> --clear`（`image` を外し、次回 `backfill-images` で stock 再取得）。
+- 表示: クレジットは **「提供: ◇◇」**（`config.pressCreditLabel`）。`creditUrl` があれば公式発表ページへリンク。記事ヒーローの「（イメージ写真）」表記は付けない。`credit()`（`cardbits.js`）/ `heroFigure()`（`article.js`）が `kind` で分岐。
+- 保護: `kind:'press'` は `backfill-images` の自動上書き対象外。og:image / JSON-LD は `imageUrl` を自動反映。
+- 検証: `check.js` が press 画像で `imageUrl`・`credit` 欠落を**公開前に弾く**（無断・無クレジット掲載の防止）。
+
+**安全チェックリスト（登録前に必ず）**
+- [ ] 報道対象“本人”の公式画像か（第三者の写真・競合製品の画像は使わない）
+- [ ] 各社の **brand / press / newsroom ガイドライン**で**報道目的の利用可**を確認した
+- [ ] **クレジット（提供元）を明記**した（`credit` 必須）。可能なら `creditUrl` で出典明示
+- [ ] 不安・許諾不明なら**使わず Unsplash か公式埋め込み（oEmbed）にフォールバック**する
+- [ ] ローカル複製（`assets/press/`）する場合は“複製の許諾”がより明確であることを確認した
 
 ---
 
@@ -264,6 +286,7 @@ npm run candidates           # 候補だけ確認（data/_candidates.json）
 zsh scripts/auto-generate.sh # 取材→執筆→反映まで全自動で1回
 npm run render               # articles.json から再描画のみ
 npm run backfill-images      # 既存記事の抽象サムネを実写真へ一括差し替え（要 UNSPLASH_KEY）
+npm run set-press-image -- <slug> <imageUrl> <credit> [creditUrl] [source]  # 公式プレス画像を手動登録（→ §6.1）
 open index.html
 ```
 

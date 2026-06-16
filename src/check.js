@@ -64,6 +64,13 @@ function checkSchema(arts) {
       if (!Number.isFinite(imp) || imp < 1 || imp > 5) fail(`${where}: importance が 1-5 ではありません (${a.importance})`);
     }
     if (!Array.isArray(a?.tags)) fail(`${where}: tags が配列ではありません`);
+    // 公式プレス画像（kind==='press'）は imageUrl とクレジット(credit)を必須にする。
+    // 無断・無クレジットの公式画像掲載を公開前に止める（CLAUDE.md の権利配慮）。
+    const img = a?.image;
+    if (img && img.kind === 'press') {
+      if (typeof img.imageUrl !== 'string' || !img.imageUrl.trim()) fail(`${where}: press画像に imageUrl がありません`);
+      if (typeof img.credit !== 'string' || !img.credit.trim()) fail(`${where}: press画像はクレジット(credit)が必須です`);
+    }
     if (typeof a?.slug === 'string') slugs.set(a.slug, (slugs.get(a.slug) || 0) + 1);
     if (typeof a?.link === 'string') links.set(a.link, (links.get(a.link) || 0) + 1);
   });
