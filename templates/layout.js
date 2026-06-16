@@ -62,7 +62,7 @@ export function header(dateLabel, activeNav = 'トップ', base = '') {
         </div>
         </div>
       </div>
-      <nav class="site-nav container" aria-label="主要セクション">
+      <nav class="site-nav" aria-label="主要セクション">
         <ul class="site-nav__list">
 ${items}
         </ul>

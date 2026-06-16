@@ -77,14 +77,15 @@ export const config = {
   thumbVariants: ['thumb--blue', 'thumb--amber', 'thumb--violet', 'thumb--teal', 'thumb--rose', 'thumb--lime'],
 
   // ナビのセクション（表示順）。slug はセクションページのファイル名 sections/<slug>.html。
+  // hue: セクション別アクセント色相（OKLCH の H・0-360）。チップの色分けで回遊の道標にする。
   navSections: [
-    { name: '基盤モデル', slug: 'foundation' },
-    { name: '研究', slug: 'research' },
-    { name: '産業応用', slug: 'industry' },
-    { name: '規制・倫理', slug: 'regulation' },
-    { name: 'スタートアップ', slug: 'startups' },
-    { name: 'ハードウェア', slug: 'hardware' },
-    { name: 'オピニオン', slug: 'opinion' },
-    { name: 'データ', slug: 'data' },
+    { name: '基盤モデル', slug: 'foundation', hue: 220 },   // 電子ブルー（ブランド基調）
+    { name: '研究', slug: 'research', hue: 285 },           // バイオレット
+    { name: '産業応用', slug: 'industry', hue: 180 },        // ティール
+    { name: '規制・倫理', slug: 'regulation', hue: 35 },     // アンバー寄り（速報レッドと差別化）
+    { name: 'スタートアップ', slug: 'startups', hue: 145 },   // グリーン
+    { name: 'ハードウェア', slug: 'hardware', hue: 65 },      // ゴールド
+    { name: 'オピニオン', slug: 'opinion', hue: 330 },        // ローズ
+    { name: 'データ', slug: 'data', hue: 250 },              // インディゴ
   ],
 };

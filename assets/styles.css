@@ -77,14 +77,20 @@
   --dur-base: 200ms;
   --dur-slow: 360ms;
 
-  /* Radii (Bloomberg風はほぼ角ばっている。控えめに) */
-  --radius-sm: 2px;
-  --radius-md: 4px;
+  /* Radii — エディトリアルの硬さは罫線・チップで保ちつつ、メディア/操作UIだけ少し緩める */
+  --radius-sm: 2px;            /* 罫線・チップ（シャープ維持） */
+  --radius-md: 8px;            /* 操作UI（ボタン・入力・検索・トグル・タグ） */
+  --radius-lg: 12px;           /* メディア（サムネ・画像・サーフェス） */
 
   /* Elevation（奥行き・ダーク基調は濃いめ） */
   --shadow-sm: 0 2px 8px oklch(0% 0 0 / 0.30);
   --shadow-md: 0 8px 28px oklch(0% 0 0 / 0.36);
   --shadow-lg: 0 20px 56px oklch(0% 0 0 / 0.46);
+  --shadow-accent: 0 14px 40px oklch(58% 0.18 232 / 0.30); /* hover の色付き影（今っぽい奥行き） */
+
+  /* Chip — セクション別 hue で道標（wayfinding）。明度/彩度はテーマで切替、hue だけ可変 */
+  --chip-l: 78%;
+  --chip-c: 0.13;
 
   /* Layout */
   --site-max: 1400px;
@@ -120,6 +126,11 @@
   --shadow-sm: 0 2px 8px oklch(50% 0.04 250 / 0.10);
   --shadow-md: 0 10px 30px oklch(50% 0.05 250 / 0.14);
   --shadow-lg: 0 24px 60px oklch(45% 0.06 250 / 0.18);
+  --shadow-accent: 0 14px 36px oklch(52% 0.17 250 / 0.20);
+
+  /* 白背景では十分なコントラストになるよう chip を深める */
+  --chip-l: 48%;
+  --chip-c: 0.15;
 }
 
 /* テーマ切替トグルボタン */
@@ -129,7 +140,7 @@
   align-items: center;
   justify-content: center;
   border: 1px solid var(--color-rule-strong);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   background: transparent;
   color: var(--color-ink-1);
   font-size: var(--text-md);
@@ -202,6 +213,10 @@ h1, h2, h3, h4 {
 }
 
 p { margin: 0; }
+
+/* figure はブラウザ既定で左右 40px のマージンが付く。サムネ(.thumb)等が右にずれるため 0 に。
+ * 独自マージンが要る figure（.prose figure / .article-hero）は各々で上書きしている。 */
+figure { margin: 0; }
 
 ::selection { background: var(--color-accent); color: var(--color-paper-0); }
 
@@ -379,7 +394,7 @@ p { margin: 0; }
   color: var(--color-ink-0);
   background: var(--color-paper-3);
   border: 1px solid var(--color-rule-strong);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
 }
 .hsearch__input::placeholder { color: var(--color-ink-2); }
 .hsearch__input:focus { outline: 2px solid var(--color-focus); outline-offset: 1px; }
@@ -425,7 +440,7 @@ p { margin: 0; }
   gap: 4px;
   padding: var(--space-2xs) var(--space-sm);
   border: 1px solid var(--color-rule-strong);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   color: var(--color-ink-1);
   line-height: 1.4;
 }
@@ -440,7 +455,7 @@ p { margin: 0; }
   font-size: var(--text-sm);
   font-weight: 500;
   letter-spacing: 0.01em;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
   cursor: pointer;
 }
@@ -507,7 +522,8 @@ p { margin: 0; }
   display: flex;
   align-items: center;
   gap: var(--space-md);
-  padding: var(--space-sm) 0;
+  /* 左右パディングは .container（32px）に委ねる。上下のみ指定してコンテンツと左端を揃える。 */
+  padding-block: var(--space-sm);
 }
 
 .breaking__tag {
@@ -566,12 +582,12 @@ p { margin: 0; }
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: oklch(var(--chip-l) var(--chip-c) var(--chip-hue, 220));
   border: 1px solid currentColor;
   border-radius: var(--radius-sm);
 }
 
-.chip--warm { color: var(--color-accent-warm); }
+.chip--warm { --chip-hue: 65; }
 .chip--solid {
   background: var(--color-accent);
   color: var(--color-paper-0);
@@ -606,11 +622,12 @@ p { margin: 0; }
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-lg);
   background: var(--color-paper-2);
 }
 
-.thumb::after {
+/* グリッドのテクスチャは抽象グラデ（フォールバック）にのみ重ねる。実写は素のまま見せる。 */
+.thumb[class*="thumb--"]::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -662,7 +679,7 @@ p { margin: 0; }
  * ============================================================ */
 
 .hero {
-  padding: var(--space-2xl) 0 var(--space-xl);
+  padding: var(--space-3xl) 0 var(--space-2xl);
 }
 
 .hero__grid {
@@ -680,10 +697,10 @@ p { margin: 0; }
 .hero__lead .thumb { aspect-ratio: 16 / 9; }
 
 .hero__headline {
-  font-size: clamp(var(--text-4xl), 4.5vw, var(--text-display-s));
+  font-size: clamp(var(--text-4xl), 5.4vw, var(--text-display));
   font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  line-height: 1.03;
+  letter-spacing: -0.022em;
 }
 .hero__headline em {
   font-style: italic;
@@ -762,8 +779,8 @@ p { margin: 0; }
 .cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-xl);
-  padding: var(--space-xl) 0;
+  gap: var(--space-2xl);
+  padding: var(--space-2xl) 0;
   border-top: 1px solid var(--color-rule);
 }
 
@@ -801,7 +818,7 @@ p { margin: 0; }
  * ============================================================ */
 
 .section {
-  padding: var(--space-2xl) 0;
+  padding: var(--space-3xl) 0;
   border-top: 1px solid var(--color-rule);
 }
 
@@ -921,6 +938,7 @@ p { margin: 0; }
 
 .newsletter {
   border: 1px solid var(--color-rule-strong);
+  border-radius: var(--radius-lg);
   padding: var(--space-xl);
   display: grid;
   gap: var(--space-md);
@@ -965,7 +983,7 @@ p { margin: 0; }
   font: inherit;
   font-size: var(--text-sm);
   padding: var(--space-sm) var(--space-md);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
 }
 
 .newsletter__form input::placeholder { color: var(--color-ink-2); }
@@ -1143,7 +1161,7 @@ p { margin: 0; }
   align-items: center;
   justify-content: center;
   border: 1px solid var(--color-rule-strong);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   color: var(--color-ink-1);
   background: transparent;
   font-family: inherit;
@@ -1237,7 +1255,7 @@ p { margin: 0; }
   gap: var(--space-xs);
   padding: var(--space-md);
   border: 1px solid var(--color-rule);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-lg);
 }
 
 .author-card__avatar {
@@ -1383,7 +1401,7 @@ p { margin: 0; }
   display: inline-block;
   padding: var(--space-2xs) var(--space-sm);
   border: 1px solid var(--color-rule-strong);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   font-family: var(--font-mono);
   font-size: var(--text-2xs);
   letter-spacing: 0.08em;
@@ -1480,7 +1498,7 @@ body::before {
 .list-card:hover { transform: translateY(-4px); }
 .card:hover .thumb,
 .list-card:hover .thumb,
-.hero__lead:hover .thumb { box-shadow: var(--shadow-md); }
+.hero__lead:hover .thumb { box-shadow: var(--shadow-accent); }
 .card:hover .thumb::before,
 .list-card:hover .thumb::before,
 .hero__lead:hover .thumb::before,

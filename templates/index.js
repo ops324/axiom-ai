@@ -3,7 +3,7 @@
 import { ticker, header, footer, page, organizationLd } from './layout.js';
 import { esc } from '../src/markdown.js';
 import { config } from '../src/config.js';
-import { thumb, credit, priorityClass } from './cardbits.js';
+import { thumb, credit, priorityClass, sectionChip } from './cardbits.js';
 
 const THUMBS = config.thumbVariants;
 const href = (a) => `articles/${a.slug}.html`;
@@ -18,7 +18,7 @@ function heroLead(a) {
           ${thumb(a, THUMBS[0])}
           <div>
             <div class="meta" style="margin-bottom: var(--space-md);">
-              <span class="chip">${esc(a.section || 'AI')}</span>
+              ${sectionChip(a.section)}
               <span>${esc(a.displayDate || '')}</span>
             </div>
             <h1 class="hero__headline">
@@ -35,10 +35,9 @@ function heroLead(a) {
 }
 
 function heroSide(items) {
-  const blocks = items.map((a, i) => {
-    const warm = i % 2 === 1 ? ' chip--warm' : '';
+  const blocks = items.map((a) => {
     return `          <div class="hero__side-item">
-            <span class="chip${warm}">${esc(a.section || 'AI')}</span>
+            ${sectionChip(a.section)}
             <h3><a href="${href(a)}">${esc(a.headline)}</a></h3>
             <div class="meta">
               <span>${relTime(a)}</span>
@@ -55,7 +54,7 @@ function cards(items) {
     const variant = THUMBS[(i + 1) % THUMBS.length];
     return `      <article class="card${priorityClass(a)}">
         ${thumb(a, variant)}
-        <span class="chip">${esc(a.section || 'AI')}</span>
+        ${sectionChip(a.section)}
         <h3 class="card__headline"><a href="${href(a)}">${esc(a.headline)}</a></h3>
         <p class="card__deck">${esc(a.lead)}</p>
         <div class="meta">

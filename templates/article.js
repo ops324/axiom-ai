@@ -3,7 +3,7 @@
 import { ticker, header, footer, page, organizationLd, absUrl } from './layout.js';
 import { mdToHtml, esc } from '../src/markdown.js';
 import { config } from '../src/config.js';
-import { thumb, credit, tagHref, optimizedUrl } from './cardbits.js';
+import { thumb, credit, tagHref, optimizedUrl, sectionChip } from './cardbits.js';
 
 const BASE = '../';
 
@@ -68,7 +68,7 @@ function relatedCards(items) {
   const variants = ['thumb--rose', 'thumb--teal', 'thumb--amber'];
   const cs = items.map((a, i) => `          <article class="card">
             ${thumb(a, variants[i % variants.length])}
-            <span class="chip">${esc(a.section || 'AI')}</span>
+            ${sectionChip(a.section)}
             <h3 class="card__headline"><a href="${esc(a.slug)}.html">${esc(a.headline)}</a></h3>
             <p class="card__deck">${esc(a.lead)}</p>
             <div class="meta"><span class="meta__author">AXIOM AI 編集部</span><span>出典: ${esc(a.source)}</span>${credit(a)}</div>
@@ -115,7 +115,7 @@ export function renderArticle(a, related, dateLabel, index = 0, tickerItems = []
       <header class="article-head">
         <div class="article-head__inner">
           <div class="meta">
-            <span class="chip">${esc(a.section || 'AI')}</span>
+            ${sectionChip(a.section)}
             <span>${esc(a.displayDate || '')}${a.displayTime ? ` ${esc(a.displayTime)}` : ''}</span>
             <span>約${readingMinutes(a.body_markdown)}分で読めます</span>
             <span>出典: ${esc(a.source)}</span>

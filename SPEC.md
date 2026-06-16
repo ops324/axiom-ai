@@ -206,6 +206,8 @@ AIニュースサイト/
 | `rssFeeds` | AI系8フィード | `tier` 付き。一次情報3＋メディア5 |
 | `imageProvider` / `*Key` | unsplash | 画像API（未設定なら CSS サムネ） |
 | `analytics.token` | 空（`CF_BEACON_TOKEN`） | Cloudflare Web Analytics の beacon トークン。空なら出力しない |
+| `thumbVariants` | CSS抽象サムネ6種 | 実写真が無いときのフォールバック（`styles.css` のグラデクラス） |
+| `navSections` | AI系8セクション | ナビ生成元。各要素は `hue`（OKLCH 色相）を持ち、チップのセクション別色分け（道標）に使う |
 
 ---
 
@@ -216,8 +218,10 @@ AIニュースサイト/
 | タグページ | `tags/<タグ>.html`（UTF-8名）と `tags/index.html`（件数で大小をつけるタグクラウド）。記事内タグ・パンくずから辿れる。 | `templates/tag.js`, `render.js` |
 | 関連記事 | タグ／セクションの一致度で「あわせて読みたい」を選出。関連集合内で**被写体（`image_query` キーワード＋画像URL）を分散**させ、同種写真の並びを避ける（関連度は犠牲にしない＝無関係記事は混ぜない）。 | `render.js: relatedFor` / `pickDiverse` / `imgSig` |
 | 重要度の視覚強調 | `importance>=4` の記事は等価グリッド（トップの注目カード・最新記事）で控えめなアクセント（カード上端のアクセント線／リストの区切り線をアクセント色）を付与し、スキャン性を上げる（von Restorff 効果）。位置による階層（hero→側→カード→時系列）は従来どおり。 | `templates/cardbits.js: priorityClass`, `index.js`, `styles.css`（`.is-priority`） |
+| セクション色分け（道標） | 各セクションに固有のアクセント色相（`navSections[].hue`）を割り当て、記事チップ（`sectionChip`）を色分け。一覧でのセクション識別・回遊を助ける（wayfinding）。明度/彩度はテーマ別トークン（`--chip-l` / `--chip-c`）、色相のみ可変なのでライト/ダーク双方でコントラスト確保。 | `config.js: navSections.hue`, `templates/cardbits.js: sectionChip`, `styles.css`（`.chip`） |
 | 記事体験 | 読了時間（≈400字/分）、公開時刻、機能する共有ボタン（X / はてブ / リンクコピー）。共有URLは `siteUrl` 基準の絶対パス。**読了プログレスバー**（本文 `.prose` のあるページに自動表示）。 | `templates/article.js`, `assets/reveal.js` |
-| 奥行き・演出 | 影トークン（`--shadow-sm/md/lg`・ライト/ダークで濃淡）、紙の微細グレイン、ヒーローの極薄発光、カードの hover リフト＋画像ズーム、見出しの下線スライド、スクロールに応じた**段階リビール**。すべて `prefers-reduced-motion` で無効化。`js` クラスは `reveal.js` が付与するため **JS 無効/失敗でも本文・カードは常に表示**（プログレッシブエンハンスメント）。 | `assets/styles.css`（ENHANCEMENTS節）, `assets/reveal.js`, `layout.js` |
+| 奥行き・演出 | 影トークン（`--shadow-sm/md/lg`・ライト/ダークで濃淡）、hover の**色付き影**（`--shadow-accent`）、紙の微細グレイン、ヒーローの極薄発光、カードの hover リフト＋画像ズーム、見出しの下線スライド、スクロールに応じた**段階リビール**。すべて `prefers-reduced-motion` で無効化。`js` クラスは `reveal.js` が付与するため **JS 無効/失敗でも本文・カードは常に表示**（プログレッシブエンハンスメント）。 | `assets/styles.css`（ENHANCEMENTS節）, `assets/reveal.js`, `layout.js` |
+| 角丸スケール | 罫線・チップは `--radius-sm`（2px・エディトリアルの硬さを維持）、操作UI（ボタン/入力/検索/トグル/タグ）は `--radius-md`（8px）、メディア（サムネ・サーフェス）は `--radius-lg`（12px）と用途別に分離。 | `assets/styles.css`（TOKENS節） |
 | アクセシビリティ・人間工学 | ダーク基調は**純黒×純白を避ける**（背景 `paper-0`=14%・本文 `ink-0`=93%で約16:1）ことでハレーションを低減。メタ／写真クレジットは `ink-2` で 5.9:1（WCAG AA 合格）。タップ領域はテーマトグル・ナビ各項目とも **44×44px 以上**。ティッカーは `prefers-reduced-motion` で停止＋**ホバー/フォーカスで一時停止**。 | `assets/styles.css`（TOKENS節・`.ticker`・`.theme-toggle`・`.site-nav`）, `templates/cardbits.js`・`article.js`（クレジット色） |
 | ライト/ダーク | ヘッダーのトグルで切替。`<head>` のインラインJSが localStorage／OS設定から `data-theme` を paint 前に適用（フラッシュ防止）。 | `styles.css` の `[data-theme="light"]`, `layout.js` |
 | サイト内検索 | `search-index.json` をクライアントで部分一致検索（見出し/タグ/セクション/リード重み付け、キーボード操作対応）。追加依存なし。 | `assets/search.js`, `render.js` |
@@ -288,6 +292,9 @@ open index.html
 - **再描画は非決定的**: `feed.xml` の `lastBuildDate` と `sitemap.xml` の `lastmod` が毎回更新されるため、
   内容が同じでも `npm run render` のたびに差分が出る（＝差分＝変更ではない）。`npm run check` は
   この性質を踏まえ「2回描画して diff 空」方式は採らず、一時dirへの描画完走で健全性を判定する。
+- **左端整列（ガター不変条件）**: ロゴ／ナビ／速報バー／画像／見出し／カード／フッターは `.container`（`--site-gutter`：PC 32px・SP 20px）で左端を揃える。守るべき2点 ―
+  ① `.container` を入れ子で**二重に付けない**（ナビは `.site-nav` 単独、速報の内側行は `padding-block` のみ指定）。二重パディングや左右パディングの上書きで要素が右/左へずれる。
+  ② `.thumb` は `<figure>` のため**ブラウザ既定の左右マージン 40px を `figure { margin: 0 }` でリセット**する（外すと画像だけ 40px 右へずれて右側にはみ出す）。
 - **ナビ**: ヘッダー各タブは `config.navSections` から `sections/<slug>.html` を生成・リンク（`render.js`）。
   記事0のセクションも空状態ページを生成する。記事のパンくず／タグはセクション・タグページへリンク済み。
   **フッターは実ページ（運営者情報/編集方針/お問い合わせ/プライバシー/利用規約/免責/RSS）へ接続済み**。

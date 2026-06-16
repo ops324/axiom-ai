@@ -3,7 +3,7 @@
 import { ticker, header, footer, page } from './layout.js';
 import { esc } from '../src/markdown.js';
 import { config } from '../src/config.js';
-import { thumb, credit, tagHref } from './cardbits.js';
+import { thumb, credit, tagHref, sectionChip } from './cardbits.js';
 
 const BASE = '../';
 const THUMBS = config.thumbVariants;
@@ -14,7 +14,7 @@ function cards(items) {
     const variant = THUMBS[i % THUMBS.length];
     return `      <article class="card">
         ${thumb(a, variant)}
-        <span class="chip">${esc(a.section || 'AI')}</span>
+        ${sectionChip(a.section)}
         <h3 class="card__headline"><a href="${href(a)}">${esc(a.headline)}</a></h3>
         <p class="card__deck">${esc(a.lead)}</p>
         <div class="meta">

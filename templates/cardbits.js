@@ -1,5 +1,18 @@
 // カードの共有部品: 実写真サムネと Unsplash 帰属（index/article/section で共用）。
 import { esc } from '../src/markdown.js';
+import { config } from '../src/config.js';
+
+// セクション名 → アクセント色相。チップを色分けして回遊の道標にする（未知セクションは既定の青）。
+const SECTION_HUE = Object.fromEntries(config.navSections.map((s) => [s.name, s.hue]));
+
+// セクション名のチップ。hue があれば --chip-hue を差し込みセクション固有色にする。
+// extraClass 例: ' chip--warm'（hue を上書きしたい特殊用途）。
+export function sectionChip(name, extraClass = '') {
+  const label = name || 'AI';
+  const hue = SECTION_HUE[label];
+  const style = hue != null ? ` style="--chip-hue:${hue}"` : '';
+  return `<span class="chip${extraClass}"${style}>${esc(label)}</span>`;
+}
 
 // タグページへのリンク（日本語タグは URL エンコード。ファイル名は生UTF-8で出力）
 export function tagHref(tag, base = '') {
