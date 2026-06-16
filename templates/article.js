@@ -3,7 +3,7 @@
 import { ticker, header, footer, page, organizationLd, absUrl } from './layout.js';
 import { mdToHtml, esc } from '../src/markdown.js';
 import { config } from '../src/config.js';
-import { thumb, credit, tagHref, optimizedUrl, sectionChip } from './cardbits.js';
+import { thumb, tagHref, optimizedUrl, sectionChip } from './cardbits.js';
 
 const BASE = '../';
 
@@ -76,7 +76,7 @@ function relatedCards(items) {
             ${sectionChip(a.section)}
             <h3 class="card__headline"><a href="${esc(a.slug)}.html">${esc(a.headline)}</a></h3>
             <p class="card__deck">${esc(a.lead)}</p>
-            <div class="meta"><span class="meta__author">AXIOM AI 編集部</span><span>出典: ${esc(a.source)}</span>${credit(a)}</div>
+            <div class="meta"><span class="meta__author">AXIOM AI 編集部</span><span>出典: ${esc(a.source)}</span></div>
           </article>`).join('\n\n');
   return `      <section class="section" aria-label="関連記事">
         <header class="section__head">

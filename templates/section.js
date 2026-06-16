@@ -3,7 +3,7 @@
 import { ticker, header, footer, page } from './layout.js';
 import { esc } from '../src/markdown.js';
 import { config } from '../src/config.js';
-import { thumb, credit, sectionChip } from './cardbits.js';
+import { thumb, sectionChip } from './cardbits.js';
 
 const BASE = '../';
 const THUMBS = config.thumbVariants;
@@ -21,7 +21,6 @@ function cards(items) {
           <span class="meta__author">AXIOM AI 編集部</span>
           <span>${esc(a.displayDate || '')}</span>
           <span>出典: ${esc(a.source)}</span>
-          ${credit(a)}
         </div>
       </article>`;
   }).join('\n\n');

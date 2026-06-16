@@ -1,4 +1,5 @@
-// カードの共有部品: 実写真サムネと Unsplash 帰属（index/article/section で共用）。
+// カードの共有部品: 実写真サムネ・セクションチップ等（index/article/section で共用）。
+// 画像クレジットは一覧では出さず、記事ページ本体（article.js の heroFigure）にのみ表示する。
 import { esc } from '../src/markdown.js';
 import { config } from '../src/config.js';
 
@@ -41,17 +42,4 @@ export function thumb(a, variant) {
     return `<figure class="thumb" style="background-image: url('${esc(optimizedUrl(img.imageUrl, 800))}'); background-size: cover; background-position: center;" aria-hidden="true"></figure>`;
   }
   return `<figure class="thumb ${variant}" aria-hidden="true"></figure>`;
-}
-
-// 画像クレジット。公式プレス画像（kind==='press'）は「提供: ◇◇」、それ以外は Unsplash 規約準拠の帰属。
-export function credit(a) {
-  const img = a.image || {};
-  if (!img.imageUrl) return '';
-  if (img.kind === 'press') {
-    const name = img.creditUrl
-      ? `<a href="${esc(img.creditUrl)}" target="_blank" rel="noopener">${esc(img.credit)}</a>`
-      : esc(img.credit);
-    return `<span style="color: var(--color-ink-2); font-size: var(--text-xs);">${esc(config.pressCreditLabel)}: ${name}</span>`;
-  }
-  return `<span style="color: var(--color-ink-2); font-size: var(--text-xs);">Photo: <a href="${esc(img.profileUrl)}" target="_blank" rel="noopener">${esc(img.photographer)}</a> / ${esc(img.provider)}</span>`;
 }

@@ -96,7 +96,7 @@ AIニュースサイト/
 │   └── markdown.js         # md→html / エスケープ
 ├── templates/
 │   ├── layout.js           # ticker/header(ナビ・検索・テーマトグル)/footer/page 骨格・解析
-│   ├── cardbits.js         # 共有: サムネ thumb() / 帰属 credit() / tagHref() / optimizedUrl()
+│   ├── cardbits.js         # 共有: サムネ thumb() / セクションチップ / tagHref() / optimizedUrl()
 │   ├── index.js            # トップ（＋メルマガ欄）
 │   ├── article.js          # 記事詳細（読了時間・共有ボタン・関連記事）
 │   ├── section.js          # セクション別一覧
@@ -179,10 +179,12 @@ AIニュースサイト/
 5. **フォールバック** — キー未設定・ヒット0・APIエラー時は `{ fallbackThumb: "thumb--blue" 等 }` を返し、
    CSS 抽象グラデーションサムネを表示（デザイン崩れゼロ）。
 
-**表示箇所**（実写真＋帰属。無ければ CSS 抽象サムネにフォールバック）
-- トップ: ヒーロー大画像＋注目カード（`templates/index.js` の `thumb()` / `credit()`）。
-- 記事詳細: アイキャッチ＋「あわせて読みたい」関連カード（`templates/article.js` の `thumb()` / `credit()`）。
+**表示箇所**（画像は実写真。無ければ CSS 抽象サムネにフォールバック）
+- トップ: ヒーロー大画像＋注目カード（`templates/index.js` の `thumb()`）。
+- 記事詳細: アイキャッチ＋「あわせて読みたい」関連カード（`templates/article.js` の `thumb()`）。
 - ヒーロー横・最新一覧・人気記事・関連トピックタグ: テキストのみ（画像なし）。
+
+**画像クレジットの表示方針**: 一覧（カード・セクション・タグ・関連記事）には**クレジットを出さない**（見た目の情報過多を避ける）。クレジットは画像が大きく出る**記事ページ本体のアイキャッチ**（`article.js` の `heroFigure()` の figcaption）にのみ表示する。Unsplash ライセンスは帰属を「推奨（必須ではない）」とするため一覧省略でも準拠。プレス画像（`kind:'press'`）のクレジットは記事ページに必ず出る（`check.js` が credit を必須化）。
 
 **運用**
 - 有効化: `.env` に `UNSPLASH_KEY`（または `PEXELS_KEY`）。Unsplash 無料 Demo は 50 req/h で 1日6記事に十分。
@@ -197,7 +199,7 @@ AIニュースサイト/
 - 登録: `npm run set-press-image -- <slug> <imageUrl> <credit> [creditUrl] [source]`
   - `imageUrl` は**外部公式URL直リンク（既定推奨・複製を残さない）**または `/assets/press/<slug>.jpg`（ローカル複製・リンク切れに強いが“複製”の許諾確認がより重要）。
   - 解除: `npm run set-press-image -- <slug> --clear`（`image` を外し、次回 `backfill-images` で stock 再取得）。
-- 表示: クレジットは **「提供: ◇◇」**（`config.pressCreditLabel`）。`creditUrl` があれば公式発表ページへリンク。記事ヒーローの「（イメージ写真）」表記は付けない。`credit()`（`cardbits.js`）/ `heroFigure()`（`article.js`）が `kind` で分岐。
+- 表示: クレジットは**記事ページのアイキャッチ**にのみ **「提供: ◇◇」**（`config.pressCreditLabel`）で表示（`article.js` の `heroFigure()` が `kind` で分岐）。`creditUrl` があれば公式発表ページへリンク。プレス画像は「（イメージ写真）」表記を付けない。一覧（カード・セクション）にはクレジットを出さない。
 - 保護: `kind:'press'` は `backfill-images` の自動上書き対象外。og:image / JSON-LD は `imageUrl` を自動反映。
 - 検証: `check.js` が press 画像で `imageUrl`・`credit` 欠落を**公開前に弾く**（無断・無クレジット掲載の防止）。
 

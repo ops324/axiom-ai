@@ -3,7 +3,7 @@
 import { ticker, header, footer, page, organizationLd } from './layout.js';
 import { esc } from '../src/markdown.js';
 import { config } from '../src/config.js';
-import { thumb, credit, priorityClass, sectionChip } from './cardbits.js';
+import { thumb, priorityClass, sectionChip } from './cardbits.js';
 
 const THUMBS = config.thumbVariants;
 const href = (a) => `articles/${a.slug}.html`;
@@ -28,7 +28,6 @@ function heroLead(a) {
             <div class="meta" style="margin-top: var(--space-md);">
               <span class="meta__author">AXIOM AI 編集部</span>
               <span>出典: ${esc(a.source)}</span>
-              ${credit(a)}
             </div>
           </div>
         </article>`;
@@ -60,7 +59,6 @@ function cards(items) {
         <div class="meta">
           <span class="meta__author">AXIOM AI 編集部</span>
           <span>出典: ${esc(a.source)}</span>
-          ${credit(a)}
         </div>
       </article>`;
   }).join('\n\n');
