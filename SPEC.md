@@ -200,6 +200,7 @@ AIニュースサイト/
   - `imageUrl` は**外部公式URL直リンク（既定推奨・複製を残さない）**または `/assets/press/<slug>.jpg`（ローカル複製・リンク切れに強いが“複製”の許諾確認がより重要）。
   - 解除: `npm run set-press-image -- <slug> --clear`（`image` を外し、次回 `backfill-images` で stock 再取得）。
 - 表示: クレジットは**記事ページのアイキャッチ**にのみ **「提供: ◇◇」**（`config.pressCreditLabel`）で表示（`article.js` の `heroFigure()` が `kind` で分岐）。`creditUrl` があれば公式発表ページへリンク。プレス画像は「（イメージ写真）」表記を付けない。一覧（カード・セクション）にはクレジットを出さない。
+- 非提携・商標の断り: 各社共通ルール「提携・推奨を示唆しない」への対応は、**画像ごとには出さず**（読者の信頼を損ねるため）、**フッター（全ページ・控えめ／`config.trademarkNotice`）と免責ページ（disclaimer.html の「商標・第三者の画像について」）に1回だけ**集約する。
 - 保護: `kind:'press'` は `backfill-images` の自動上書き対象外。og:image / JSON-LD は `imageUrl` を自動反映。
 - 検証: `check.js` が press 画像で `imageUrl`・`credit` 欠落を**公開前に弾く**（無断・無クレジット掲載の防止）。
 

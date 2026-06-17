@@ -1065,6 +1065,15 @@ figure { margin: 0; }
   flex-wrap: wrap;
 }
 
+/* 商標・非提携の注記（全ページ・控えめ） */
+.site-footer__note {
+  margin-top: var(--space-md);
+  font-size: var(--text-2xs);
+  color: var(--color-ink-2);
+  line-height: 1.6;
+  max-width: 90ch;
+}
+
 /* ============================================================
  * 16. ARTICLE PAGE
  * ============================================================ */
@@ -1188,9 +1197,6 @@ figure { margin: 0; }
   text-align: left;
   max-width: 60ch;
 }
-
-/* プレス画像の非推奨注記（提携・推奨を示唆しない旨）。控えめに表示。 */
-.press-note { color: var(--color-ink-3); }
 
 /* Article body 3-col */
 

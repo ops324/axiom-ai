@@ -121,6 +121,7 @@ ${sections}
           <a href="${base}contact.html">お問い合わせ</a>
         </div>
       </div>
+      <p class="site-footer__note">${esc(config.trademarkNotice)}</p>
     </div>
   </footer>`;
 }

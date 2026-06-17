@@ -40,10 +40,10 @@ function heroFigure(a, index = 0) {
   const img = a.image || {};
   if (img.imageUrl) {
     const isPress = img.kind === 'press';
-    // 公式プレス画像は「— 提供: ◇◇（非推奨の注記）」、ストック写真は従来の撮影者帰属＋「（イメージ写真）」。
-    // 注記は各社共通ルール「提携・推奨を示唆しない」への対応（広告運用での誤認防止）。
+    // 公式プレス画像は「— 提供: ◇◇」、ストック写真は従来の撮影者帰属＋「（イメージ写真）」。
+    // 非提携・商標の断りは画像ごとには出さず、フッター＋免責ページに集約（読者の信頼を損ねないため）。
     const credit = isPress
-      ? `${esc(config.pressCreditLabel)}: ${img.creditUrl ? `<a href="${esc(img.creditUrl)}" target="_blank" rel="noopener">${esc(img.credit)}</a>` : esc(img.credit)}<span class="press-note">（${esc(config.pressDisclaimer)}）</span>`
+      ? `${esc(config.pressCreditLabel)}: ${img.creditUrl ? `<a href="${esc(img.creditUrl)}" target="_blank" rel="noopener">${esc(img.credit)}</a>` : esc(img.credit)}`
       : `Photo: <a href="${esc(img.profileUrl)}" target="_blank" rel="noopener">${esc(img.photographer)}</a> / ${esc(img.provider)}（イメージ写真）`;
     const aria = isPress ? `${esc(a.headline)} の関連画像` : `${esc(a.headline)} のイメージ写真`;
     return `      <figure class="article-hero">
