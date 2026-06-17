@@ -9,6 +9,7 @@
     "ingest": "node src/ingestDrafts.js",
     "render": "node src/renderOnly.js",
     "check": "node src/check.js",
+    "evaluate": "node src/evaluate.js",
     "backfill-images": "node src/backfill-images.js",
     "set-press-image": "node src/set-press-image.js",
     "serve": "node --version >/dev/null && python3 -m http.server 8000"

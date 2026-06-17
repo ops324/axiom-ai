@@ -1,9 +1,12 @@
 // 公開前チェック（npm run check）。開発ルール（CLAUDE.md）を「実行可能」にするためのガード。
 // 1) レンダー完走チェック … 一時ディレクトリへお試しレンダーし、全テンプレが壊れていないこと＋
 //    主要生成物が出力されることを確認（作業ツリーは汚さない）。
+// 1b) constitution 退行検査 … ロック対象の文言（署名等）が生成記事HTMLに残っているか。
 // 2) スキーマ/不変条件チェック … articles.json の必須項目・importance範囲・slug/link一意を検証。
 // 3) 秘密情報チェック … .env が git 管理外であること、.env の値がトラッキング対象に混入していないこと。
-// いずれか失敗で非ゼロ終了。
+// 4) 客観品質チェック … 本文長/タグ数/重複話題など。これは「警告のみ」で exit には影響しない
+//    （自己改善 MVP の床。決定的・オフライン・LLM/ネットワーク不使用）。
+// 1〜3 のいずれか失敗で非ゼロ終了。4 は参考情報。
 import { mkdtemp, rm, readFile, access } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -13,10 +16,13 @@ import { execFileSync } from 'node:child_process';
 import { loadArticles } from './store.js';
 import { renderSite } from './render.js';
 import { config } from './config.js';
+import { evaluateArticle } from './evaluate.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const fails = [];
 const fail = (msg) => fails.push(msg);
+const warns = [];
+const warn = (msg) => warns.push(msg);
 
 // --- 1) レンダー完走チェック（副作用なし：一時dirへ書く）---
 async function checkRender(arts) {
@@ -38,6 +44,21 @@ async function checkRender(arts) {
         await access(path.join(dir, rel));
       } catch {
         fail(`レンダー: 期待した生成物がありません → ${rel}`);
+      }
+    }
+
+    // --- 1b) constitution 退行検査 ---
+    // ロック対象の文言（署名表記など）が実際の生成記事HTMLに残っているか。
+    // 自己改善や不用意なリファクタで「決めたこと」が消える退行を公開前に止める。
+    const sampleSlug = arts[0]?.slug;
+    if (sampleSlug && Array.isArray(config.lockedDecisions) && config.lockedDecisions.length) {
+      try {
+        const html = await readFile(path.join(dir, 'articles', `${sampleSlug}.html`), 'utf8');
+        for (const phrase of config.lockedDecisions) {
+          if (!html.includes(phrase)) fail(`constitution 退行: ロック文言が記事HTMLにありません → 「${phrase}」`);
+        }
+      } catch {
+        fail('constitution 退行検査: サンプル記事HTMLを読めませんでした');
       }
     }
   } catch (err) {
@@ -112,15 +133,32 @@ async function checkSecrets(arts) {
   }
 }
 
+// --- 4) 客観品質チェック（警告のみ・exit に影響しない）---
+// しきい値（config.qualityThresholds）は「床」であって最大化目標ではない。
+// hard-fail は 2) スキーマ側に任せ、ここは編集の気づき用に warn を出すだけ。
+function checkQuality(arts) {
+  arts.forEach((a, i) => {
+    const recent = arts.slice(i + 1); // この記事より古い記事を母集団に
+    const { flags } = evaluateArticle(a, recent);
+    for (const f of flags) warn(`${a.slug}: ${f}`);
+  });
+}
+
 // --- 実行 ---
 const arts = await loadArticles();
 await checkRender(arts);
 checkSchema(arts);
 await checkSecrets(arts);
+checkQuality(arts);
+
+if (warns.length) {
+  console.warn(`⚠ 品質警告（${warns.length} 件・公開はブロックしません）:`);
+  for (const w of warns) console.warn(`  - ${w}`);
+}
 
 if (fails.length) {
   console.error(`✗ check 失敗（${fails.length} 件）:`);
   for (const f of fails) console.error(`  - ${f}`);
   process.exit(1);
 }
-console.log(`✓ check 通過: ${arts.length} 記事・レンダー完走・スキーマOK・鍵混入なし`);
+console.log(`✓ check 通過: ${arts.length} 記事・レンダー完走・スキーマOK・鍵混入なし・constitution 維持`);

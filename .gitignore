@@ -6,8 +6,10 @@ node_modules/
 # 実行時の一時ファイル（articles.json は正本なのでコミットする）
 data/_candidates.json
 data/_drafts.json
+data/_review.json
 data/scheduler.log
 data/.health
+data/.harness.lock/
 
 # Claude Code ローカル状態
 .claude/scheduled_tasks.lock

@@ -331,3 +331,45 @@ open index.html
   sitemap.xml / robots.txt / RSSフィード（feed.xml＋feed.xsl）を出力。共通OG画像 `assets/og-default.jpg`。
 - **アナリティクス**: Cloudflare Web Analytics を導入済み（`.env` の `CF_BEACON_TOKEN`）。トークンは公開前提の値で、
   HTML（=デプロイ物）に埋め込まれる。`.env` 自体は git 管理外。
+
+## 12. 自己改善ハーネス（MVP）
+
+記事品質を継続的に上げるため、**評価→蓄積→（将来）改善** のループを既存パイプラインに載せる。
+今回実装したのは **MVP（内ループ＋記憶）** のみ。設計上の弱点（自己参照・代理指標の目標化・小N）への対策として
+4つの錨（**出典照合・別モデル judge・人間キャリブレーション・不変条項**）を据えている。
+
+### 12.1 評価の信号（追加課金0・決定的）
+- **客観指標**（`src/evaluate.js`・LLM/ネットワーク不使用）: 本文長・見出し長・リード長・タグ数・セクション整合・
+  直近記事との話題類似度（タグ＋見出しの文字2-gram Jaccard）・画像種別。しきい値は `config.qualityThresholds`。
+  **これらは「床（ガードレール）」であって最大化目標ではない**（機械的な水増し/切り詰めを誘発しないため）。
+- **LLM 採点**（別モデル judge）: `config.rubric` の6次元を1〜5で採点。faithfulness は**出典リンクを再取得して事実照合**する。
+- **人間キャリブレーション**: `npm run evaluate -- --rate <slug> <1-5> [メモ]` で人手評価を蓄積し、自己参照ループの錨にする。
+
+### 12.2 不変条項（constitution）と退行検査
+- `config.constitution`: 自己改善が**決して弱められない核**（事実忠実性・数値保全・全文転載しない・中立・出典明示）。
+- `config.lockedDecisions`: 文字列で固定する決定（署名「AI 自動要約 + 人手編集」など）。
+  記事HTMLから消えると `npm run check` が落ちる（**退行検査**）。
+
+### 12.3 日次フロー（内ループ）
+`scripts/auto-generate.sh` が3段で実行する（**stale安全ロックで二重起動を排他**）:
+1. **writer（既定モデル/Opus）** `prompts/generate-articles.md` … 候補取得→取材→**自己批評**→下書き `data/_drafts.json`。**取り込みはしない**。
+2. **judge（別モデル `config.judgeModel`＝既定 Haiku）** `prompts/review-drafts.md` … 出典照合で faithfulness を採点し、`data/_review.json` に
+   各下書きの `verdict: pass|veto`＋スコアを出力。**veto は強い根拠時のみ**（事実不一致・出典死活・constitution 違反）。
+3. **ingest** `src/ingestDrafts.js` … veto を尊重して破棄、画像付与・再生成、評価を **ledger** に追記。
+- **トークン削減の triage**: judge 呼び出しの前に `node src/evaluate.js --triage` を実行。下書きが**すべて `tier:'primary'` かつ客観フラグ無し**の
+  低リスク回は judge を**丸ごとスキップ**（客観ゲート＋writer 自己批評のみで公開）。`media` 混在 or 客観フラグ有り＝独立検証が最も要る回だけ judge を走らせる。
+  `tier` が `primary` と明示されない下書きは risky 扱い（フェイルセーフ）。judge を安くする目的で **Haiku** を既定モデルにしている（writer=Opus とは別モデル＝相関は下げたまま）。
+- **失敗時最優先＝日次を止めない**: judge がエラー/タイムアウト/スキップでも**ブロックせず**客観ゲートのみで通常公開し（失敗時は通知）。
+
+### 12.4 記憶（ledger）
+`data/quality/`（**data 配下＝dirty ガードに触れず auto コミットに乗る**）:
+- `evaluations.jsonl` … 1記事1評価（客観指標＋judge 結果を合流）。
+- `runs.jsonl` … 実行ごとのサイト集計（セクション/importance 分布・画像ヒット率・平均フラグ）。
+- `calibration.jsonl` … 人間評価。
+
+### 12.5 将来フェーズ（未実装・検証ゲートの先）
+MVP を数日〜2週間運用し「評価信号が役立つ」と確認できたら着手する:
+- **外ループ（週次・別ブランチ・人間承認 PR）**: ledger＋calibration を分析し、`prompts`/`config`（可変パラメータ）/`templates`/CSS への
+  改善差分を作る。**constitution は不可・design はテキスト提案のみ**（headless はピクセルを見ないため）。
+- **対話ハーネス**: subagents（news-judge / site-auditor）と slash commands（`/evaluate`・`/self-improve`）。
+  `/self-improve` は preview スクショ＋デザインスキルで**視覚監査込み**の改善を人と回す。
