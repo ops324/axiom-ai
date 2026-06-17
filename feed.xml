@@ -7,7 +7,23 @@
     <atom:link href="https://axiom-ai-xi.vercel.app/feed.xml" rel="self" type="application/rss+xml" />
     <description>生成AI・基盤モデル・規制・産業応用の最新ニュースを、編集部の要約と論評でお届けする日本語AI専門メディア。</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 17 Jun 2026 03:04:13 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 09:05:58 GMT</lastBuildDate>
+    <item>
+      <title>日立、OpenAIと連携 Codexでレガシー刷新</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260617-05.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260617-05.html</guid>
+      <pubDate>Wed, 17 Jun 2026 09:05:57 GMT</pubDate>
+      <description>日立がOpenAIとの提携を本格化し、Codexによるレガシー刷新とサイバー防衛に乗り出す。</description>
+      <category>産業応用</category>
+    </item>
+    <item>
+      <title>SpaceX、Cursor運営を600億ドルで買収合意</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260617-04.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260617-04.html</guid>
+      <pubDate>Wed, 17 Jun 2026 09:05:57 GMT</pubDate>
+      <description>SpaceXがAIコーディング「Cursor」のAnysphereを全株式600億ドルで取得すると発表した。</description>
+      <category>産業応用</category>
+    </item>
     <item>
       <title>米政府指令でClaude最新2モデルが全面停止</title>
       <link>https://axiom-ai-xi.vercel.app/articles/20260617-03.html</link>
@@ -150,22 +166,6 @@
       <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260614-04.html</guid>
       <pubDate>Sun, 14 Jun 2026 03:03:54 GMT</pubDate>
       <description>ChatGPTアカウントがあれば誰でも受けられる実務向けの自習講座を公開した。</description>
-      <category>基盤モデル</category>
-    </item>
-    <item>
-      <title>Google、新モデルGemini 3.5とOmniを公開</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260614-03.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260614-03.html</guid>
-      <pubDate>Sun, 14 Jun 2026 03:03:54 GMT</pubDate>
-      <description>Google I/O 2026でエージェント特化の3.5 Flashと動画生成Omniを発表した。</description>
-      <category>研究</category>
-    </item>
-    <item>
-      <title>BBVA、ChatGPTを全社員12万人規模に展開</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260614-02.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260614-02.html</guid>
-      <pubDate>Sat, 13 Jun 2026 21:03:44 GMT</pubDate>
-      <description>スペインの金融大手BBVAがOpenAIとの提携を拡大し、ChatGPTを全社員規模に広げる。</description>
       <category>基盤モデル</category>
     </item>
   </channel>
