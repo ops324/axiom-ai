@@ -147,7 +147,8 @@ AIニュースサイト/
 |---|---|---|
 | 一次情報優先 | フィードを `tier`（primary=企業公式 / media=報道）で区別。候補は primary を上位に。media の主張は Claude が WebSearch で裏取り。 | `config.rssFeeds[].tier` |
 | 重要度で選別 | Claude が候補を 1〜5 で採点し、閾値以上のみ・1回最大N本を掲載。類似トピックは1本に統合。 | `importanceFloor`=3, `maxArticles`=2 |
-| 重要度で序列 | ヒーロー大見出し／カード／人気記事を重要度順（同点は新しい順）に配置。「最新記事」のみ時系列。 | `render.js: importanceThenRecency` |
+| 重要度で序列 | カード／人気記事を重要度順（同点は新しい順）に配置。「最新記事」のみ時系列。 | `render.js: importanceThenRecency` |
+| ヒーローの鮮度ウィンドウ | トップ最上段（ヒーロー）は**直近 `heroRecencyHours` 時間内の最重要記事**から選ぶ。古い高importance記事がトップに居座る停滞を防ぐ（ほぼ日次で入れ替わる）。ウィンドウ内に記事が無ければ全体の最重要をヒーローに（保険）。サイド/カード/人気の重要度順は不変。 | `render.js`（featured 先頭差し替え）, `heroRecencyHours`=24 |
 | AI関連度フィルタ | media tier 候補は `aiKeywords` のヒット数が閾値未満なら除外（primary 公式は常に通す）。 | `aiKeywords`, `relevanceFloorMedia`=1 |
 | 関連記事 | 「あわせて読みたい」はタグ共有×3＋同セクション×2 でスコアし上位3件。不足は重要度で補完。 | `render.js: relatedFor` |
 | 保持とアーカイブ | トップは最新 N 本。超過分は `archive.html`（月別一覧）へ。記事HTMLは全保持。 | `retentionTop`=40 |
@@ -225,6 +226,7 @@ AIニュースサイト/
 | `candidatePool` | 12 | Claude に提示する候補数 |
 | `importanceFloor` | 3 | これ未満の重要度は掲載しない |
 | `retentionTop` | 40 | トップ掲載の上限。超過分はアーカイブへ |
+| `heroRecencyHours` | 24 | ヒーローは直近この時間内の最重要記事から選ぶ（トップ停滞の防止） |
 | `skipUrlPatterns` | 動画/音声系 | 取材に向かない弱いソースを除外 |
 | `aiKeywords` | AI関連語44件 | media 候補のAI関連度判定に使うキーワード |
 | `relevanceFloorMedia` | 1 | media 候補のキーワードヒットがこれ未満なら除外 |

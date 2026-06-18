@@ -146,8 +146,10 @@ open index.html
   ヘッドレス Claude が media の主張を WebSearch で裏取りしてから採用する（`src/config.js` の `rssFeeds`）。
 - **重要度で選別＋序列化** — Claude が候補を重要度 1〜5 で採点し、`importanceFloor`(3) 以上だけを
   1回 `maxArticles`(2) 本まで掲載（＝1日6本前後）。重要なものが無い回は載せない。類似トピックは1本に統合。
-- **重要度で配置** — `render.js` がトップのヒーロー大見出し／カード／人気記事を重要度順に並べる
+- **重要度で配置** — `render.js` がトップのカード／人気記事を重要度順に並べる
   （`importanceThenRecency`）。「最新記事」リストのみ時系列。
+- **ヒーローの鮮度ウィンドウ** — トップ最上段は直近 `heroRecencyHours`(24) 時間内の最重要記事から選び、
+  古い高importance記事の居座り（トップ停滞）を防ぐ。ウィンドウ内に無ければ全体の最重要を表示（保険）。
 - **保持とアーカイブ** — トップは最新 `retentionTop`(40) 本まで。超過分は `archive.html`（月別一覧）へ。記事HTMLは全保持。
 
 ### 主な設定（`src/config.js`）
@@ -158,6 +160,7 @@ open index.html
 | `candidatePool` | 12 | Claude に提示する候補数（この中から重要度で選別） |
 | `importanceFloor` | 3 | 重要度がこれ未満の候補は掲載しない |
 | `retentionTop` | 40 | トップ掲載の上限。超過分は `archive.html` へ |
+| `heroRecencyHours` | 24 | ヒーローは直近この時間内の最重要記事から選ぶ（トップ停滞の防止） |
 | `rssFeeds` | AI 系 8 フィード（`tier`付き） | 一次情報/メディアの別。増減はここで編集 |
 | `imageProvider` | `unsplash` | `unsplash` / `pexels`（キー未設定なら CSS サムネ） |
 
