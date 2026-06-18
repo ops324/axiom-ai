@@ -24,14 +24,18 @@ function dateLabel(d = new Date()) {
   return `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日 ${wd}`;
 }
 
+// 並び・表示・鮮度の基準日時。出典の発行日時（publishedAt）を優先し、
+// 無ければ取り込み時刻（createdAt）にフォールバック（レガシー記事の後方互換）。
+const effDate = (a) => a.publishedAt || a.createdAt;
+
 function decorate(a) {
-  const d = a.createdAt ? new Date(a.createdAt) : new Date();
+  const d = effDate(a) ? new Date(effDate(a)) : new Date();
   const displayDate = `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}`;
   const displayTime = `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
   return { ...a, displayDate, displayTime };
 }
 
-const recencyDesc = (x, y) => Date.parse(y.createdAt || 0) - Date.parse(x.createdAt || 0);
+const recencyDesc = (x, y) => Date.parse(effDate(y) || 0) - Date.parse(effDate(x) || 0);
 const imp = (a) => Number(a.importance) || 3;
 const importanceThenRecency = (x, y) => (imp(y) - imp(x)) || recencyDesc(x, y);
 
@@ -114,7 +118,7 @@ export async function renderSite(rawArticles, { outDir = ROOT } = {}) {
   // これを先頭へ移すことで、古い高importance記事がトップに居座る停滞を防ぐ（サイド/カード/人気の重要度順は維持）。
   // ウィンドウ内に該当が無ければ何もしない＝従来どおり全体の最重要がヒーロー（保険）。
   const heroCutoff = Date.now() - config.heroRecencyHours * 3600 * 1000;
-  const heroIdx = featured.findIndex((a) => Date.parse(a.createdAt || 0) >= heroCutoff);
+  const heroIdx = featured.findIndex((a) => Date.parse(effDate(a) || 0) >= heroCutoff);
   if (heroIdx > 0) {
     const [hero] = featured.splice(heroIdx, 1);
     featured.unshift(hero);
@@ -198,7 +202,7 @@ export async function renderSite(rawArticles, { outDir = ROOT } = {}) {
 // sitemap.xml・robots.txt・feed.xml を生成
 async function writeSeoFiles(byRecency, tagMap, legalFiles, archivedCount, outDir = ROOT) {
   const now = new Date().toISOString();
-  const lastmod = (a) => (a.createdAt ? new Date(a.createdAt).toISOString() : now);
+  const lastmod = (a) => (effDate(a) ? new Date(effDate(a)).toISOString() : now);
 
   // --- sitemap.xml ---
   const urls = [];
@@ -228,7 +232,7 @@ Sitemap: ${abs('/sitemap.xml')}
   // --- feed.xml（RSS 2.0・最新20件）---
   const items = byRecency.slice(0, 20).map((a) => {
     const link = abs(`/articles/${a.slug}.html`);
-    const pub = a.createdAt ? new Date(a.createdAt).toUTCString() : new Date().toUTCString();
+    const pub = effDate(a) ? new Date(effDate(a)).toUTCString() : new Date().toUTCString();
     return `    <item>
       <title>${xmlEsc(a.headline)}</title>
       <link>${xmlEsc(link)}</link>

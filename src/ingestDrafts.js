@@ -69,6 +69,9 @@ for (const d of drafts) {
     image,
     mode: 'full',
     createdAt: new Date().toISOString(),
+    // 出典の発行日時（候補の publishedAt を正規化）。並び・表示・鮮度の基準。
+    // 不明なら null → render は createdAt にフォールバック（後方互換）。
+    publishedAt: d.publishedAt ? new Date(d.publishedAt).toISOString() : null,
   });
   createdReviews.push(rv || null);
 }

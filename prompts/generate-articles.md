@@ -48,11 +48,13 @@ node src/fetchCandidates.js
   "link": "候補の link をそのまま",
   "tier": "候補の tier をそのまま（'primary' か 'media'）",
   "importance": 4,
-  "image_query": "rocket launch spacecraft"
+  "image_query": "rocket launch spacecraft",
+  "publishedAt": "候補の publishedAt をそのまま（出典の発行日時・ISO8601）。不明なら省略可"
 }
 ```
 - `tier` は候補の値をそのまま入れる（査読要否の判定に使う。記事本体には保存されない）。
 - `importance` は手順1.5で付けた重要度（3〜5の整数）を入れる。
+- `publishedAt` は候補の `publishedAt` をそのまま転記する（記事の並び・表示日時・鮮度の基準になる）。候補に無ければ省略してよい（取り込み時刻にフォールバックする）。
 - `image_query` は**記事内容を視覚的に表す英語の画像検索ワード（2〜4語）**。フリー素材サイト（Unsplash）で
   実際にヒットする一般的・具体的な名詞や情景にする。例:
   - クラウド/データセンターの話 → `data center servers`

@@ -10,7 +10,7 @@ function groupByMonth(articles) {
   const groups = [];
   let cur = null;
   for (const a of articles) {
-    const d = a.createdAt ? new Date(a.createdAt) : new Date();
+    const d = (a.publishedAt || a.createdAt) ? new Date(a.publishedAt || a.createdAt) : new Date();
     const key = `${d.getFullYear()}年${d.getMonth() + 1}月`;
     if (!cur || cur.key !== key) { cur = { key, items: [] }; groups.push(cur); }
     cur.items.push(a);
