@@ -64,7 +64,12 @@ BEFORE_COUNT="$(count_articles)"
 # --- 1) 執筆（writer=既定モデル/Opus）---
 # プロンプトに従い fetchCandidates → 取材 → 自己批評 → 下書き(data/_drafts.json) まで。取り込みはしない。
 # 注: zsh では $status は読み取り専用（$? の別名）。別名 rc を使う。
-"$CLAUDE_BIN" --dangerously-skip-permissions -p "$(cat "$PROMPT_FILE")"
+# 直近記事の品質傾向（決定的・オフライン）を writer プロンプト末尾へ還流する。
+# 取得失敗時は空文字＝従来どおりの挙動（日次ジョブは止めない）。
+DIGEST="$("$NODE_BIN" src/qualityDigest.js 2>/dev/null)"
+"$CLAUDE_BIN" --dangerously-skip-permissions -p "$(cat "$PROMPT_FILE")${DIGEST:+
+
+$DIGEST}"
 rc=$?
 
 # --- 2) 査読（judge=別モデル）→ 3) 取り込み。下書きがあるときだけ実行。---

@@ -918,6 +918,7 @@
     "section": "産業応用",
     "source": "The Verge",
     "link": "https://www.theverge.com/business/948996/spacex-ipo-elon-musk",
+    "importance": 3,
     "image": {
       "imageUrl": "https://images.unsplash.com/photo-1517976487492-5750f3195933?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxyb2NrZXQlMjBsYXVuY2h8ZW58MXwwfHx8MTc4MTI5NDMzNnww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
       "photographer": "SpaceX",
@@ -943,6 +944,7 @@
     "section": "産業応用",
     "source": "The Verge",
     "link": "https://www.theverge.com/ai-artificial-intelligence/949005/jeff-bezos-prometheus-artificial-general-engineer",
+    "importance": 3,
     "image": {
       "imageUrl": "https://images.unsplash.com/photo-1737644467636-6b0053476bb2?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxodW1hbm9pZCUyMHJvYm90JTIwZW5naW5lZXJpbmd8ZW58MXwwfHx8MTc4MTI5NDMzN3ww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
       "photographer": "Gabriele Malaspina",
@@ -968,6 +970,7 @@
     "section": "スタートアップ",
     "source": "TechCrunch",
     "link": "https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/",
+    "importance": 3,
     "image": {
       "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxzdGFydHVwJTIwb2ZmaWNlJTIwdGVhbXxlbnwxfDB8fHwxNzgxMjk0MzM4fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
       "photographer": "Annie Spratt",
@@ -993,6 +996,7 @@
     "section": "産業応用",
     "source": "The Verge",
     "link": "https://www.theverge.com/ai-artificial-intelligence/948409/elon-musk-trillionaire-spacex-ipo",
+    "importance": 3,
     "image": {
       "imageUrl": "https://images.unsplash.com/photo-1457364887197-9150188c107b?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxyb2NrZXQlMjBsYXVuY2glMjBuaWdodHxlbnwxfDB8fHwxNzgxMjk0MzM4fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
       "photographer": "SpaceX",
@@ -1016,6 +1020,7 @@
     "section": "スタートアップ",
     "source": "TechCrunch",
     "link": "https://techcrunch.com/2026/06/12/spacex-ipo-everything-you-need-to-know/",
+    "importance": 3,
     "image": {
       "imageUrl": "https://images.unsplash.com/photo-1614728263952-84ea256f9679?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxzcGFjZWNyYWZ0JTIwcm9ja2V0JTIwc2t5fGVufDF8MHx8fDE3ODEyOTQzMzl8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
       "photographer": "NASA",
@@ -1039,6 +1044,7 @@
     "section": "研究",
     "source": "Hugging Face",
     "link": "https://huggingface.co/blog/allenai/olmo-eval",
+    "importance": 3,
     "image": {
       "imageUrl": "https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkfGVufDF8MHx8fDE3ODEyOTQzNDB8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
       "photographer": "Deng Xiang",
@@ -1062,6 +1068,7 @@
     "section": "スタートアップ",
     "source": "TechCrunch",
     "link": "https://techcrunch.com/2026/06/11/spacex-officially-prices-shares-at-135-in-the-largest-ipo-ever/",
+    "importance": 3,
     "image": {
       "imageUrl": "https://images.unsplash.com/photo-1645226880663-81561dcab0ae?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxzdG9jayUyMG1hcmtldCUyMGNoYXJ0JTIwdHJhZGluZ3xlbnwxfDB8fHwxNzgxMjk0MzQwfDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
       "photographer": "Adam Śmigielski",
@@ -1086,6 +1093,7 @@
     "section": "研究",
     "source": "Google AI",
     "link": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/virginia-community-investments/",
+    "importance": 3,
     "image": {
       "imageUrl": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxwb3dlciUyMGVuZXJneSUyMGdyaWR8ZW58MXwwfHx8MTc4MTI5NDM0MHww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
       "photographer": "Matthew Henry",
@@ -1109,6 +1117,7 @@
     "section": "スタートアップ",
     "source": "TechCrunch",
     "link": "https://techcrunch.com/2026/06/11/spacex-spv-investors-wont-know-their-true-holdings-until-post-ipo-lock-ups-lift/",
+    "importance": 3,
     "image": {
       "imageUrl": "https://images.unsplash.com/photo-1771758249853-415175dc29b9?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxmaW5hbmNpYWwlMjBkb2N1bWVudHMlMjBvZmZpY2V8ZW58MXwwfHx8MTc4MTI5NDM0MXww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
       "photographer": "Camilo Rueda Lopez",
