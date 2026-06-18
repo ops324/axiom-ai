@@ -7,7 +7,23 @@
     <atom:link href="https://axiom-ai-xi.vercel.app/feed.xml" rel="self" type="application/rss+xml" />
     <description>生成AI・基盤モデル・規制・産業応用の最新ニュースを、編集部の要約と論評でお届けする日本語AI専門メディア。</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 18 Jun 2026 03:04:22 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2026 09:08:19 GMT</lastBuildDate>
+    <item>
+      <title>Claudeで約45分の障害 「動かない」声相次ぐ</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260618-06.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260618-06.html</guid>
+      <pubDate>Thu, 18 Jun 2026 09:08:19 GMT</pubDate>
+      <description>Anthropicの対話AI「Claude」で約45分間の障害が発生し、応答停止や遅延の報告が相次いだ。</description>
+      <category>産業応用</category>
+    </item>
+    <item>
+      <title>Midjourney、全身超音波スキャナーで医療参入</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260618-05.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260618-05.html</guid>
+      <pubDate>Thu, 18 Jun 2026 09:08:18 GMT</pubDate>
+      <description>画像生成AIのMidjourneyが医療部門と初のハード製品を発表し、全身ボディスキャン事業に乗り出した。</description>
+      <category>産業応用</category>
+    </item>
     <item>
       <title>OpenAI、生命科学の評価基準LifeSciBench公開</title>
       <link>https://axiom-ai-xi.vercel.app/articles/20260618-04.html</link>
@@ -151,22 +167,6 @@
       <pubDate>Mon, 15 Jun 2026 03:03:39 GMT</pubDate>
       <description>Sakana AIがリサーチ業務に特化した初の商用AIサービス「Sakana Marlin」を6月15日に始めた。</description>
       <category>産業応用</category>
-    </item>
-    <item>
-      <title>OpenAI、1.5億ドルでパートナー網を始動</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260615-03.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260615-03.html</guid>
-      <pubDate>Mon, 15 Jun 2026 03:03:38 GMT</pubDate>
-      <description>OpenAIが1.5億ドルを投じ、企業のAI導入を支援する世界規模のパートナー制度を立ち上げた。</description>
-      <category>基盤モデル</category>
-    </item>
-    <item>
-      <title>SpaceX上場が最大規模、AI企業のIPO競争過熱</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260615-02.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260615-02.html</guid>
-      <pubDate>Sun, 14 Jun 2026 21:04:24 GMT</pubDate>
-      <description>SpaceXが史上最大のIPOを達成し、OpenAIやAnthropicも追随観測。AI関連企業への資金集中が鮮明になっている。</description>
-      <category>スタートアップ</category>
     </item>
   </channel>
 </rss>

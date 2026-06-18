@@ -1,5 +1,57 @@
 [
   {
+    "slug": "20260618-05",
+    "headline": "Midjourney、全身超音波スキャナーで医療参入",
+    "lead": "画像生成AIのMidjourneyが医療部門と初のハード製品を発表し、全身ボディスキャン事業に乗り出した。",
+    "body_markdown": "画像生成AIで知られる米Midjourneyが2026年6月18日、サンフランシスコのイベントで医療部門「Midjourney Medical」と、初のハードウェア製品「Midjourney Scanner」を発表した。同社が「Ultrasonic CT」と呼ぶ全身超音波スキャナーで、筋肉・脂肪・骨・臓器の構成を捉えるという。\n\n超音波チップ企業Butterfly Networkと提携し、1台あたり40基の超音波オンチップ撮像モジュールを備える。利用者は浅い水を張ったプラットフォームに乗り、多数のセンサーが並ぶリングを通過することで体内の3D画像を生成する仕組みだ。CEOのDavid Holz氏は、初期試作機がMRIより約10倍安く約60倍速いとし、放射線や強力な磁石を使わずにMRIに匹敵する画質を目指すと説明した。同社は今後6年で約5万台を展開し月10億回の全身スキャンを行う構想を掲げ、2027年末にはサンフランシスコに旗艦施設「Midjourney Spa」を開く計画も示した。\n\n画像生成からハードウェア・医療への転換は大胆な賭けだが、提示された性能や安さは現時点で独立した検証や査読を経ておらず、医療機器としての規制のハードルも残る。誇大に見える数値目標が実機で裏づけられるかが焦点となる。",
+    "tags": [
+      "Midjourney",
+      "医療AI",
+      "超音波",
+      "ハードウェア",
+      "画像生成"
+    ],
+    "section": "産業応用",
+    "source": "The Verge",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/952011/midjourney-medical-ai-ultrasound-scan",
+    "importance": 4,
+    "image_query": "medical ultrasound scanner",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1513224502586-d1e602410265?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdWx0cmFzb3VuZCUyMHNjYW5uZXJ8ZW58MXwwfHx8MTc4MTc3MzY5OHww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Jair Lázaro",
+      "profileUrl": "https://unsplash.com/@jairlazarofuentes?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-18T09:08:18.949Z"
+  },
+  {
+    "slug": "20260618-06",
+    "headline": "Claudeで約45分の障害 「動かない」声相次ぐ",
+    "lead": "Anthropicの対話AI「Claude」で約45分間の障害が発生し、応答停止や遅延の報告が相次いだ。",
+    "body_markdown": "Anthropicの対話AI「Claude」で2026年6月18日午後、一時的な障害が発生した。X上では「動かない」「落ちた？」といった声が相次ぎ、やりとりが途切れたり応答が遅延したりする症状が報告された。\n\nAnthropicは同日午後4時41分に自社のステータスサイトで障害を公表し、「原因を特定し、修正作業中」と説明。午後5時19分に復旧を告知した（いずれも日本時間）。中断は約45分間で、原因の詳細や全体的な影響規模は明らかにされていない。\n\n生成AIが文章作成やプログラミングなど日常業務に組み込まれるほど、短時間の障害でも作業が止まる範囲は広がる。今回は短時間で復旧したものの、特定のAIサービスへの依存が高まる中で、可用性や代替手段の確保が利用者・企業双方の課題として改めて意識される出来事といえる。",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "障害",
+      "生成AI",
+      "可用性"
+    ],
+    "section": "産業応用",
+    "source": "ITmedia AI＋",
+    "link": "https://www.itmedia.co.jp/aiplus/article/2606/18/2000000104/",
+    "importance": 3,
+    "image_query": "server room data center",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1614508569207-3295ac89d75f?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwyfHxzZXJ2ZXIlMjByb29tJTIwZGF0YSUyMGNlbnRlcnxlbnwxfDB8fHwxNzgxNzczNjk5fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Elimende Inagella",
+      "profileUrl": "https://unsplash.com/@elimendeinagella?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-18T09:08:19.505Z"
+  },
+  {
     "slug": "20260618-03",
     "headline": "OpenAI、GPT-5.4で創薬反応を半自律改良",
     "lead": "OpenAIとMolecule.oneが、AIが創薬で使う化学反応の条件を見直し収率を改善したと発表した。",
