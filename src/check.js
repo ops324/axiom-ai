@@ -17,6 +17,7 @@ import { loadArticles } from './store.js';
 import { renderSite } from './render.js';
 import { config } from './config.js';
 import { evaluateArticle } from './evaluate.js';
+import { mdToHtml } from './markdown.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const fails = [];
@@ -50,15 +51,18 @@ async function checkRender(arts) {
     // --- 1b) constitution 退行検査 ---
     // ロック対象の文言（署名表記など）が実際の生成記事HTMLに残っているか。
     // 自己改善や不用意なリファクタで「決めたこと」が消える退行を公開前に止める。
-    const sampleSlug = arts[0]?.slug;
-    if (sampleSlug && Array.isArray(config.lockedDecisions) && config.lockedDecisions.length) {
-      try {
-        const html = await readFile(path.join(dir, 'articles', `${sampleSlug}.html`), 'utf8');
-        for (const phrase of config.lockedDecisions) {
-          if (!html.includes(phrase)) fail(`constitution 退行: ロック文言が記事HTMLにありません → 「${phrase}」`);
+    // 1記事だけだと取りこぼすため、先頭数件をサンプルして確認する。
+    const sampleSlugs = arts.slice(0, 3).map((a) => a?.slug).filter(Boolean);
+    if (sampleSlugs.length && Array.isArray(config.lockedDecisions) && config.lockedDecisions.length) {
+      for (const slug of sampleSlugs) {
+        try {
+          const html = await readFile(path.join(dir, 'articles', `${slug}.html`), 'utf8');
+          for (const phrase of config.lockedDecisions) {
+            if (!html.includes(phrase)) fail(`constitution 退行: ロック文言が記事HTMLにありません → 「${phrase}」(${slug})`);
+          }
+        } catch {
+          fail(`constitution 退行検査: サンプル記事HTMLを読めませんでした (${slug})`);
         }
-      } catch {
-        fail('constitution 退行検査: サンプル記事HTMLを読めませんでした');
       }
     }
   } catch (err) {
@@ -133,6 +137,36 @@ async function checkSecrets(arts) {
   }
 }
 
+// --- 3b) サニタイザ退行検査（本文MarkdownのXSS無害化）---
+// 実データの本文はクリーンで素通り検知できないため、既知の悪性入力を mdToHtml に通し、
+// 生HTML・危険プロトコルが無害化されることを決定的に確認する（オフライン・ネットワーク不使用）。
+function checkSanitizer() {
+  const malicious = [
+    '<script>alert(1)</script>',
+    '<img src=x onerror=alert(1)>',
+    '[x](javascript:alert(1))',
+    '![y](data:text/html,abc)',
+    '<a href="vbscript:msgbox(1)">z</a>',
+  ].join('\n\n');
+  let html = '';
+  try {
+    html = mdToHtml(malicious);
+  } catch (err) {
+    fail(`サニタイザ検査: mdToHtml が例外で停止しました: ${err.message}`);
+    return;
+  }
+  // 生HTMLはエスケープされ「&lt;…&gt;」のテキストになる（=無害）。危険なのは“実タグ”として
+  // 出力された場合のみなので、判定は実タグ（リテラルな < で始まる）内に限定する。
+  const lower = html.toLowerCase();
+  if (lower.includes('<script')) fail('サニタイザ退行: 生の <script> が本文HTMLに出力されています');
+  if (/<[^>]*\son\w+\s*=/.test(lower)) fail('サニタイザ退行: イベントハンドラ属性（on*=）が実タグに残っています');
+  for (const proto of ['javascript:', 'data:', 'vbscript:']) {
+    if (lower.includes(`href="${proto}`) || lower.includes(`src="${proto}`)) {
+      fail(`サニタイザ退行: 危険プロトコル ${proto} が href/src に残っています`);
+    }
+  }
+}
+
 // --- 4) 客観品質チェック（警告のみ・exit に影響しない）---
 // しきい値（config.qualityThresholds）は「床」であって最大化目標ではない。
 // hard-fail は 2) スキーマ側に任せ、ここは編集の気づき用に warn を出すだけ。
@@ -148,6 +182,7 @@ function checkQuality(arts) {
 const arts = await loadArticles();
 await checkRender(arts);
 checkSchema(arts);
+checkSanitizer();
 await checkSecrets(arts);
 checkQuality(arts);
 
@@ -161,4 +196,4 @@ if (fails.length) {
   for (const f of fails) console.error(`  - ${f}`);
   process.exit(1);
 }
-console.log(`✓ check 通過: ${arts.length} 記事・レンダー完走・スキーマOK・鍵混入なし・constitution 維持`);
+console.log(`✓ check 通過: ${arts.length} 記事・レンダー完走・スキーマOK・サニタイザOK・鍵混入なし・constitution 維持`);
