@@ -88,6 +88,13 @@ function checkSchema(arts) {
       const imp = Number(a.importance);
       if (!Number.isFinite(imp) || imp < 1 || imp > 5) fail(`${where}: importance が 1-5 ではありません (${a.importance})`);
     }
+    // publishedAt は任意（出典発行日時）。値があれば妥当な日時文字列であること。
+    // 欠落時は render が createdAt にフォールバック（後方互換）。
+    if (a?.publishedAt != null) {
+      if (typeof a.publishedAt !== 'string' || Number.isNaN(Date.parse(a.publishedAt))) {
+        fail(`${where}: publishedAt が妥当な日時文字列ではありません (${a.publishedAt})`);
+      }
+    }
     if (!Array.isArray(a?.tags)) fail(`${where}: tags が配列ではありません`);
     // 公式プレス画像（kind==='press'）は imageUrl とクレジット(credit)を必須にする。
     // 無断・無クレジットの公式画像掲載を公開前に止める（CLAUDE.md の権利配慮）。
