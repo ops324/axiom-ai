@@ -57,8 +57,9 @@ node src/fetchCandidates.js
 - `tier` は候補の値をそのまま入れる（査読要否の判定に使う。記事本体には保存されない）。
 - `importance` は手順1.5で付けた重要度（3〜5の整数）を入れる。
 - `publishedAt` は候補の `publishedAt` をそのまま転記する（記事の並び・表示日時・鮮度の基準になる）。候補に無ければ省略してよい（取り込み時刻にフォールバックする）。
-- `image_query` は**記事内容を視覚的に表す英語の画像検索ワード（2〜4語）**。フリー素材サイト（Unsplash）で
-  実際にヒットする一般的・具体的な名詞や情景にする。例:
+- `image_query` は**記事内容を視覚的に表す英語の画像検索ワード（2〜3語）**。フリー素材サイト（Unsplash）で
+  実際にヒットする一般的・具体的な名詞や情景にする。**語を盛り込みすぎると0ヒットになる**ため、
+  4語以上の限定的な組み合わせ（例: `dna genetic research laboratory`）は避け、当たりやすい2〜3語（例: `dna laboratory`）にする。例:
   - クラウド/データセンターの話 → `data center servers`
   - 開発者/コードの話 → `programming code screen`
   - ロケット/宇宙企業 → `rocket launch spacecraft`
