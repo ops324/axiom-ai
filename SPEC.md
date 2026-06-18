@@ -170,20 +170,22 @@ AIニュースサイト/
 
 処理は `src/fetchImage.js`（`ingestDrafts.js` から記事ごとに呼ばれる）:
 
-1. **キーワード生成** — 検索ワードは次の優先順:
-   - **①記事ごとの `image_query`**（最優先）— Claude が記事を読んで決めた英語の画像検索ワード（2〜4語）。
-     内容を視覚的に表す具体的な被写体（例: `data center servers` / `rocket launch` / `programming code screen`）。
-     ドラフトに含めさせ、記事レコードにも保存する（将来の再取得でも内容準拠を維持）。
-   - **②簡易語彙マップ**（フォールバック）— `image_query` が無い記事は `tags`／見出しから推定。
-   - **③既定** `artificial intelligence technology`。
-2. **取得（候補30件）** — `imageProvider`（既定 Unsplash、無ければ Pexels）で landscape 写真を**最大30件**検索。
+1. **キーワード生成（段階的フォールバック）** — `keywordVariants()` が「具体的→広い」順に検索語の候補列を作り、
+   **0ヒットなら次の語へ広げて最初に当たった集合を採用**する（`image_query` が具体的すぎると Unsplash は
+   AND 的検索で0件になり抽象サムネへ落ちるため、それを防ぐ）。順序:
+   - **①記事ごとの `image_query`**（最優先）— Claude が決めた英語ワード（**2〜3語**）。内容を視覚的に表す具体的な被写体。
+     記事レコードにも保存（将来の再取得でも内容準拠を維持）。
+   - **②語を減らした版** — `image_query` が4語以上なら先頭3語・先頭2語に短縮（例: `dna genetic research laboratory`→0件 なら `dna genetic research`→`dna genetic`）。
+   - **③簡易語彙マップ** — `tags`／見出しから推定（例: 診断→`medical technology`）。
+   - **④既定** `artificial intelligence technology`。
+2. **取得（候補30件）** — 各語につき `imageProvider`（既定 Unsplash、無ければ Pexels）で landscape 写真を**最大30件**検索。
 3. **重複回避** — 候補の中から**他記事で未使用の写真を選ぶ**。判定は `imageKey()`（URL から写真固有IDを抽出）。
    使用済みキーの `Set` を生成・バックフィル全体で共有し、既存記事とも突き合わせる。
    全件使用済みのときのみ index ベースで分散（最終手段は重複許容）。
 4. **帰属** — 取得できたら `{ imageUrl, photographer, profileUrl, provider }` を記録し、
    **撮影者名＋プロフィールリンクを必ず表示**（Unsplash 規約準拠）。Unsplash はダウンロードトリガーを叩く（規約準拠）。
-5. **フォールバック** — キー未設定・ヒット0・APIエラー時は `{ fallbackThumb: "thumb--blue" 等 }` を返し、
-   CSS 抽象グラデーションサムネを表示（デザイン崩れゼロ）。
+5. **フォールバック** — **全キーワード候補が0ヒット**、またはキー未設定・APIエラー時のみ `{ fallbackThumb: "thumb--blue" 等 }` を返し、
+   CSS 抽象グラデーションサムネを表示（デザイン崩れゼロ）。`npm run backfill-images` で後から実写真へ差し替え可能。
 
 **表示箇所**（画像は実写真。無ければ CSS 抽象サムネにフォールバック）
 - トップ: ヒーロー大画像＋注目カード（`templates/index.js` の `thumb()`）。
