@@ -19,14 +19,24 @@ const KW_MAP = [
   [/コード|開発者|プログラ|エンジニア/, 'software code developer'],
 ];
 
-function keyword(article) {
+// 検索語の候補列を「具体的→広い」順で作る。
+// image_query が具体的すぎて 0 ヒットでも、語を減らした版・タグ/見出しの簡易マップ・既定語へと
+// 段階的に広げて当てる（過剰具体的なクエリでの抽象サムネ落ちを防ぐ）。
+function keywordVariants(article) {
+  const variants = [];
   // 最優先: Claude が記事を読んで決めた検索ワード（内容に最も合う）
   const q = (article.image_query || '').trim();
-  if (q) return q;
-  // フォールバック: タグ/見出しからの簡易マップ
+  if (q) {
+    variants.push(q);
+    const words = q.split(/\s+/);
+    if (words.length > 3) variants.push(words.slice(0, 3).join(' ')); // 先頭3語
+    if (words.length > 2) variants.push(words.slice(0, 2).join(' ')); // 先頭2語
+  }
+  // タグ/見出しからの簡易マップ（最初の一致のみ）
   const hay = [...(article.tags || []), article.headline || ''].join(' ');
-  for (const [re, kw] of KW_MAP) if (re.test(hay)) return kw;
-  return 'artificial intelligence technology';
+  for (const [re, kw] of KW_MAP) if (re.test(hay)) { variants.push(kw); break; }
+  variants.push('artificial intelligence technology'); // 既定
+  return [...new Set(variants)]; // 重複除去（順序維持）
 }
 
 // 画像の一意キー（重複判定用）。保存済みレコードからも導出できるよう URL から抽出。
@@ -77,14 +87,15 @@ async function pexelsCandidates(kw) {
 // 戻り値: 画像メタ or { fallbackThumb }
 // used: 既に使用済みの imageKey の Set（重複回避）。選んだ画像のキーは used に追加する。
 export async function fetchImage(article, index = 0, used = new Set()) {
-  const kw = keyword(article);
+  const primary = config.imageProvider === 'pexels' ? pexelsCandidates : unsplashCandidates;
+  const secondary = config.imageProvider === 'pexels' ? unsplashCandidates : pexelsCandidates;
   try {
-    const primary = config.imageProvider === 'pexels' ? pexelsCandidates : unsplashCandidates;
-    const secondary = config.imageProvider === 'pexels' ? unsplashCandidates : pexelsCandidates;
-    let cands = await primary(kw);
-    if (!cands.length) cands = await secondary(kw);
+    // 具体的→広い順に検索語を試し、最初にヒットした候補集合を採用（0ヒットでの抽象落ちを防ぐ）。
+    for (const kw of keywordVariants(article)) {
+      let cands = await primary(kw);
+      if (!cands.length) cands = await secondary(kw);
+      if (!cands.length) continue; // この語は0ヒット → 次の（より広い）語へ
 
-    if (cands.length) {
       // 未使用の候補を優先。全て使用済みなら index ベースで分散（最終手段は重複許容）。
       const pick = cands.find((c) => { const k = imageKey(c); return k && !used.has(k); })
         || cands[index % cands.length];
