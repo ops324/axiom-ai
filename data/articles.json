@@ -1,5 +1,140 @@
 [
   {
+    "slug": "20260620-01",
+    "headline": "新興企業、LLMの計算ボトルネック克服を主張",
+    "lead": "Subquadraticがスパース注意で計算量を削減と主張。第三者評価は速度向上を示すも専門家は懐疑的。",
+    "body_markdown": "米マイアミ拠点のAI新興企業Subquadraticが先月ステルスを脱し、大規模言語モデル（LLM）を10年近く制約してきた数学的ボトルネックを解いたと主張している。問題は「二乗で増える注意計算（quadratic attention）」だ。従来のTransformerは各トークンを他の全トークンと掛け合わせる「密な注意」を使うため、文章の長さを2倍にすると計算量はおよそ4倍に膨らむ。\n\n同社のモデル「SubQ」は、関連するトークンの組だけを動的に選んで計算する「疎な注意（sparse attention）」を採用したとする。第三者評価機関Appenの独立ベンチマークでは、SubQはFlashAttention採用モデルより56倍高速で、コーディング評価LiveCodeBenchで89.7%、600万・1200万トークンの長文検索課題で98%を記録したという。CEOのJustin Dangel氏は、RULER 128の実行コストが「8ドル」で済み、Anthropicのモデルでは「2600ドル」かかったと述べた。\n\n一方で懐疑論も根強い。SubQはゼロから学習したのではなく中国製オープンモデルQwenの重みを再利用しており、一般公開も限定的だ。独立研究者は、公開された証拠は「二乗注意のボトルネックを解いた」とまで言える水準にはないと指摘する。主張が裏付けられれば長文処理のコスト構造を変えうるが、現時点では再現検証が待たれる段階にとどまる。",
+    "tags": [
+      "LLM",
+      "Transformer",
+      "計算効率",
+      "スタートアップ",
+      "ベンチマーク"
+    ],
+    "section": "研究",
+    "source": "MIT Tech Review",
+    "link": "https://www.technologyreview.com/2026/06/19/1139313/a-startup-claims-it-broke-through-a-bottleneck-thats-holding-back-llms/",
+    "importance": 4,
+    "image_query": "abstract network connections",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1644088379091-d574269d422f?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMG5ldHdvcmslMjBjb25uZWN0aW9uc3xlbnwxfDB8fHwxNzgxOTAzMjI1fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Conny Schneider",
+      "profileUrl": "https://unsplash.com/@choys_?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-19T21:07:05.784Z",
+    "publishedAt": "2026-06-19T10:40:24.000Z"
+  },
+  {
+    "slug": "20260620-02",
+    "headline": "OpenAI、ChatGPTの広告テストを日本で開始",
+    "lead": "無料とGoプランの成人ユーザーが対象。設定から非表示にでき、回答は広告に影響されないと説明。",
+    "body_markdown": "米OpenAIの日本法人は2026年6月19日、ChatGPTでの広告表示テストを日本でも始めたと発表した。米国では同年2月にテストが始まっており、日本はそれに続く形となる。\n\n広告が表示されるのは「無料プラン」と月額1400円の「Go」プランの成人ユーザーで、Plus・Pro・Business・Enterprise・Educationの各プラン利用者は対象外とされる。広告を非表示にしたい場合は、アプリ設定の「広告の制御」から操作できる。具体的には、上位プランへアップグレードするか、1日に無料でやりとりできる回数を減らすことで広告を消せるという。\n\nOpenAIは、ChatGPTの回答自体は広告の影響を受けないとし、チャット履歴などの個人情報を広告主に渡さない方針を示している。広告主に提供されるのは表示回数やクリック数といった指標のみという。日本でのテスト広告の運用は、電通デジタル、Hakuhodo DY ONE、サイバーエージェントが支援する。\n\n無料層を抱えるChatGPTにとって広告は新たな収益源となりうる一方、対話型サービスの信頼性をどう保つかが問われる。回答と広告を切り分ける設計が、実際の利用体験でどこまで守られるかが今後の焦点になる。",
+    "tags": [
+      "OpenAI",
+      "ChatGPT",
+      "広告",
+      "収益化",
+      "日本"
+    ],
+    "section": "産業応用",
+    "source": "ITmedia AI＋",
+    "link": "https://www.itmedia.co.jp/aiplus/article/2606/19/2000000108/",
+    "importance": 4,
+    "image_query": "smartphone app screen",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxzbWFydHBob25lJTIwYXBwJTIwc2NyZWVufGVufDF8MHx8fDE3ODE5MDMyMjZ8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "William Hook",
+      "profileUrl": "https://unsplash.com/@williamtm?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-19T21:07:06.359Z",
+    "publishedAt": "2026-06-19T02:26:50.000Z"
+  },
+  {
+    "slug": "20260620-03",
+    "headline": "GMO、中国Unitreeの人型ロボ国内代理店に",
+    "lead": "販売から導入・保守まで一気通貫で支援。Unitreeは人型ロボの世界シェア約4割を握る。",
+    "body_markdown": "GMOインターネットグループ傘下でロボティクス事業を手掛けるGMO AI＆ロボティクス商事は2026年6月19日、中国のロボット開発企業Unitree Roboticsと日本国内正規代理店契約を締結したと発表した。対象は人型ロボットや四足歩行ロボットで、販売から導入支援、保守までを一気通貫で手掛けるとしている。\n\n同社はすでに、人型ロボットによる陸上競技の世界大会優勝を目指すプロジェクトや、羽田空港での手荷物・貨物の積み下ろし業務の省人化実証実験などに取り組んでいる。今回の代理店契約で、機体の調達から現場導入後の運用までを国内で一貫して支えられる体制を整える狙いだ。\n\nUnitreeは二足歩行できる人型ロボットの世界市場シェア約4割を握り首位に立つとされ、2025年の売上高は前年比435%の392億円。2026年内の上場も控える注目企業だ。GMO側は、グループが持つITインフラや金融サービスの知見を組み合わせ、セキュリティを確保した導入環境を提供できる点を強みに挙げる。\n\n人型ロボットの実用化が研究段階から現場導入へ移りつつある中、海外の有力機体を国内で扱う窓口の整備は、日本企業の導入障壁を下げる動きとして注目される。",
+    "tags": [
+      "ロボット",
+      "Unitree",
+      "GMO",
+      "人型ロボット",
+      "産業応用"
+    ],
+    "section": "ハードウェア",
+    "source": "ITmedia AI＋",
+    "link": "https://www.itmedia.co.jp/aiplus/article/2606/19/2000000109/",
+    "importance": 3,
+    "image_query": "humanoid robot",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1601132359864-c974e79890ac?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwyfHxodW1hbm9pZCUyMHJvYm90fGVufDF8MHx8fDE3ODE5MDMyMjd8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Aideal Hwa",
+      "profileUrl": "https://unsplash.com/@aideal?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-19T21:07:07.332Z",
+    "publishedAt": "2026-06-19T07:16:24.000Z"
+  },
+  {
+    "slug": "20260620-04",
+    "headline": "Elastic、AIデバッグ新興Deductive AIを買収へ",
+    "lead": "買収額は最大8500万ドルと報道（両社未確認）。観測領域へAIデバッグ技術を統合する狙い。",
+    "body_markdown": "検索基盤を手掛けるElasticが、ソフトウェアのバグ検出・修正をAIで自動化する新興企業Deductive AIを買収することで合意したと報じられた。複数の関係者によれば買収額は最大8500万ドルとされるが、両社とも本件を認めていない。\n\nDeductive AIは2023年創業で、人手で行ってきたデバッグ作業を自動化する「AI SRE（サイト信頼性エンジニアリング）」に注力する。2024年11月、CRVが主導しDatabricks Ventures、Thomvest Ventures、PrimeSetが参加した750万ドルのシード調達（評価額3300万ドル）とともにステルスを脱した。創業者はThoughtSpotで技術担当VPを務めたRakesh Kothari氏と、MetaやDatabricksに在籍したSameer Agarwal氏。年間経常収益（ARR）は約100万ドルと報じられている。\n\nElasticは同社の技術を自社の可観測性（オブザーバビリティ）基盤に統合し、システム性能の監視や障害の自動解決をリアルタイムで提供することを狙うとされる。確立した大手が、AIを前提に設計された新興企業を取り込み既存製品を補強する動きの一例といえる。創業3年・小規模なARRの段階での買収合意は、AI運用ツール領域での人材・技術獲得競争の過熱を映している。",
+    "tags": [
+      "Elastic",
+      "買収",
+      "AI SRE",
+      "オブザーバビリティ",
+      "スタートアップ"
+    ],
+    "section": "スタートアップ",
+    "source": "TechCrunch",
+    "link": "https://techcrunch.com/2026/06/18/source-elastic-agrees-to-buy-crv-backed-deductiveai-for-up-to-85m/",
+    "importance": 3,
+    "image_query": "programming code screen",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1607706189992-eae578626c86?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHw1fHxwcm9ncmFtbWluZyUyMGNvZGUlMjBzY3JlZW58ZW58MXwwfHx8MTc4MTkwMzIyN3ww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Mohammad Rahmani",
+      "profileUrl": "https://unsplash.com/@afgprogrammer?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-19T21:07:07.960Z",
+    "publishedAt": "2026-06-19T00:51:11.000Z"
+  },
+  {
+    "slug": "20260620-05",
+    "headline": "AWS、AIエージェント向けWeb検索を正式提供",
+    "lead": "Bedrock AgentCoreでGA。Amazon独自の検索インデックスで最新情報をエージェントに供給。",
+    "body_markdown": "アマゾン・ウェブ・サービス（AWS）は、AIエージェント向けのWeb検索機能「Web Search on Amazon Bedrock AgentCore」を一般提供（GA）開始した。AIエージェントの知識は学習時点で固定されるため、株価や直近の出来事、新発表といったリアルタイムの情報には答えにくいという課題がある。今回の機能はエージェントに最新のWeb情報へのアクセス手段を与えるものだ。\n\nこの検索機能はAgentCore Gatewayと統合され、Model Context Protocol（MCP）経由でエージェントが自動的に発見・呼び出せる。手作業でのツール設定は不要という。特徴として、Amazonが独自に維持する数百億規模の文書を含む検索インデックスを用い、数分以内に更新される点を挙げる。組み込みのナレッジグラフにより事実性の高い応答を返し、ハルシネーション（誤情報生成）を抑えるとする。\n\nクエリはAWSの外部や第三者検索エンジンに送られないため、企業のデータ所在地に関する懸念にも対応する。返されるのは生のHTMLではなく、モデルの文脈に最適化された関連箇所の抜粋だ。料金は1000クエリあたり7ドルで、提供リージョンは当初us-east-1（米国東部・バージニア北部）となる。\n\n外部情報を安全に扱える検索基盤は、企業がエージェントを実運用に乗せる際の要となる。クラウド内で完結する設計は、データ保護を重視する用途での採用を後押ししそうだ。",
+    "tags": [
+      "AWS",
+      "AIエージェント",
+      "Web検索",
+      "Bedrock",
+      "MCP"
+    ],
+    "section": "開発",
+    "source": "AWS ML Blog",
+    "link": "https://aws.amazon.com/blogs/machine-learning/introducing-web-search-on-amazon-bedrock-agentcore/",
+    "importance": 3,
+    "image_query": "data center servers",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwY2VudGVyJTIwc2VydmVyc3xlbnwxfDB8fHwxNzgxOTAzMjI4fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Taylor Vick",
+      "profileUrl": "https://unsplash.com/@tvick?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-19T21:07:08.253Z",
+    "publishedAt": "2026-06-19T14:15:24.000Z"
+  },
+  {
     "slug": "20260619-08",
     "headline": "Photoshop等にAIアシスタント、公開ベータ開始",
     "lead": "AdobeがCreative Cloud主要アプリに対話型AIアシスタントを搭載し公開ベータを始めた。",
