@@ -7,7 +7,15 @@
     <atom:link href="https://axiom-ai-xi.vercel.app/feed.xml" rel="self" type="application/rss+xml" />
     <description>生成AI・基盤モデル・規制・産業応用の最新ニュースを、編集部の要約と論評でお届けする日本語AI専門メディア。</description>
     <language>ja</language>
-    <lastBuildDate>Sat, 20 Jun 2026 21:07:37 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 03:07:09 GMT</lastBuildDate>
+    <item>
+      <title>Signalのウィテカー氏「AIチャットボットは友達ではない」</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260621-10.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260621-10.html</guid>
+      <pubDate>Sat, 20 Jun 2026 20:32:29 GMT</pubDate>
+      <description>Signal代表のウィテカー氏が、AIを擬人化せず統合に伴うプライバシーの危うさに警鐘を鳴らした。</description>
+      <category>規制・倫理</category>
+    </item>
     <item>
       <title>The Atlantic、AI学習に使われた楽曲のDBを公開</title>
       <link>https://axiom-ai-xi.vercel.app/articles/20260621-03.html</link>
@@ -81,6 +89,14 @@
       <category>研究</category>
     </item>
     <item>
+      <title>理研、AI科学用スパコンを「理究」と命名 千利休に由来</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260621-08.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260621-08.html</guid>
+      <pubDate>Fri, 19 Jun 2026 08:00:51 GMT</pubDate>
+      <description>理化学研究所がAI for Science向けスパコンの名称を公募で「理究」（りきゅう）に決めた。</description>
+      <category>ハードウェア</category>
+    </item>
+    <item>
       <title>米、ASML製EUV装置の中国流出を指摘</title>
       <link>https://axiom-ai-xi.vercel.app/articles/20260619-10.html</link>
       <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260619-10.html</guid>
@@ -151,22 +167,6 @@
       <pubDate>Thu, 18 Jun 2026 21:06:08 GMT</pubDate>
       <description>ServiceNowが、AI研究エージェントが検索履歴から機密を漏らすリスクを測る評価基準を公開した。</description>
       <category>研究</category>
-    </item>
-    <item>
-      <title>AI推論モデル、難病の子ども18人を新たに診断</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260619-01.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260619-01.html</guid>
-      <pubDate>Thu, 18 Jun 2026 21:06:08 GMT</pubDate>
-      <description>OpenAIの推論モデルが未解明だった小児の希少疾患を解析し、18件の新たな診断につながった。</description>
-      <category>基盤モデル</category>
-    </item>
-    <item>
-      <title>米FERC、AI向け大規模電力接続の新ルール</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260620-07.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260620-07.html</guid>
-      <pubDate>Thu, 18 Jun 2026 20:00:27 GMT</pubDate>
-      <description>柔軟な大口需要家は系統接続の審査を最短60日に短縮し、自前電源の確保を促す。</description>
-      <category>ハードウェア</category>
     </item>
   </channel>
 </rss>

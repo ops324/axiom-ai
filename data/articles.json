@@ -1,5 +1,140 @@
 [
   {
+    "slug": "20260621-06",
+    "headline": "LoRAは最適とは限らない、HFが40超の微調整手法を比較",
+    "lead": "Hugging Faceが40以上のPEFT手法を統一条件で比較し、用途次第でLoRA以外が有利になると示した。",
+    "body_markdown": "Hugging Faceは、軽量な微調整（PEFT）手法を統一条件で比較した検証結果を公開した。大規模言語モデルの追加学習で広く使われるLoRAは、同社のモデルカードの98.4%で採用されるなど事実上の標準となっている。だが今回の検証では、必ずしもLoRAが最良とは限らないと結論づけた。\n\n検証では40を超える手法を、数学推論データセットや画像生成タスクといった共通の条件・ハードウェアにそろえて評価した。画像生成では、OFTがLoRAより少ないメモリで高い類似度（0.708対0.697）を示し、この指標で上回ったという。一方で、メモリ効率に優れるLoRA-FAや、LoRA形式に変換できるGraLoRAなど、用途に応じた選択肢があることも示された。\n\nPEFTライブラリは設定を1行変えるだけで手法を切り替えられる統一APIを備えるとされ、同社は既定でLoRAを選ぶのではなく代替手法も試すよう促している。微調整のコストと性能の最適点はタスクごとに異なるという、実務上の指針を裏づける内容といえる。",
+    "tags": [
+      "LoRA",
+      "ファインチューニング",
+      "Hugging Face",
+      "PEFT",
+      "機械学習"
+    ],
+    "section": "研究",
+    "source": "Hugging Face",
+    "link": "https://huggingface.co/blog/peft-beyond-lora",
+    "importance": 3,
+    "image_query": "programming code screen",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHw5fHxwcm9ncmFtbWluZyUyMGNvZGUlMjBzY3JlZW58ZW58MXwwfHx8MTc4MjAxMTIyNnww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Kevin Ku",
+      "profileUrl": "https://unsplash.com/@ikukevk?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-21T03:07:06.495Z",
+    "publishedAt": "2026-06-18T00:00:00.000Z"
+  },
+  {
+    "slug": "20260621-07",
+    "headline": "Adobe、Fireflyを刷新 作った素材を覚えるAIスタジオ",
+    "lead": "Adobeが創作の文脈や素材を保持する新しいFireflyのAIスタジオをプライベートベータで公開した。",
+    "body_markdown": "Adobeは6月18日、生成AIサービス「Firefly」のクリエイティブAIスタジオを刷新し、プライベートベータとして公開した。同社は新しい体験の特徴を「継続的な文脈、再利用できる素材、整理されたワークフロー」と説明する。\n\n中核となる新機能の一つが「Elements（エレメンツ）」だ。キャラクターやオブジェクト、背景に名前を付けて保存し、デザインを崩さずに繰り返し使えるようにする。あわせて「Projects（プロジェクツ）」は、素材や生成結果、制作上の文脈を一カ所に集約し、FireflyやCreative Cloudをまたいで作業を再開しやすくする。生成と編集を一つの画面に統合し、着想から制作までを途切れずに進められる点も売りとしている。\n\nFireflyは2023年9月の公開以来、たびたび刷新されてきた。今回はAIに過去の創作の文脈を覚えさせる方向へ踏み込んだもので、単発の画像生成から、継続的な制作を支える基盤へと位置づけを移そうとする狙いがうかがえる。提供は順番待ちリスト経由のプライベートベータにとどまる。",
+    "tags": [
+      "Adobe",
+      "Firefly",
+      "生成AI",
+      "画像生成",
+      "クリエイティブ"
+    ],
+    "section": "産業応用",
+    "source": "The Verge",
+    "link": "https://www.theverge.com/tech/952104/adobe-firefly-ai-agent-elements-projects-update",
+    "importance": 3,
+    "image_query": "graphic design computer",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwyfHxncmFwaGljJTIwZGVzaWduJTIwY29tcHV0ZXJ8ZW58MXwwfHx8MTc4MjAxMTIyN3ww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Emily Bernal",
+      "profileUrl": "https://unsplash.com/@emilybernal?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-21T03:07:07.576Z",
+    "publishedAt": "2026-06-18T13:00:00.000Z"
+  },
+  {
+    "slug": "20260621-08",
+    "headline": "理研、AI科学用スパコンを「理究」と命名 千利休に由来",
+    "lead": "理化学研究所がAI for Science向けスパコンの名称を公募で「理究」（りきゅう）に決めた。",
+    "body_markdown": "理化学研究所は6月19日、AIを活用した科学研究「AI for Science」向けのスーパーコンピュータの名称を「理究（りきゅう）」に決定したと発表した。名称は2025年11月20日から12月22日まで公募し、重複を除く856件の応募から選ばれた。\n\n選定理由として、AI for Scienceの趣旨によく合致し、茶人・千利休と音が同じで親しみやすい点を挙げた。利休の教えを伝える道歌にある「守・破・離」になぞらえ、既存知識の習得（守）、AIによる新知識の開拓（破）、人類とAIによる科学の新領域の開拓（離）を表し、「科学という本分を忘れない」という想いを込めたという。\n\n理究はNVIDIAの「GB200 NVL4」GPUを積んだ計算ノード400台（GPU1600基）で構成し、Quantum-X800 InfiniBandで接続する。性能は倍精度（FP64）で64.16ペタフロップス、FP8で15.539エクサフロップスとされる。生成AIの普及で科学研究向けの計算基盤を整える動きが各国で進むなか、国内の取り組みを象徴する一台となる。",
+    "tags": [
+      "理化学研究所",
+      "スーパーコンピュータ",
+      "AI for Science",
+      "NVIDIA",
+      "理究"
+    ],
+    "section": "ハードウェア",
+    "source": "ITmedia AI＋",
+    "link": "https://www.itmedia.co.jp/aiplus/article/2606/19/2000000110/",
+    "importance": 3,
+    "image_query": "data center servers",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwY2VudGVyJTIwc2VydmVyc3xlbnwxfDB8fHwxNzgyMDExMjI3fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Taylor Vick",
+      "profileUrl": "https://unsplash.com/@tvick?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-21T03:07:08.051Z",
+    "publishedAt": "2026-06-19T08:00:51.000Z"
+  },
+  {
+    "slug": "20260621-09",
+    "headline": "GitHub Copilot、文脈処理とモデル振り分けを最適化",
+    "lead": "GitHubがCopilotの文脈管理とモデル自動振り分けを改良し、品質を保ちつつコストを抑えると説明した。",
+    "body_markdown": "GitHubは、AIコーディング支援「Copilot」が文脈の扱いとモデルの振り分けをどう改善しているかを解説した。狙いは、各セッションのトークンをより多く有用な作業へ振り向け、利用者のクレジットを長持ちさせることにある。\n\n文脈面では、繰り返し使う情報のモデル状態を再利用し、毎回プロンプトの先頭を計算し直さない「プロンプトキャッシュ」を導入。ツール定義を最初から全て読み込むのではなく必要に応じて取得する仕組みも採り入れ、エージェントが多くのツールを扱う場面に備える。\n\nモデル振り分けでは、課題の複雑さや必要な推論の深さに応じて適切なモデルを選ぶ「HyDRA」を用いる。同社によると、最も効くケースでは上位モデルを上回りつつ12.9%のコスト削減、全体平均では72.5%の削減になるという。コーディング評価「SWE-bench」では、競合と同等の解決率（70.8%）を3.3倍の費用効率で達成したとしている。\n\n生成AIの利用が広がるなか、品質を落とさず計算コストを抑える運用上の工夫が、開発者向けツールの競争軸になりつつある。",
+    "tags": [
+      "GitHub Copilot",
+      "AIコーディング",
+      "開発者ツール",
+      "モデルルーティング",
+      "コスト最適化"
+    ],
+    "section": "開発",
+    "source": "GitHub Blog",
+    "link": "https://github.blog/ai-and-ml/github-copilot/getting-more-from-each-token-how-copilot-improves-context-handling-and-model-routing/",
+    "importance": 3,
+    "image_query": "programming code screen",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxMHx8cHJvZ3JhbW1pbmclMjBjb2RlJTIwc2NyZWVufGVufDF8MHx8fDE3ODIwMTEyMjh8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Fotis Fotopoulos",
+      "profileUrl": "https://unsplash.com/@ffstop?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-21T03:07:08.477Z",
+    "publishedAt": "2026-06-17T19:41:46.000Z"
+  },
+  {
+    "slug": "20260621-10",
+    "headline": "Signalのウィテカー氏「AIチャットボットは友達ではない」",
+    "lead": "Signal代表のウィテカー氏が、AIを擬人化せず統合に伴うプライバシーの危うさに警鐘を鳴らした。",
+    "body_markdown": "暗号化メッセージアプリ「Signal」を運営するSignal財団のメレディス・ウィテカー代表が、BloombergのインタビューでAIチャットボットへの過信に警鐘を鳴らした。「これらはあなたの友達ではない。意識を持つ存在でもない」と述べ、対話AIを擬人化することへの懸念を示した。\n\nウィテカー氏自身はAIの利用を文書の整形など最小限にとどめ、思考や執筆そのものを委ねることは避けているという。知的な営みをAIに明け渡すことへの警戒からだ。\n\n加えて、AIが買い物などを代行する構想にも触れ、そうしたサービスはクレジットカードやブラウザ、メッセージアプリ、住所、カレンダーなど広範なアクセスを必要とすると指摘。これを個人のセキュリティに対する「一種のバックドア」になりかねないと批判した。AIが生活の各サービスに深く組み込まれるほど、脆弱性が一点に集中するという見立てである。\n\n利便性を掲げてAIを生活へ統合する動きが加速するなか、その裏で進むデータ集約の危うさを問い直す指摘として注目される。",
+    "tags": [
+      "Signal",
+      "メレディス・ウィテカー",
+      "プライバシー",
+      "AI倫理",
+      "チャットボット"
+    ],
+    "section": "規制・倫理",
+    "source": "TechCrunch",
+    "link": "https://techcrunch.com/2026/06/20/signals-meredith-whittaker-wants-you-to-remember-that-ai-chatbots-are-not-your-friends/",
+    "importance": 3,
+    "image_query": "smartphone privacy security",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxzbWFydHBob25lJTIwcHJpdmFjeSUyMHNlY3VyaXR5fGVufDF8MHx8fDE3ODIwMTEyMjl8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Dan Nelson",
+      "profileUrl": "https://unsplash.com/@danny144?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-21T03:07:09.234Z",
+    "publishedAt": "2026-06-20T20:32:29.000Z"
+  },
+  {
     "slug": "20260621-01",
     "headline": "AlphaFold主導のジャンパー氏、Anthropicへ移籍",
     "lead": "ノーベル化学賞受賞者でAlphaFoldを率いたジョン・ジャンパー氏が、約9年在籍したGoogle DeepMindを離れAnthropicへ移ると発表した。",
