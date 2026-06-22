@@ -7,7 +7,47 @@
     <atom:link href="https://axiom-ai-xi.vercel.app/feed.xml" rel="self" type="application/rss+xml" />
     <description>生成AI・基盤モデル・規制・産業応用の最新ニュースを、編集部の要約と論評でお届けする日本語AI専門メディア。</description>
     <language>ja</language>
-    <lastBuildDate>Sun, 21 Jun 2026 23:50:44 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 06:03:26 GMT</lastBuildDate>
+    <item>
+      <title>NVIDIA、45度の液冷でAIサーバー刷新 電力と水を削減</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260622-04.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260622-04.html</guid>
+      <pubDate>Mon, 22 Jun 2026 05:00:22 GMT</pubDate>
+      <description>NVIDIAが最大45度の液体で全部品を冷やす新世代サーバーを発表。冷却電力と水使用を大幅に削減できるとする。</description>
+      <category>ハードウェア</category>
+    </item>
+    <item>
+      <title>PFN、国産LLM「PLaMo 3.0 Prime」提供開始 高コスパ訴求</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260622-02.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260622-02.html</guid>
+      <pubDate>Mon, 22 Jun 2026 04:18:48 GMT</pubDate>
+      <description>Preferred Networksが国産フルスクラッチのLLM「PLaMo 3.0 Prime」を提供開始。高コスパと日本語性能を訴える。</description>
+      <category>産業応用</category>
+    </item>
+    <item>
+      <title>Sakana AI、集合知型「Fugu」提供 一部で最高性能主張</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260622-05.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260622-05.html</guid>
+      <pubDate>Mon, 22 Jun 2026 01:48:32 GMT</pubDate>
+      <description>Sakana AIが複数モデルを束ねるマルチエージェント「Sakana Fugu」を提供開始。一部ベンチで最上位級の性能を主張。</description>
+      <category>研究</category>
+    </item>
+    <item>
+      <title>サムスン、全社にChatGPTとCodex導入 OpenAI最大級の展開</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260622-01.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260622-01.html</guid>
+      <pubDate>Sun, 21 Jun 2026 23:00:00 GMT</pubDate>
+      <description>サムスン電子がChatGPT EnterpriseとCodexを従業員へ展開。OpenAIにとって最大級の企業導入となる。</description>
+      <category>基盤モデル</category>
+    </item>
+    <item>
+      <title>米政権、Anthropicへ輸出規制 2モデルを一時停止</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260622-03.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260622-03.html</guid>
+      <pubDate>Sun, 21 Jun 2026 15:28:17 GMT</pubDate>
+      <description>トランプ政権が安全保障を理由にAnthropicへ輸出規制を発動。2つのモデルが停止し、業界への影響が議論されている。</description>
+      <category>規制・倫理</category>
+    </item>
     <item>
       <title>Signalのウィテカー氏「AIチャットボットは友達ではない」</title>
       <link>https://axiom-ai-xi.vercel.app/articles/20260621-10.html</link>
@@ -127,46 +167,6 @@
       <pubDate>Fri, 19 Jun 2026 04:49:33 GMT</pubDate>
       <description>OpenAIで法人向けAI営業を率いたバレット・ゾフ氏が、復帰から約5カ月で再び退社した。</description>
       <category>産業応用</category>
-    </item>
-    <item>
-      <title>OpenAI、ChatGPTの広告テストを日本で開始</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260620-02.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260620-02.html</guid>
-      <pubDate>Fri, 19 Jun 2026 02:26:50 GMT</pubDate>
-      <description>無料とGoプランの成人ユーザーが対象。設定から非表示にでき、回答は広告に影響されないと説明。</description>
-      <category>産業応用</category>
-    </item>
-    <item>
-      <title>Elastic、AIデバッグ新興Deductive AIを買収へ</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260620-04.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260620-04.html</guid>
-      <pubDate>Fri, 19 Jun 2026 00:51:11 GMT</pubDate>
-      <description>買収額は最大8500万ドルと報道（両社未確認）。観測領域へAIデバッグ技術を統合する狙い。</description>
-      <category>スタートアップ</category>
-    </item>
-    <item>
-      <title>ChatGPT広告、日本でも開始 無料版とGoに表示</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260619-03.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260619-03.html</guid>
-      <pubDate>Fri, 19 Jun 2026 00:23:56 GMT</pubDate>
-      <description>OpenAIが日本でChatGPT広告のパイロットを開始。無料版と低価格プラン「Go」で表示する。</description>
-      <category>産業応用</category>
-    </item>
-    <item>
-      <title>AI推論のBaseten、15億ドル調達と報道</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260619-11.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260619-11.html</guid>
-      <pubDate>Thu, 18 Jun 2026 21:20:13 GMT</pubDate>
-      <description>AI推論基盤のBasetenが評価額130億ドルで15億ドルの調達を進めると報じられた。</description>
-      <category>スタートアップ</category>
-    </item>
-    <item>
-      <title>AI研究エージェントの情報漏えいを測る新指標</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260619-02.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260619-02.html</guid>
-      <pubDate>Thu, 18 Jun 2026 21:06:08 GMT</pubDate>
-      <description>ServiceNowが、AI研究エージェントが検索履歴から機密を漏らすリスクを測る評価基準を公開した。</description>
-      <category>研究</category>
     </item>
   </channel>
 </rss>

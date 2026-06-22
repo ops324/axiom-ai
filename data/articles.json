@@ -1,5 +1,140 @@
 [
   {
+    "slug": "20260622-01",
+    "headline": "サムスン、全社にChatGPTとCodex導入 OpenAI最大級の展開",
+    "lead": "サムスン電子がChatGPT EnterpriseとCodexを従業員へ展開。OpenAIにとって最大級の企業導入となる。",
+    "body_markdown": "OpenAIは6月、サムスン電子がChatGPT EnterpriseとコーディングAI「Codex」を従業員に本格導入すると発表した。韓国国内の全社員と、スマートフォンや家電を手掛けるDX部門の全世界の社員が対象で、OpenAIにとって最大級の企業向け展開の一つとなる。サムスンは研究開発から製造、マーケティング、管理部門まで幅広い業務での活用を見込む。Codexはコードの記述・レビュー・デバッグを支援し、社内ツールや業務自動化の内製を後押しするという。\n\nサムスンは2023年、社内の機密コードがChatGPT経由で流出した問題を受け、生成AIの利用を一時全面禁止していた。今回の全社導入はその方針からの大きな転換にあたる。OpenAIによると、韓国でのCodexの週間アクティブ利用者は2026年2月から約8倍に増えたとしており、開発現場での定着が導入拡大を後押しした形だ。同社はGoogleのGeminiやAnthropicのClaudeも併用しており、特定のベンダーに依存しない多元的なAI基盤を敷く構えだ。大企業が生成AIを「禁止」から「全社標準」へ位置づけ直す動きを示す事例といえる。",
+    "tags": [
+      "OpenAI",
+      "サムスン電子",
+      "ChatGPT",
+      "Codex",
+      "企業導入"
+    ],
+    "section": "基盤モデル",
+    "source": "OpenAI",
+    "link": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment",
+    "importance": 4,
+    "image_query": "office workers computer",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1560264280-88b68371db39?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjB3b3JrZXJzJTIwY29tcHV0ZXJ8ZW58MXwwfHx8MTc4MjEwODIwNXww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Arlington Research",
+      "profileUrl": "https://unsplash.com/@arlington_research?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-22T06:03:23.711Z",
+    "publishedAt": "2026-06-21T23:00:00.000Z"
+  },
+  {
+    "slug": "20260622-02",
+    "headline": "PFN、国産LLM「PLaMo 3.0 Prime」提供開始 高コスパ訴求",
+    "lead": "Preferred Networksが国産フルスクラッチのLLM「PLaMo 3.0 Prime」を提供開始。高コスパと日本語性能を訴える。",
+    "body_markdown": "Preferred Networks（PFN）は6月22日、自社開発の大規模言語モデル「PLaMo 3.0 Prime」の提供を始めた。フルスクラッチで開発した国産モデルで、複雑な課題に対応する推論（Reasoning）モデルと、応答速度を重視する非推論モデルの2種類を用意する。一度に扱える文脈長は従来の6万4000トークンから25万6000トークンへ拡大し、外部ツールの呼び出しやコード生成・修正、業務システム連携、AIエージェント用途に対応するとしている。\n\n料金はStandardプランで、入力が100万トークンあたり60円、出力が同250円。AIサービス提供者向けのProviderプランや、利用制限付きの無料プランも用意する（無料プランは準備中）。PFNは、OpenAIのgpt-oss-120bやGPT-5.4 Mini、AlibabaのQwen3.6-27b、AnthropicのClaude Haiku 4.5などと比較し、日本語性能とコーディング能力で競争力があると主張する。海外勢が先行する基盤モデル市場で、国産モデルがコスト競争力を前面に存在感を示せるかが問われる。",
+    "tags": [
+      "PLaMo",
+      "Preferred Networks",
+      "国産LLM",
+      "基盤モデル",
+      "API"
+    ],
+    "section": "産業応用",
+    "source": "ITmedia AI＋",
+    "link": "https://www.itmedia.co.jp/aiplus/article/2606/22/2000000113/",
+    "importance": 4,
+    "image_query": "data center servers",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1746893737268-81fe686e6a51?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwyfHxkYXRhJTIwY2VudGVyJTIwc2VydmVyc3xlbnwxfDB8fHwxNzgyMTA4MjA2fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Avi Waxman",
+      "profileUrl": "https://unsplash.com/@aviosly?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-22T06:03:24.624Z",
+    "publishedAt": "2026-06-22T04:18:48.000Z"
+  },
+  {
+    "slug": "20260622-03",
+    "headline": "米政権、Anthropicへ輸出規制 2モデルを一時停止",
+    "lead": "トランプ政権が安全保障を理由にAnthropicへ輸出規制を発動。2つのモデルが停止し、業界への影響が議論されている。",
+    "body_markdown": "米TechCrunchのポッドキャスト番組「Equity」は6月21日、トランプ政権がAnthropicに対して発動した輸出規制を取り上げた。番組や記事によると、政権は「国家安全保障上の懸念」を理由に、同社のAIモデル「Fable 5」と「Mythos 5」を停止させる命令を出し、外国籍の利用者によるアクセスを禁じたという。具体的な根拠は示されていないとされる。背景として、Amazonの研究者がFable 5の安全機構を回避する手法を見つけ、同社のアンディ・ジャシーCEOがホワイトハウスに懸念を伝えたと報じられている。モデルの停止は6月12日とされる。\n\n誰が利益を得るのかについては、番組の出演者が見解を述べ合う形で、確定した事実ではない。規制を免れた競合が相対的に有利になるとの見方や、過去の対立局面でかえってClaudeの利用が増えた例から、Anthropic自身の注目度が高まる可能性も指摘された。政権と特定のAI企業の関係が、市場競争の条件を左右しかねない構図がうかがえる。輸出規制という強い手段がAI分野に向けられたこと自体、技術と安全保障の結び付きが一段と強まっていることを映している。",
+    "tags": [
+      "Anthropic",
+      "輸出規制",
+      "トランプ政権",
+      "AI規制",
+      "Amazon"
+    ],
+    "section": "規制・倫理",
+    "source": "TechCrunch",
+    "link": "https://techcrunch.com/2026/06/21/when-the-trump-administration-cracks-down-on-anthropic-who-benefits/",
+    "importance": 4,
+    "image_query": "capitol building washington",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1581097543550-b3cbe2e6ea6e?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwyfHxjYXBpdG9sJTIwYnVpbGRpbmclMjB3YXNoaW5ndG9ufGVufDF8MHx8fDE3ODIxMDgyMDd8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Harold Mendoza",
+      "profileUrl": "https://unsplash.com/@haroldrmendoza?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-22T06:03:25.311Z",
+    "publishedAt": "2026-06-21T15:28:17.000Z"
+  },
+  {
+    "slug": "20260622-04",
+    "headline": "NVIDIA、45度の液冷でAIサーバー刷新 電力と水を削減",
+    "lead": "NVIDIAが最大45度の液体で全部品を冷やす新世代サーバーを発表。冷却電力と水使用を大幅に削減できるとする。",
+    "body_markdown": "NVIDIAは6月、次世代「Rubin」世代のAIサーバーで、チップやネットワーク機器まで全ての部品を液体で冷やす設計を採用したと明らかにした。ファンを使わない密閉式の循環方式で、冷却液の温度は最大45度（華氏113度）と、一般的な温浴の38〜40度より高い。温度を高く保てるほど冷却に要する電力を抑えられるのが利点だ。同社によると、データセンターの消費電力のうち冷却は最大40%を占め、冷却機の設定温度を1度上げるごとに冷却電力は約4%減るという。\n\n試算では、50メガワット規模の施設を液冷に切り替えると年間400万ドル超を節約でき、水使用量は1メガワットあたり年約260万ガロンからほぼゼロへ減らせるとする。冷却液は水75%とプロピレングリコール25%の混合で、45度で流入し約55度で排出する。ラックの集約も進み、従来の6ユニット分を2ユニットに収めるという。冷却技術はSchneider Electric傘下のMotivairと協業した。電力と水の制約が強まるAIデータセンターで、冷却の効率化が拡張の鍵になりつつある。",
+    "tags": [
+      "NVIDIA",
+      "液冷",
+      "データセンター",
+      "省電力",
+      "Rubin"
+    ],
+    "section": "ハードウェア",
+    "source": "NVIDIA",
+    "link": "https://blogs.nvidia.com/blog/liquid-cooling-ai-factories/",
+    "importance": 3,
+    "image_query": "server room",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1683322499436-f4383dd59f5a?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwyfHxzZXJ2ZXIlMjByb29tfGVufDF8MHx8fDE3ODIxMDgyMDd8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Scott Rodgerson",
+      "profileUrl": "https://unsplash.com/@scottrodgerson?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-22T06:03:25.769Z",
+    "publishedAt": "2026-06-22T05:00:22.000Z"
+  },
+  {
+    "slug": "20260622-05",
+    "headline": "Sakana AI、集合知型「Fugu」提供 一部で最高性能主張",
+    "lead": "Sakana AIが複数モデルを束ねるマルチエージェント「Sakana Fugu」を提供開始。一部ベンチで最上位級の性能を主張。",
+    "body_markdown": "Sakana AIは6月22日、複数のAIモデルを組み合わせて課題を処理するマルチエージェントシステム「Sakana Fugu」の提供を始めた。リクエストの難易度に応じて使うモデルを選び、必要に応じて専用エージェントのチームを編成する。内部処理は自動で完結し、利用者はAPIを通じて単一モデルのように扱えるという。APIはOpenAI互換で、個人向けは月額20ドルから、上位のProが100ドル、Maxが200ドル。法人向けには従量課金を用意する。\n\n上位版「Fugu Ultra」の性能について同社は、プログラミング能力を測る「Terminal-Bench 2.1」でFable 5を上回り、複雑な図表の読み取りを問う「Charxiv Reasoning」ではClaude Mythos Previewを超えたとする。一方、学問的知識を問う「Humanity's Last Exam」ではFable 5に及ばなかったという。単体の巨大モデルを磨くのではなく、複数モデルの「集合知」で性能を引き出す設計思想で、用途によって得意・不得意が分かれる点も示された。ベンチマークの結果は提供元の主張であり、第三者による検証が今後の焦点となる。",
+    "tags": [
+      "Sakana AI",
+      "マルチエージェント",
+      "ベンチマーク",
+      "LLM",
+      "集合知"
+    ],
+    "section": "研究",
+    "source": "ITmedia AI＋",
+    "link": "https://www.itmedia.co.jp/aiplus/article/2606/22/2000000111/",
+    "importance": 4,
+    "image_query": "abstract network technology",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1727434032773-af3cd98375ba?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMG5ldHdvcmslMjB0ZWNobm9sb2d5fGVufDF8MHx8fDE3ODIxMDgyMDh8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Luke Jones",
+      "profileUrl": "https://unsplash.com/@lukejonesdesign?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-22T06:03:26.548Z",
+    "publishedAt": "2026-06-22T01:48:32.000Z"
+  },
+  {
     "slug": "20260621-06",
     "headline": "LoRAは最適とは限らない、HFが40超の微調整手法を比較",
     "lead": "Hugging Faceが40以上のPEFT手法を統一条件で比較し、用途次第でLoRA以外が有利になると示した。",
