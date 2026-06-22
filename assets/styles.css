@@ -297,7 +297,7 @@ figure { margin: 0; }
 .feed-list { list-style: none; margin: 0; padding: 0; }
 .feed-item {
   display: grid;
-  grid-template-columns: 56px 1fr auto;
+  grid-template-columns: max-content 1fr auto;
   align-items: baseline;
   gap: var(--space-md);
   padding: var(--space-md) 0;
@@ -572,7 +572,7 @@ figure { margin: 0; }
  * ============================================================ */
 @media (max-width: 600px) {
   :root { --gutter: 18px; }
-  .feed-item { grid-template-columns: 48px 1fr; }
+  .feed-item { grid-template-columns: max-content 1fr; }
   .feed-item__cat { grid-column: 2; text-align: left; }
   .article-share { margin-left: 0; }
   .site-footer__top { grid-template-columns: 1fr 1fr; }
