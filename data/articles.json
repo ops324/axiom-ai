@@ -1,5 +1,86 @@
 [
   {
+    "slug": "20260622-06",
+    "headline": "OpenAI、新職種「FDE」の実態語る 「仕事の7割が消滅」も",
+    "lead": "OpenAIのフォワード・デプロイド・エンジニアリング統括が、新職種FDEの急速な変容を語った。",
+    "body_markdown": "OpenAIは6月16日に開いたイベントで、新職種「FDE（Forward Deployed Engineering）」の実態を明かした。FDEは顧客の現場で連携しながら、AIシステムの設計から開発、運用までを一気通貫で担う役割だ。同社のColin Jarvis氏（Global Head of Forward Deployed Engineering）は「FDEの役割は半年ごとに完全に変わると覚悟すべきだ」と述べ、チーム向けの研修（ブートキャンプ）を6週間ごとに更新していると説明した。\n\n転換点は2026年2月だという。AIエージェント「Codex」の性能向上を機に、従来は各ワークフローを個別に作って組み合わせていた手法から、Codexを中核に据えてエージェントにスキルを教える方式へ移行した。結果としてCodexが自動化できる作業が増え、Jarvis氏は従来業務の「約7割が消えた」場面もあったと振り返る。半導体分野では当初のシミュレーション中心から、物理的な設計にまで対応範囲が広がったという。\n\nAIエージェントの実装が進むほど、人の役割は構築そのものから監督や教育へと移っていく。先端企業の職務がどう再定義されつつあるかを具体的に示す事例といえる。",
+    "tags": [
+      "OpenAI",
+      "Codex",
+      "AIエージェント",
+      "雇用",
+      "FDE"
+    ],
+    "section": "産業応用",
+    "source": "ITmedia AI＋",
+    "link": "https://www.itmedia.co.jp/aiplus/article/2606/22/2000000112/",
+    "importance": 4,
+    "image_query": "software engineer laptop",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGVuZ2luZWVyJTIwbGFwdG9wfGVufDF8MHx8fDE3ODIxMDk5Mjd8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Glenn Carstens-Peters",
+      "profileUrl": "https://unsplash.com/@glenncarstenspeters?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-22T06:32:05.826Z",
+    "publishedAt": "2026-06-22T03:30:00.000Z"
+  },
+  {
+    "slug": "20260622-07",
+    "headline": "AWS、AIエージェント向け「文脈」基盤を発表 散在データを知識グラフ化",
+    "lead": "AWSがサミットNYで、AIエージェントが社内データの関係性を安全に参照できる新サービス群を発表した。",
+    "body_markdown": "AWSは6月のAWS Summit New York Cityで、AIエージェントに「文脈」を与える新サービス群を発表した。中核となる「AWS Context」（近日提供）は、社内に散在するデータの関係性を自動で知識グラフ化し、エージェントが実行時にデータ間の関係やビジネスルール、業務知識を参照できるようにする。エージェントからの問い合わせを学習して情報源を順位付けし、正しい結合経路を見つける点が特徴だ。出力はApache Iceberg形式でAmazon S3に保存され、IAMやLake Formationの権限を引き継ぐため、アクセスは監査可能だという。\n\n関連して、AWS Glue Data Catalogにはビジネス文脈や意味ベースの検索機能（プレビュー）を追加。Amazon S3には、各オブジェクトへ最大1GBの照会可能な業務文脈を付与できる「S3 Annotations」を一般提供した。注釈はコピーや複製の際にもオブジェクトと一緒に移動する。\n\n「エージェントは参照できる文脈の分だけ賢くなる」とAWSは説く。データが各所に分散する企業で、権限を保ったまま文脈を渡す層を整えることが、信頼できるエージェント運用の前提になりつつある。",
+    "tags": [
+      "AWS",
+      "AIエージェント",
+      "知識グラフ",
+      "データ基盤",
+      "クラウド"
+    ],
+    "section": "開発",
+    "source": "AWS ML Blog",
+    "link": "https://aws.amazon.com/blogs/machine-learning/context-intelligence-for-your-data-and-ai-agents-at-scale/",
+    "importance": 4,
+    "image_query": "data center servers",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1746893737268-81fe686e6a51?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwyfHxkYXRhJTIwY2VudGVyJTIwc2VydmVyc3xlbnwxfDB8fHwxNzgyMTA5OTI4fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Avi Waxman",
+      "profileUrl": "https://unsplash.com/@aviosly?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-22T06:32:06.486Z",
+    "publishedAt": "2026-06-17T17:17:37.000Z"
+  },
+  {
+    "slug": "20260622-08",
+    "headline": "iOS 27、Siri以外にも実用AI 割り勘やパスワード更新を自動化",
+    "lead": "AppleがWWDCで公開したiOS 27は、Siri刷新以外にも日常作業を助けるAI機能を多数備える。",
+    "body_markdown": "Appleが6月上旬のWWDCで公開したiOS 27には、刷新されたSiri以外にも実用的なAI（Apple Intelligence）機能が並ぶ。例えば飲食店のレシートを撮影すると明細を読み取り、税やチップを按分したうえで、メッセージやApple Cashを通じて割り勘を請求できる。パスワード機能は漏えいや脆弱なパスワードを検出し、対応するサイトで自動的により安全なものへ更新するという。\n\nこのほか、会話の文脈からリマインダーの追加や写真共有、予定作成をワンタップで提案する機能を搭載。カスタマーサポートへの通話時には、メールから抽出した確認番号などを端末内処理で画面に表示する。自然言語による予定作成やショートカットの作成、開いたタブを旅行や調べ物といった話題別に自動整理する機能なども加わる。スマートホームでは関連する複数の操作を一つの通知にまとめ、通知の乱立を避ける。各機能は現在開発者向けベータで提供され、一般公開ベータを経て2026年秋の正式版に搭載される予定だ。\n\n派手なSiri刷新の陰で、日常作業を地道に自動化する機能が広いユーザー基盤に届く。生成AIが特別な道具ではなく「使う機能」として生活に溶け込む段階に入ったことを示している。",
+    "tags": [
+      "Apple",
+      "iOS 27",
+      "Apple Intelligence",
+      "WWDC",
+      "スマートフォン"
+    ],
+    "section": "ハードウェア",
+    "source": "TechCrunch",
+    "link": "https://techcrunch.com/2026/06/21/beyond-siri-here-are-the-practical-ai-features-coming-to-your-iphone-in-ios-27/",
+    "importance": 4,
+    "image_query": "smartphone in hand",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxzbWFydHBob25lJTIwaW4lMjBoYW5kfGVufDF8MHx8fDE3ODIxMDk5Mjl8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Gilles Lambert",
+      "profileUrl": "https://unsplash.com/@gilleslambert?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-22T06:32:07.060Z",
+    "publishedAt": "2026-06-21T14:40:28.000Z"
+  },
+  {
     "slug": "20260622-01",
     "headline": "サムスン、全社にChatGPTとCodex導入 OpenAI最大級の展開",
     "lead": "サムスン電子がChatGPT EnterpriseとCodexを従業員へ展開。OpenAIにとって最大級の企業導入となる。",

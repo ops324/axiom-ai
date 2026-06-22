@@ -7,7 +7,7 @@
     <atom:link href="https://axiom-ai-xi.vercel.app/feed.xml" rel="self" type="application/rss+xml" />
     <description>生成AI・基盤モデル・規制・産業応用の最新ニュースを、編集部の要約と論評でお届けする日本語AI専門メディア。</description>
     <language>ja</language>
-    <lastBuildDate>Mon, 22 Jun 2026 06:03:26 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 06:32:07 GMT</lastBuildDate>
     <item>
       <title>NVIDIA、45度の液冷でAIサーバー刷新 電力と水を削減</title>
       <link>https://axiom-ai-xi.vercel.app/articles/20260622-04.html</link>
@@ -22,6 +22,14 @@
       <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260622-02.html</guid>
       <pubDate>Mon, 22 Jun 2026 04:18:48 GMT</pubDate>
       <description>Preferred Networksが国産フルスクラッチのLLM「PLaMo 3.0 Prime」を提供開始。高コスパと日本語性能を訴える。</description>
+      <category>産業応用</category>
+    </item>
+    <item>
+      <title>OpenAI、新職種「FDE」の実態語る 「仕事の7割が消滅」も</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260622-06.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260622-06.html</guid>
+      <pubDate>Mon, 22 Jun 2026 03:30:00 GMT</pubDate>
+      <description>OpenAIのフォワード・デプロイド・エンジニアリング統括が、新職種FDEの急速な変容を語った。</description>
       <category>産業応用</category>
     </item>
     <item>
@@ -47,6 +55,14 @@
       <pubDate>Sun, 21 Jun 2026 15:28:17 GMT</pubDate>
       <description>トランプ政権が安全保障を理由にAnthropicへ輸出規制を発動。2つのモデルが停止し、業界への影響が議論されている。</description>
       <category>規制・倫理</category>
+    </item>
+    <item>
+      <title>iOS 27、Siri以外にも実用AI 割り勘やパスワード更新を自動化</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260622-08.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260622-08.html</guid>
+      <pubDate>Sun, 21 Jun 2026 14:40:28 GMT</pubDate>
+      <description>AppleがWWDCで公開したiOS 27は、Siri刷新以外にも日常作業を助けるAI機能を多数備える。</description>
+      <category>ハードウェア</category>
     </item>
     <item>
       <title>Signalのウィテカー氏「AIチャットボットは友達ではない」</title>
@@ -151,22 +167,6 @@
       <pubDate>Fri, 19 Jun 2026 07:16:24 GMT</pubDate>
       <description>販売から導入・保守まで一気通貫で支援。Unitreeは人型ロボの世界シェア約4割を握る。</description>
       <category>ハードウェア</category>
-    </item>
-    <item>
-      <title>OpenAI、Codexに操作記録の新機能</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260619-09.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260619-09.html</guid>
-      <pubDate>Fri, 19 Jun 2026 05:15:00 GMT</pubDate>
-      <description>OpenAIがCodexに、Mac上の操作を記録して再実行する「Record &amp; Replay」を追加した。</description>
-      <category>開発</category>
-    </item>
-    <item>
-      <title>OpenAI法人営業責任者ゾフ氏、5カ月で再離脱</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260620-11.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260620-11.html</guid>
-      <pubDate>Fri, 19 Jun 2026 04:49:33 GMT</pubDate>
-      <description>OpenAIで法人向けAI営業を率いたバレット・ゾフ氏が、復帰から約5カ月で再び退社した。</description>
-      <category>産業応用</category>
     </item>
   </channel>
 </rss>
