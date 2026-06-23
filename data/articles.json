@@ -1,5 +1,140 @@
 [
   {
+    "slug": "20260624-01",
+    "headline": "GPT-5、免疫学の3年来の謎に新仮説を提示",
+    "lead": "米ジャクソン研究所の免疫学者が、3年間説明できなかったT細胞の実験結果をGPT-5 Proが新機序で説明したと報告した。",
+    "body_markdown": "OpenAIは6月23日、米ジャクソン研究所（JAX）の免疫学者デリヤ・ウヌトマズ氏が、研究上長らく説明できずにいた実験結果を「GPT-5 Pro」によって読み解いた事例を公開した。同氏はがんや自己免疫疾患の鍵を握るT細胞の挙動を研究している。\n\nウヌトマズ氏の研究室では、T細胞をめぐるある実験で観測された現象を約3年にわたり説明できずにいた。GPT-5 Proは実験データを分析し、その効果が「N結合型糖鎖修飾」（タンパク質の折り畳みに関わる過程）への干渉によって生じ、IL-2シグナルの低下やT細胞の分化経路の変化につながり得るという機序を提示した。これは研究室の専門家が検討していなかった視点だったという。ウヌトマズ氏は、データの解釈に対するGPT-5 Proの貢献は共著者に値すると述べている。\n\n提示されたのはあくまで仮説であり、実験による検証はこれからだ。それでも、熟練の専門家が見落とした機序をモデルが指摘し得る点は、AIを研究の対話相手として用いる新たな可能性を示す。発見までの時間を年単位から週単位へ縮められるとの期待がある一方、現時点では個別事例にとどまり、再現性や一般化、誤った仮説を生むリスクの評価は今後の課題となる。",
+    "tags": [
+      "GPT-5",
+      "OpenAI",
+      "免疫学",
+      "AI for Science",
+      "T細胞"
+    ],
+    "section": "研究",
+    "source": "OpenAI",
+    "link": "https://openai.com/index/gpt-5-immunology-mystery",
+    "importance": 4,
+    "image_query": "science laboratory research",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1614935151651-0bea6508db6b?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwbGFib3JhdG9yeSUyMHJlc2VhcmNofGVufDF8MHx8fDE3ODIyNDg5NzN8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Julia Koblitz",
+      "profileUrl": "https://unsplash.com/@jkoblitz?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-23T21:09:33.262Z",
+    "publishedAt": "2026-06-23T17:00:00.000Z"
+  },
+  {
+    "slug": "20260624-02",
+    "headline": "GitHubら、加州のAI透明化法改正を要求",
+    "lead": "GitHubやHugging Faceらが、加州AI透明化法はオープンソースのライセンス慣行と衝突するとして改正を要求した。",
+    "body_markdown": "GitHubは、カリフォルニア州の「AI透明化法」（SB942、改正案SB1000）について、オープンソース保護の観点から改正を求める連合に参加したと明らかにした。連合にはHugging Face、Black Forest Labs、Mozillaも名を連ねる。同法はAIが生成したコンテンツの開示など、AIシステムの透明性確保を目的とする。\n\n連合が問題視するのは、下流の利用者が義務を果たさない場合に開発者へライセンスの取り消しを求める条項だ。オープンソースのライセンスは本来「恒久的で取り消し不能」であり、誰もが安心して再利用・改変できる前提に立つ。この要件はその根幹と衝突し、ライセンスが有効か否かを不透明にしてソフトウェア供給網全体に不確実性をもたらすと連合は主張する。そのうえで取り消しに関する文言の削除を求め、代わりに文書による通知を認めるEUのAI法・透明性行動規範に倣う方式を提案している。\n\n透明性規制とオープンソースの慣行が緊張関係に立つ事例だ。規制の趣旨を損なわずに、限定的な修正で開発者の予見可能性を守れるかが論点となる。コードの自由な再利用を支える前提が揺らげば、AI開発を支える基盤そのものに影響が及びかねない。",
+    "tags": [
+      "オープンソース",
+      "AI規制",
+      "GitHub",
+      "カリフォルニア州",
+      "透明性"
+    ],
+    "section": "規制・倫理",
+    "source": "GitHub Blog",
+    "link": "https://github.blog/news-insights/policy-news-and-insights/github-joins-coalition-advocating-for-fixes-to-california-ai-transparency-act-to-protect-open-source/",
+    "importance": 4,
+    "image_query": "government law building",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1627397159237-d2acb7f500af?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxnb3Zlcm5tZW50JTIwbGF3JTIwYnVpbGRpbmd8ZW58MXwwfHx8MTc4MjI0ODk3M3ww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Joel Durkee",
+      "profileUrl": "https://unsplash.com/@joeldurkee?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-23T21:09:34.035Z",
+    "publishedAt": "2026-06-23T15:48:00.000Z"
+  },
+  {
+    "slug": "20260624-03",
+    "headline": "Meta、Ray-Banを外した自社スマートグラス",
+    "lead": "Metaが初めてRay-Banブランドを冠さない3種のAIグラスを発表。299ドルからで上位モデルは399ドル。",
+    "body_markdown": "Metaは6月23日、これまで象徴的だった「Ray-Ban」ブランドを冠さない自社スマートグラスを初めて発表した。製造は引き続き眼鏡大手エシロールルックスオティカと組むが、自社ブランドを前面に出す転換となる。\n\n公開されたのは「Fury」「Adventurer」、そしてKylie Jenner氏が監修したモデルの3種で、いずれもカメラと音声で使うAIアシスタント「Meta AI」を内蔵する。FuryとAdventurerは299ドルから、Jenner監修モデルは399ドルという価格設定だ。バッテリーは8時間超とされ、充電ケースが追加で約40時間分を補うという。Jenner監修モデルは右レンズに小さな宝石をあしらい、AIの音声に同氏の声を選べる点が特徴だ。各モデルは複数のスタイルとカラーで展開され、オープンイヤー型のスピーカーで通話や音楽再生、AIとの対話に対応する。\n\nRay-Banの名を外したのは、ブランド料に頼らず価格を抑え、利用層を広げる狙いとみられる。一方で、これまで築いてきた高級感や認知度を手放す賭けでもある。生成AIの新たな入口としてスマートグラスを位置づけ、競合に先んじようとする各社の動きを映す一手だ。",
+    "tags": [
+      "Meta",
+      "スマートグラス",
+      "ウェアラブル",
+      "AIアシスタント",
+      "EssilorLuxottica"
+    ],
+    "section": "産業応用",
+    "source": "The Verge",
+    "link": "https://www.theverge.com/tech/954052/meta-glasses-hands-on-kylie-jenner-smart-glasses-price-battery-privacy",
+    "importance": 4,
+    "image_query": "smart glasses wearable",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1562330744-0e81c1e9dd88?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxzbWFydCUyMGdsYXNzZXMlMjB3ZWFyYWJsZXxlbnwxfDB8fHwxNzgyMjQ4OTc0fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Quang Tri NGUYEN",
+      "profileUrl": "https://unsplash.com/@quangtri?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-23T21:09:34.647Z",
+    "publishedAt": "2026-06-23T13:00:00.000Z"
+  },
+  {
+    "slug": "20260624-04",
+    "headline": "NVIDIA、スパコンTOP500の8割超に採用",
+    "lead": "最新のスパコン番付TOP500で、NVIDIA技術が400システム超（81%）に採用され、新規の約9割を占めた。",
+    "body_markdown": "NVIDIAは6月、独ハンブルクで開かれた「ISC High Performance」に合わせ、最新のスーパーコンピュータ性能ランキングで自社技術の採用状況を公表した。世界の上位500システム（TOP500）のうち400を超える、全体の81%にNVIDIA技術が使われ、新たにランク入りしたシステムの約9割を占めた。\n\n内訳ではGPU採用が238システム、ネットワーキングが376システムでいずれも過去最多。「Grace」CPUの採用は前回から8増えて26システムに達し、出荷数は累計約250万個に上るという。省電力性能のGreen500では上位8システムすべて、上位10のうち9システムがNVIDIAのGPUや技術を採用した。首位は仏トゥールーズ大学の「KAIROS」で、Grace Hopper超チップにより1ワットあたり73.3ギガフロップスを記録した。欧州初のエクサ級「JUPITER」はTOP500で5位、スイスの「Alps」は10位に入った。\n\nAIブームを背景に、高性能計算の基盤がNVIDIAに集中している実態が改めて浮かぶ。性能と電力効率の両面で優位を保つ一方、特定企業への集中は調達や競争の観点で論点も残す。",
+    "tags": [
+      "NVIDIA",
+      "スーパーコンピュータ",
+      "TOP500",
+      "GPU",
+      "HPC"
+    ],
+    "section": "ハードウェア",
+    "source": "NVIDIA",
+    "link": "https://blogs.nvidia.com/blog/top500-green500-supercomputers-isc-2026/",
+    "importance": 3,
+    "image_query": "supercomputer data center",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1782155789492-3ea097e779cf?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxzdXBlcmNvbXB1dGVyJTIwZGF0YSUyMGNlbnRlcnxlbnwxfDB8fHwxNzgyMjQ4OTc0fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Brecht Corbeel",
+      "profileUrl": "https://unsplash.com/@brechtcorbeel?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-23T21:09:35.146Z",
+    "publishedAt": "2026-06-23T09:00:38.000Z"
+  },
+  {
+    "slug": "20260624-05",
+    "headline": "Anthropic、Slack常駐AI「Claude Tag」をベータ提供",
+    "lead": "Anthropicが、Slackで@メンションして使う常駐型AIアシスタント「Claude Tag」を法人向けにベータ公開した。",
+    "body_markdown": "AnthropicがSlack上で動く常駐型のAIアシスタント「Claude Tag」を発表したと、TechCrunchが6月23日に報じた。チャンネル内で「@Claude」と呼びかけて質問や作業を依頼でき、現在は法人向けのClaude EnterpriseおよびClaude Teamでベータ提供されている。\n\n特徴は、チャンネルごとに単一のClaudeが共有され、参加者は前任者が進めた作業をそのまま引き継げる点だ。会話に自発的に加わって進捗の更新や関連事項を知らせる「アンビエントモード」も備える。許可を与えれば他チャンネルからも事実を集めて文脈を蓄積していく一方、管理者がアクセスできるツールやデータ、チャンネルを制御でき、例えば法務向けのClaudeが開発チャンネルを参照しないよう境界を保てるという。料金などの詳細は明らかにされていない。\n\n組織の暗黙知や業務文脈を取り込もうとする狙いがうかがえ、MicrosoftのCopilotやGleanなど企業向けAIとの競争を映す。利便性の裏で、常時学習される組織データの扱いや権限管理という統治面の課題も伴い、どこまでをAIに任せ、何を人が確認するかの線引きが企業ごとに問われることになる。",
+    "tags": [
+      "Anthropic",
+      "Claude",
+      "Slack",
+      "エンタープライズAI",
+      "AIエージェント"
+    ],
+    "section": "スタートアップ",
+    "source": "TechCrunch",
+    "link": "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/",
+    "importance": 4,
+    "image_query": "office team collaboration",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1603201667141-5a2d4c673378?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwyfHxvZmZpY2UlMjB0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwxfDB8fHwxNzgyMjQ4OTc1fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Cherrydeck",
+      "profileUrl": "https://unsplash.com/@cherrydeck?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-23T21:09:35.768Z",
+    "publishedAt": "2026-06-23T17:00:00.000Z"
+  },
+  {
     "slug": "20260623-10",
     "headline": "OpenAI、OSSの脆弱性修正を支援する新施策",
     "lead": "OpenAIがTrail of Bitsと連携し、AIと専門家でOSSの脆弱性を発見・修正する取り組みを始めた。",

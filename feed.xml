@@ -7,7 +7,47 @@
     <atom:link href="https://axiom-ai-xi.vercel.app/feed.xml" rel="self" type="application/rss+xml" />
     <description>生成AI・基盤モデル・規制・産業応用の最新ニュースを、編集部の要約と論評でお届けする日本語AI専門メディア。</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 23 Jun 2026 09:08:03 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 21:09:35 GMT</lastBuildDate>
+    <item>
+      <title>GPT-5、免疫学の3年来の謎に新仮説を提示</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260624-01.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260624-01.html</guid>
+      <pubDate>Tue, 23 Jun 2026 17:00:00 GMT</pubDate>
+      <description>米ジャクソン研究所の免疫学者が、3年間説明できなかったT細胞の実験結果をGPT-5 Proが新機序で説明したと報告した。</description>
+      <category>研究</category>
+    </item>
+    <item>
+      <title>Anthropic、Slack常駐AI「Claude Tag」をベータ提供</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260624-05.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260624-05.html</guid>
+      <pubDate>Tue, 23 Jun 2026 17:00:00 GMT</pubDate>
+      <description>Anthropicが、Slackで@メンションして使う常駐型AIアシスタント「Claude Tag」を法人向けにベータ公開した。</description>
+      <category>スタートアップ</category>
+    </item>
+    <item>
+      <title>GitHubら、加州のAI透明化法改正を要求</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260624-02.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260624-02.html</guid>
+      <pubDate>Tue, 23 Jun 2026 15:48:00 GMT</pubDate>
+      <description>GitHubやHugging Faceらが、加州AI透明化法はオープンソースのライセンス慣行と衝突するとして改正を要求した。</description>
+      <category>規制・倫理</category>
+    </item>
+    <item>
+      <title>Meta、Ray-Banを外した自社スマートグラス</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260624-03.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260624-03.html</guid>
+      <pubDate>Tue, 23 Jun 2026 13:00:00 GMT</pubDate>
+      <description>Metaが初めてRay-Banブランドを冠さない3種のAIグラスを発表。299ドルからで上位モデルは399ドル。</description>
+      <category>産業応用</category>
+    </item>
+    <item>
+      <title>NVIDIA、スパコンTOP500の8割超に採用</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260624-04.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260624-04.html</guid>
+      <pubDate>Tue, 23 Jun 2026 09:00:38 GMT</pubDate>
+      <description>最新のスパコン番付TOP500で、NVIDIA技術が400システム超（81%）に採用され、新規の約9割を占めた。</description>
+      <category>ハードウェア</category>
+    </item>
     <item>
       <title>業務AI利用者の37.8%「禁止されても使い続ける」</title>
       <link>https://axiom-ai-xi.vercel.app/articles/20260623-14.html</link>
@@ -127,46 +167,6 @@
       <pubDate>Mon, 22 Jun 2026 07:38:00 GMT</pubDate>
       <description>小田急電鉄が踏切カメラの映像をAIで解析し、取り残された人を検知して列車に停止信号を送る仕組みを4踏切で24時間運用に入れた。</description>
       <category>産業応用</category>
-    </item>
-    <item>
-      <title>NVIDIA、45度の液冷でAIサーバー刷新 電力と水を削減</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260622-04.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260622-04.html</guid>
-      <pubDate>Mon, 22 Jun 2026 05:00:22 GMT</pubDate>
-      <description>NVIDIAが最大45度の液体で全部品を冷やす新世代サーバーを発表。冷却電力と水使用を大幅に削減できるとする。</description>
-      <category>ハードウェア</category>
-    </item>
-    <item>
-      <title>PFN、国産LLM「PLaMo 3.0 Prime」提供開始 高コスパ訴求</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260622-02.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260622-02.html</guid>
-      <pubDate>Mon, 22 Jun 2026 04:18:48 GMT</pubDate>
-      <description>Preferred Networksが国産フルスクラッチのLLM「PLaMo 3.0 Prime」を提供開始。高コスパと日本語性能を訴える。</description>
-      <category>産業応用</category>
-    </item>
-    <item>
-      <title>OpenAI、新職種「FDE」の実態語る 「仕事の7割が消滅」も</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260622-06.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260622-06.html</guid>
-      <pubDate>Mon, 22 Jun 2026 03:30:00 GMT</pubDate>
-      <description>OpenAIのフォワード・デプロイド・エンジニアリング統括が、新職種FDEの急速な変容を語った。</description>
-      <category>産業応用</category>
-    </item>
-    <item>
-      <title>Sakana AI、集合知型「Fugu」提供 一部で最高性能主張</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260622-05.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260622-05.html</guid>
-      <pubDate>Mon, 22 Jun 2026 01:48:32 GMT</pubDate>
-      <description>Sakana AIが複数モデルを束ねるマルチエージェント「Sakana Fugu」を提供開始。一部ベンチで最上位級の性能を主張。</description>
-      <category>研究</category>
-    </item>
-    <item>
-      <title>サムスン、全社にChatGPTとCodex導入 OpenAI最大級の展開</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260622-01.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260622-01.html</guid>
-      <pubDate>Sun, 21 Jun 2026 23:00:00 GMT</pubDate>
-      <description>サムスン電子がChatGPT EnterpriseとCodexを従業員へ展開。OpenAIにとって最大級の企業導入となる。</description>
-      <category>基盤モデル</category>
     </item>
   </channel>
 </rss>
