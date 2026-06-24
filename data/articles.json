@@ -1,5 +1,140 @@
 [
   {
+    "slug": "20260625-01",
+    "headline": "OpenAI、自社初の推論用チップ「Jalapeño」公開",
+    "lead": "OpenAIがBroadcomと共同開発した推論特化のカスタムASIC「Jalapeño」を発表。9カ月で設計を完了したという。",
+    "body_markdown": "OpenAIは6月24日、半導体大手Broadcomと共同開発した自社初のカスタムAIチップ「Jalapeño（ハラペーニョ）」を公開した。学習用や汎用プロセッサではなく、大規模言語モデルの「推論」処理に特化した専用ASICで、ChatGPTやコーディング支援などモデルが実際に応答を生成する工程を高速かつ省電力で担う狙いがある。データの移動を抑え、演算・メモリ・ネットワークの資源を均衡させることで、理論上の最大性能に近い実効性能を引き出すとしている。\n\nOpenAIによれば、初期設計から製造前の「テープアウト」までをわずか9カ月で完了し、高性能半導体として過去最速級の開発サイクルだったという。設計や最適化の一部にはOpenAI自身のモデルを活用した。試作チップはすでに社内で実ワークロードを稼働させており、電力当たり性能は現行の最先端を大きく上回る見込みだとする。本格展開は2026年末からを予定し、製造ではCelesticaも協力する。\n\n推論需要の急拡大で計算コストが膨らむ中、自社設計チップはNvidiaへの依存とコストを下げる布石となる。AnthropicやGoogleなどに続き主要各社が独自シリコンへ動く流れを象徴する発表だが、量産と性能が公表通りに実現するかは今後の検証を待つ必要がある。",
+    "tags": [
+      "OpenAI",
+      "Broadcom",
+      "AIチップ",
+      "推論",
+      "半導体"
+    ],
+    "section": "ハードウェア",
+    "source": "OpenAI",
+    "link": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
+    "importance": 5,
+    "image_query": "data center servers",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwY2VudGVyJTIwc2VydmVyc3xlbnwxfDB8fHwxNzgyMTYyNjc4fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Taylor Vick",
+      "profileUrl": "https://unsplash.com/@tvick?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-24T21:09:48.045Z",
+    "publishedAt": "2026-06-24T06:00:00.000Z"
+  },
+  {
+    "slug": "20260625-02",
+    "headline": "AI規制推進の州議員、巨額PAC戦の末に予備選敗北",
+    "lead": "AI安全規制を主導した州議員ボーズ氏が、約2700万ドルが投じられた予備選で敗れた。",
+    "body_markdown": "米ニューヨーク州の連邦下院第12選挙区（引退するナドラー議員の後任）の民主党予備選で、州議会議員のアレックス・ボーズ氏が6月23日に敗北を認めた。ボーズ氏は、フロンティアAI企業に安全計画の策定などを義務付ける州法「RAISE法」を共同提案した人物で、AI規制推進派として知られる。\n\nこの選挙は、AI業界内の対立を映す代理戦争として注目を集めた。OpenAIやPalantirの関係者、ベンチャー大手a16zらが出資する規制緩和派の大型政治団体（PAC）「Leading the Future」は、ボーズ氏に700万ドル超を投じて攻撃した。一方、安全規制に前向きなAnthropic系のPACがボーズ氏を支援し、関連する支出は計約2700万ドルに膨らんだ。結果は、ボーズ氏が僅差で敗れ、ミカ・ラッシャー氏が勝利した。\n\n一つの予備選にこれだけのAIマネーが流れ込んだことは、規制の行方が業界の死活問題となりつつある現実を示す。ボーズ氏はAI系PACの最初の主要標的とされ、今後の中間選挙でも安全規制の是非が大きな争点となる可能性をうかがわせる結果となった。",
+    "tags": [
+      "AI規制",
+      "RAISE法",
+      "Anthropic",
+      "OpenAI",
+      "米政治"
+    ],
+    "section": "規制・倫理",
+    "source": "The Verge",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/956263/alex-bores-new-york-12th-district-congressional-primary-results",
+    "importance": 4,
+    "image_query": "united states capitol building",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1594581979864-36977b15d0dc?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHx1bml0ZWQlMjBzdGF0ZXMlMjBjYXBpdG9sJTIwYnVpbGRpbmd8ZW58MXwwfHx8MTc4MjMzNTM4OHww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Andy Feliciotti",
+      "profileUrl": "https://unsplash.com/@someguy?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-24T21:09:48.911Z",
+    "publishedAt": "2026-06-24T17:25:00.000Z"
+  },
+  {
+    "slug": "20260625-03",
+    "headline": "AIが設計する「人智を超えた」高周波チップ",
+    "lead": "プリンストン大の研究者が、高周波無線チップをAIにゼロから設計させる手法を実用化しつつある。",
+    "body_markdown": "無線通信の心臓部である高周波集積回路（RFIC）の設計は、長年「熟練の職人芸」とされ、一つの新設計に数年と巨額の費用を要してきた。米プリンストン大学の研究チームは、この設計をAIに委ねる手法を相次いで示している。強化学習でアーキテクチャや回路構成を一から探索させ、電磁界の振る舞いを瞬時に予測するAIエミュレーターと組み合わせることで、本来は数分から数時間かかる電磁シミュレーションをミリ秒単位に短縮した。\n\n生まれた回路は、人間の設計テンプレートに縛られないため、QRコードのような不規則な形状になる。それでも2023年に発表した試作の電力増幅器は、シリコン製として当時最高水準の広帯域・高効率を記録したという。さらに拡散モデルを用い、解釈しやすい「整った」形状から複雑な形状まで、約6分で生成し分けられるようにした。\n\n設計期間を桁違いに縮める可能性がある一方、研究者はAIが動作しない回路を「幻覚」する恐れを認め、人間による検証の重要性を強調する。普及には、企業が抱え込む設計データの共有と、開かれた基盤づくりが課題になるとしている。",
+    "tags": [
+      "AI設計",
+      "半導体",
+      "高周波回路",
+      "強化学習",
+      "プリンストン大"
+    ],
+    "section": "研究",
+    "source": "IEEE Spectrum",
+    "link": "https://spectrum.ieee.org/ai-radio-chip-design",
+    "importance": 4,
+    "image_query": "circuit board chip",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHw0fHxjaXJjdWl0JTIwYm9hcmQlMjBjaGlwfGVufDF8MHx8fDE3ODIxNjI2Nzd8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Igor Omilaev",
+      "profileUrl": "https://unsplash.com/@omilaev?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-24T21:09:48.930Z",
+    "publishedAt": "2026-06-24T13:00:01.000Z"
+  },
+  {
+    "slug": "20260625-04",
+    "headline": "Figma、設計画面にコードと動きを統合",
+    "lead": "Figmaが年次会議Config 2026で、コード編集や動き・AIシェーダーをキャンバスに統合する更新を発表した。",
+    "body_markdown": "デザインツール大手のFigmaは年次カンファレンス「Config 2026」で、デザインと開発の境界を縮める一連の新機能を発表した。目玉の一つが「コードレイヤー」で、リポジトリを取り込んでコードから画面遷移を抽出し、デザイン画面を離れずにコードを調整できる。10年以上続いてきた、デザインから実装への受け渡し工程を一段省く狙いがある。\n\nアニメーションもキャンバス上に統合された。これまで外部ソフトで作っていた動きを、Figma Design内のタイムラインで直接付けてプレビューできる。さらにWebGPUを用いた「シェーダー」機能では、ディザリングやぼかし、すりガラスや金属のような質感を、文章や参照画像から「Figmaエージェント」が生成する。生成された効果には調整用のパラメーターが自動で付く。AIアシスタント向けの新スキルや、文章入力で独自プラグインを作る機能も加わった。\n\n一方で、キャンバスを動かすAIモデル自体は外部企業のものに依存しており、Figmaは人間の判断を軸に据える姿勢を強調した。制作の自動化が進む中で、ツールの役割を問い直す動きといえる。",
+    "tags": [
+      "Figma",
+      "デザイン",
+      "AI",
+      "開発ツール",
+      "Config2026"
+    ],
+    "section": "開発",
+    "source": "TechCrunch",
+    "link": "https://techcrunch.com/2026/06/24/figma-adds-code-layers-support-for-animations-more-ai-features-in-new-update/",
+    "importance": 3,
+    "image_query": "design workspace laptop",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjB3b3Jrc3BhY2UlMjBsYXB0b3B8ZW58MXwwfHx8MTc4MjMzNTM4OXww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Luca Bravo",
+      "profileUrl": "https://unsplash.com/@lucabravo?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-24T21:09:49.522Z",
+    "publishedAt": "2026-06-24T16:15:00.000Z"
+  },
+  {
+    "slug": "20260625-05",
+    "headline": "「トークン節約」時代へ、AI利用に上限課す企業",
+    "lead": "使い放題志向から一転、コスト管理のため社員のAI利用を絞る企業が増えていると米TechCrunchが伝えた。",
+    "body_markdown": "生成AIの利用を最大化する「トークン使い放題（tokenmaxxing）」の熱狂は短命に終わり、企業はいま社員のAI利用に上限を課す「トークン節約（token rationing）」へと向かっている――。米TechCrunchがこうした潮流を伝えた。背景にあるのは、利用量に応じて膨らむ費用の読みにくさと、支出に見合う価値が本当に出ているのかという経営層の疑問だ。\n\n記事によれば、コンサルティング大手アクセンチュアは、PDFを資料に変換するといった些末な作業で社員が割り当てを浪費しないよう対策を講じているという。同社はかつて、AIを使いこなせない社員は昇進で不利になりうると示唆していただけに、方針の振れ幅は大きい。期待が先行して配られた予算が、いまや厳格に管理される対象へと変わりつつある。\n\n一連の動きは、AIが目新しさだけでなく具体的な業務価値を求められる段階に入ったことを映す。投資家の不安からメモリ半導体株などが売られる「AI売り」も重なり、費用対効果への視線は一段と厳しくなっている。",
+    "tags": [
+      "生成AI",
+      "コスト管理",
+      "企業活用",
+      "アクセンチュア",
+      "業務効率"
+    ],
+    "section": "産業応用",
+    "source": "TechCrunch",
+    "link": "https://techcrunch.com/2026/06/24/companies-are-scrambling-to-stop-employees-from-maxing-out-ai-budgets-with-small-tasks/",
+    "importance": 3,
+    "image_query": "office workers computers",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwyfHxvZmZpY2UlMjB3b3JrZXJzJTIwY29tcHV0ZXJzfGVufDF8MHx8fDE3ODIzMzUzOTB8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Tim van der Kuip",
+      "profileUrl": "https://unsplash.com/@timmykp?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-24T21:09:50.246Z",
+    "publishedAt": "2026-06-24T20:09:45.000Z"
+  },
+  {
     "slug": "20260624-11",
     "headline": "AnthropicがSlack向け新機能「Claude Tag」を公開",
     "lead": "AnthropicがSlackにAI「Claude」を招き、会話からタスクを任せられる新機能を公開した",

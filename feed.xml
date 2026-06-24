@@ -7,7 +7,39 @@
     <atom:link href="https://axiom-ai-xi.vercel.app/feed.xml" rel="self" type="application/rss+xml" />
     <description>生成AI・基盤モデル・規制・産業応用の最新ニュースを、編集部の要約と論評でお届けする日本語AI専門メディア。</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 24 Jun 2026 09:09:38 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 21:09:50 GMT</lastBuildDate>
+    <item>
+      <title>「トークン節約」時代へ、AI利用に上限課す企業</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260625-05.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260625-05.html</guid>
+      <pubDate>Wed, 24 Jun 2026 20:09:45 GMT</pubDate>
+      <description>使い放題志向から一転、コスト管理のため社員のAI利用を絞る企業が増えていると米TechCrunchが伝えた。</description>
+      <category>産業応用</category>
+    </item>
+    <item>
+      <title>AI規制推進の州議員、巨額PAC戦の末に予備選敗北</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260625-02.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260625-02.html</guid>
+      <pubDate>Wed, 24 Jun 2026 17:25:00 GMT</pubDate>
+      <description>AI安全規制を主導した州議員ボーズ氏が、約2700万ドルが投じられた予備選で敗れた。</description>
+      <category>規制・倫理</category>
+    </item>
+    <item>
+      <title>Figma、設計画面にコードと動きを統合</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260625-04.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260625-04.html</guid>
+      <pubDate>Wed, 24 Jun 2026 16:15:00 GMT</pubDate>
+      <description>Figmaが年次会議Config 2026で、コード編集や動き・AIシェーダーをキャンバスに統合する更新を発表した。</description>
+      <category>開発</category>
+    </item>
+    <item>
+      <title>AIが設計する「人智を超えた」高周波チップ</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260625-03.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260625-03.html</guid>
+      <pubDate>Wed, 24 Jun 2026 13:00:01 GMT</pubDate>
+      <description>プリンストン大の研究者が、高周波無線チップをAIにゼロから設計させる手法を実用化しつつある。</description>
+      <category>研究</category>
+    </item>
     <item>
       <title>Diver-X、ロボット学習に使えるVRグローブ新型</title>
       <link>https://axiom-ai-xi.vercel.app/articles/20260624-12.html</link>
@@ -23,6 +55,14 @@
       <pubDate>Wed, 24 Jun 2026 06:27:00 GMT</pubDate>
       <description>AnthropicがSlackにAI「Claude」を招き、会話からタスクを任せられる新機能を公開した</description>
       <category>開発</category>
+    </item>
+    <item>
+      <title>OpenAI、自社初の推論用チップ「Jalapeño」公開</title>
+      <link>https://axiom-ai-xi.vercel.app/articles/20260625-01.html</link>
+      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260625-01.html</guid>
+      <pubDate>Wed, 24 Jun 2026 06:00:00 GMT</pubDate>
+      <description>OpenAIがBroadcomと共同開発した推論特化のカスタムASIC「Jalapeño」を発表。9カ月で設計を完了したという。</description>
+      <category>ハードウェア</category>
     </item>
     <item>
       <title>Mistral、文書OCR新版「OCR 4」公開 170言語対応</title>
@@ -126,46 +166,6 @@
       <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260624-04.html</guid>
       <pubDate>Tue, 23 Jun 2026 09:00:38 GMT</pubDate>
       <description>最新のスパコン番付TOP500で、NVIDIA技術が400システム超（81%）に採用され、新規の約9割を占めた。</description>
-      <category>ハードウェア</category>
-    </item>
-    <item>
-      <title>業務AI利用者の37.8%「禁止されても使い続ける」</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260623-14.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260623-14.html</guid>
-      <pubDate>Tue, 23 Jun 2026 08:18:44 GMT</pubDate>
-      <description>調査で、業務でAIを使う人の37.8%が勤務先に禁止されても利用を続ける意向を示した。</description>
-      <category>産業応用</category>
-    </item>
-    <item>
-      <title>Sakana AIの新「Fugu」、料金ドル建ての理由</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260623-13.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260623-13.html</guid>
-      <pubDate>Tue, 23 Jun 2026 07:34:00 GMT</pubDate>
-      <description>Sakana AIがマルチエージェントAI「Sakana Fugu」を発表し、料金をドル建てとした理由を説明した。</description>
-      <category>スタートアップ</category>
-    </item>
-    <item>
-      <title>AIを理由に挙げる大手テックの人員削減が拡大</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260623-12.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260623-12.html</guid>
-      <pubDate>Tue, 23 Jun 2026 01:27:55 GMT</pubDate>
-      <description>2026年、AIを理由に挙げる大手テックの人員削減が相次ぎ、OracleやAmazonで大規模な整理が報じられた。</description>
-      <category>規制・倫理</category>
-    </item>
-    <item>
-      <title>ダイハツ、アルミ部品の穴内部キズ検査をAI自動化</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260623-07.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260623-07.html</guid>
-      <pubDate>Tue, 23 Jun 2026 00:13:54 GMT</pubDate>
-      <description>目視に頼っていた0.1mm単位の微細検査を画像認識で代替し、竜王工場に導入した。</description>
-      <category>産業応用</category>
-    </item>
-    <item>
-      <title>NVIDIA、データセンターの水使用ほぼゼロを主張</title>
-      <link>https://axiom-ai-xi.vercel.app/articles/20260623-06.html</link>
-      <guid isPermaLink="true">https://axiom-ai-xi.vercel.app/articles/20260623-06.html</guid>
-      <pubDate>Mon, 22 Jun 2026 23:24:32 GMT</pubDate>
-      <description>次世代Rubin向け液冷設計で施設内の水消費をほぼ解消としたが、発電や製造の水は対象外との指摘も。</description>
       <category>ハードウェア</category>
     </item>
   </channel>
