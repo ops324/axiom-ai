@@ -145,7 +145,7 @@ function jsonLdScript(jsonLd) {
 // ページ全体のHTMLを組み立てる。
 // base: サブディレクトリ用の相対プレフィックス / canonicalPath: サイト内絶対パス（"/..."）
 // ogImage: 共有画像 / ogType: 'website'|'article' / jsonLd: 構造化データ（obj か配列）
-export function page({ title, description, body, base = '', canonicalPath = '/', ogImage, ogType = 'website', jsonLd }) {
+export function page({ title, description, body, base = '', canonicalPath = '/', ogImage, ogType = 'website', jsonLd, bodyClass = '' }) {
   const canonical = absUrl(canonicalPath);
   const img = resolveOg(ogImage);
   const desc = description || config.siteDescription;
@@ -174,7 +174,7 @@ ${FONTS}
   <link rel="stylesheet" href="${base}assets/styles.css">
   <link rel="alternate" type="application/rss+xml" title="${esc(config.siteName)} RSS" href="${base}feed.xml">
 ${jsonLdScript(jsonLd)}${analyticsSnippet()}</head>
-<body>
+<body${bodyClass ? ` class="${bodyClass}"` : ''}>
 
 ${body}
 

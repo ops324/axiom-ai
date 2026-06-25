@@ -52,6 +52,7 @@
 
   /* レイアウト */
   --site-max: 760px;
+  --site-max-wide: 1120px;    /* トップのみ PC で widen（.page--home） */
   --gutter: 24px;
   --measure: 40rem;
 
@@ -351,6 +352,115 @@ figure { margin: 0; }
   color: var(--accent);
 }
 .feed__empty { color: var(--ink-2); padding: var(--space-lg) 0; }
+
+/* ============================================================
+ * 6b. HOME 骨格（トップのみ）— ヒーロー＋トップニュース → 最新グリッド → カテゴリ別ブロック
+ *   モバイル先行で1カラム積み。PC（≥1000px）で widen＋多列。色・画像方針は不変。
+ * ============================================================ */
+
+/* --- トップニュース（右レール） --- */
+.home__rail { padding: var(--space-xl) 0; border-top: 1px solid var(--rule); }
+.rail-list { list-style: none; margin: 0; padding: 0; }
+.rail-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  padding: var(--space-md) 0;
+  border-top: 1px solid var(--rule);
+}
+.rail-item:first-child { border-top: 0; }
+.rail-item__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  font-weight: 500;
+  line-height: 1.42;
+  letter-spacing: -0.004em;
+  color: var(--ink-0);
+  transition: color var(--dur) var(--ease);
+}
+.rail-item__title:hover { color: var(--accent); }
+
+/* --- カテゴリ別ブロック --- */
+.secblock { padding: var(--space-xl) 0; border-top: 1px solid var(--rule); }
+.secblock__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-md);
+  border-bottom: 1px solid var(--rule-strong);
+}
+.secblock__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  letter-spacing: -0.006em;
+  color: var(--ink-0);
+  margin: 0;
+}
+.secblock__more {
+  flex: none;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.secblock__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg) var(--space-2xl);
+}
+.seccard { display: flex; flex-direction: column; gap: var(--space-2xs); }
+.seccard__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-md);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.006em;
+  color: var(--ink-0);
+  transition: color var(--dur) var(--ease);
+}
+.seccard__title:hover { color: var(--accent); }
+
+/* --- 中間幅（≥680px）：ブロックを2列に --- */
+@media (min-width: 680px) {
+  .secblock__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* --- PC（≥1000px）：widen＋2カラム骨格 --- */
+@media (min-width: 1000px) {
+  .page--home .container { max-width: var(--site-max-wide); }
+
+  /* ヒーロー左・トップニュース右の2カラム */
+  .home__lead {
+    display: grid;
+    grid-template-columns: 1.65fr 1fr;
+    column-gap: var(--space-3xl);
+    align-items: start;
+  }
+  .home__lead > .lead { padding: var(--space-xl) 0 0; }
+  .home__rail {
+    padding: var(--space-xl) 0 0 var(--space-xl);
+    border-top: 0;
+    border-left: 1px solid var(--rule);
+  }
+
+  /* 最新：2列グリッド（上段の2枚は罫線を消して頭を揃える） */
+  .home .feed-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--space-2xl);
+  }
+  .home .feed-list .feed-item:nth-child(2) { border-top: 0; }
+
+  /* カテゴリ別：3列 */
+  .secblock__grid { grid-template-columns: repeat(3, 1fr); }
+}
 
 /* ============================================================
  * 7. SUBSCRIBE / BUTTON
