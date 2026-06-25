@@ -5,22 +5,16 @@
 import { ticker, header, footer, page } from './layout.js';
 import { esc } from '../src/markdown.js';
 import { config } from '../src/config.js';
+import { metaLine } from './cardbits.js';
 
 const MONTH_BASE = '../';
 const monthHref = (a) => `${MONTH_BASE}articles/${a.slug}.html`;
 
-function isoDate(a) {
-  const src = a.publishedAt || a.createdAt;
-  if (!src) return '';
-  const d = new Date(src);
-  return Number.isNaN(d.getTime()) ? '' : esc(d.toISOString());
-}
-
 function feedList(items, href) {
   const rows = items.map((a) => `        <li class="feed-item">
-          <time class="feed-item__time" datetime="${isoDate(a)}">${esc(a.displayDate || '')}</time>
+          ${metaLine(a)}
           <a class="feed-item__title" href="${href(a)}">${esc(a.headline)}</a>
-          <span class="feed-item__cat">出典: ${esc(a.source || '')}</span>
+          <span class="feed-item__src">出典: ${esc(a.source || '')}</span>
         </li>`).join('\n');
   return `      <ul class="feed-list">\n${rows}\n      </ul>`;
 }

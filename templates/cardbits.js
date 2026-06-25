@@ -16,6 +16,22 @@ export function tagHref(tag, base = '') {
   return `${base}tags/${encodeURIComponent(tag)}.html`;
 }
 
+// 出典発行日時（無ければ取り込み時刻）の ISO 文字列。<time datetime> 用（a11y）。
+export function isoDate(a) {
+  const src = a.publishedAt || a.createdAt;
+  if (!src) return '';
+  const d = new Date(src);
+  return Number.isNaN(d.getTime()) ? '' : esc(d.toISOString());
+}
+
+// 「カテゴリ · 日付＋時刻」のエブロー。section を省く場合は withCat=false（ブロック内は見出しと重複するため）。
+// index の最新リスト/レールと、一覧系（section/tag/archive）の feedList で共用する。
+export function metaLine(a, withCat = true) {
+  const cat = withCat ? `<span class="feed-item__cat">${esc(a.section || 'AI')}</span>` : '';
+  const dt = esc([a.displayDateShort || a.displayDate, a.displayTime].filter(Boolean).join(' '));
+  return `<div class="feed-item__meta">${cat}<time class="feed-item__time" datetime="${isoDate(a)}">${dt}</time></div>`;
+}
+
 // 重要度(1-5)。レガシー記事の欠落は 3 にフォールバック（render.js と同義）。
 export const imp = (a) => Number(a.importance) || 3;
 

@@ -3,7 +3,7 @@
 import { ticker, header, footer, page, organizationLd } from './layout.js';
 import { esc } from '../src/markdown.js';
 import { config } from '../src/config.js';
-import { sectionChip, optimizedUrl } from './cardbits.js';
+import { sectionChip, optimizedUrl, isoDate, metaLine } from './cardbits.js';
 
 const href = (a) => `articles/${a.slug}.html`;
 
@@ -12,21 +12,6 @@ const eff = (a) => a.publishedAt || a.createdAt;
 const imp = (a) => Number(a.importance) || 3;
 const recencyDesc = (x, y) => Date.parse(eff(y) || 0) - Date.parse(eff(x) || 0);
 const importanceThenRecency = (x, y) => (imp(y) - imp(x)) || recencyDesc(x, y);
-
-// 出典発行日時（無ければ取り込み時刻）の ISO 文字列。<time datetime> 用（a11y）。
-function isoDate(a) {
-  const src = a.publishedAt || a.createdAt;
-  if (!src) return '';
-  const d = new Date(src);
-  return Number.isNaN(d.getTime()) ? '' : esc(d.toISOString());
-}
-
-// 「カテゴリ · 日付＋時刻」のエブロー。section を省く場合は withCat=false（ブロック内は見出しと重複するため）。
-function metaLine(a, withCat = true) {
-  const cat = withCat ? `<span class="feed-item__cat">${esc(a.section || 'AI')}</span>` : '';
-  const dt = esc([a.displayDateShort || a.displayDate, a.displayTime].filter(Boolean).join(' '));
-  return `<div class="feed-item__meta">${cat}<time class="feed-item__time" datetime="${isoDate(a)}">${dt}</time></div>`;
-}
 
 // リード（最上段の1本）。実写真があれば控えめに添える（抽象グラデのフォールバックは出さない）。
 function leadStory(a) {
