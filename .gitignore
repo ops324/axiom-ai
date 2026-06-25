@@ -14,4 +14,7 @@ data/.harness.lock/
 # Claude Code ローカル状態
 .claude/scheduled_tasks.lock
 
+# デザインスプリントの試作物（隔離・本番配信させない／自動ジョブに拾わせない）
+design-sprint/
+
 # 公式プレス画像のローカル複製（assets/press/）は配信物なので「コミットする」。無視しない。
