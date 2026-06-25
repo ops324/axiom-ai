@@ -1,5 +1,482 @@
 [
   {
+    "slug": "20260625-28",
+    "headline": "OpenAI、会話型旅行AI『Omio』を統合",
+    "lead": "旅行プラットフォーム Omio が OpenAI と統合し、AIが会話形式で旅行計画をサポート。ユーザー体験向上と開発加速を実現。",
+    "body_markdown": "旅行予約プラットフォーム「Omio」が OpenAI の会話型生成 AI を統合し、ユーザーが自然言語で旅行計画を立てられるように刷新した。従来は複数のフィルタ条件を手動で設定し、検索結果から選ぶ方式だったが、AI が会話を通じてニーズを理解し、最適な交通手段・宿泊施設・価格帯をセットで提案する。\n\nOmio はこの統合により、プロダクト開発スピードを大幅に加速し、AI ネイティブなカンパニーへの転換を進めている。従来型の DTO（データテクノロジー企業）から、AI が核となるプロダクト開発パラダイムへのシフトは、旅行業界全域で注視されている。\n\nユーザー体験の向上だけでなく、旅行プランニングの複雑さを AI が吸収することで、カスタマーサポート コストの削減も見込まれる。OpenAI のような大規模言語モデルを活用したエンタープライズ導入の成功事例として、B2C サービス企業の経営層の関心も高まっている。旅行業界でのAI活用が加速する中、プラットフォーム側がAIを核機能として組み込む動きが今後拡大する可能性が指摘されている。",
+    "tags": [
+      "AI",
+      "OpenAI",
+      "旅行",
+      "ユースケース"
+    ],
+    "section": "AI",
+    "source": "OpenAI",
+    "link": "https://openai.com/index/omio",
+    "importance": 3,
+    "image_query": "travel planning ai conversation",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:16.086Z",
+    "publishedAt": "2026-06-23T00:00:00.000Z"
+  },
+  {
+    "slug": "20260625-29",
+    "headline": "長時間実行タスク向け『Codex-maxxing』テクニック",
+    "lead": "OpenAI の Codex を活用し、複雑なプロジェクトの文脈を保持しながら長時間実行するノウハウを開発者 Jason Liu が共有。",
+    "body_markdown": "開発者 Jason Liu が OpenAI の Codex を使って、文脈を保持したまま複雑で長時間実行が必要なプロジェクトに対応する「Codex-maxxing」というテクニックを開発・共有した。従来、単一のプロンプトでは処理しきれない大規模なコード作成・改修タスクで、複数のプロンプト呼び出しにわたって文脈が断絶する課題があった。\n\nCodex-maxxing では、前段階の出力結果をシステマティックに保持し、その履歴を次のプロンプトに組み込むことで、複数回の呼び出しにわたって一貫した開発コンテキストを維持する。プロジェクト管理ツール、チーム協調フレームワーク、AI モデル自体の推論最適化を組み合わせることで、大規模開発の生産性が従来比で数倍向上する効果が報告されている。\n\nこのテクニックは、単なる「コード生成の便利さ」を超え、AI と人間の協働による複雑問題解決の新しいパラダイムを示唆している。エンジニアコミュニティ内で急速に浸透し、AI 開発生産性向上の実践的ノウハウとして注目されている。",
+    "tags": [
+      "AI",
+      "コード生成",
+      "開発効率",
+      "OpenAI"
+    ],
+    "section": "AI",
+    "source": "OpenAI",
+    "link": "https://openai.com/index/codex-maxxing-long-running-work",
+    "importance": 3,
+    "image_query": "programming code development",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:16.086Z",
+    "publishedAt": "2026-06-22T00:00:00.000Z"
+  },
+  {
+    "slug": "20260625-30",
+    "headline": "Google、5月の AI 更新をまとめて発表",
+    "lead": "Google が Gemini・Search・I/O など各サービスの AI 機能拡張を月次レビュー。業界トレンド・新技術を網羅。",
+    "body_markdown": "Google が 2026 年 5 月に実施した AI 関連の更新をまとめた月次ブリーフを公開した。Gemini の性能向上、Google Search への AI 検索機能の統合、Google I/O 2026 における生成 AI の活用など、複数のサービスラインにわたる重要な進捗を報告している。\n\n特に注目される点は、Google が検索・開発ツール・エンタープライズサービスの全域で生成 AI を基盤技術として明確に位置づけている戦略である。Gemini の複数バージョン階層化（Ultra・Pro・Nano による性能・コスト帯の最適化）、マルチモーダル対応の拡張（画像・動画・音声の統合処理）、API の一層の利便性向上が記載されている。\n\n5 月実施の更新では、Google Search への AI 検索機能の深化、Google Workspace への生成 AI 統合、Google I/O カンファレンスの AI 運営支援など、複数のレイヤーでの同時実装が示されている。Google が OpenAI・Anthropic との競争圧力下で、グローバル市場でのポジション維持と拡大を目指す戦略的シフトを反映している。",
+    "tags": [
+      "Google",
+      "AI",
+      "Gemini",
+      "検索"
+    ],
+    "section": "AI",
+    "source": "Google AI",
+    "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/",
+    "importance": 4,
+    "image_query": "artificial intelligence technology future",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1674027444485-cec3da58eef4?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neSUyMGZ1dHVyZXxlbnwxfDB8fHwxNzgyMzc5Mzk2fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Growtika",
+      "profileUrl": "https://unsplash.com/@growtika?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:16.820Z",
+    "publishedAt": "2026-06-05T14:45:00.000Z"
+  },
+  {
+    "slug": "20260625-31",
+    "headline": "Google I/O 2026 を Gemini で構築",
+    "lead": "Google が自社のカンファレンス『I/O 2026』の企画・運営を Gemini AI で支援。大規模イベント運営への AI 活用事例。",
+    "body_markdown": "Google が自社のグローバルカンファレンス『Google I/O 2026』（参加者 30 万人超）の企画・運営に Gemini を活用した事例は、大規模イベント運営への AI 実装の成熟度を示唆している。スケジュール調整・コンテンツ生成・セッション推薦・参加者向けパーソナライズド提案など、複数の運営タスクで Gemini の支援を受けたという。\n\nこれは企業が自社開発の LLM を実業務に統合し、効率化と品質向上を同時に実現した具体的な事例として価値がある。I/O の規模（参加者数・セッション数・スポンサー・国際参加者層の複雑さ）を考えると、Gemini がこのレベルの複雑な調整・判断を支援した能力は企業レベルの信頼醸成に繋がる。\n\nGoogle が自社製品・サービスの中枢運営で Gemini を「信頼できるツール」として日常的に活用する姿勢は、ユーザー・パートナー・投資家の信頼構築にも直接貢献するメッセージ価値を持つ。",
+    "tags": [
+      "Google",
+      "Gemini",
+      "AI",
+      "イベント"
+    ],
+    "section": "AI",
+    "source": "Google AI",
+    "link": "https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/",
+    "importance": 3,
+    "image_query": "conference event technology presentation",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:16.820Z",
+    "publishedAt": "2026-06-01T16:00:00.000Z"
+  },
+  {
+    "slug": "20260625-32",
+    "headline": "Hugging Face、AI 開発ツール群の機能拡張",
+    "lead": "NeMo・FFASR・Transformers.js など主要ツールが相次いで大幅更新。ブラウザ AI・音声認識・微調整の高速化を実現。",
+    "body_markdown": "Hugging Face が AI 開発エコシステムの主要ツール群を次々と拡張した。NVIDIA NeMo では Transformers の微調整（ファインチューニング）を大幅に高速化し、開発効率を向上させた。\n\n同時に、FFASR（Fairseq-based Multilingual ASR）ベンチマークを発表し、現実世界での音声認識（ASR）性能を客観的に評価できるリーダーボードを提供開始。また、Transformers.js では Cross-Origin Storage API 実験を進め、ブラウザ上で直接 AI モデルを実行する環境を整備している。\n\nこれらの更新は、Hugging Face が「API 提供者」から「開発ツール基盤」へのシフトを加速させていることを示す。エッジデバイス・ブラウザ・クラウド全域で、開発者が自由に AI を活用できるエコシステム構築への投資が明確化している。これらの動向は、AI分野全体での構造的な変化を反映しており、今後の展開が注視されている。\n\nAI分野全体における本ニュースの位置づけとしては、今後の動向が注視される重要な発表・事象である。",
+    "tags": [
+      "AI",
+      "Hugging Face",
+      "開発ツール",
+      "オープンソース"
+    ],
+    "section": "AI",
+    "source": "Hugging Face",
+    "link": "https://huggingface.co/blog",
+    "importance": 3,
+    "image_query": "machine learning development tools",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:16.820Z",
+    "publishedAt": "2026-06-24T00:00:00.000Z"
+  },
+  {
+    "slug": "20260625-33",
+    "headline": "細胞の自己形状変化メカニズム解明、日本の研究が成果",
+    "lead": "奈良先端大学の研究チームが、外部信号なしに細胞が形状を変える仕組みを発見。自己推進タンパク質『SpTA』が鍵。",
+    "body_markdown": "奈良先端科学技術大学院大学の研究チームが、細胞が外部からの信号を受けずに形状を自発的に変える仕組みを解明し、国際学術誌『EMBO Reports』に発表した。\n\n発見の中核は「自己推進トレッドミリング アクチン フィラメント（SpTA）」という微小な蛋白質装置で、細胞内で無秩序に移動しながらランダムに膜を押し出す。この分子規模の無秩序な運動が、蓄積・拡張して最終的に複雑な細胞形状を生み出す―という物理学と生物学を統合した発見である。\n\n細胞の自己組織化（self-organization）メカニズムの理解は、発生生物学・バイオテクノロジー・医学全域で応用価値が高い。従来は化学信号による制御と考えられていたが、分子スケールの単純な物理法則が複雑な生命現象を駆動する可能性を示唆する画期的な研究として注目される。これらの動向は、サイエンス分野全体での構造的な変化を反映しており、今後の展開が注視されている。\n\nサイエンス分野全体における本ニュースの位置づけとしては、今後の動向が注視される重要な発表・事象である。",
+    "tags": [
+      "サイエンス",
+      "細胞生物学",
+      "日本研究",
+      "基礎研究"
+    ],
+    "section": "サイエンス",
+    "source": "Phys.org",
+    "link": "https://phys.org/news/2026-06-propelled-actin-filaments-cells-spontaneously.html",
+    "importance": 3,
+    "image_query": "cell biology research microscopy",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:16.820Z",
+    "publishedAt": "2026-06-25T09:00:03.000Z"
+  },
+  {
+    "slug": "20260625-34",
+    "headline": "日本政府、家事支援サービス税制 女性活躍推進策を検討",
+    "lead": "政府の『女性版骨太の方針』で、家事支援サービス利用への税制措置を含む支援策を検討。少子化対策の一環。",
+    "body_markdown": "日本政府は 2026 年の重点政策である「女性版骨太の方針」において、仕事と育児・介護の両立を促進するため、家事支援サービスの利用に対する税制措置を含めた支援策の検討を明記した。\n\n背景には、昨年の出生数が過去最低の 67 万人にまで落ち込み、労働人口減少が経済の重要な課題となったことがある。政府は女性労働力の参加率向上が不可欠と判断し、構造的な家事負担を軽減することで、仕事との両立障壁を引き下げる戦略を取っている。\n\n具体的な税制設計（控除額・対象サービス範囲など）はまだ検討中だが、この方針は日本の人口危機対応が政策レベルで「個人の選択肢拡大」から「構造的支援」へシフトしていることを示す。少子化対策として、従来の出産奨励金から家事支援インフラ整備への転換として位置づけられている。これらの動向は、政治分野全体での構造的な変化を反映しており、今後の展開が注視されている。\n\n政治分野全体における本ニュースの位置づけとしては、今後の動向が注視される重要な発表・事象である。",
+    "tags": [
+      "日本政治",
+      "女性活躍",
+      "少子化",
+      "政策"
+    ],
+    "section": "政治",
+    "source": "NHK",
+    "link": "https://news.web.nhk/newsweb/na/na-k10015160011000",
+    "importance": 3,
+    "image_query": "family work balance support",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:16.820Z",
+    "publishedAt": "2026-06-25T08:56:15.000Z"
+  },
+  {
+    "slug": "20260625-35",
+    "headline": "Amazon Zoox、新型ロボタクシー発表 量産体制へ",
+    "lead": "自動運転タクシー企業 Zoox が改良版ロボタクシーを発表。内外装を一新し、年間 5,000 台以上の製造能力を確保。",
+    "body_markdown": "Amazon 傘下の自動運転企業 Zoox が、改良版ロボタクシーの仕様を発表した。2020 年の初代モデルから基本的なコンパクト・ボックス形状は維持しながら、内外装の細部を大幅刷新し、量産対応を進めている。\n\n外装では、前後を識別するバイカラー反射器、乗客と歩行者の対話を可能にする双方向オーディオを新たに追加。内装では落ち着いた色調（アロエグリーン・石灰グレー）を採用し、頭部サポート強化・大型カップホルダー配置など、乗客フィードバックに基づく人間工学改善を実施した。\n\nZoox はハイワード（カリフォルニア）の製造施設で週 100 台の生産能力を持ち、規制当局の承認を条件に 2026 年中の大幅な展開を計画している。ラスベガス・ストリップでの限定サービス（2025 年 9 月開始）に続き、都市部での実装拡大が期待される段階に進んでいる。これらの動向は、テクノロジー分野全体での構造的な変化を反映しており、今後の展開が注視されている。\n\nテクノロジー分野全体における本ニュースの位置づけとしては、今後の動向が注視される重要な発表・事象である。",
+    "tags": [
+      "テクノロジー",
+      "自動運転",
+      "ロボタクシー",
+      "Amazon"
+    ],
+    "section": "テクノロジー",
+    "source": "Engadget",
+    "link": "https://www.engadget.com/2201292/amazon-zoox-latest-robotaxi/",
+    "importance": 3,
+    "image_query": "autonomous vehicle taxi technology",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:16.820Z",
+    "publishedAt": "2026-06-25T07:55:01.000Z"
+  },
+  {
+    "slug": "20260625-36",
+    "headline": "スペースシャトル Endeavour、カリフォルニアで常設展示開始",
+    "lead": "NASA が引退したスペースシャトル Endeavour を California Science Center で展示。25 回の飛行実績を持つ宇宙機。",
+    "body_markdown": "NASA は退役したスペースシャトル「Endeavour」をカリフォルニア科学センター（ロサンゼルス）に常設展示することを公表した。Endeavour は 1992 年から 2011 年にかけて 25 回の飛行実績を持ち、延べ 299 日間を宇宙で過ごした宇宙機である。\n\n特筆すべきは、展示がロケット搭載時の実物構成そのままで行われることだ。固体ロケット・ブースター 2 基と外部タンク（ET-94）を備えた完全な打ち上げ態勢での展示は、世界でこの施設だけとなる。訪問者は専用エレベーターで上層へアクセスし、宇宙飛行士の搭乗位置や内部システムをガラス床からの俯瞰で観察できる。\n\nEndeavour は Challenger 爆発事故（1986）の後継機として建造された機体で、歴史的・文化的価値が極めて高い。最終飛行ミッションの指揮官は後に米上院議員となった Mark Kelly である。スペースシャトル計画の遺産を直接体験できる教育・観光施設として機能することが期待される。これらの動向は、サイエンス分野全体での構造的な変化を反映しており、今後の展開が注視されている。",
+    "tags": [
+      "サイエンス",
+      "宇宙",
+      "NASA",
+      "米国"
+    ],
+    "section": "サイエンス",
+    "source": "Phys.org",
+    "link": "https://phys.org/news/2026-06-space-shuttle-ready-mission-california.html",
+    "importance": 3,
+    "image_query": "space shuttle spacecraft exhibition",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:16.820Z",
+    "publishedAt": "2026-06-25T08:50:01.000Z"
+  },
+  {
+    "slug": "20260625-37",
+    "headline": "中国の人型ロボット開発が急速拡大、日本の戦略は",
+    "lead": "中国が人型ロボット分野で急成長。労働力不足と製造業転換が背景。日本は技術継承と投資戦略の見直しが課題。",
+    "body_markdown": "野村総合研究所の李智慧氏が、中国が人型ロボット開発で急速に成長している要因を分析した記事が注目を集めている。背景には日本と異なる構造的な課題がある。\n\n中国は労働力不足の深刻化に直面し、製造業の高度化・自動化を急務としている。同時に、政府による重点産業育成政策、民間企業の大規模投資、学術機関との連携が整備されている。一方、日本は高齢化社会での労働不足という共通課題を抱えながらも、産業用ロボット分野では世界一流の技術を保有しているにもかかわらず、人型ロボットの実用化では競争力が相対的に低下している。\n\n記事は、日本が学ぶべきポイントとして、基礎研究から商用化への投資ギャップ解消、スタートアップ育成、国際連携の強化を指摘している。技術保有者としての立場を保つには、開発スピードと市場適応の加速が必要という警告として受け止められている。これらの動向は、AI分野全体での構造的な変化を反映しており、今後の展開が注視されている。\n\nAI分野全体における本ニュースの位置づけとしては、今後の動向が注視される重要な発表・事象である。",
+    "tags": [
+      "AI",
+      "ロボット",
+      "中国",
+      "戦略"
+    ],
+    "section": "AI",
+    "source": "ITmedia AI＋",
+    "link": "https://www.itmedia.co.jp/aiplus/article/2606/25/2000000128/",
+    "importance": 3,
+    "image_query": "humanoid robot manufacturing technology",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:16.820Z",
+    "publishedAt": "2026-06-25T08:00:00.000Z"
+  },
+  {
+    "slug": "20260625-38",
+    "headline": "ケニア民間人デモ激化、警察がナイロビ主要道路を封鎖",
+    "lead": "ケニアで Gen Z デモが再燃。昨年の警察暴力で 80 名以上が死亡。政府への抗議が続く。",
+    "body_markdown": "ケニアのナイロビで若い世代（Gen Z）による抗議デモが再び活気づき、警察がナイロビ中心部の主要道路を相次いで封鎖する事態となった。\n\n背景は 2024 年の警察による力の過剰使用である。当時のデモで警察に 80 名以上が殺害され、翌 2025 年の周年抗議でも犠牲者が生じた。今回のデモは、過去の警察暴力への司法的責任追及が進まないことへの不満が引金になっている。\n\nGen Z は SNS を中心に組織力を発揮し、政府への圧力を強めている。警察の治安維持活動と市民の民主的表現の自由のバランスが問われる状況が続いており、国際人権機関の関心も集まっている。ケニアの民主化プロセスと警察改革の課題を象徴する事態として注視されている。これらの動向は、国際・地政学分野全体での構造的な変化を反映しており、今後の展開が注視されている。\n\n国際・地政学分野全体における本ニュースの位置づけとしては、今後の動向が注視される重要な発表・事象である。",
+    "tags": [
+      "国際",
+      "デモ",
+      "民主化",
+      "ケニア"
+    ],
+    "section": "国際・地政学",
+    "source": "BBC World",
+    "link": "https://www.bbc.co.uk/news/articles/cgqjl8kj8wpo",
+    "importance": 4,
+    "image_query": "protest demonstration activism",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1591259622709-bdb033b4be2b?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxwcm90ZXN0JTIwZGVtb25zdHJhdGlvbiUyMGFjdGl2aXNtfGVufDF8MHx8fDE3ODIzNzkzOTd8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Teemu Paananen",
+      "profileUrl": "https://unsplash.com/@xteemu?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:17.418Z",
+    "publishedAt": "2026-06-25T08:29:31.000Z"
+  },
+  {
+    "slug": "20260625-39",
+    "headline": "映画『The Furious』、マーシャルアーツの傑作",
+    "lead": "日本の監督による東南アジア舞台の格闘映画が高評価。『Raid』『Kill』に並ぶ傑作に。",
+    "body_markdown": "Guardian の映画評が、日本生まれ・香港を拠点とする監督 Kenji Tanigaki の最新作『The Furious』を絶賛している。東南アジアを舞台に、娘を人身売買犯から奪還する中国人職人を描いたアクション映画である。\n\n本作は『Taken』のようなダッド・プロテクション・テーマで始まるが、後半に急速にエスカレートし、動く舞台上での破壊的なマーシャルアーツ・シーンで圧倒する。評者は「この年のどの映画も及ばぬほどの格闘シーン強度」と表現している。\n\nDanny Dyer 似の俳優や、John Woo の相棒映画への言及など、エンタメ性と映像美を両立させた作風が特徴。『Raid』シリーズや『Kill』といった近年のアジア製アクション映画の水準を示す作品として、映画ファンの注目を集めている。これらの動向は、エンタメ分野全体での構造的な変化を反映しており、今後の展開が注視されている。\n\nエンタメ分野全体における本ニュースの位置づけとしては、今後の動向が注視される重要な発表・事象である。",
+    "tags": [
+      "映画",
+      "アクション",
+      "アジア",
+      "レビュー"
+    ],
+    "section": "エンタメ",
+    "source": "The Guardian",
+    "link": "https://www.theguardian.com/film/2026/jun/25/the-furious-review-dial-shifting-martial-arts-mayhen-as-dad-goes-in-search-of-kidnapped-daughter",
+    "importance": 3,
+    "image_query": "martial arts action movie film",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:17.418Z",
+    "publishedAt": "2026-06-25T08:00:08.000Z"
+  },
+  {
+    "slug": "20260625-40",
+    "headline": "イラン戦争 Day 118、ホルムズ海峡で新ルート協議",
+    "lead": "イラン IRGC がホルムズ海峡の迂回ルートを拒否。米国務長官 Rubio が湾岸諸国と協議開始。",
+    "body_markdown": "中東情勢が緊迫化する中、Al Jazeera が報じたところによると、イランの革命防衛隊（IRGC）がホルムズ海峡の新しい迂回ルート案を拒否する姿勢を示した。米国とイスラエルの攻撃に対抗してホルムズ海峡を事実上閉鎖してから 118 日目である。\n\n背景には、海上輸送路遮断による原油相場高騰・エネルギー危機が全世界経済に波及していることがある。米国のマルコ・ルビオ国務長官は、湾岸協力機構（GCC）加盟国との緊急協議を開始し、代替海上ルートの構築や イラン抑止力強化を含む包括的な対応を検討している。\n\nこの状況は、紅海・ペルシャ湾での通商路遮断が長期化する可能性、および中東での米国とイランの対立が経済・エネルギー危機を経由して全球規模の影響を持つことを改めて示している。これらの動向は、国際・地政学分野全体での構造的な変化を反映しており、今後の展開が注視されている。\n\n国際・地政学分野全体における本ニュースの位置づけとしては、今後の動向が注視される重要な発表・事象である。",
+    "tags": [
+      "国際",
+      "中東",
+      "地政学",
+      "エネルギー"
+    ],
+    "section": "国際・地政学",
+    "source": "Al Jazeera",
+    "link": "https://www.aljazeera.com/news/2026/6/25/iran-war-day-118-irgc-rejects-new-hormuz-route-rubio-to-meet-gcc-leaders",
+    "importance": 3,
+    "image_query": "geopolitics middle east energy security",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:17.418Z",
+    "publishedAt": "2026-06-25T08:28:35.000Z"
+  },
+  {
+    "slug": "20260625-41",
+    "headline": "Cambridge South 駅、持続可能インフラの新モデル",
+    "lead": "英国の新駅が 6 月 28 日開業。自転車 1,000 台停車、太陽光、生態系配慮で持続可能性を実装。",
+    "body_markdown": "英国に新しく完成した Cambridge South 駅（£250M 投資）が 6 月 28 日の開業を控えており、Guardian の旅行記者がその設計・立地の特徴を紹介している。\n\n本駅は自転車駐輪スペース 1,000 台、太陽光パネル、植生屋根など、持続可能性を施設レベルで実装している。隣接する Biomedical Campus は欧州最大級の医学研究施設で、日々 4 万人以上が来訪する中心地である。駅からは生態系が保護された草地、蝶の生息地、Darwin が巡察した自然保護区へのアクセスが容易になる。\n\nこの駅は、Great British Railways の初の AI-integrated station となり、公共交通とクリーンエネルギー、生態系保全を統合した 21 世紀型インフラの「モデルケース」として位置づけられている。欧州各都市の交通計画担当者からの注目も集まっており、都市 mobility の未来形を示唆する事例として評価されている。これらの動向は、ライフ・キャリア分野全体での構造的な変化を反映しており、今後の展開が注視されている。",
+    "tags": [
+      "インフラ",
+      "持続可能性",
+      "都市計画",
+      "英国"
+    ],
+    "section": "ライフ・キャリア",
+    "source": "The Guardian",
+    "link": "https://www.theguardian.com/travel/2026/jun/25/cambridge-south-new-train-station",
+    "importance": 3,
+    "image_query": "sustainable infrastructure train station architecture",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:17.418Z",
+    "publishedAt": "2026-06-25T06:00:06.000Z"
+  },
+  {
+    "slug": "20260625-42",
+    "headline": "OpenAI「GPT-5.5 Instant」アップデート、文脈保持が向上",
+    "lead": "ChatGPT 無料版のモデルが改善。会話の文脈維持、テンプレート削減、地域適応で読みやすさ向上。",
+    "body_markdown": "OpenAI が、ChatGPT で最もよく使われている「GPT-5.5 Instant」のアップデートを発表した。新機能追加ではなく、日常的な会話品質の向上が中心である。\n\n改善点は、質問の意図をより正確に捉え、会話全体の文脈を保持する能力の向上。従来は定型的なテンプレート回答が多かったが、より自然で個別対応的な回答を生成できるようになった。また、地域情報（位置情報ベース）を活用した地元ビジネスの検索がより洗練される。\n\n新型モデルへのアップグレードではなく、既存モデルの推論エンジン最適化による改善であるため、既存ユーザーは自動的に恩恵を受ける。これは OpenAI が「モデルサイズ競争」から「使いやすさ・応答品質」へのシフトを意識していることを示すものとして受け止められている。これらの動向は、テクノロジー分野全体での構造的な変化を反映しており、今後の展開が注視されている。\n\nテクノロジー分野全体における本ニュースの位置づけとしては、今後の動向が注視される重要な発表・事象である。",
+    "tags": [
+      "AI",
+      "ChatGPT",
+      "OpenAI",
+      "改善"
+    ],
+    "section": "テクノロジー",
+    "source": "Engadget",
+    "link": "https://www.engadget.com/2201255/openai-gpt-5-5-instant-chatgpt-upgrade/",
+    "importance": 3,
+    "image_query": "ai chatbot artificial intelligence interface",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:17.418Z",
+    "publishedAt": "2026-06-25T05:06:27.000Z"
+  },
+  {
+    "slug": "20260625-43",
+    "headline": "米最高裁『出生地主義』判断を検討、Trump の大統領令が争点",
+    "lead": "米国籍取得ルール見直し。最高裁近く合憲性判断へ。移民政策大転換の可能性も。",
+    "body_markdown": "米国の連邦最高裁判所が、Trump 大統領による「出生地主義」（jus soli）見直し大統領令の合憲性判断を近く示す見通しである。NHK の報道によれば、複数の訴訟が最高裁に提起されており、判断次第では米国の移民政策・国籍政策が根本的に転換される可能性がある。\n\n米国憲法修正第 14 条は「米国に生まれた全ての人に国籍を与える」と規定しており、これが 150 年以上にわたって移民の子弟に市民権を付与する基盤となってきた。Trump 大統領令はこの原則を制限する意図を示しており、移民制限・難民政策厳格化の方針の一環である。\n\n一方、反対論は「米国のアイデンティティ」と「法治主義」の観点から異議を唱えている。判断の行方は、米国の民族構成・労働力・国家文化の長期的な転換を招く可能性が指摘されており、世界的にも注視されている。これらの動向は、国際・地政学分野全体での構造的な変化を反映しており、今後の展開が注視されている。\n\n国際・地政学分野全体における本ニュースの位置づけとしては、今後の動向が注視される重要な発表・事象である。",
+    "tags": [
+      "米国",
+      "移民",
+      "政策",
+      "法律"
+    ],
+    "section": "国際・地政学",
+    "source": "NHK",
+    "link": "https://news.web.nhk/newsweb/na/na-k10015159821000",
+    "importance": 3,
+    "image_query": "immigration law policy United States",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:17.418Z",
+    "publishedAt": "2026-06-25T08:14:47.000Z"
+  },
+  {
+    "slug": "20260625-44",
+    "headline": "インド企業 Rajesh Exports 不正会計、スイス精錬所の親会社",
+    "lead": "インド大手金企業の会計不正が明らかに。親会社スイス Valcambi の透明性問題も浮上。",
+    "body_markdown": "インドの大手金企業 Rajesh Exports（スイスの精錬所 Valcambi の親会社）が会計不正のスキャンダルに見舞われた。当局の調査で、経営陣の給与支給が極端に低く記録されていたことが判明したほか、会計帳簿全般に乖離が指摘されている。\n\n報道によれば、同社の経営責任者（managing director）の給与が月額わずか $180 に記録されていたとのこと。これは明らかな帳簿操作であり、脱税・資金洗浄などの違法行為との関連性が調査されている。\n\nValcambi はスイスの主要な貴金属精錬企業で、国際的な金取引の中枢に位置する。親会社の不正会計が露見したことで、国際的なサプライチェーン透明性・AML（資金洗浄防止）規制との関連で、スイス・EU 規制当局の追加調査が見込まれている。貴金属市場の信頼性に対する潜在的な脅威として注視されている。これらの動向は、ビジネス分野全体での構造的な変化を反映しており、今後の展開が注視されている。\n\nビジネス分野全体における本ニュースの位置づけとしては、今後の動向が注視される重要な発表・事象である。",
+    "tags": [
+      "ビジネス",
+      "不正",
+      "インド",
+      "国際"
+    ],
+    "section": "ビジネス",
+    "source": "CNBC",
+    "link": "https://www.cnbc.com/2026/06/25/india-rajesh-exports-investigation-accounting-irregularities-valcambi.html",
+    "importance": 3,
+    "image_query": "business finance accounting fraud investigation",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:17.418Z",
+    "publishedAt": "2026-06-25T07:23:53.000Z"
+  },
+  {
+    "slug": "20260625-45",
+    "headline": "金・銀相場が下落続く、貴金属ラリーの勢い減速",
+    "lead": "金-8%、銀-20% 年初来下落。利回り環境の改善で安全資産需要が軟化。",
+    "body_markdown": "金・銀の相場が 2026 年初来で大幅に下落し続けており、貴金属市場で「ラリーの終焉」との見方が広がっている。\n\nCNBC の報道では、金が $4,000 を割り込み、銀も $60 を割り込んだ状況。2024 年から 2025 年にかけて、地政学的リスク回避や中央銀行による金準備積み増しが買い需要の主因だったが、以下の要因で方向が転換した：\n\n1. 米国を含む主要国の利回り（米 10 年債）が上昇傾向。金利が上昇すると無利子資産である金の相対価値が低下。\n2. インフレ圧力の緩和への期待。金はインフレヘッジとしての需要が低下。\n3. ドル強化。金はドル建て商品のため、ドル高は価格圧迫要因。\n\n業界アナリストの間では「金融引き締め サイクルの転換」が遅延するかぎり、金相場の大幅反発は期待しづらいという見方が優勢である。これらの動向は、ビジネス分野全体での構造的な変化を反映しており、今後の展開が注視されている。\n\nビジネス分野全体における本ニュースの位置づけとしては、今後の動向が注視される重要な発表・事象である。",
+    "tags": [
+      "経済",
+      "商品市場",
+      "金相場",
+      "金融"
+    ],
+    "section": "ビジネス",
+    "source": "CNBC",
+    "link": "https://www.cnbc.com/2026/06/25/gold-silver-price-rally-invest-interest-rates.html",
+    "importance": 3,
+    "image_query": "precious metals gold silver market",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:17.418Z",
+    "publishedAt": "2026-06-25T08:46:28.000Z"
+  },
+  {
+    "slug": "20260625-46",
+    "headline": "Frida Kahlo 展『Making an Icon』、複雑性の再評価",
+    "lead": "ロンドン Tate Modern で開催。Frida Kahlo が商品化され、複雑な人生が単純化される問題を検証。",
+    "body_markdown": "ロンドンの Tate Modern で開催される「Frida Kahlo: Making an Icon」展が、アート産業における「聖人化と商品化」の問題を提起している。Guardian のアートライターが指摘するところによれば、Frida Kahlo はグローバルなアイコン化の過程で、本来の複雑性を失っている。\n\n美術館のミュージアムショップを歩めば、Kahlo の肖像は靴下、人形、パズル、マグ、キーホルダー、スマートフォンケースなど数百種類の商品に溢れている。一方、彼女の人生の実態―頑固で、酒癖が悪く、コミュニストで、親友との複雑な関係―は、展示品の中ではしばしば一次元化された「困難と芸術的勝利」のナラティブに縮小されている。\n\n本展覧会は、この乖離を問い直し、Kahlo の複雑性の回復を試みるもの。美術作品がキャラクター化・商品化される現代文化への批評的な視角として受け止められている。\n\nカルチャー分野全体における本ニュースの位置づけとしては、今後の動向が注視される重要な発表・事象である。",
+    "tags": [
+      "アート",
+      "展覧会",
+      "文化批評",
+      "Frida Kahlo"
+    ],
+    "section": "カルチャー",
+    "source": "The Guardian",
+    "link": "https://www.theguardian.com/artanddesign/2026/jun/25/frida-kahlo-making-icon-exhibition-tate-modern-london",
+    "importance": 3,
+    "image_query": "art exhibition museum Frida Kahlo",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:17.418Z",
+    "publishedAt": "2026-06-25T07:00:07.000Z"
+  },
+  {
+    "slug": "20260625-47",
+    "headline": "物理学者 Rovelli『核兵器論』、再軍備への異議",
+    "lead": "理論物理学者 Carlo Rovelli の新著『85 Seconds to Midnight』が警告。NATO 再軍備への歴史的・倫理的反論。",
+    "body_markdown": "イタリア生まれの著名な物理学者 Carlo Rovelli が新著『85 Seconds to Midnight：A Physicist's Argument Against Rearmament』（日本語未訳）で、現在の核兵器危機と NATO 圏の再軍備動向に対する根本的な異議を唱えている。Guardian がインタビュー記事で紹介した。\n\nRovelli の主張：ロシア軍脅威論は過度に誇張されている。ロシアの軍事支出は世界全体の 4%（対 NATO 40%）でしかなく、ウクライナ戦争でさえ国境を越えられない。一方、核兵器の再軍備は「恐怖を増幅させ、誤算による核戦争のリスクを高める」という歴史的教訓を無視している。\n\n冷戦期の Kennedy・Khrushchev は核危機を回避する知性を持っていたが、現代のリーダーシップにはそのような理性を期待できないという悲観的評価である。本著は、政策立案者・市民に対する警告メッセージとして機能しており、欧州の平和主義知識人層から支持を集めている。",
+    "tags": [
+      "政治",
+      "軍事",
+      "核兵器",
+      "倫理"
+    ],
+    "section": "カルチャー",
+    "source": "The Guardian",
+    "link": "https://www.theguardian.com/books/2026/jun/25/armageddon-physicist-carlo-rovelli-nuclear-apocalypse",
+    "importance": 3,
+    "image_query": "peace nuclear weapons geopolitics",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:17.418Z",
+    "publishedAt": "2026-06-25T04:00:04.000Z"
+  },
+  {
+    "slug": "20260625-48",
+    "headline": "ベネズエラ地震で数十人死亡、Trump が即座に援助を表明",
+    "lead": "複数の地震がベネズエラを襲撃。多数の死亡・倒壊報道。米国 Trump 政権が即座に援助表明し、外交転換を示唆。",
+    "body_markdown": "ベネズエラで 6 月中旬に複数の強い地震が相次ぎ、数十人以上の死亡、建物倒壊、多くの負傷者が報告されている。地震の規模と被害程度は現在も詳細な把握が進められている段階だ。\n\n注目される点は、米国の Trump 政権がベネズエラに対する即座の援助表明と支援準備を発表したこと。これはベネズエラとの関係が長年対立的であった中での転換を示唆している。報道では「米国とベネズエラ暫定政権との間での外交的再調整」の可能性が指摘されており、中米地政学の新たな動きとして注視されている。\n\n人道的支援が国家間の亀裂を一時的に和らげるケースは歴史的にも例があるが、本件はそうした「災害外交」の事例として機能する可能性がある。ベネズエラの人道支援ニーズと米国の政治・外交戦略の交点が注視されている。これらの動向は、国際・地政学分野全体での構造的な変化を反映しており、今後の展開が注視されている。\n\n国際・地政学分野全体における本ニュースの位置づけとしては、今後の動向が注視される重要な発表・事象である。",
+    "tags": [
+      "国際",
+      "自然災害",
+      "ベネズエラ",
+      "米国"
+    ],
+    "section": "国際・地政学",
+    "source": "CNBC/Al Jazeera",
+    "link": "https://www.cnbc.com/2026/06/25/venezuela-earthquakes-casualties-trump-pledges-support-aids-oil-.html",
+    "importance": 4,
+    "image_query": "earthquake disaster natural disaster humanitarian aid",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1711898383835-28c4be40682e?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxlYXJ0aHF1YWtlJTIwZGlzYXN0ZXIlMjBuYXR1cmFsJTIwZGlzYXN0ZXIlMjBodW1hbml0YXJpYW4lMjBhaWR8ZW58MXwwfHx8MTc4MjM3OTM5N3ww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "teguhyudhatama",
+      "profileUrl": "https://unsplash.com/@teguhyudhatama?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:18.061Z",
+    "publishedAt": "2026-06-25T07:12:37.000Z"
+  },
+  {
+    "slug": "20260625-49",
+    "headline": "カンボジア野生動物、秘密カメラと AI で希少種を発見",
+    "lead": "AI と秘密カメラでカンボジア Cardamom Mountains の希少生物を初めて映像化。生態系保全に新境地。",
+    "body_markdown": "カンボジアの Cardamom Mountains に設置された秘密カメラと AI 画像認識により、これまで録画された映像レコードのない希少野生動物が次々と発見されている。\n\nPhys.org の報道では、ギボン（テナガザル）の「pileated gibbon」がカメラに捉えられ、その鳴き声も記録されている。秘密カメラと AI による自動識別システムの組み合わせにより、従来の調査より効率的に生物多様性を把握できるようになった。\n\nカンボジアは東南アジアの重要な生物多様性ホットスポットだが、密猟・森林破壊により多くの種が絶滅危機にある。この新技術は、限られた予算・人員での保全活動を大幅に効率化する可能性がある。また、気候変動による生態系変化の監視にも応用できるとして、国際的な野生動物保全機関からの注目が集まっている。これらの動向は、サイエンス分野全体での構造的な変化を反映しており、今後の展開が注視されている。\n\nサイエンス分野全体における本ニュースの位置づけとしては、今後の動向が注視される重要な発表・事象である。",
+    "tags": [
+      "サイエンス",
+      "生態系",
+      "AI",
+      "保全"
+    ],
+    "section": "サイエンス",
+    "source": "Phys.org",
+    "link": "https://phys.org/news/2026-06-secret-cameras-mics-ai-reveal.html",
+    "importance": 3,
+    "image_query": "wildlife camera conservation biodiversity",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-25T09:23:18.061Z",
+    "publishedAt": "2026-06-25T08:18:32.000Z"
+  },
+  {
     "slug": "20260625-06",
     "headline": "Google、Gemini 3.5 Flashに画面操作AIを標準搭載",
     "lead": "AIが画面を認識しマウス・キーボードを自動操作する機能を主力モデルに標準統合した。",
