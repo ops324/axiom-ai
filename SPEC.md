@@ -125,7 +125,7 @@ AIニュースサイト/
   "lead": "…",                      // 要点1文（80字以内）
   "body_markdown": "…",             // 本文（Markdown・目安550〜750字／床450・上限900で警告）
   "tags": ["…"],                    // 日本語タグ 3〜5個
-  "section": "基盤モデル",            // セクション
+  "section": "AI",                  // セクション（navSections 推奨。旧カテゴリは sectionAliases で正規化）
   "source": "OpenAI",               // 出典名
   "link": "https://…",              // 出典URL（冪等キー）
   "importance": 4,                  // 重要度 1〜5（編集序列に使用）
@@ -251,7 +251,8 @@ AIニュースサイト/
 | `imageProvider` / `*Key` | unsplash | 画像API（未設定なら CSS サムネ） |
 | `analytics.token` | 空（`CF_BEACON_TOKEN`） | Cloudflare Web Analytics の beacon トークン。空なら出力しない |
 | `thumbVariants` | CSS抽象サムネ6種 | 実写真が無いときのフォールバック（`styles.css` のグラデクラス） |
-| `navSections` | 7セクション（基盤モデル/研究/開発/産業応用/規制・倫理/スタートアップ/ハードウェア） | ナビ生成元。各要素は `hue`（OKLCH 色相）を持ち、チップのセクション別色分け（道標）に使う。オピニオン/データは記事0継続のため除外（育てば再追加）。`section` 値自体は自由でナビ外でも記事ページは生成 |
+| `navSections` | 総合10セクション（AI/テクノロジー/サイエンス/ビジネス/経済・マネー/政治/国際・地政学/カルチャー/エンタメ/ライフ・キャリア） | ナビ生成元。各要素は `slug`（`sections/<slug>.html`）と `hue`（OKLCH 色相）を持つ。総合ニュース化で旧 AI 細分類から再編。`section` 値自体は自由でナビ外でも記事ページは生成 |
+| `sectionAliases` | 旧7カテゴリ → `AI` | 旧 AI 細分類（産業応用/研究/基盤モデル/規制・倫理/スタートアップ/ハードウェア/開発）を navSections へ正規化。ingest 自動＋`npm run migrate-sections`。旧ラベルはタグへ退避（§編集・運用「カテゴリ正規化」） |
 
 ---
 
@@ -261,7 +262,7 @@ AIニュースサイト/
 |---|---|---|
 | タグページ | `tags/<タグ>.html`（UTF-8名）と `tags/index.html`（件数で大小をつけるタグクラウド）。記事内タグ・パンくずから辿れる。 | `templates/tag.js`, `render.js` |
 | 関連記事 | タグ／セクションの一致度で「あわせて読みたい」を選出。関連集合内で**被写体（`image_query` キーワード＋画像URL）を分散**させ、同種写真の並びを避ける（関連度は犠牲にしない＝無関係記事は混ぜない）。 | `render.js: relatedFor` / `pickDiverse` / `imgSig` |
-| トップの骨格 | 総合ニュースの定番骨格：**ヒーロー（リード1本）＋「トップニュース」右レール → 「最新」グリッド → カテゴリ別ブロック → 購読**。リードは重要度順（鮮度窓つき）、トップニュース＝`featured[1..6]`（右レール6本）。**カテゴリ別ブロックは `universe` に実在する `section` 値から ≥3本のものを自動生成**（現データは AI 細分類に偏在のため当面 産業応用/規制・倫理 等が立つ。総合化に伴い各カテゴリが自動で増える）。表示順は `navSections` 優先→残りは本数降順。「すべて見る→」は `navSections` 名に一致するときのみ section ページへリンク（リンク切れ回避）。重複抑制のためヒーロー＋トップニュース既出は下段から除外。 | `templates/index.js: renderIndex` / `topRail` / `latestList` / `sectionBlocks` |
+| トップの骨格 | 総合ニュースの定番骨格：**ヒーロー（リード1本）＋「トップニュース」右レール → 「最新」グリッド → カテゴリ別ブロック → 購読**。リードは重要度順（鮮度窓つき）、トップニュース＝`featured[1..6]`（右レール6本）。**カテゴリ別ブロックは `universe` に実在する `section` 値から ≥3本のものを自動生成**（旧カテゴリは `sectionAliases` で `AI` に正規化済みのため当面は **AI 1ブロック**。総合ニュース記事が増えれば各カテゴリが自動で立ち上がり賑わいが復活）。表示順は `navSections` 優先→残りは本数降順。「すべて見る→」は `navSections` 名に一致するときのみ section ページへリンク（リンク切れ回避）。重複抑制のためヒーロー＋トップニュース既出は下段から除外。 | `templates/index.js: renderIndex` / `topRail` / `latestList` / `sectionBlocks` |
 | 重要度で配置 | リード以下の「最新」「トップニュース」「カテゴリ別カード」はいずれも**エブロー型**（上段にメタ「カテゴリ · 日付＋時刻」、下段にセリフ見出し。ブロック内カードはカテゴリ重複のため日時のみ）。色や帯による強調は使わず、位置と型階層で序列を示す。日付＋時刻は `displayDateShort`（`MM.DD`）＋`displayTime`（`HH:MM`）で表示（`render.js: decorate`）。 | `render.js: importanceThenRecency` / `decorate`, `templates/index.js: metaLine` |
 | 型階層・エディトリアル | 色を増やさず**型と余白だけで序列**を立てる（白基調ミニマル堅持）。リード見出しを `clamp(--text-2xl, 6.4vw, 46px)`・字間 -0.014em でヘッドライン化、リード文（デッキ）をサンス→**セリフ 20px** に格上げ、「最新」見出し（`.feed__head`）を罫線付きの欄見出しに、本文 `.prose h2` の頭に短い罫線。**「最新」行はエブロー型**（`.feed-item` はフレックス縦積み、`.feed-item__meta` に「カテゴリ（`.feed-item__cat` ＝ ink-1 太字 ＋ 中点 `::after`）· 日時（`.feed-item__time`）」、下段に `.feed-item__title`。余白広め・極薄罫線・見出し hover で青）。記事リード `.article-lede` は 24px のデッキ格。新規トークンは追加しない（既存 `--text-*`/`--space-*` のみ）。※`importance>=5` の行強調（`.feed-item[data-imp]`/`.feed-item--lead`）は CSS 側を用意済みだがテンプレが当該属性を未出力のため現状休眠（無害）。由来: design-sprint 勝者案 B。 | `assets/styles.css`（§15 型階層）, `templates/index.js`/`article.js` |
 | タブレット中間帯 | `640/600/420` のスマホ寄り BP に加え **680–1024px** を新設。ガターを 32px に広げ、`site-footer__top` を「ブランド全幅＋4等分」の2行に組み直して 600–768px の窮屈さを解消。`min-width` 加算でモバイル既存レイアウトは不変（相互排他で衝突なし）。 | `assets/styles.css`（§15 @media 680–1024px） |
