@@ -312,7 +312,7 @@ figure { margin: 0; }
   gap: var(--space-xs);
   font-family: var(--font-sans);
   font-size: var(--text-xs);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   color: var(--ink-2);
 }
 .feed-item__cat {
@@ -320,7 +320,7 @@ figure { margin: 0; }
   align-items: center;
   gap: var(--space-xs);
   max-width: 12em;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--ink-1);
   white-space: nowrap;
   overflow: hidden;
@@ -328,12 +328,23 @@ figure { margin: 0; }
 }
 .feed-item__cat::after {
   content: "·";
+  margin-left: var(--space-2xs);
   font-weight: 400;
-  color: var(--rule-strong);
+  color: var(--ink-2);
 }
 .feed-item__time {
   font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
   white-space: nowrap;
+}
+/* 一覧（section/tag/archive）の出典行。メタ行の「·」区切りは付けず控えめに。
+   縦積みの行内で内容幅のまま右端へ寄せる。 */
+.feed-item__src {
+  align-self: flex-end;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  color: var(--ink-2);
 }
 .feed-item__title {
   font-family: var(--font-serif);

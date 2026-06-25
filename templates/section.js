@@ -3,22 +3,17 @@
 import { ticker, header, footer, page } from './layout.js';
 import { esc } from '../src/markdown.js';
 import { config } from '../src/config.js';
+import { metaLine } from './cardbits.js';
 
 const BASE = '../';
 const href = (a) => `${BASE}articles/${a.slug}.html`;
 
-function isoDate(a) {
-  const src = a.publishedAt || a.createdAt;
-  if (!src) return '';
-  const d = new Date(src);
-  return Number.isNaN(d.getTime()) ? '' : esc(d.toISOString());
-}
-
 function feedList(items) {
+  // セクションページは全記事が同一カテゴリ＝カテゴリ表記は冗長なので省く（日時のみ）。
   const rows = items.map((a) => `        <li class="feed-item">
-          <time class="feed-item__time" datetime="${isoDate(a)}">${esc(a.displayDate || '')}</time>
+          ${metaLine(a, false)}
           <a class="feed-item__title" href="${href(a)}">${esc(a.headline)}</a>
-          <span class="feed-item__cat">出典: ${esc(a.source)}</span>
+          <span class="feed-item__src">出典: ${esc(a.source)}</span>
         </li>`).join('\n');
   return `      <ul class="feed-list">\n${rows}\n      </ul>`;
 }

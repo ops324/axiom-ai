@@ -99,7 +99,7 @@ AIニュースサイト/
 │   └── markdown.js         # md→html / エスケープ / 本文の生HTML・危険プロトコル無害化
 ├── templates/
 │   ├── layout.js           # header(ナビ・検索)/footer/page 骨格・解析（ticker は空スタブ）
-│   ├── cardbits.js         # 共有: 中立カテゴリラベル sectionChip() / tagHref() / optimizedUrl()
+│   ├── cardbits.js         # 共有: メタ行 metaLine()/isoDate() / 中立カテゴリラベル sectionChip() / tagHref() / optimizedUrl()
 │   ├── index.js            # トップ（ヒーロー＋トップニュース右レール→最新グリッド→カテゴリ別ブロック→購読）
 │   ├── article.js          # 記事詳細（読了時間・共有ボタン・関連記事）
 │   ├── section.js          # セクション別一覧
@@ -198,7 +198,7 @@ AIニュースサイト/
 **表示箇所**（白基調ミニマル方針：画像は実写真があるときのみ。抽象グラデのダミーサムネは描画しない）
 - トップ: リードに実写真があれば1枚（`templates/index.js: leadStory`）。最新の行リストはテキストのみ。
 - 記事詳細: アイキャッチ（実写真があるときのみ・`templates/article.js: heroFigure`）。重要度未満の記事は画像なし。
-- セクション/タグ/アーカイブ/関連記事: すべてテキストの行リスト（画像なし）。
+- セクション/タグ/アーカイブ/関連記事: すべてテキストの行リスト（画像なし）。メタ行はトップの「最新」と同じ共有 `metaLine()` で「カテゴリ · 日付＋時刻」に統一（**セクションページはカテゴリが自明＝重複のため日時のみ**＝`metaLine(a,false)`）。出典行（`.feed-item__src`）は行の**右端**に寄せる。
 - ※ `fetchImage.js` はデータ上 `fallbackThumb` を返すことがあるが、テンプレートは参照しない（実写真のみ表示）。
 
 **リードのクリック導線**: リードに画像があるとき、画像（`.lead__media`）は記事ページへのリンク。見出しリンクと同一記事への重複リンクになるため `tabindex="-1"` ＋ `aria-hidden="true"` で**マウス操作専用**とし、AT／キーボードには出さない（読み上げ・タブ移動は見出しリンクのみ）。記事詳細のアイキャッチは**リンク化しない**（既に記事内のため）。
@@ -265,8 +265,8 @@ AIニュースサイト/
 | タグページ | `tags/<タグ>.html`（UTF-8名）と `tags/index.html`（件数で大小をつけるタグクラウド）。記事内タグ・パンくずから辿れる。 | `templates/tag.js`, `render.js` |
 | 関連記事 | タグ／セクションの一致度で「あわせて読みたい」を選出。関連集合内で**被写体（`image_query` キーワード＋画像URL）を分散**させ、同種写真の並びを避ける（関連度は犠牲にしない＝無関係記事は混ぜない）。 | `render.js: relatedFor` / `pickDiverse` / `imgSig` |
 | トップの骨格 | 総合ニュースの定番骨格：**ヒーロー（リード1本）＋「トップニュース」右レール → 「最新」グリッド → カテゴリ別ブロック → 購読**。リードは重要度順（鮮度窓つき）、トップニュース＝`featured[1..6]`（右レール6本）。**カテゴリ別ブロックは `universe` に実在する `section` 値から ≥3本のものを自動生成**（旧カテゴリは `sectionAliases` で `AI` に正規化済みのため当面は **AI 1ブロック**。総合ニュース記事が増えれば各カテゴリが自動で立ち上がり賑わいが復活）。表示順は `navSections` 優先→残りは本数降順。「すべて見る→」は `navSections` 名に一致するときのみ section ページへリンク（リンク切れ回避）。重複抑制のためヒーロー＋トップニュース既出は下段から除外。 | `templates/index.js: renderIndex` / `topRail` / `latestList` / `sectionBlocks` |
-| 重要度で配置 | リード以下の「最新」「トップニュース」「カテゴリ別カード」はいずれも**エブロー型**（上段にメタ「カテゴリ · 日付＋時刻」、下段にセリフ見出し。ブロック内カードはカテゴリ重複のため日時のみ）。色や帯による強調は使わず、位置と型階層で序列を示す。日付＋時刻は `displayDateShort`（`MM.DD`）＋`displayTime`（`HH:MM`）で表示（`render.js: decorate`）。 | `render.js: importanceThenRecency` / `decorate`, `templates/index.js: metaLine` |
-| 型階層・エディトリアル | 色を増やさず**型と余白だけで序列**を立てる（白基調ミニマル堅持）。リード見出しを `clamp(--text-2xl, 6.4vw, 46px)`・字間 -0.014em でヘッドライン化、リード文（デッキ）をサンス→**セリフ 20px** に格上げ、「最新」見出し（`.feed__head`）を罫線付きの欄見出しに、本文 `.prose h2` の頭に短い罫線。**「最新」行はエブロー型**（`.feed-item` はフレックス縦積み、`.feed-item__meta` に「カテゴリ（`.feed-item__cat` ＝ ink-1 太字 ＋ 中点 `::after`）· 日時（`.feed-item__time`）」、下段に `.feed-item__title`。余白広め・極薄罫線・見出し hover で青）。記事リード `.article-lede` は 24px のデッキ格。新規トークンは追加しない（既存 `--text-*`/`--space-*` のみ）。※`importance>=5` の行強調（`.feed-item[data-imp]`/`.feed-item--lead`）は CSS 側を用意済みだがテンプレが当該属性を未出力のため現状休眠（無害）。由来: design-sprint 勝者案 B。 | `assets/styles.css`（§15 型階層）, `templates/index.js`/`article.js` |
+| 重要度で配置 | リード以下の「最新」「トップニュース」「カテゴリ別カード」はいずれも**エブロー型**（上段にメタ「カテゴリ · 日付＋時刻」、下段にセリフ見出し。ブロック内カード／セクションページはカテゴリ重複のため日時のみ＝`metaLine(a,false)`）。**同じ `metaLine()` をセクション/タグ/アーカイブの一覧でも共用**（`cardbits.js`）し全ページで体裁を統一。色や帯による強調は使わず、位置と型階層で序列を示す。日付＋時刻は `displayDateShort`（`MM.DD`）＋`displayTime`（`HH:MM`）で表示（`render.js: decorate`）。 | `render.js: importanceThenRecency` / `decorate`, `templates/cardbits.js: metaLine` |
+| 型階層・エディトリアル | 色を増やさず**型と余白だけで序列**を立てる（白基調ミニマル堅持）。リード見出しを `clamp(--text-2xl, 6.4vw, 46px)`・字間 -0.014em でヘッドライン化、リード文（デッキ）をサンス→**セリフ 20px** に格上げ、「最新」見出し（`.feed__head`）を罫線付きの欄見出しに、本文 `.prose h2` の頭に短い罫線。**「最新」行はエブロー型**（`.feed-item` はフレックス縦積み、`.feed-item__meta` に「カテゴリ（`.feed-item__cat` ＝ ink-1・中字500・字間0.08em ＋ 中点 `::after`＝ink-2・前に余白）· 日時（`.feed-item__time`＝等幅数字）」、下段に `.feed-item__title`、一覧では出典 `.feed-item__src`＝右寄せ `align-self:flex-end`。余白広め・極薄罫線・見出し hover で青。単色のミニマル洗練）。記事リード `.article-lede` は 24px のデッキ格。新規トークンは追加しない（既存 `--text-*`/`--space-*` のみ）。※`importance>=5` の行強調（`.feed-item[data-imp]`/`.feed-item--lead`）は CSS 側を用意済みだがテンプレが当該属性を未出力のため現状休眠（無害）。由来: design-sprint 勝者案 B。 | `assets/styles.css`（§15 型階層）, `templates/index.js`/`article.js` |
 | タブレット中間帯 | `640/600/420` のスマホ寄り BP に加え **680–1024px** を新設。ガターを 32px に広げ、`site-footer__top` を「ブランド全幅＋4等分」の2行に組み直して 600–768px の窮屈さを解消。`min-width` 加算でモバイル既存レイアウトは不変（相互排他で衝突なし）。 | `assets/styles.css`（§15 @media 680–1024px） |
 | セクション表記 | 多色チップ（セクション別 hue）は**撤去**し、色を持たない中立のカテゴリ文字ラベル（`.cat` / 行リストの `feed-item__cat`）に統一。色信号の競合を避ける。 | `templates/cardbits.js: sectionChip`, `styles.css`（`.cat`） |
 | 記事体験 | 読了時間（≈400字/分）、公開時刻、機能する共有ボタン（X / はてブ / リンクコピー）。共有URLは `siteUrl` 基準の絶対パス。**読了プログレスバー**（本文 `.prose` のあるページに自動表示）。 | `templates/article.js`, `assets/reveal.js` |
