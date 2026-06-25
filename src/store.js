@@ -3,6 +3,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { config } from './config.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_FILE = path.join(__dirname, '..', 'data', 'articles.json');
@@ -25,6 +26,16 @@ export async function saveArticles(articles) {
 // 既存 link 集合（重複判定用）
 export function existingLinks(articles) {
   return new Set(articles.map((a) => a.link));
+}
+
+// 旧カテゴリ → navSections 正規化（config.sectionAliases）。エイリアスがあれば section を
+// 寄せ、旧ラベルを先頭タグに退避（重複排除・5件上限）。無ければそのまま返す。
+// ingest（取り込み時）と migrate-sections（一括移行）で共用。
+export function normalizeSectionTags(name, tags = []) {
+  const aliased = config.sectionAliases?.[name];
+  if (!aliased) return { section: name, tags };
+  const merged = [name, ...tags].filter((t, i, arr) => t && arr.indexOf(t) === i);
+  return { section: aliased, tags: merged.slice(0, 5) };
 }
 
 // 日付ベースの slug を採番。同日内の既存件数 + offset で連番。

@@ -8,6 +8,7 @@
     "candidates": "node src/fetchCandidates.js",
     "ingest": "node src/ingestDrafts.js",
     "render": "node src/renderOnly.js",
+    "migrate-sections": "node src/migrateSections.js",
     "check": "node src/check.js",
     "evaluate": "node src/evaluate.js",
     "quality-digest": "node src/qualityDigest.js",

@@ -6,7 +6,7 @@ import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { config } from './config.js';
-import { loadArticles, saveArticles, makeSlug, yyyymmdd, existingLinks } from './store.js';
+import { loadArticles, saveArticles, makeSlug, yyyymmdd, existingLinks, normalizeSectionTags } from './store.js';
 import { fetchImage, imageKey } from './fetchImage.js';
 import { renderSite } from './render.js';
 import { evaluateArticle, appendEvaluation, writeRunSummary } from './evaluate.js';
@@ -61,13 +61,18 @@ for (const d of drafts) {
   const image = importance >= config.imageImportanceFloor
     ? await fetchImage(d, created.length, usedImages)
     : null;
+  // 旧カテゴリは navSections へ正規化（旧ラベルはタグへ退避）。新規の総合カテゴリは素通り。
+  const { section, tags } = normalizeSectionTags(
+    d.section || 'AI',
+    Array.isArray(d.tags) ? d.tags.slice(0, 5) : [],
+  );
   created.push({
     slug: makeSlug(store, dateStr, created.length),
     headline: String(d.headline).trim(),
     lead: String(d.lead || '').trim(),
     body_markdown: String(d.body_markdown).trim(),
-    tags: Array.isArray(d.tags) ? d.tags.slice(0, 5) : [],
-    section: d.section || 'AI',
+    tags,
+    section,
     source: d.source || '',
     link: d.link,
     importance,

@@ -54,6 +54,7 @@
 | `npm run check` | 公開前ゲート（必須）。レンダー完走＋スキーマ/一意性＋鍵混入＋**constitution 退行検査**＋**客観品質警告**（警告は非ブロック） |
 | `npm run candidates` | RSS 取得の疎通（`data/_candidates.json` 生成） |
 | `npm run render` | `articles.json` から全 HTML 再生成 |
+| `npm run migrate-sections` | 旧カテゴリ section を `config.sectionAliases` で navSections へ一括正規化（旧ラベルはタグへ退避・冪等）。実行後 `npm run render` |
 | `npm run evaluate` | 直近記事を客観評価して ledger に記録（`--rate <slug> <1-5> [メモ]` で人手評価）。SPEC §12 |
 | `npm run backfill-images` | 画像の補完／重複解消（画像系を触ったとき） |
 | `npm run set-press-image` | 公式プレス画像を手動登録（クレジット必須・自動上書き保護。SPEC §6.1） |

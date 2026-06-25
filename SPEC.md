@@ -153,6 +153,7 @@ AIニュースサイト/
 | 重要度で選別 | Claude が候補を 1〜5 で採点し、閾値以上のみ・1回最大N本を掲載（床を越えた分だけ＝本数は可変）。類似トピックは1本に統合。網羅性のため話題・セクションを分散。 | `importanceFloor`=3, `maxArticles`=5, `candidatePool`=30 |
 | 並び・鮮度の基準日時 | 並び順・表示日時・鮮度判定は **`publishedAt`（出典の発行日時）優先・無ければ `createdAt`（取り込み時刻）** にフォールバック。取り込み時刻基準だと「昨日発行を今日取り込んだ記事」が新着扱いになる歪みを防ぐ。 | `render.js: effDate` |
 | 重要度で序列 | トップ最上段の**リード1本**を重要度順（同点は新しい順＝`publishedAt`基準）で選ぶ。以降は**トップニュース右レール（重要度上位6本）→「最新」グリッド（時系列）→ カテゴリ別ブロック**の骨格で展開（詳細は §デザイン「トップの骨格」）。 | `render.js: importanceThenRecency`, `templates/index.js` |
+| カテゴリ正規化 | 記事の `section` は `config.sectionAliases`（旧 AI 細分類＝産業応用/研究/基盤モデル/規制・倫理/スタートアップ/ハードウェア/開発 → **`AI`**）で navSections へ正規化。**旧ラベルは記事のタグへ退避**して回遊性・粒度を保つ。取り込み時（`ingestDrafts`）に自動適用＋一括移行 `npm run migrate-sections` で既存データを統一（冪等）。新規の総合カテゴリは素通り。リブランド前レガシーの不整合（薄い section ページ・`evaluate.js` の未知セクション警告）を解消する。 | `config.sectionAliases`, `store.js: normalizeSectionTags`, `src/migrateSections.js` |
 | リードの鮮度ウィンドウ | トップ最上段（リード）は**直近 `heroRecencyHours` 時間内（`publishedAt`基準）の最重要記事**から選ぶ。古い高importance記事がトップに居座る停滞を防ぐ（ほぼ日次で入れ替わる）。ウィンドウ内に記事が無ければ全体の最重要をリードに（保険）。 | `render.js`（featured 先頭差し替え）, `heroRecencyHours`=24 |
 | AI関連度フィルタ | media tier 候補は `aiKeywords` のヒット数が閾値未満なら除外（primary 公式は常に通す）。 | `aiKeywords`, `relevanceFloorMedia`=1 |
 | 関連記事 | 「あわせて読みたい」はタグ共有×3＋同セクション×2 でスコアし上位3件。不足は重要度で補完。 | `render.js: relatedFor` |
