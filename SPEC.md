@@ -244,6 +244,8 @@ AIニュースサイト/
 | `candidatePool` | 30 | Claude に提示する候補数（小さいと primary で満杯になり media/新ソースが届かない） |
 | `importanceFloor` | 3 | これ未満の重要度は掲載しない |
 | `retentionTop` | 40 | トップ掲載の上限。超過分は月別アーカイブへ |
+| `sectionBlockMin` | 2 | トップ中段カテゴリ別ブロックの最小本数。これ以上ある section を `navSections` 順に固定表示（未満は脱落） |
+| `sectionBlockMax` | 4 | 1カテゴリ別ブロックあたりの最大カード数 |
 | `searchIndexMax` | 600 | `search-index.json` に載せる最大件数（直近順・クライアント負荷抑制。全記事はアーカイブから辿れる） |
 | `heroRecencyHours` | 24 | ヒーローは直近この時間内の最重要記事から選ぶ（トップ停滞の防止） |
 | `skipUrlPatterns` | 動画/音声系 | 取材に向かない弱いソースを除外 |
@@ -264,7 +266,7 @@ AIニュースサイト/
 |---|---|---|
 | タグページ | `tags/<タグ>.html`（UTF-8名）と `tags/index.html`（件数で大小をつけるタグクラウド）。記事内タグ・パンくずから辿れる。 | `templates/tag.js`, `render.js` |
 | 関連記事 | タグ／セクションの一致度で「あわせて読みたい」を選出。関連集合内で**被写体（`image_query` キーワード＋画像URL）を分散**させ、同種写真の並びを避ける（関連度は犠牲にしない＝無関係記事は混ぜない）。 | `render.js: relatedFor` / `pickDiverse` / `imgSig` |
-| トップの骨格 | 総合ニュースの定番骨格：**ヒーロー（リード1本）＋「トップニュース」右レール → 「最新」グリッド → カテゴリ別ブロック → 購読**。リードは重要度順（鮮度窓つき）、トップニュース＝`featured[1..6]`（右レール6本）。**カテゴリ別ブロックは `universe` に実在する `section` 値から ≥3本のものを自動生成**（旧カテゴリは `sectionAliases` で `AI` に正規化済みのため当面は **AI 1ブロック**。総合ニュース記事が増えれば各カテゴリが自動で立ち上がり賑わいが復活）。表示順は `navSections` 優先→残りは本数降順。「すべて見る→」は `navSections` 名に一致するときのみ section ページへリンク（リンク切れ回避）。重複抑制のためヒーロー＋トップニュース既出は下段から除外。 | `templates/index.js: renderIndex` / `topRail` / `latestList` / `sectionBlocks` |
+| トップの骨格 | 総合ニュースの定番骨格：**ヒーロー（リード1本）＋「トップニュース」右レール → 「最新」グリッド → カテゴリ別ブロック → 購読**。リードは重要度順（鮮度窓つき）、トップニュース＝`featured[1..6]`（右レール6本）。**カテゴリ別ブロックは `universe` に実在する `section` 値から ≥`sectionBlockMin`(2)本のものを自動生成**（1カテゴリあたり最大 `sectionBlockMax`(4) カード）。表示順は `navSections` 優先（薄いカテゴリも2本あれば見出しを出して固定表示）→`navSections` 外の旧カテゴリは本数降順で末尾。「すべて見る→」は `navSections` 名に一致するときのみ section ページへリンク（リンク切れ回避）。重複抑制のためヒーロー＋トップニュース既出は下段から除外。 | `templates/index.js: renderIndex` / `topRail` / `latestList` / `sectionBlocks` |
 | 重要度で配置 | リード以下の「最新」「トップニュース」「カテゴリ別カード」はいずれも**エブロー型**（上段にメタ「カテゴリ · 日付＋時刻」、下段にセリフ見出し。ブロック内カード／セクションページはカテゴリ重複のため日時のみ＝`metaLine(a,false)`）。**同じ `metaLine()` をセクション/タグ/アーカイブの一覧でも共用**（`cardbits.js`）し全ページで体裁を統一。色や帯による強調は使わず、位置と型階層で序列を示す。日付＋時刻は `displayDateShort`（`MM.DD`）＋`displayTime`（`HH:MM`）で表示（`render.js: decorate`）。 | `render.js: importanceThenRecency` / `decorate`, `templates/cardbits.js: metaLine` |
 | 型階層・エディトリアル | 色を増やさず**型と余白だけで序列**を立てる（白基調ミニマル堅持）。リード見出しを `clamp(--text-2xl, 6.4vw, 46px)`・字間 -0.014em でヘッドライン化、リード文（デッキ）をサンス→**セリフ 20px** に格上げ、「最新」見出し（`.feed__head`）を罫線付きの欄見出しに、本文 `.prose h2` の頭に短い罫線。**「最新」行はエブロー型**（`.feed-item` はフレックス縦積み、`.feed-item__meta` に「カテゴリ（`.feed-item__cat` ＝ ink-1・中字500・字間0.08em ＋ 中点 `::after`＝ink-2・前に余白）· 日時（`.feed-item__time`＝等幅数字）」、下段に `.feed-item__title`、一覧では出典 `.feed-item__src`＝右寄せ `align-self:flex-end`。余白広め・極薄罫線・見出し hover で青。単色のミニマル洗練）。記事リード `.article-lede` は 24px のデッキ格。新規トークンは追加しない（既存 `--text-*`/`--space-*` のみ）。※`importance>=5` の行強調（`.feed-item[data-imp]`/`.feed-item--lead`）は CSS 側を用意済みだがテンプレが当該属性を未出力のため現状休眠（無害）。由来: design-sprint 勝者案 B。 | `assets/styles.css`（§15 型階層）, `templates/index.js`/`article.js` |
 | タブレット中間帯 | `640/600/420` のスマホ寄り BP に加え **680–1024px** を新設。ガターを 32px に広げ、`site-footer__top` を「ブランド全幅＋4等分」の2行に組み直して 600–768px の窮屈さを解消。`min-width` 加算でモバイル既存レイアウトは不変（相互排他で衝突なし）。 | `assets/styles.css`（§15 @media 680–1024px） |

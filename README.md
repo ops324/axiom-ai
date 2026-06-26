@@ -167,6 +167,7 @@ open index.html
 | `candidatePool` | 140 | Claude に提示する候補数（この中から重要度＋カバレッジ均等化で選別） |
 | `importanceFloor` | 3 | 重要度がこれ未満の候補は掲載しない |
 | `retentionTop` | 40 | トップ掲載の上限。超過分は `archive.html` へ |
+| `sectionBlockMin` / `sectionBlockMax` | 2 / 4 | トップ中段カテゴリ別ブロックの最小本数（`navSections` 順に固定表示）／1ブロックの最大カード数 |
 | `heroRecencyHours` | 24 | ヒーローは直近この時間内の最重要記事から選ぶ（トップ停滞の防止） |
 | `rssFeeds` | 総合ニュース10セクションのRSS（`tier`付き） | 一次情報/メディアの別。実フィードは `src/config.js` を参照（増減もここで編集） |
 | `imageImportanceFloor` | 4 | この重要度未満の記事には画像を付けない（取得・ページ重量の節約） |
