@@ -7,7 +7,7 @@
     <atom:link href="https://fukan-news.vercel.app/feed.xml" rel="self" type="application/rss+xml" />
     <description>テック・AI・科学・経済・政治・国際・カルチャーまで、世界のニュースを編集部の要約と中立論評で俯瞰する日本語ニュースメディア。</description>
     <language>ja</language>
-    <lastBuildDate>Fri, 26 Jun 2026 12:20:39 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 13:08:53 GMT</lastBuildDate>
     <item>
       <title>イラン、米・湾岸諸国の共同声明を『介入主義』と非難</title>
       <link>https://fukan-news.vercel.app/articles/20260626-08.html</link>
@@ -17,11 +17,11 @@
       <category>国際・地政学</category>
     </item>
     <item>
-      <title>欧州の記録的熱波、気候変動で5倍以上確率が上昇</title>
+      <title>欧州の記録的熱波、気候変動で確率が数十〜数百倍に</title>
       <link>https://fukan-news.vercel.app/articles/20260626-05.html</link>
       <guid isPermaLink="true">https://fukan-news.vercel.app/articles/20260626-05.html</guid>
       <pubDate>Fri, 26 Jun 2026 11:42:01 GMT</pubDate>
-      <description>欧州全域で36℃超の熱波が襲来。夏至前後の気温が平年より14～18℃も上昇。気候変動の影響で同規模の熱波は50年前なら『ほぼ起こり得なかった』。</description>
+      <description>欧州全域で40℃を超える熱波が襲来。気候変動により同規模の熱波は2003年比で数十〜数百倍起こりやすくなり、50年前なら事実上不可能だったとされる。</description>
       <category>国際・地政学</category>
     </item>
     <item>
@@ -53,7 +53,7 @@
       <link>https://fukan-news.vercel.app/articles/20260626-11.html</link>
       <guid isPermaLink="true">https://fukan-news.vercel.app/articles/20260626-11.html</guid>
       <pubDate>Fri, 26 Jun 2026 11:36:53 GMT</pubDate>
-      <description>ベネズエラ北西部でマグニチュード7超の地震が相次ぎ発生。死者は235人以上、行方不明者1万4000人超。国際社会からの支援が本格化。</description>
+      <description>ベネズエラ北西部でマグニチュード7超の地震が相次ぎ発生。死者は235人以上、負傷者は4300人超。国際社会からの支援が本格化。</description>
       <category>国際・地政学</category>
     </item>
     <item>
@@ -69,7 +69,7 @@
       <link>https://fukan-news.vercel.app/articles/20260626-20.html</link>
       <guid isPermaLink="true">https://fukan-news.vercel.app/articles/20260626-20.html</guid>
       <pubDate>Fri, 26 Jun 2026 11:27:59 GMT</pubDate>
-      <description>ホルムズ海峡で貨物船がミサイル攻撃受ける。UN の 1.1万人避難計画が一時中止。イランが『一方的ルート』に強硬反発。</description>
+      <description>ホルムズ海峡近くで貨物船がドローン攻撃を受ける。UN の 1.1万人避難計画が一時中止。イランが『一方的ルート』に強硬反発。</description>
       <category>国際・地政学</category>
     </item>
     <item>
