@@ -1,5 +1,455 @@
 [
   {
+    "slug": "20260630-01",
+    "headline": "米最高裁、トランプのFRB理事解任を無効と判決",
+    "lead": "大統領権限を制限。中央銀行の独立性が憲法上保護されることが確定。",
+    "body_markdown": "米連邦最高裁判所は2026年6月29日、トランプ大統領がFRB（連邦準備制度理事会）のリサ・クック理事の解任を無効とする判決を下した。5対4の判決で、クック理事は訴訟が進む間、職務を継続する。\n\nトランプ政権は2025年8月、クック理事が2021年に住宅ローン詐欺を犯したと主張して解任を宣告していた。しかし最高裁のジョン・ロバーツ首席判事は、大統領が自由にFRB理事を解任できるとすれば「法定の解任事由保護を実質的に無効にする」と述べ、議会が定めた法令と中央銀行の政治的独立という伝統に反すると指摘した。\n\n同時に最高裁は、FTC（連邦取引委員会）委員レベッカ・スローター氏の解任は認める判決も示した。これはFRBが議会によって特別な独立性保護を与えられているのに対し、FTCはそうした明示的な保護がないという判断による。この判決は、大統領権力と金融規制機関の独立性のバランスについての重要な先例となる。",
+    "tags": [
+      "米国政治",
+      "中央銀行",
+      "憲法判例"
+    ],
+    "section": "国際・地政学",
+    "source": "NBC News / SCOTUSblog",
+    "link": "https://www.nbcnews.com/politics/supreme-court/supreme-court-rules-trump-cannot-fire-fed-member-lisa-cook-grants-powe-rcna234931",
+    "importance": 5,
+    "image_query": "supreme court building washington",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1658958327132-a80f8a9409fb?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxzdXByZW1lJTIwY291cnQlMjBidWlsZGluZyUyMHdhc2hpbmd0b258ZW58MXwwfHx8MTc4Mjc3MDE5Mnww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Fine Photographics",
+      "profileUrl": "https://unsplash.com/@finephotographics?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:32.743Z",
+    "publishedAt": "2026-06-29T00:00:00.000Z"
+  },
+  {
+    "slug": "20260630-02",
+    "headline": "円、39年半ぶり安値に　1ドル＝161円90銭",
+    "lead": "ニューヨーク外為市場で円が大幅安。1986年以来の円安水準に到達。",
+    "body_markdown": "2026年6月29日、ニューヨーク外国為替市場の取引で、円相場が1ドル＝161円90銭台まで下落し、1986年12月以来、約39年半ぶりの円安・ドル高水準をつけた。\n\n円を売ってドルを買う動きが加速したことが背景。先月には1ドル＝161円96銭を付けており、この日の相場はそれを上回る安値となった。金融市場では米国の高金利政策が継続するという見通しと、日本の金融緩和政策の継続が円安圧力をもたらしている。\n\n円安は輸出企業に有利に働く一方で、輸入物価の上昇を通じて消費者負担の増加につながる。日本銀行は金融政策の調整を検討する際、為替動向を重要な指標として監視している。39年以上続いた円高時代が終わり、新たな為替相場体制への適応が日本経済に求められている。",
+    "tags": [
+      "為替相場",
+      "円安",
+      "日本経済"
+    ],
+    "section": "経済・マネー",
+    "source": "日本経済新聞",
+    "link": "https://finance.yahoo.co.jp/quote/USDJPY=X/history",
+    "importance": 4,
+    "image_query": "currency exchange trading",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1689732888407-310424e3a372?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwyfHxjdXJyZW5jeSUyMGV4Y2hhbmdlJTIwdHJhZGluZ3xlbnwxfDB8fHwxNzgyNzcwMTkzfDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Austin Hervias",
+      "profileUrl": "https://unsplash.com/@ahervias77?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:33.370Z",
+    "publishedAt": "2026-06-29T20:29:52.000Z"
+  },
+  {
+    "slug": "20260630-03",
+    "headline": "OpenAI、EU労働市場のAI影響を分析　新報告書発表",
+    "lead": "EUの職業の18％が自動化リスク、12％は成長機会ありと分析。政策立案者に警告。",
+    "body_markdown": "OpenAIは2026年6月29日、欧州連合（EU）の労働市場におけるAIの影響を分析した新しい報告書を発表した。先月発表した米国向けの枠組みを欧州に拡張したもので、EUの職業・資格・能力分類（ESCO）とユーロスタット統計を利用している。\n\n報告書によると、EU域内の職業のうち18％が自動化リスクが高く、24％はAI統合によって職務が再編成される見込み。一方で12％の職業ではAIとともに成長の機会があり、46％は比較的短期的な変化の影響が少ないと分類された。\n\nこれは雇用予測ではなく、調整圧力と機会がどこに生じるかを示す計画用図表である。報告書の目的は、政策立案者や企業、教育機関が職業転換戦略を詳細に計画できるよう支援することにある。EU全体の労働市場へのAI影響は国によって異なり、加盟国ごとに適応戦略が必要となる。",
+    "tags": [
+      "AI",
+      "欧州労働市場",
+      "政策"
+    ],
+    "section": "AI",
+    "source": "OpenAI",
+    "link": "https://openai.com/index/mapping-ai-jobs-transition-eu/",
+    "importance": 4,
+    "image_query": "workforce training technology",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1581093805071-a04e696db334?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHx3b3JrZm9yY2UlMjB0cmFpbmluZyUyMHRlY2hub2xvZ3l8ZW58MXwwfHx8MTc4Mjc3MDE5M3ww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "ThisisEngineering",
+      "profileUrl": "https://unsplash.com/@thisisengineering?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:34.049Z",
+    "publishedAt": "2026-06-29T07:00:00.000Z"
+  },
+  {
+    "slug": "20260630-04",
+    "headline": "HPがOpenAI「Frontier」を全社展開　4か月パイロット後",
+    "lead": "顧客体験と内部業務にAIを統合。エンジニアリング効率が大幅向上。",
+    "body_markdown": "HP Inc.は2026年6月28日、OpenAIの「Frontier」プラットフォームを全社規模で導入することを発表した。2月から4か月間のパイロットプログラムで、エンジニアリング、セキュリティ、カスタマーエクスペリエンス部門での運用効果を検証した後の本格展開である。\n\nパイロット結果によると、エンジニアがFrontierを使用することで、わずか数週間で122のプルリクエストを43プロジェクト間で処理。セキュリティチームは通常1か月かかるバグ修復を1日で完了させた。HPはこれらの実績に基づき、顧客向けツール、従業員生産性システム、ワークフォースアナリティクス、エンジニアリング・ソフトウェア開発にFrontierを展開する方針。\n\nHP と OpenAIは今後、データ統合、ガバナンス、セキュリティを重視した共同開発を進め、エンタープライズAI導入の新しいモデルを構築していく。",
+    "tags": [
+      "OpenAI",
+      "エンタープライズAI",
+      "自動化"
+    ],
+    "section": "AI",
+    "source": "HP",
+    "link": "https://www.hp.com/us-en/newsroom/press-releases/2026/open-ai-partnership.html",
+    "importance": 3,
+    "image_query": "enterprise software productivity",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:34.051Z",
+    "publishedAt": "2026-06-28T17:00:00.000Z"
+  },
+  {
+    "slug": "20260630-05",
+    "headline": "Google Gemini、無料ユーザーに画像生成　米国で展開",
+    "lead": "Google Photos連携で個人化可能。13歳以上が利用可能。",
+    "body_markdown": "Google は 2026年6月29日、Geminiの個人化AI画像生成機能を米国の無料ユーザーに拡大開放した。これまでPlus・Pro・Ultraサブスクライバー限定だった機能。13歳以上の全Geminiユーザーが利用でき、18歳以上なら画像編集機能も使用可能。\n\n大きな特徴は、Google Photosとの連携により、ユーザーが写真を手動でアップロードせずに個人化された画像を生成できること。「私の夢の家をデザインして」といった簡潔なプロンプトで、Geminiがユーザーの関心とライフスタイルを反映した創作ができる。\n\nPersonal IntelligenceとNano Bananaという新機能が、ユーザーのGoogle関連サービスの利用データを活用して、より正確で個人的な結果を実現。Google Appsへの接続は完全にオプトイン型で、ユーザーはいつでも設定で調整可能。",
+    "tags": [
+      "Google",
+      "AI画像生成",
+      "無料化"
+    ],
+    "section": "AI",
+    "source": "TechCrunch",
+    "link": "https://techcrunch.com/2026/06/29/geminis-personalized-ai-image-generation-is-now-free-for-u-s-users/",
+    "importance": 3,
+    "image_query": "AI image generation creative",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:34.051Z",
+    "publishedAt": "2026-06-29T20:12:59.000Z"
+  },
+  {
+    "slug": "20260630-06",
+    "headline": "ベネズエラ地震で1700人以上が死亡　余震で救助活動を阻害",
+    "lead": "M7.5の本震に続く余震で被害拡大。橋崩落で救援物資が滞る。",
+    "body_markdown": "ベネズエラは2026年6月24～29日にかけて相次ぐ大規模地震に見舞われた。24日のM7.2の前震から39秒後にM7.5の本震が発生し、サン・フェリペ・ヤラクイ州が震源。その後の余震により被害がさらに拡大した。\n\n6月26日には強い余震でカラカスの建物が損傷し、カラボボ州のラ・グアイラとカラバレダ区を結ぶ橋が崩落。この橋の崩落は救援活動を大きく阻害し、孤立地域への物資搬送が困難になった。さらに4.6の余震がカラボボ沿岸部で発生し、住民の不安が続いている。\n\n死者数は1700人を超え、5000人以上が負傷、約16000人が住宅を失った。瓦礫の下での生存者捜索は続いているものの、橋崩落による物流遮断と余震の危険性が救助活動を制約している。多くの家族が支援なしに自力で対応を迫られている。",
+    "tags": [
+      "ベネズエラ",
+      "地震",
+      "災害"
+    ],
+    "section": "国際・地政学",
+    "source": "Al Jazeera",
+    "link": "https://www.aljazeera.com/news/2026/6/29/aftershock-hits-caracas-during-critical-hours-for-venezuela-rescue-efforts",
+    "importance": 4,
+    "image_query": "earthquake disaster rescue",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1544257750-572358f5da22?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwzfHxlYXJ0aHF1YWtlJTIwZGlzYXN0ZXIlMjByZXNjdWV8ZW58MXwwfHx8MTc4MjU5NTIyOHww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "John Middelkoop",
+      "profileUrl": "https://unsplash.com/@koopfilms?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:34.070Z",
+    "publishedAt": "2026-06-29T20:00:44.000Z"
+  },
+  {
+    "slug": "20260630-07",
+    "headline": "Burnham英国次期首相候補、「分権革命」を宣言　マンチェスター新拠点",
+    "lead": "「No.10 North」構想で権力を地方分散。40年ぶりの政治改革を掲げる。",
+    "body_markdown": "英国労働党の事実上の次期指導者候補であるアンディ・バーナムは2026年6月29日、マンチェスターの人民歴史博物館で主要政策演説を行い、英国の政治権力を再編成する「最大規模の権力分散」計画を発表した。7月20日のリーダーシップ投票で対抗馬がいないことから、バーナムの首相就任はほぼ確定。\n\n中核は「No.10 North」（ナンバー10ノース）構想。ダウニング街10番地（首相官邸）に相当する拠点をマンチェスターに設置し、国庫から地方部への権力と資源の配分を監督する。スチャー政権以降47年続く中央集権的統治を根本から転換。\n\nさらにバーナムは、スコットランド・ウェールズ・北アイルランドへの分権拡大や、公営住宅の大規模建設計画、高街ルネサンス、学術的・技術的教育の対等化を掲げた。10年間の改革計画で、2008年の金融危機以来の経済停滞から脱却を目指す。",
+    "tags": [
+      "UK政治",
+      "分権",
+      "改革"
+    ],
+    "section": "政治",
+    "source": "The Guardian",
+    "link": "https://www.theguardian.com/politics/2026/jun/29/burnham-sets-out-vision-to-transform-britain-and-fix-broken-system",
+    "importance": 4,
+    "image_query": "government political reform leadership",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1614610741181-2bce5e06976d?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxnb3Zlcm5tZW50JTIwcG9saXRpY2FsJTIwcmVmb3JtJTIwbGVhZGVyc2hpcHxlbnwxfDB8fHwxNzgyNzcwMTk0fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Brett Jordan",
+      "profileUrl": "https://unsplash.com/@brett_jordan?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:34.832Z",
+    "publishedAt": "2026-06-29T19:39:04.000Z"
+  },
+  {
+    "slug": "20260630-08",
+    "headline": "英国医師ストライキ合意　4年で賃上げ35.2%実現へ",
+    "lead": "NHS との給与交渉が妥結。研修枠4500職拡大も含む。",
+    "body_markdown": "英国の医師組合BMA（British Medical Association）は2026年6月29日、政府との給与交渉で妥結し、1600人のレジデント医師（研修医）がストライキ終結投票で合意を支持した。4年で平均35.2%の給与上昇を実現する内容。\n\n合意の詳細は、今年度は基本給3.5%と追加3.1%で計6.6%の昇給。初年度・2年目研修医にはさらに手厚く、それぞれ6.2%・7.1%の上昇。加えて、王立カレッジの資格認定費や試験費用の返金（年数千ポンド相当）も含まれる。\n\n3年にわたって訓練職を4500職新設し、キャリア進出の停滞を解消する。昨夏から続いたストライキでNHSは10億ポンドの損失を被っており、合意による雇用安定とサービス継続が期待される。ストライキは2026年6月26日投票で大多数の医師が提案を受け入れた。",
+    "tags": [
+      "NHS",
+      "医師",
+      "賃上げ"
+    ],
+    "section": "政治",
+    "source": "The Guardian",
+    "link": "https://www.theguardian.com/society/2026/jun/29/resident-doctors-england-accept-government-offer-on-pay-and-jobs",
+    "importance": 3,
+    "image_query": "healthcare medical professionals",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:34.832Z",
+    "publishedAt": "2026-06-29T17:53:52.000Z"
+  },
+  {
+    "slug": "20260630-09",
+    "headline": "TIDAL、AI生成音楽の収益化禁止　7月から実施",
+    "lead": "100%AI生成曲はロイヤリティなし。音楽ストリーミング業界で広がる対応。",
+    "body_markdown": "音楽ストリーミングサービスのTIDALは2026年6月29日、AI生成音楽の新ポリシーを発表した。2026年7月15日より、100%AI生成の楽曲はプラットフォーム上で収益化されず、アーティストはロイヤリティを受け取れない。\n\n具体的には、TIDALの検出ツールで完全にAI生成と特定された曲は「AI」バッジでラベリングされ、直接ファンへの販売も対象外になる。同時にTIDALは、特定アーティストに成りすましたAI生成音楽を自動削除する機能も導入。詳細な検出精度が向上すれば、「大部分」AI生成の曲も対象拡大される見込み。\n\nTIDALは「オーガニックな創作性を保護し、アーティストがファンダムを構築できる環境を守る」という名目を掲げている。SpotifyやApple Music、Deezer、Qobuzなど主要ストリーミングサービスも同様のポリシー導入を検討・実施しており、業界全体で音楽の真正性確保への機運が高まっている。",
+    "tags": [
+      "AI音楽",
+      "著作権",
+      "ストリーミング"
+    ],
+    "section": "AI",
+    "source": "TechCrunch",
+    "link": "https://techcrunch.com/2026/06/29/tidal-cracks-down-on-ai-music-by-cutting-off-monetization/",
+    "importance": 3,
+    "image_query": "music streaming audio production",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:34.832Z",
+    "publishedAt": "2026-06-29T16:29:04.000Z"
+  },
+  {
+    "slug": "20260630-10",
+    "headline": "ソニー PlayStation 6、「リビング外」への展開を示唆",
+    "lead": "次世代PlayStation、携帯型デバイスで「どこでもプレイ」構想。",
+    "body_markdown": "ソニーが次世代PlayStation（PS6）について、従来のリビングルームでの使用に限定されない新しい体験設計を進めていることが、投資家向けQ&Aの回答で示された。PlayStationが長年「リビングルームプレイ」と結びついてきたが、近年ユーザーが様々な場所でゲームをプレイしたいという需要を認識している。\n\n報道によると、ソニーは「Project Canis」というコードネームで専用携帯デバイスの開発を進めており、PS6本体と同時期の発売が検討されている。リモートプレイか独立型ゲーミングが可能な形態。これはNintendo Switchの成功に着想を得たもので、家庭用と持ち運び型の体験を一つのエコシステムで統合する戦略。\n\nソニーは既にPS Portalというポータブルデバイスで、ベッドルームやオフィスでのプレイ需要を検証済み。PS6の発売は2028～2029年が予想されており、グローバルなRAM不足（AI需要）の影響が開発スケジュールに影響している。",
+    "tags": [
+      "PlayStation",
+      "ゲーミング",
+      "携帯型"
+    ],
+    "section": "テクノロジー",
+    "source": "The Verge",
+    "link": "https://www.theverge.com/games/959191/sony-next-generation-playstation-ps6-beyond-the-living-room",
+    "importance": 3,
+    "image_query": "gaming console portable device",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:34.832Z",
+    "publishedAt": "2026-06-29T19:12:15.000Z"
+  },
+  {
+    "slug": "20260630-11",
+    "headline": "NASA・SBA、宇宙産業スケール化イニシアティブ発表",
+    "lead": "米国の宇宙経済成長へ中小企業を支援。月・火星開発に向け。",
+    "body_markdown": "米国航空宇宙局（NASA）と米国中小企業庁（SBA）は2026年6月29日、ワシントンDCのNASA本部で両機関が協力する新しいイニシアティブに調印した。「SBIC-NASA Initiative」（中小企業投資会社パートナーシップ）として、米国の宇宙経済の成長と拡大を目的とする。\n\nこのイニシアティブの下、NASAは宇宙探査に不可欠な工業製品メーカーと技術プロバイダーへの民間投資を促進し、中小企業をこれらの資金機会と結びつける。月面での長期的な活動と火星への人類派遣に向けて、必要とされるコンポーネントやシステム開発を加速させるのが目的。\n\nSBAが管理する中小企業投資会社（SBIC）プログラムを活用し、宇宙産業関連の研究・開発資金をスタートアップや中小企業に配分。トランプ政権の「National Space Policy（国家宇宙政策）」に基づいており、米国の宇宙産業における競争力維持とイノベーション促進を図る。",
+    "tags": [
+      "宇宙開発",
+      "中小企業",
+      "月火星探査"
+    ],
+    "section": "サイエンス",
+    "source": "NASA",
+    "link": "https://www.nasa.gov/news-release/nasa-sba-announce-new-initiative-to-scale-american-space-economy/",
+    "importance": 3,
+    "image_query": "space rocket exploration nasa",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:34.833Z",
+    "publishedAt": "2026-06-29T20:39:57.000Z"
+  },
+  {
+    "slug": "20260630-12",
+    "headline": "AI評価プラットフォーム Arena、年間100百万ドル企業に",
+    "lead": "8か月でARR 100M達成。AI モデル比較で業界標準に。",
+    "body_markdown": "UC バークレーの研究プロジェクトから始まった AI モデル評価プラットフォーム Arena は、2026年6月に年間経常収益（ARR）1億ドルという企業規模に到達した。商用化から8か月での達成。\n\nArena は無料の AI 評価用チャットボット・リーダーボード（Elo レーティング）で2023年から研究者や開発者に広く利用されてきた。2025年9月に有料サービス「AI Evaluations」を開始。これはモデルメーカーと企業向けに、深掘りした性能分析データを提供するもの。\n\n成長は急速で、2025年12月時点で年間3000万ドル、2026年6月で1億ドルへと急増。同社は Felicis、a16z、Kleiner Perkins など主要ベンチャーキャピタルから計2.5億ドルを調達。無料の公開リーダーボードがプロダクト・マーケット・フィット実証となり、エンタープライズ市場への拡大に成功した事例として注目される。",
+    "tags": [
+      "AI評価",
+      "AIモデル",
+      "スタートアップ"
+    ],
+    "section": "AI",
+    "source": "TechCrunch",
+    "link": "https://techcrunch.com/2026/06/29/arena-the-ai-leaderboard-everyone-uses-is-now-a-100m-business/",
+    "importance": 3,
+    "image_query": "data analytics benchmark leaderboard",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:34.833Z",
+    "publishedAt": "2026-06-29T17:39:17.000Z"
+  },
+  {
+    "slug": "20260630-13",
+    "headline": "Uber、Waymo との提携終了　フェニックスで自社ロボタクシーへ",
+    "lead": "3年間の協業を解消。Uber は別企業との提携へ。",
+    "body_markdown": "Uber Technologies とAlphabet の子会社 Waymo は、3年間続いたフェニックスでのロボタクシー提携を5月に終了した。Uber アプリで提供されていた Waymo の自動運転タクシーサービスが消滅。\n\nパイロットプログラムは実験的な規模にとどまっており、Uber アプリ上には十数台の Waymo 車両のみが登録されていた。Waymo はこれらの車両をフェニックスの独自事業に再統合。同市で Via との公共交通連携や DoorDash との配送サービスを継続する。Uber は別のロボタクシー企業との提携を検討中だが、具体的なパートナー名は未公表。\n\n両社はパイロットの成功を評価しており、Uber はこの限定的な展開が Austin と Atlanta での急速な事業拡大に役立ったと述べている。しかし長期的には、Uber は独自のロボタクシー技術開発により重点を移す方針。",
+    "tags": [
+      "自動運転",
+      "ロボタクシー",
+      "モビリティ"
+    ],
+    "section": "テクノロジー",
+    "source": "Engadget",
+    "link": "https://www.engadget.com/2204472/uber-is-no-longer-offering-waymo-rides-in-phoenix/",
+    "importance": 3,
+    "image_query": "autonomous vehicle taxi transportation",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:34.833Z",
+    "publishedAt": "2026-06-29T20:43:16.000Z"
+  },
+  {
+    "slug": "20260630-14",
+    "headline": "iPhone 18 Pro 画像が暗号化ネットで流出　Tata 侵害",
+    "lead": "Apple サプライヤーへの大規模サイバー攻撃。63GB超が公開。",
+    "body_markdown": "Apple のインド製造パートナー Tata Electronics がランサムウェア攻撃を受け、iPhone 18 Pro の設計情報を含む 630GB 以上のデータが 2026年6月初旬から暗号化ネット（ダークウェブ）に流出している。ランサムウェア集団「World Leaks」が関与。\n\n流出データには iPhone 18 Pro と Max の部品一覧、構成図、カメラ・バッテリー・主要チップボード上のコンポーネント詳細が含まれる。特に注目されるのは、2026年初頭の Tata 製造拠点でのドロップテスト写真。スレート色の従来型デザイン、3眼リアカメラ、Apple ロゴが見える。\n\nApple は対応に「懸念」を表明。Tata との合同調査が開始された。月 200,000 ファイルを超える漏洩であり、サプライチェーン・セキュリティの脆弱性を露呈。暗号化ネット上での循環は最低 6月10日からであり、複数の組織がアクセスしたと考えられる。",
+    "tags": [
+      "セキュリティ",
+      "iPhone",
+      "サイバー攻撃"
+    ],
+    "section": "テクノロジー",
+    "source": "The Verge",
+    "link": "https://www.theverge.com/tech/959229/iphone-18-pro-leak-apple-dark-web",
+    "importance": 3,
+    "image_query": "cybersecurity data breach technology",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:34.833Z",
+    "publishedAt": "2026-06-29T20:18:26.000Z"
+  },
+  {
+    "slug": "20260630-15",
+    "headline": "日本、インド訪問へ　AI・経済安保で協力強化",
+    "lead": "高市首相が7月1～3日、モディ首相と会談。半導体投資も視野。",
+    "body_markdown": "高市早苗首相は 2026年7月1日～3日の日程でインドを訪問し、ナレンドラ・モディ首相と首脳会談を行う。海洋安全保障、経済安全保障、エネルギーの三本柱をテーマに、日印戦略的パートナーシップを強化する。\n\n会談では、昨年 8月のモディ首相訪日で発表された「今後 10年の日印共同ビジョン」の進展確認と、AI、半導体、投資・イノベーションを通じた経済成長協力を推進。50を超える日本企業・団体が同行し、インドの北東部グワハティの半導体産業集積地での日本企業進出や共同プロジェクトの検討が進行中。\n\n地政学的には、インド太平洋地域での経済・安保協力強化により、米国や豪州との Quad 連携の補強になる。インドは急速な経済成長と AI 投資で地域的重要性が増している。日本にとって調達サプライチェーン多様化と技術協力の確保が課題。",
+    "tags": [
+      "日本外交",
+      "インド",
+      "経済安保"
+    ],
+    "section": "国際・地政学",
+    "source": "NHK",
+    "link": "https://news.web.nhk/newsweb/na/na-k10015164091000",
+    "importance": 3,
+    "image_query": "international diplomacy meeting",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:34.833Z",
+    "publishedAt": "2026-06-29T20:25:30.000Z"
+  },
+  {
+    "slug": "20260630-16",
+    "headline": "ドイツ、子育て支援施設での銃撃事件　6人が死亡",
+    "lead": "親権問題から暴力。45 歳男容疑者を逮捕。",
+    "body_markdown": "ドイツ北部のシュターデ市で 2026年6月29日、青少年福祉センターでの銃撃事件が発生し、6人が殺害された。4人の女性スタッフと 2人の男性（スタッフと来訪者）。被害者の中に子どもはいない。\n\n容疑者は 45歳のトルコ系ドイツ人男性。生後3ヶ月の娘の親権をめぐる調停が同センターで行われていた。調停中に銃を発砲し、複数の職員を殺傷。その後、知人の女性運転手（55歳）が容疑者の脱走を助けたが、警察に逮捕された。\n\n施設は妊娠女性と幼い子どもを持つ若い母親の一時的な宿泊所。容疑者は親権争いの過程で暴力に訴えた。ドイツではこうした家庭・親権問題に関連する暴力事件が社会的懸念。事件は、親権問題での相談機関スタッフが危険にさらされていることも浮き彫りにした。",
+    "tags": [
+      "ドイツ",
+      "銃撃事件",
+      "暴力"
+    ],
+    "section": "国際・地政学",
+    "source": "Al Jazeera",
+    "link": "https://www.aljazeera.com/news/2026/6/29/six-people-shot-dead-at-centre-for-mothers-and-children-in-germany",
+    "importance": 3,
+    "image_query": "emergency response police incident",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:34.833Z",
+    "publishedAt": "2026-06-29T19:53:57.000Z"
+  },
+  {
+    "slug": "20260630-17",
+    "headline": "イスラエル、ガザと西岸で攻撃継続　8人が死亡",
+    "lead": "停戦後も人道危機続く。子ども含む民間人被害。",
+    "body_markdown": "イスラエルは 2026年6月29日、ガザおよび占領地西岸での攻撃で計 8人を殺害した。ガザではイスラエルドローン攻撃により、カン・ユニス西部アル・マウアシで 12歳の少年を含む複数の市民が死亡。西岸ではイスラエル軍がジェニン西方のアル・ヤムン町を襲撃し、パレスチナ人青年 1人を銃撃で殺害した。\n\n停戦後、ガザの死者数は 1000人を超えており、2023年10月からの戦争全体では 73,000人以上が犠牲に。6月中旬以降の死者のうち 250人以上が子ども。アル・サファディ一家を含む多数の民間人被害が報告されている。\n\nパレスチナ人権団体 B'Tselem は「前例のない子ども・十代若者殺害」と非難。国連の独立調査委員会は、イスラエルが ジェノサイド行為に当たる可能性のある意図的な民間人殺害を続けているとの見解を示している。人道危機と民間人保護が国際的に問われ続けている。",
+    "tags": [
+      "イスラエル",
+      "ガザ",
+      "紛争"
+    ],
+    "section": "国際・地政学",
+    "source": "Al Jazeera",
+    "link": "https://www.aljazeera.com/news/2026/6/29/israeli-attacks-kill-eight-people-in-gaza-and-a-teenager-in-the-west-bank",
+    "importance": 3,
+    "image_query": "conflict humanitarian crisis middle east",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:34.833Z",
+    "publishedAt": "2026-06-29T19:33:59.000Z"
+  },
+  {
+    "slug": "20260630-18",
+    "headline": "英女優ペネロペ・キース、86歳で逝去　喜劇の名手",
+    "lead": "「奥さまは魔女」「貴族は誰？」などで英国民に愛された。",
+    "body_markdown": "英国の伝説的なコメディ女優ペネロペ・キース（1940年4月2日～2026年6月）が、サリー州の自宅でがんのため 86歳で逝去した。スターダムへ導いた 1975～1978年のシットコム「The Good Life（奥さまは魔女）」でマーゴ・レッドベッター役を演じ、1977年 BAFTA 助演賞を受賞。その後 1979～1981年の「To the Manor Born（貴族は誰？）」ではオードリー・フォーブス＝ハミルトン役で主演。\n\n舞台出身で、1989年にローレンス・オリヴィエ卿に続いて英国俳優向上委員会（Actors' Benevolent Fund）会長に就任。2014年新年勲章で大英帝国ダムコマンダー（DBE）勲章を授与され、芸術とチャリティへの貢献を認定された。\n\n英国内で高い知名度を持つ彼女は、知的で洗練されたユーモアと気品で何世代にも及ぶ視聴者を魅了。訃報には文化人から多くの追悼コメントが寄せられている。",
+    "tags": [
+      "イギリス文化",
+      "コメディ女優",
+      "訃報"
+    ],
+    "section": "カルチャー",
+    "source": "BBC Arts",
+    "link": "https://www.bbc.co.uk/news/articles/c2ey1pjx0z9o",
+    "importance": 3,
+    "image_query": "actress theater performance television",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:34.833Z",
+    "publishedAt": "2026-06-29T16:21:53.000Z"
+  },
+  {
+    "slug": "20260630-19",
+    "headline": "AI エージェント、「同僚」ではない　研究者が警告",
+    "lead": "人間がAIを従業員と見なすと誤った判断が増加。",
+    "body_markdown": "MIT テクノロジー・レビューの 2026年6月調査で、AI エージェント（自動実行型 AI）を組織上「デジタル従業員」として扱う傾向が危険であることが明かになった。ボストン大学のエマ・ワイルス助教授の研究によると、AI を「AI 従業員」と紹介されたグループは、「チャットボット」と紹介されたグループと比べて誤り検出率が 18% 低下。\n\n調査対象の 1261人マネージャーの約 3分の 1 が、企業が既に AI エージェントを「従業員」として枠づけており、23% は組織図に記載していると回答。Microsoft、OpenAI、Anthropic、Google は 4月以降、「認知力を持つデジタル同僚」として AI エージェント管理ツールを相次ぎリリースしている。\n\nノーベル経済学賞受賞者のダロン・アセモグル MIT 経済学教授は、「AI エージェントは人間を置き換える存在として行商されているが、それは敗北の提案」と述べている。AI を道具ではなく組織メンバーと見なすことで、説明責任の回避と人間の警戒心低下につながるリスク。",
+    "tags": [
+      "AI管理",
+      "人間中心AI",
+      "組織心理"
+    ],
+    "section": "AI",
+    "source": "MIT Technology Review",
+    "link": "https://www.technologyreview.com/2026/06/29/1139849/ai-agents-are-not-your-coworkers/",
+    "importance": 3,
+    "image_query": "workplace technology collaboration team",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:34.833Z",
+    "publishedAt": "2026-06-29T18:00:00.000Z"
+  },
+  {
+    "slug": "20260630-20",
+    "headline": "Cursor、モバイルアプリで AI コーディング遠隔管理",
+    "lead": "スマートフォンから AI エージェント起動・監視。開発効率化へ。",
+    "body_markdown": "AI コーディング IDE 企業 Cursor は 2026年6月末、モバイルアプリ「Cursor Mobile」を発表。iOS デバイスから AI コーディング・エージェントの起動、管理、進捗追跡を可能にした。開発者がオフィスやリモート環境に限定されず、スマートフォンから複数エージェントを並行実行できる。\n\n機能には、複数エージェントの同時起動、長時間実行タスクのリアルトラック、変更内容の審査、プルリクエスト申請、コードテスト（サンドボックス環境）、ビデオ・スクリーンショット・ログなどの生成物確認、音声モードでの会話が含まれる。動画や注釈付きスクリーンショットで視覚的フィードバックも可能。\n\nこの展開は、Anthropic や OpenAI の同様モバイルツール提供に続くもの。AI コーディング・エージェントがより自律的になるにつれ、開発者は「何を書くか」から「エージェントの進行を管理するか」へシフト。モバイル対応で、開発監視がいつでもどこでも行える時代へ。",
+    "tags": [
+      "AI開発",
+      "モバイルアプリ",
+      "生産性"
+    ],
+    "section": "AI",
+    "source": "TechCrunch",
+    "link": "https://techcrunch.com/2026/06/29/cursor-now-has-a-mobile-app-for-guiding-your-coding-agent-on-the-go/",
+    "importance": 3,
+    "image_query": "mobile app development coding",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:34.833Z",
+    "publishedAt": "2026-06-29T17:03:50.000Z"
+  },
+  {
+    "slug": "20260630-21",
+    "headline": "Google、AI フルスタック戦略を強化　モデルから製品まで一貫",
+    "lead": "チップ・モデル・プラットフォーム・UI を統合。エージェント中心へ転換。",
+    "body_markdown": "Google は 2026年 6月、フルスタック AI アプローチの統合戦略を明確化した。カスタムシリコン（TPU）から研究、モデル開発、プロダクト提供まで、全レイヤーを AI エージェント・シフトへ配置。\n\nGoogleCloud Next で Riyaz Habibibhai Cloud AI 製品マーケティング責任者は、「全スタック層（モデル・プラットフォーム・IDE・生産性スイート・セキュリティ）をエージェント中心の設計」と述べた。I/O 2026 での発表要点は、開発の中心軸が「モデルは何を言えるか」から「エージェントは何をできるか」へシフト。Google が 8世代 TPU（TPU 8t・8i）、Gemini 3.5 Flash、Managed Agents API、AI Studio、Gemini Spark など各層で同時展開。\n\n差別化は、従来のテキスト・画像生成 AI ではなく、「相互作用・持続・調整するエージェント」の実装。これにより、企業向けワークフロー自動化と個人向け AI 助手の境界が曖昧化し、Google は垂直統合により競争優位を獲得する戦略。",
+    "tags": [
+      "Google",
+      "AI戦略",
+      "エージェント"
+    ],
+    "section": "AI",
+    "source": "Google Developers Blog",
+    "link": "https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/",
+    "importance": 4,
+    "image_query": "technology infrastructure innovation",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwzfHx0ZWNobm9sb2d5JTIwaW5mcmFzdHJ1Y3R1cmUlMjBpbm5vdmF0aW9ufGVufDF8MHx8fDE3ODI3NzAxOTV8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Christina @ wocintechchat.com M",
+      "profileUrl": "https://unsplash.com/@wocintechchat?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-06-29T21:56:35.618Z",
+    "publishedAt": "2026-06-29T00:00:00.000Z"
+  },
+  {
     "slug": "20260629-09",
     "headline": "AlphaFold進化形、複雑なタンパク質構造を正確に予測",
     "lead": "実験データを組み込んだAlphaFoldの改善により、従来見逃されていた動的なタンパク質構造を予測可能に。",
