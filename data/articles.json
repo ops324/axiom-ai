@@ -1,5 +1,365 @@
 [
   {
+    "slug": "20260701-14",
+    "headline": "OpenAI、GeneBench-Proで生物学AI評価の新基準確立",
+    "lead": "OpenAIがゲノミクス・定量生物学向けベンチマークGeneBench-Proを発表、最先端AIの現実的課題への対応能力を評価する。",
+    "body_markdown": "OpenAIは6月30日、計算生物学の困難な問題を評価するベンチマーク『GeneBench-Pro』を公開した。129の合成問題を10の分野・21の小分野にわたって配置し、ゲノミクス、定量生物学、並びに臨床薬物遺伝学や癌ゲノミクスなどの応用領域を網羅している。\n\nこのベンチマークの特徴は、現実的で意図的にノイズを含んだデータセットと、実務判断を伴う解析を要求する点にある。OpenAIが『研究的判断力』と呼ぶ能力—どの質問がデータセットによって支持されるか、いつ初期診断モデルを変更するか、結果がいつ意思決定に耐えうるかという一連の判断—を探索している。\n\n成績結果は既存モデルの限界を浮き彫りにする。OpenAIの最強モデル『GPT-5.6 Sol』でも最高推論レベルで28.7％、Pro モードで31.5％の解法率に留まる。Anthropicの『Claude Opus 4.8』は16.0％の達成率であり、業界最先端のモデルであっても生物学的推論の現実的課題の大半は未解決状態にある。このベンチマークは、AIが科学的領域での有用性を示す以前に、継続的な進化が必須であることを示唆している。",
+    "tags": [
+      "AI",
+      "生物学",
+      "ベンチマーク",
+      "科学研究",
+      "OpenAI"
+    ],
+    "section": "AI",
+    "source": "OpenAI",
+    "link": "https://openai.com/index/introducing-genebench-pro",
+    "importance": 4,
+    "image_query": "dna laboratory research",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxkbmElMjBsYWJvcmF0b3J5JTIwcmVzZWFyY2h8ZW58MXwwfHx8MTc4Mjg5ODEwMnww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Louis Reed",
+      "profileUrl": "https://unsplash.com/@_louisreed?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-07-01T09:28:23.062Z",
+    "publishedAt": "2026-06-30T00:00:00.000Z"
+  },
+  {
+    "slug": "20260701-15",
+    "headline": "Anthropicが科学研究向けAIワークベンチ『Claude Science』を発表",
+    "lead": "Anthropicが研究者向けAI実行環境『Claude Science』をベータ公開、60以上の科学データベース統合に対応。",
+    "body_markdown": "Anthropicは6月30日、科学研究向けのAI実行環境『Claude Science』をベータ公開した。複数の科学データベース、コーディングツール、計算リソース、研究ワークフローを単一インタフェースに統合し、ゲノミクス、単一細胞解析、プロテオミクス、構造生物学、化学情報学に対応する60以上のデータベースと接続済みである。\n\nプラットフォームは3Dタンパク質構造、ゲノムブラウザトラック、化学構造図の出力、実装の監査可能な履歴、ローカルマシン（macOS/Linux）またはSSH/HPC経由のリモート実行に対応している。Claudeの既存ファミリーモデルで動作し、Claude Pro、Max、Team、Enterpriseユーザーが利用可能である。\n\nさらにAnthropicは科学研究支援プログラムを発表した。最大50の『Claude Science』プロジェクトに対し、プロジェクト当たり最大3万ドルのコンピュート資金を提供する。Modalも選定プロジェクトへ2,000ドルの計算リソースを提供し、応募は7月15日、受賞通知は7月31日の予定である。NVIDIA BioNeMoエージェントツールキットのコネクタも統合され、生命科学向けの最新モデルへのアクセスが可能になっている。",
+    "tags": [
+      "AI",
+      "科学研究",
+      "生物学",
+      "Anthropic",
+      "ツール"
+    ],
+    "section": "AI",
+    "source": "Anthropic",
+    "link": "https://www.anthropic.com/news/claude-science-ai-workbench",
+    "importance": 4,
+    "image_query": "scientific research laboratory",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1727091506038-5451111dc2fb?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxzY2llbnRpZmljJTIwcmVzZWFyY2glMjBsYWJvcmF0b3J5fGVufDF8MHx8fDE3ODI4OTgxMDN8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Indra Projects",
+      "profileUrl": "https://unsplash.com/@indraprojects?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-07-01T09:28:23.574Z",
+    "publishedAt": "2026-06-30T21:50:04.000Z"
+  },
+  {
+    "slug": "20260701-16",
+    "headline": "Getty、英規制対抗で37億ドルShutterstock買収破談",
+    "lead": "Getty ImagesがShutterstock買収を中止、英CMAの編集事業売却条件に同意せず。",
+    "body_markdown": "Getty Imagesは6月30日、37億ドル規模だったShutterstock買収契約を終了すると発表した。米司法省が無条件認可を与えた一方、英国競争・市場庁（CMA）は編集写真事業（BackgridおよびSplashの買収社含む）の売却を条件付けており、同社はこれに応じない方針を決定した。\n\nGettyの取締役会は『同社が同条件を受け入れる必要はない』と判断し、第二延長期限（7月6日）を経てマージ契約を終了することを決議した。背景にはストック写真市場の変化がある。生成型AIツールの普及により、企業は安価で制作容易な合成画像に移行しており、両社は市場競争圧力に直面している。\n\nShutterstock株は買収破談後のアフターアワーズで約30％下落し、市場はこの決定を消極的に評価している。Getty自身も資金調達の選択肢検討を迫られており、今後の経営戦略が注視される。",
+    "tags": [
+      "買収破談",
+      "ストック写真",
+      "競争規制",
+      "Getty",
+      "Shutterstock"
+    ],
+    "section": "ビジネス",
+    "source": "The Verge",
+    "link": "https://www.theverge.com/tech/960047/getty-shutterstock-merger-agreement-termination",
+    "importance": 4,
+    "image_query": "stock photo business merger",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1672380135241-c024f7fbfa13?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxzdG9jayUyMHBob3RvJTIwYnVzaW5lc3MlMjBtZXJnZXJ8ZW58MXwwfHx8MTc4Mjg5ODEwNHww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Radission US",
+      "profileUrl": "https://unsplash.com/@radission?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-07-01T09:28:24.347Z",
+    "publishedAt": "2026-07-01T08:41:26.000Z"
+  },
+  {
+    "slug": "20260701-17",
+    "headline": "英国エネルギー価格上限13％引き上げ、1362万世帯が貧困危機へ",
+    "lead": "英Ofgem、7月より電気ガス料金年1862ポンドに引き上げ、燃料貧困家庭が1362万増加へ。",
+    "body_markdown": "英国の規制機関Ofgemが発表した2026年第3四半期のエネルギー価格上限により、典型的な家庭の年間電気ガス代金は1641ポンドから1862ポンド（日本円で約30万円）へ引き上げされる。幅7月1日より適用される13.5％の値上げは、中東紛争に起因する国際的な卸売ガス価格上昇が原因である。\n\nガス料金の上昇が特に大きく、24％の値上げが見込まれる一方、電気料金は相対的に5％の上昇に留まる。本引き上げにより、燃料貧困線（家計に占めるエネルギー支出比10％超）に該当する世帯は、4月時点の1130万から1362万へ拡大する見通しである。\n\nエネルギー企業の利益率には議論の余地がある。End Fuel Poverty Coalitionの調べでは、2026年前半3ヶ月のエネルギー企業利益は世界全体で260億ポンド、このうち英国分だけで30億ポンドに達している。一般家計の支払能力の限界に直面する中、エネルギー企業の莫大な利益構造への政治的圧力が高まっている。",
+    "tags": [
+      "エネルギー",
+      "価格上限",
+      "燃料貧困",
+      "インフレ",
+      "英国"
+    ],
+    "section": "経済・マネー",
+    "source": "Ofgem",
+    "link": "https://www.ofgem.gov.uk/press-release/energy-price-cap-will-rise-13-july",
+    "importance": 4,
+    "image_query": "energy grid power infrastructure",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1543489816-c87b0f5f7dd4?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHw0fHxlbmVyZ3klMjBncmlkJTIwcG93ZXIlMjBpbmZyYXN0cnVjdHVyZXxlbnwxfDB8fHwxNzgyODk4MTA0fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Nikola Johnny Mirkovic",
+      "profileUrl": "https://unsplash.com/@thejohnnyme?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-07-01T09:28:25.108Z",
+    "publishedAt": "2026-07-01T05:00:26.000Z"
+  },
+  {
+    "slug": "20260701-18",
+    "headline": "レバノン・イスラエル停戦、Hezbollah反発で継続交渉難航",
+    "lead": "米仲介のレバノン・イスラエル停戦枠組み合意も、Hezbollah『無効』と拒否、南部情勢は膠着状態。",
+    "body_markdown": "米国務長官マルコ・ルビオが6月26日に発表したレバノン・イスラエル停戦枠組みは、イスラエル防衛軍（IDF）の南レバノン撤退とレバノン軍の同地域展開、米国および国際監視下でのHezbollah非武装化を条件としている。しかし、Hezbollah指導部はこれを『降伏』と解釈し、『無効』と宣言した。\n\nHezbollahのナイム・カセム書記長は、イスラエル軍の具体的撤退日程なしの枠組みに不信を示し、むしろ『完全停戦と全領土からの無条件撤退』を要求している。加えて、イラン支援の組織として、レバノン国内の兵器保有維持を明示している。これにより、停戦発表後も両勢力間の砲撃・越境攻撃は継続している。\n\n交渉は迷路に陥っている。米イラン和平交渉の進展も、イスラエルによるレバノン領内への継続的軍事活動により阻害されている。テヘランは、米国との和平合意の条件としてイスラエルのレバノン攻撃停止を掲げており、この地域的課題が大国間交渉の障害となっている。",
+    "tags": [
+      "紛争",
+      "中東",
+      "停戦",
+      "Hezbollah",
+      "地政学"
+    ],
+    "section": "国際・地政学",
+    "source": "Al Jazeera",
+    "link": "https://www.aljazeera.com/opinions/2026/7/1/the-lebanon-israel-agreement-is-paving-the-way-for-the-next-war",
+    "importance": 4,
+    "image_query": "conflict war military",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1772303142585-b07fda193178?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxjb25mbGljdCUyMHdhciUyMG1pbGl0YXJ5fGVufDF8MHx8fDE3ODI4OTgxMDV8MA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Saifee Art",
+      "profileUrl": "https://unsplash.com/@saifee_art?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-07-01T09:28:25.857Z",
+    "publishedAt": "2026-07-01T08:03:40.000Z"
+  },
+  {
+    "slug": "20260701-19",
+    "headline": "世界の海水温、6月過去最高・El Niño強化で2026年は記録破壊年へ",
+    "lead": "欧州Copernicus、6月海水温度20.98℃で過去最高更新、El Niño強化で2026年の気候異変加速予測。",
+    "body_markdown": "欧州Copernicus海洋サービスが公開した2026年6月のグローバル海水表面温度データは、平均20.98℃で2023年・2024年の記録を更新した。海洋熱波は過去6ヶ月間で約82％の全海洋域に拡大しており、これまでに類を見ない規模である。\n\n気象パターンとしてのEl Niñoが6月11日に正式宣言され、気象庁の予測では非常に強いEl Niño（『スーパーEl Niño』）に発展する確率は63％とされている。Copernicus海洋科学リーダーのシモン・ファン・ジェニップ氏は『El Niñoの発生と温室効果ガスの継続排出の複合作用により、2026年は記録的高温年になる見通しが高い』と述べている。\n\nこの温度上昇は大気圏へも波及し、全球気温の新記録更新と、極端気象現象（豪雨・干ばつ・熱波）の多発が予想されている。水産資源の生態系への影響も懸念される一方、医学気候学的には媒介昆虫による感染症拡大の加速化という新たなリスクが指摘されている。",
+    "tags": [
+      "気候変動",
+      "海洋温暖化",
+      "El Niño",
+      "地球温暖化",
+      "科学"
+    ],
+    "section": "サイエンス",
+    "source": "Phys.org",
+    "link": "https://phys.org/news/2026-07-world-oceans-june-eu.html",
+    "importance": 4,
+    "image_query": "ocean water climate",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxvY2VhbiUyMHdhdGVyJTIwY2xpbWF0ZXxlbnwxfDB8fHwxNzgyODk4MTA2fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Matt Hardy",
+      "profileUrl": "https://unsplash.com/@matthardy?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-07-01T09:28:26.583Z",
+    "publishedAt": "2026-07-01T06:07:37.000Z"
+  },
+  {
+    "slug": "20260701-20",
+    "headline": "ScarfBench公開、Java企業向けAIエージェント評価・10％未満の成功率",
+    "lead": "HuggingFace・IBM、エンタープライズJavaフレームワーク移行ベンチマークScarfBench発表、最先端AIの現実的限界浮き彫り。",
+    "body_markdown": "HuggingFaceとIBM Researchが共同開発したベンチマーク『ScarfBench』は、AIエージェントが複雑な企業向けJavaアプリケーションの動作環境を移行できるかを評価する初の包括的尺度を提供する。34のアプリケーションから204の移行タスクを生成し、102のフレームワーク実装、約151,000行のコードを対象に約1,331の専門家検証テストが設計されている。\n\n評価基準は三層構成である。コンパイル成功、デプロイメント成功、行動仕様検証の達成に基づき、単なるコード生成ではなく『実際に機能するか』を測定する。しかし結果は現在の境界型モデルの局限を明かにした。最先端AIエージェントでも、行動検証合格率は10％未満に留まっている。\n\n根本的課題は何か。設計チームは『Javaコード翻訳そのものではなく、設定・インフラ・ランタイム環境の依存性のネットワークを管理する能力』が決定的制約であると指摘している。つまり、AIが実務的な技術移行を成し遂げるには、単なる言語能力向上ではなく、システム全体の複雑性を理解・調整する推論能力の革新が必須であることが示唆されている。",
+    "tags": [
+      "AI",
+      "ベンチマーク",
+      "Java",
+      "エンタープライズ",
+      "評価"
+    ],
+    "section": "AI",
+    "source": "Hugging Face",
+    "link": "https://huggingface.co/blog/ibm-research/scarfbench",
+    "importance": 3,
+    "image_query": "programming code software",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-07-01T09:28:26.583Z",
+    "publishedAt": "2026-06-30T18:32:50.000Z"
+  },
+  {
+    "slug": "20260701-21",
+    "headline": "ベネズエラ地震、1943人死亡・39秒差の双地震で被害拡大",
+    "lead": "ベネズエラで7.5・7.2マグニチュード双地震、カラカス北西部で1943人死亡、250以上の建築が崩壊。",
+    "body_markdown": "6月24日、ベネズエラ北西部カラカス西方約100km沖でマグニチュード7.5と7.2の地震が39秒差で発生した。この『ダブレット』と呼ばれる双地震は、カリブ海プレートと南米プレートの境界での断層運動から生じた。1900年以来、ベネズエラ地域を襲った最大の地震であり、広域的な被害を引き起こした。\n\n死傷者数は急速に増加している。現在までの統計では1,943人が死亡、10,571人が負傷している。地震後430以上の余震が記録されており、捜索・救助活動を複雑化させている。カラカス市街から北部沿岸地域のラグアイラ州まで、250以上の建築物が崩壊し、交通インフラの被害も深刻である。\n\n地元の混乱は深い。政治的危機の続く中での自然災害であり、政府機能の限界が救援活動の障害となっている。国家統計では約430万人が直接被影響下にあり、医療・食料・水の不足が報告されている。6日後に瓦礫からの生存救出例も報告されており、捜索の継続は極めて時間との競争になっている。",
+    "tags": [
+      "災害",
+      "地震",
+      "ベネズエラ",
+      "自然災害",
+      "人道支援"
+    ],
+    "section": "国際・地政学",
+    "source": "CNN",
+    "link": "https://www.cnn.com/2026/06/24/weather/live-news/venezuela-earthquake-puerto-rico-tsunami",
+    "importance": 3,
+    "image_query": "earthquake disaster natural",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-07-01T09:28:26.584Z",
+    "publishedAt": "2026-06-24T00:00:00.000Z"
+  },
+  {
+    "slug": "20260701-22",
+    "headline": "UK競争当局、Apple・Google『二者独占』に破壊的介入・ユーザーステアリング容認へ",
+    "lead": "英CMA、モバイルプラットフォームのApple・Google支配に対抗、デベロッパーのオフプラットフォーム決済誘導容認方針。",
+    "body_markdown": "英国競争・市場庁（CMA）は6月29日、モバイルプラットフォーム市場でAppleとGoogleが実質的な『二者独占』を支配していると判断し、競争促進の構造改革提案を発表した。英国の携帯端末のうち90～100％がAppleまたはGoogleの双社のプラットフォーム上で動作しており、市場支配的地位が確立している。\n\nCMAの提案の中核は『ステアリング』（ユーザーを外部決済方法へ誘導）の容認である。現在、AppleはSteepを禁止し、Googleも制限している。CMAは、開発者がユーザーに対して『そのアプリ内購入ではなく、Webサイト経由で購入すれば割引を受けられる』といった案内を許可する方針を推し進めている。さらにAppleに対し、NFC（近距離通信）技術の開放を検討する圧力をかけている。\n\n業界反発も予想される。Apple・Googleは協議プロセスに同意し、2月にいくつかの譲歩約束（自社アプリへの優遇禁止、審査プロセスの透明化）を公開している。しかし、『二者独占破壊』を標榜するCMAの最終規則導入は2026年後半に予定されており、多国籍テック企業への規制の国家間スタンダード化を促す事例となる可能性がある。",
+    "tags": [
+      "競争規制",
+      "テックプラットフォーム",
+      "独占",
+      "英国",
+      "モバイル"
+    ],
+    "section": "テクノロジー",
+    "source": "Guardian",
+    "link": "https://www.theguardian.com/business/2026/jun/30/uk-apple-google-mobile-app-stores-developers-payment-cma",
+    "importance": 3,
+    "image_query": "mobile app store commerce",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-07-01T09:28:26.584Z",
+    "publishedAt": "2026-06-30T14:32:03.000Z"
+  },
+  {
+    "slug": "20260701-23",
+    "headline": "AI解雇で企業後悔・Ford・IBM再採用に転じ、AIの不十分な実態浮き彫り",
+    "lead": "自動車・IT企業がAI導入理由の解雇後、業務維持難しく再採用開始、AI単独での実務実行限界が明白に。",
+    "body_markdown": "AI導入による大規模解雇を実行した企業が、その戦略を撤回する動きが相次いでいる。Ford Motorは、自動化システムが対応できない品質管理タスク遂行のため、経験豊富な人間エンジニアの再採用に着手した。Commonwealth Bank of AustraliaおよびIBMもAI試験導入後に人間スタッフの重要性を再評価し、採用方針を反転させている。\n\nIBMの事例は典型的である。同社がHR機能の94％をAIで自動化したが、残る6％の『倫理的ジレンマを伴う判断』がシステムで処理不可能であることに気づいた。結果として、AIハンドラーとしての人間職員の必須性が明白になり、米国内でのエントリーレベル採用を3倍に拡大する方針を打ち出している。\n\n業界コンセンサスは転換点を迎えている。自動化推進企業の多くが『後悔』を表明し、AIが完全に人間労働を代替する可能性は限定的であることを認識した。『急速な自動化→業務停滞→人間リハイア』という企業サイクルは、AIの成熟段階における過度な楽観主義がもたらした必然的修正であり、ビジネスプロセスの現実的理解への回帰を示唆している。",
+    "tags": [
+      "AI",
+      "雇用",
+      "自動化",
+      "産業",
+      "人事"
+    ],
+    "section": "ビジネス",
+    "source": "CNBC",
+    "link": "https://www.cnbc.com/2026/07/01/employers-who-laid-off-workers-for-ai-are-reversing-their-decisions.html",
+    "importance": 3,
+    "image_query": "workplace automation technology",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-07-01T09:28:26.584Z",
+    "publishedAt": "2026-07-01T04:37:25.000Z"
+  },
+  {
+    "slug": "20260701-24",
+    "headline": "中国、海外投資規制強化・『オフショア洗浄』を取り締まり",
+    "lead": "中国国務院、対外直接投資規制を強化、技術流出・タックスヘイブン悪用を厳格化。",
+    "body_markdown": "中国国務院は7月1日発効の『対外直接投資規制（2026版）』を施行し、海外投資における技術管理を大幅に厳格化した。同規制は民間個人による海外投資や国境を超えた技術協働を新たにスコープに含め、人事異動・研修やIPロンダリングを経由した規制回避を狙い撃ちにしている。\n\n規制のターゲットは『オフショア洗浄』と呼ばれる実践である。これは、ケイマン・BVI構造体への資本移転、IP権の海外移管、スタッフの現地異動を通じ、中国発生の技術を規制外に置くスキーム。規制ではこうした方法が『禁止技術または管制下の技術・データを無断利用する行為』として明示的に引き違反化される。\n\nこれと並行して、中国は租税回避への取り締まりを強化している。CRS（共通報告基準）データと AI分析により、2026年の海外資産申告に基づく脱税疑いが増加、税務当局が『違法所得全額没収』を掲げている。Futu Holdings、Tiger Brokers（Up Fintech傘下）、Long Bridge Securities など、本土ライセンス無しで国内営業していた企業への摘発が進行中である。",
+    "tags": [
+      "中国",
+      "規制",
+      "海外投資",
+      "技術流出防止",
+      "タックス"
+    ],
+    "section": "ビジネス",
+    "source": "The Diplomat",
+    "link": "https://thediplomat.com/2026/06/chinas-new-investment-regulations-block-strategic-technology-transfer/",
+    "importance": 3,
+    "image_query": "international business finance",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-07-01T09:28:26.584Z",
+    "publishedAt": "2026-06-28T10:33:26.000Z"
+  },
+  {
+    "slug": "20260701-25",
+    "headline": "ヒマラヤセンザンコウ、新種として確認・19世紀標本で解明",
+    "lead": "国際研究がヒマラヤセンザンコウをシナセンザンコウと別種と認定、DNA解析により独立種確立。",
+    "body_markdown": "国際的な研究チーム（ネパール・中国・米国・英国・スペイン）により、ヒマラヤセンザンコウ（Manis aurita）が独立した完全種として確認された。従来、これはシナセンザンコウ（Manis pentadactyla）の亜種に分類されていたが、分子遺伝学的解析により分化が証明された。\n\nゲノム解析は個体群の深い歴史を記録していた。遺伝データから、カトマンズ渓谷の個体群は過去190～195世代（西暦660～695年）で急激な衰退を経験し、約700年前にはさらに最低水準に到達したことが判明した。野生生物の個体群動態が遺伝標識に刻印される事例として、保護生物学に重要な含意をもたらしている。\n\n保護的価値は大きい。ヒマラヤセンザンコウが『新種』として国際法上に登録されれば、個別の保護対象となり、密猟取引の遡及可能性が高まる。ゲノム基準により、没収されたセンザンコウの鱗から個体群出所地を特定できるようになり、違法取引ネットワークの地図化が可能になる。人類史上密猟されすぎる動物であるセンザンコウの、最初の種レベル的保護枠組みが成立した。",
+    "tags": [
+      "生物多様性",
+      "種分化",
+      "DNA",
+      "保全",
+      "野生動物"
+    ],
+    "section": "サイエンス",
+    "source": "Phys.org",
+    "link": "https://phys.org/news/2026-06-himalayan-pangolin-emerges-distinct-species.html",
+    "importance": 3,
+    "image_query": "animal wildlife conservation",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-07-01T09:28:26.584Z",
+    "publishedAt": "2026-07-01T09:00:10.000Z"
+  },
+  {
+    "slug": "20260701-26",
+    "headline": "スウェーデン移民政策硬化、難民以来10年の一線引き・強制報告義務化へ",
+    "lead": "スウェーデン、1970年代以来の難民受け入れ転換、7月から強制報告制度導入、移民本人確認厳格化。",
+    "body_markdown": "スウェーデンは2016年以降、移民・難民政策の段階的硬化を進めてきたが、2026年は転換の最終段階を迎える。7月12日より、全ての入国者の住居許可が『一時的』に制限され、永住許可への道が実質的に閉ざされる。これは数十年間のスウェーデン移民政策の根本的反転である。\n\n7月13日発効の『情報提供法』（通称『通報者法』）は、税務当局・社会サービス・警察など6つの国家機関に、未登録移民の疑い者通報を義務付ける。医療・教育・福祉施設の機密性が失われ、脆弱層の公的アクセスが遮断される懸念が指摘されている。その結果、違法滞在者の増加や、人道支援ネットワークの地下化が予想されている。\n\n犯罪関連の強制退去ルール強化も9月1日より施行予定である。それまでに改正されるセンテンシング基準では、より軽い犯罪行為でも外国人への退去を強制し、再入国禁止期間を長期化させる。同時に、自発的帰還を促進するため、成人当たり35万スウェーデンクローネ（約50万円）、一世帯上限60万クローネの帰還グラント制度が強化されている。",
+    "tags": [
+      "移民",
+      "難民",
+      "政策",
+      "スウェーデン",
+      "国家"
+    ],
+    "section": "国際・地政学",
+    "source": "Al Jazeera",
+    "link": "https://www.aljazeera.com/news/2026/7/1/i-did-nothing-wrong-swedens-migration-regime-hardens-upending-lives",
+    "importance": 3,
+    "image_query": "immigration border policy",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-07-01T09:28:26.584Z",
+    "publishedAt": "2026-07-01T05:52:19.000Z"
+  },
+  {
+    "slug": "20260701-27",
+    "headline": "トランプ前大統領、暗号資産で14億ドル収益・政権内の利益相反議論再燃",
+    "lead": "トランプ大統領2025年資産報告書、暗号関連収入14憶ドル超、World Liberty Financial等が主要稼ぎ頭。",
+    "body_markdown": "トランプ大統領が提出した2025年度資産報告書により、暗号資産関連ビジネスから14億ドル超の収益を得たことが判明した。具体的には、World Liberty Financial等の仮想通貨企業からの配当が5.88億ドル、Trump自身が共同創設したMemecoin事業『CIC Digital LLC』からが6.36億ドルである。\n\nWorld Liberty Financeはトランプとその息子たち、外交高官スティーブン・ウィットコフが共同出資したプロジェクトであり、政策決定権を持つ行政官が金銭的利益相反を抱える構図が問題視されている。トランプの暗号資産収入は、不動産事業やトランプブランド商品販売を上回っており、暗号規制の政策方針がいかに形成されているかについて透明性上の懸念が生じている。\n\n政治的インパクトは大きい。従来の『大統領職と民間ビジネスの分離』という米国の政治倫理規範が問われており、暗号業界への政策的庇護と、大統領個人の経済利益の関係性が注視されている。",
+    "tags": [
+      "暗号資産",
+      "政治",
+      "米国",
+      "利益相反",
+      "資産報告"
+    ],
+    "section": "国際・地政学",
+    "source": "BBC World",
+    "link": "https://www.bbc.co.uk/news/articles/cvgmv98ez3zo",
+    "importance": 3,
+    "image_query": "cryptocurrency bitcoin finance",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-07-01T09:28:26.584Z",
+    "publishedAt": "2026-07-01T07:30:53.000Z"
+  },
+  {
+    "slug": "20260701-28",
+    "headline": "Sakana AIのマルチエージェント『Fugu』、Google Cloud基盤で東京発信",
+    "lead": "日本発Sakana AIが『Fugu』公開、Claude・GPT・Geminiを動的に統合、Google Cloud採用で世界展開。",
+    "body_markdown": "日本のスタートアップSakana AIが6月22日、マルチエージェント統合システム『Sakana Fugu』を発表した。単一のLLMではなく『他のLLMを呼び出すために訓練されたLLM』であり、ユーザーのリクエストに応じてClaude Opus 4.8、GPT-5.5、Gemini 3.1 Proを動的に選別・分配・統合する。\n\nFuguの運用基盤にはGoogle Cloudが採用されており、GCP標準サービス群（Gemini、Cloud Run、BigQuery、Cloud Armor等）が基盤を成している。パフォーマンス面では、Fugu Ultraは多くのベンチマークでOpus 4.8やGPT 5.5を上回り、SWE-Bench Proで73.7点を達成している（Opus 4.8は下回る）。\n\n利用価値は応用領域による。複数モデルの最適選別により、個別モデルの単純な積み上げより効率的な推論が可能になる。料金体系は従量制と月額制を混在させており、月額20～200ドル、従量制は百万トークン当たり入力5ドル・出力30ドルである。ただし、GDPRコンプライアンス理由でEU/EEA地域では未利用で、北米・英国での展開が優先されている。",
+    "tags": [
+      "AI",
+      "マルチエージェント",
+      "日本",
+      "Google Cloud",
+      "LLM統合"
+    ],
+    "section": "AI",
+    "source": "ITmedia",
+    "link": "https://www.itmedia.co.jp/aiplus/article/2607/01/2000000149/",
+    "importance": 3,
+    "image_query": "artificial intelligence technology",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-07-01T09:28:26.584Z",
+    "publishedAt": "2026-07-01T07:52:21.000Z"
+  },
+  {
     "slug": "20260701-01",
     "headline": "Claude Sonnet 5、エージェント業務で低価格化",
     "lead": "Anthropicが新モデル「Claude Sonnet 5」を発表。高度なエージェント機能を備えながらOpusより安価な設定で提供し、AI開発の価格競争が激化する。",
