@@ -1,5 +1,240 @@
 [
   {
+    "slug": "20260703-01",
+    "headline": "日本が2兆円規模の対インド投資発表",
+    "lead": "日本とインドの首脳会談で日本企業による2兆円投資と約130件の企業協力を発表。経済関係を大幅に強化。",
+    "body_markdown": "インドを訪問中の日本の高市総理大臣は2日、ナレンドラ・モディ首相と会談し、日本企業によるインド向け投資規模として約2兆円を発表した。同時に約130件の企業間協力文書も締結された。\n\nこの投資には、半導体産業、資源・エネルギー、医療・健康といった戦略的に重要な分野が含まれている。インドは南アジア有数の高成長経済として認識されており、日本の成熟産業から新興市場への資本流出戦略の一環と位置付けられる。\n\n両国は投資の深化とともに「戦略的パートナーシップ」の強化で合意。日本にとってインドは人口規模、成長率、地政学的重要性の観点から枢要な経済パートナーで、対中国バランスとしても機能する。一方インドは日本の資本・技術の受け入れにより、製造業基盤の高度化を図る狙いがある。\n\nこの規模の投資発表は、日本の海外経済戦略が東南アジア一極集中から南アジアへの多角化へシフトしていることを示唆している。今後、両国の経済的紐帯がさらに強まる見通しだ。",
+    "tags": [
+      "日本",
+      "インド",
+      "投資",
+      "経済外交"
+    ],
+    "section": "ビジネス",
+    "source": "NHK",
+    "link": "https://news.web.nhk/newsweb/na/na-k10015167611000",
+    "importance": 5,
+    "image_query": "business investment India Japan",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1565374392032-8007fb37c26e?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGludmVzdG1lbnQlMjBJbmRpYXxlbnwxfDB8fHwxNzgzMDI2NzU0fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "rupixen",
+      "profileUrl": "https://unsplash.com/@rupixen?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-07-02T21:12:34.305Z",
+    "publishedAt": "2026-07-02T20:50:01.000Z"
+  },
+  {
+    "slug": "20260703-02",
+    "headline": "Anthropic、Samsungとカスタムチップ開発協議",
+    "lead": "AnthropicがSamsungと協力してAI専用チップの開発を検討。OpenAIの対抗策としてハードウェア戦略を本格化。",
+    "body_markdown": "Anthropicは韓国Samsung電子と協力して、同社向けのカスタムAIチップ開発を検討していると発表した。これはOpenAIが先週Broadcomとの提携で推論プロセッサ「Jalapeño」を発表したことへの直接的な対抗措置と見られる。\n\nAI企業のカスタムチップ開発は、特定のタスク向けにユニークなハードウェアを設計すること、そしてNvidiaへの供給依存を軽減することの二つの目的がある。AnthropicはこれまでGoogle、Amazon、Nvidiaのチップを利用してきたが、独立性と性能最適化の観点からハードウェアスタック多様化に乗り出した。\n\nSamsungは既にAI産業に深く組み込まれており、Nvidiaとも強固なパートナーシップを保つため、Anthropicの開発パートナーとして理想的な位置付けにある。チップ開発の成功にはメモリ技術、製造プロセス、テスト・検証体制など複合的な能力が必要だが、Samsungはこれらの領域で世界トップの企業である。\n\nこの動きは、生成AI市場が単なるソフトウェア競争から、ハードウェア統合まで含む総合的な競争へシフトしていることを象徴している。Anthropic、OpenAI、そしてGoogleやAmazonといった大手が相次いでチップ開発に参入する背景には、AI推論と学習の効率化がビジネスの根幹を左右するという認識がある。",
+    "tags": [
+      "Anthropic",
+      "Samsung",
+      "チップ",
+      "AI競争"
+    ],
+    "section": "テクノロジー",
+    "source": "TechCrunch",
+    "link": "https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/",
+    "importance": 4,
+    "image_query": "semiconductor chip technology circuit board",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHw4fHxzZW1pY29uZHVjdG9yJTIwY2hpcCUyMHRlY2hub2xvZ3klMjBjaXJjdWl0JTIwYm9hcmR8ZW58MXwwfHx8MTc4MzAyNjc1NXww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Chris Ried",
+      "profileUrl": "https://unsplash.com/@cdr6934?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-07-02T21:12:35.579Z",
+    "publishedAt": "2026-07-02T18:31:09.000Z"
+  },
+  {
+    "slug": "20260703-03",
+    "headline": "大規模言語モデルの特化は避けられない",
+    "lead": "Hugging Faceが数学と生物学から「AIの特化」の必然性を論証。汎用モデル志向から分野別専門化への転換を指摘。",
+    "body_markdown": "Hugging Faceのブログが、大規模言語モデル（LLM）が特化型システムへ向かうことが数学的・生物学的に不可避であると主張する記事を発表した。\n\n論文の核心はWolpert-Macready定理にある。これは「汎用最適化アルゴリズムは存在しない」ことを証明する古典的な定理で、限定的リソースの下では、特定タスクに資源を集中させるアプローチが広く分散させるものを上回るという数学的現実を示す。\n\nこの原則は複数の領域で確認できる。進化生物学では、適応的な特化が広範な汎用性より生存優位を持つ。市場競争では、専門化された戦略が総合的な競争に勝つ。機械学習の実践でも、AlphaFoldやMixture-of-Experts（専門家混合モデル）が特化の効果を実証している。\n\n記事は「スケーリングは学習方法を変えるが、有限タスク集合への集中の価値を消滅させない」と指摘。つまり、モデルがいかに大きく成長しようとも、それが得意な領域と不得意な領域の差は消えず、結果として各企業のAI導入では汎用モデルより特化型システムが投資対効果（ROI）を改善する可能性が高いという示唆である。\n\nこの論点は、現在のAI業界が進む方向と一致している。ChatGPTやClaudeなどの汎用LLMが注目を集める一方で、医療診断、法律相談、科学研究、カスタマーサポート等の個別分野での特化型モデルがビジネス価値を高めている実態がある。産業全体としては、汎用基盤モデルの継続開発と並行して、特定分野への最適化が加速する見通しだ。",
+    "tags": [
+      "AI",
+      "機械学習",
+      "モデル設計",
+      "Hugging Face"
+    ],
+    "section": "AI",
+    "source": "Hugging Face",
+    "link": "https://huggingface.co/blog/Dharma-AI/why-specialization-is-inevitable",
+    "importance": 4,
+    "image_query": "neural network machine learning artificial intelligence",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1677442135131-4d7c123aef1c?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHw1fHxuZXVyYWwlMjBuZXR3b3JrJTIwbWFjaGluZSUyMGxlYXJuaW5nJTIwYXJ0aWZpY2lhbCUyMGludGVsbGlnZW5jZXxlbnwxfDB8fHwxNzgzMDI2NzU2fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Steve A Johnson",
+      "profileUrl": "https://unsplash.com/@steve_j?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-07-02T21:12:36.562Z",
+    "publishedAt": "2026-06-30T14:39:11.000Z"
+  },
+  {
+    "slug": "20260703-04",
+    "headline": "OpenAI、政府へ5%株譲渡の構想提案",
+    "lead": "OpenAIがAI企業複数による政府への5%株譲渡構想を提案。アラスカ永続基金モデルで国民がAI利益配分を得る仕組み。",
+    "body_markdown": "OpenAIのサム・アルトマンCEOが米国政府に対し、AI企業が保有株の5%を譲渡する構想を提案した。トランプ政権の商務長官・財務長官らとの協議に基づくもので、アラスカ永続基金（Alaska Permanent Fund）に類似した政府出資機構の設置を想定している。\n\nアラスカ永続基金は、石油収入を種銭にした州営法人で、得られた配当金を住民に配分する仕組み。OpenAIの提案は、これを参考にOpenAI、Anthropic、Google、Meta等のAI企業複数が5%の株式を政府に譲渡し、統一的な政府機構で保有・管理する構想である。この仕組みなら、一般米国民がAI業界の利益成長に直結する配当や利益を受け取ることになり、「AI革命の成果を公衆で共有する」という正当性を得られる。\n\n提案の背景には、急成長するAI産業の富が一部の企業と投資家に集中することへの政治的懸念がある。トランプ大統領も5月に「政府がAI大手を保有することは美しいこと」と述べ、米国民をこのビジネスのパートナーにすべき考えを示していた。\n\nアルトマン氏は2025年初頭からこの構想を政府関係者に働きかけてきた。ただし実現には議会承認が必要であり、各企業が実際に応じるかは不透明である。直接的な所有権移譲には経営上・法的課題があるためだ。今後の政府と業界間の交渉が注視される。",
+    "tags": [
+      "OpenAI",
+      "政策",
+      "株式",
+      "米国"
+    ],
+    "section": "ビジネス",
+    "source": "TechCrunch",
+    "link": "https://techcrunch.com/2026/07/02/openai-proposed-donating-5-of-its-equity-to-a-us-sovereign-wealth-fund/",
+    "importance": 4,
+    "image_query": "government finance investment fund management",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1559067096-49ebca3406aa?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxnb3Zlcm5tZW50JTIwZmluYW5jZSUyMGludmVzdG1lbnQlMjBmdW5kJTIwbWFuYWdlbWVudHxlbnwxfDB8fHwxNzgzMDI2NzU3fDA&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "Precondo CA",
+      "profileUrl": "https://unsplash.com/@precondo?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-07-02T21:12:37.712Z",
+    "publishedAt": "2026-07-02T15:20:51.000Z"
+  },
+  {
+    "slug": "20260703-05",
+    "headline": "マイクロソフト、AI展開会社を25億ドルで設立",
+    "lead": "マイクロソフトが新事業部門「Microsoft Frontier Company」を設立。AI導入支援に25億ドルを投資し6000人の技術者を配置。",
+    "body_markdown": "マイクロソフトは新しい事業部門「Microsoft Frontier Company」を立ち上げ、エンタープライズAI導入支援に25億ドルを投資することを発表した。同部門には6000名の業界および技術専門家が配置される予定で、Fortune 500企業を中心とした大規模顧客向けAI実装サービスの拡大を目指す。\n\nマイクロソフトのコマーシャル部門CEOは、同社が構築する組織を「Forward-Deployed Engineer（FDE）というラベルを超えた、業界最大規模で最も能力のある成果志向のエンジニア組織になる」と述べており、顧客企業への深い浸透とカスタマイズされたAI導入戦略の提供を標榜している。\n\nすでにLondon Stock Exchange Group、Unilever、Land O'Lakes、Accenture などとのパートナーシップが発表されており、各業界での実装事例構築が進行中である。この動きは、Amazon、OpenAI、Anthropicが最近発表したAI展開事業と並行する業界トレンドであり、大手企業がエンタープライズAI導入支援サービスへの投資を相次いで加速させていることを示している。\n\nマイクロソフトの既存顧客基盤（Fortune 500企業の多くに既に配置済みのエンジニア）が大きな競争優位性を提供する。同社は自社クラウド（Azure）、AI基盤モデル（OpenAIとの提携）、導入支援体制（新部門）という三層の統合戦略で、エンタープライズAI市場での支配的地位を確立する構図が鮮明になっている。",
+    "tags": [
+      "マイクロソフト",
+      "AI導入",
+      "エンタープライズ",
+      "投資"
+    ],
+    "section": "ビジネス",
+    "source": "TechCrunch",
+    "link": "https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/",
+    "importance": 5,
+    "image_query": "business technology corporate enterprise software",
+    "image": {
+      "imageUrl": "https://images.unsplash.com/photo-1764123108291-0f48d2c7e563?ixid=M3w5NzU5Mzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlY2hub2xvZ3klMjBjb3Jwb3JhdGUlMjBlbnRlcnByaXNlJTIwc29mdHdhcmV8ZW58MXwwfHx8MTc4MzAyNjc1OHww&ixlib=rb-4.1.0&w=1280&q=80&fm=jpg",
+      "photographer": "William Liu",
+      "profileUrl": "https://unsplash.com/@willspills?utm_source=axiom_ai&utm_medium=referral",
+      "provider": "Unsplash"
+    },
+    "mode": "full",
+    "createdAt": "2026-07-02T21:12:38.302Z",
+    "publishedAt": "2026-07-02T13:53:00.000Z"
+  },
+  {
+    "slug": "20260703-06",
+    "headline": "WHO、クルーズ船ハンタウイルス感染を終焉宣言",
+    "lead": "クルーズ船での稀なハンタウイルス集団感染が終結。13人感染、3人死亡で収束。33カ国で接触追跡。",
+    "body_markdown": "世界保健機関（WHO）のテドロス事務局長は、オランダ籍の極地探査船「MV Hondius」で発生したハンタウイルス集団感染の終焉を宣言した。最後の濃厚接触者が隔離を完了し、検査で陰性となったことで感染拡大の脅威が除去されたと判定した。\n\n同船は4月1日にアルゼンチンのウスアイア港を出発し、南大西洋の離島を経由した後、スペイン領カナリア諸島を目指していた。5月18日のロッテルダム到着までに13人の感染を確認、うち3人が死亡した。稀なアンデスハンタウイルス株によるもので、アルゼンチンとチリで流行する株である。\n\nハンタウイルスはげっ歯類との接触やその排泄物を通じて感染する。通常はヒト間の伝播を起こさないが、このアンデス株は濃厚接触でも伝播する唯一のハンタウイルスで、医学的に重要な特性を持つ。WHOは33カ国・地域で650人以上の接触者を追跡調査し、新規患者の発生を防いだ。\n\nこの事例は、クルーズ船のような閉鎖環境における感染症拡大の速度と、国際保健当局による迅速な対応の重要性を示している。また、稀な感染症が国際交通の拡大に伴い、予期しないタイミングで大規模な公衆衛生上の脅威になり得ることも改めて示唆している。",
+    "tags": [
+      "WHO",
+      "感染症",
+      "公衆衛生",
+      "ハンタウイルス"
+    ],
+    "section": "国際・地政学",
+    "source": "Al Jazeera",
+    "link": "https://www.aljazeera.com/news/2026/7/2/who-declares-cruise-linked-hantavirus-outbreak-officially-over",
+    "importance": 3,
+    "image_query": "public health virus disease investigation",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-07-02T21:12:38.303Z",
+    "publishedAt": "2026-07-02T20:50:03.000Z"
+  },
+  {
+    "slug": "20260703-07",
+    "headline": "胚発生時の細胞シグナル、発見研究が完成",
+    "lead": "故Kathryn Anderson博士の研究室が、WNT分子が胚の細胞分化を段階的に制御する仕組みを解明。癌転移への応用に期待。",
+    "body_markdown": "米国Sloan Kettering Institute発生生物学部門の故Kathryn Anderson博士の研究室が、WNT分子が胚発生時に細胞に段階的な指令を与えるメカニズムを最終的に明らかにした。5年以上の研究期間を経た同研究は、細胞分化と組織形成の基本原理に光を当てるものである。\n\n研究チームの発見によれば、WNT分子は「一つの役割を果たすのではなく、複数段階で作用する」。具体的には、BMP分子およびNODAL分子と協働し、これらの異なるTGF-βファミリー分子が細胞の位置に基づいて相反する濃度勾配を形成する。細胞はこうした「位置地図」を読み取ることで、最終的なアイデンティティ（器官や組織の役割）を決定する。\n\nこの知見は癌医学に直結する。正常発生では有益な上皮間葉転換（EMT）が、癌では致命的な転移を引き起こす。WHOの統計では「癌死の約90%が転移に起因する」とされており、BMP/NODALシグナルの相互作用を理解することで、転移抑制の新たな治療標的が開発される可能性がある。\n\n同研究室は故Anderson博士の遺志を継ぎ、段階的シグナル制御の原理を他の発生過程にも適用する研究を計画している。基礎医学から臨床応用への道程は長いが、この基礎発見が將来の癌治療法改善に寄与する可能性は高い。",
+    "tags": [
+      "生物学",
+      "発生学",
+      "細胞シグナル",
+      "癌研究"
+    ],
+    "section": "サイエンス",
+    "source": "Phys.org",
+    "link": "https://phys.org/news/2026-07-embryo-cells-lab-discovery.html",
+    "importance": 3,
+    "image_query": "cell biology embryo development microscopy",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-07-02T21:12:38.303Z",
+    "publishedAt": "2026-07-02T21:00:08.000Z"
+  },
+  {
+    "slug": "20260703-08",
+    "headline": "Jersey Mike's IPOでAI過熱ぶりを露呈",
+    "lead": "サンドイッチチェーンがIPOでAI言及22回。投資家のAI需要へのご都合主義的対応を媒体が皮肉",
+    "body_markdown": "ニュージャージー州のサンドイッチチェーン「Jersey Mike's Subs」が2026年7月に上場した。同社のS-1有価証券登録書では「人工知能」および「AI」という用語が22回言及されている。投資家のAI需要に応えるべく、同社は「We are beginning to use AI Technologies in our business」とリスク警告に記載した。\n\nしかし、テックメディア「TechCrunch」の記者ジュリー・ボルトは、サンドイッチ製造企業によるこの過度なAI言及を皮肉的に評価している。実際のサンドイッチ店がAIの脅威にさらされる確度を「雷に打たれるくらい」と指摘し、投資家のAI渇望に単に便乗する言説の空虚さを指摘した。\n\nボルトはスターバックスの在庫管理ツール問題を例に挙げ、飲食チェーンにおけるAI導入の実態と困難を論じている。自動注文システムが顧客需要を誤認識し、過剰在庫や機会損失をもたらした事例であり、「飲食業ではむしろAI導入が業務複雑性を高める可能性が高い」という指摘である。\n\nこの事例は、AI産業のハイプサイクルにおいて、根拠に乏しいAI言及がIPO市場まで波及していることを象徴している。上場企業の開示文書におけるAI言及の増加は、必ずしも実装進度の向上を意味せず、投資家向けのレトリックとしてのAI的用語の濫用傾向を示唆している。",
+    "tags": [
+      "AI",
+      "IPO",
+      "ハイプ",
+      "飲食業"
+    ],
+    "section": "ビジネス",
+    "source": "TechCrunch",
+    "link": "https://techcrunch.com/2026/07/02/jersey-mikes-ipo-illustrates-how-bad-the-ai-hype-has-become/",
+    "importance": 3,
+    "image_query": "business finance market stock IPO",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-07-02T21:12:38.304Z",
+    "publishedAt": "2026-07-02T20:11:59.000Z"
+  },
+  {
+    "slug": "20260703-09",
+    "headline": "AI時代、ソフトウェアエンジニアは「ループ」を書く",
+    "lead": "ITメディア解説：内側ループ（AI自動実行）と外側ループ（人間検証）の二重構造に開発が転換。エンジニアの役割が変化。",
+    "body_markdown": "ITmedia AI+ が、AI時代のソフトウェア開発パラダイム転換を解説した記事を発表。開発プロセスが「内側ループと外側ループ」の二重構造へシフトしていることを指摘している。\n\n「内側ループ」はAIエージェントが自動的に実行する開発サイクル。AIツールがコード生成、ファイル読込、テスト実行を繰り返し、「完成」と判定するまで自律的に進む。人間の介入を最小化し、反復速度を飛躍的に高める仕組みである。\n\n「外側ループ」は人間がAIの成果物を確認し、修正指示を与えるプロセス。AIが「終了」と判定した後でも、人間が必要な修正を指示し、別のセッションで再実行させる構造である。この二重ループが両立することで、単純な自動化ではなく、人間の指標と機械の効率性を統合した開発体制が成立する。\n\nこの概念は Armin Ronacher 氏の「The Coming Loop」論文に基盤を置いている。記事の示唆するところは、従来の「ゼロからのコード作成」から「既存コード変換・最適化」へのシフトである。エンジニアの役割は新規作成よりも、AIが生成したコードの検証、改善、統合に注力するものへ転換しつつある。\n\nこのパラダイム転換は、エンジニア需要の即座の消滅を意味しない。むしろ、コード品質の判定能力、アーキテクチャ設計の指標性、ドメイン知識に基づく修正指示といった、より高次のスキルが求められるようになることを示唆している。",
+    "tags": [
+      "AI開発",
+      "エンジニアリング",
+      "ソフトウェア",
+      "パラダイム転換"
+    ],
+    "section": "テクノロジー",
+    "source": "ITmedia AI＋",
+    "link": "https://atmarkit.itmedia.co.jp/ait/articles/2607/03/news016.html",
+    "importance": 3,
+    "image_query": "programming code software development computer screen",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-07-02T21:12:38.304Z",
+    "publishedAt": "2026-07-02T20:00:00.000Z"
+  },
+  {
+    "slug": "20260703-10",
+    "headline": "AIが産業インフラを支配：発電所から工場まで",
+    "lead": "MIT Tech Review が報告：AI がメンテナンス最適化で15%の効率化を実現。エネルギー・製造業での予測分析が急速に拡大。",
+    "body_markdown": "AI テクノロジーが産業インフラの運用最適化に本格的に導入される動きが加速している。MIT Technology Review が報じた Woodside Energy の事例では、石油・ガス企業が予測分析と機械学習を活用し、メンテナンスコストを大幅に削減している。\n\nWoodside Energy の事例では、機械学習を用いて保守作業のタイミングを最適化し、5年間でメンテナンス時間を最大15%削減することに成功した。同社はまた、LNG プラント起動を支援する AI コパイロット「Startup Advisor」を導入し、複雑な操作をサポートしながら経験の浅いオペレーターを支援している。\n\nこの動きは従来の生成AI（チャットボット、画像生成）とは異なり、物理的インフラストラクチャの稼働効率に直結する産業用AI実装を示唆している。天然ガス発電、风力発電、水処理、鉱山運用等の領域で、AI が膨大なセンサーデータを分析し、故障予測やメンテナンス最適化を行う事例が急増している。\n\nただし、実装には技術的・組織的課題が存在する。同社は「could we do this, should we do this」という倫理的判断の必要性を強調し、高品質で統治されたデータ基盤（enterprise scale data platform）への長期投資、そして人材・プロセス・技術の統合的な組織転換が不可欠だと指摘している。\n\nWoodside が掲げるアプローチ「think big, prototype small, scale fast」は、産業用 AI 実装の標準的パターンとして業界に浸透しつつある。",
+    "tags": [
+      "AI応用",
+      "産業",
+      "効率化",
+      "エネルギー"
+    ],
+    "section": "テクノロジー",
+    "source": "MIT Tech Review",
+    "link": "https://www.technologyreview.com/2026/07/02/1138433/teaching-ai-to-run-with-the-turbines/",
+    "importance": 3,
+    "image_query": "industrial infrastructure power plant energy generation",
+    "image": null,
+    "mode": "full",
+    "createdAt": "2026-07-02T21:12:38.304Z",
+    "publishedAt": "2026-07-02T12:51:44.000Z"
+  },
+  {
     "slug": "20260702-24",
     "headline": "OpenAI、政府出資機構で5%株譲渡提案",
     "lead": "OpenAIが米政府に対し、AI企業複数が5%ずつ譲渡し公開が利益共有する構想提案。アラスカ永続基金モデル想定。",
